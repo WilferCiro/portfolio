@@ -1,0 +1,110 @@
+
+import React from 'react';
+import Link from 'next/link'
+
+import { theme } from '@/styles/theme'
+
+// Antd
+import {
+	Space,
+	Tooltip,
+	Anchor
+} from 'antd';
+// Antd
+const LinkAntd = Anchor.Link;
+import {
+	GithubOutlined,
+	FacebookFilled,
+	LinkedinFilled,
+	MailFilled,
+	InstagramFilled
+} from '@ant-design/icons';
+
+const FloatInfo = () => {
+	return (
+		<>
+			<div className="social-network">
+				<Space direction="vertical">
+					<Link href="https://github.com/WilferCiro">
+						<a target="_blank">
+							<Tooltip placement="right" title={"Go to GitHub profile"}>
+								<GithubOutlined />
+							</Tooltip>
+						</a>
+					</Link>
+					<Link href="https://github.com/WilferCiro">
+						<a target="_blank">
+							<Tooltip placement="right" title={"Go to Facebook profile"}>
+								<FacebookFilled />
+							</Tooltip>
+						</a>
+					</Link>
+					<Link href="https://github.com/WilferCiro">
+						<a target="_blank">
+							<Tooltip placement="right" title={"Go to Instagram profile"}>
+								<InstagramFilled />
+							</Tooltip>
+						</a>
+					</Link>
+					<Link href="https://github.com/WilferCiro">
+						<a target="_blank">
+							<Tooltip placement="right" title={"Go to LinkedIn profile"}>
+								<LinkedinFilled />
+							</Tooltip>
+						</a>
+					</Link>
+					<Link href="https://github.com/WilferCiro">
+						<a target="_blank">
+							<Tooltip placement="right" title={"Send me an email"}>
+								<MailFilled />
+							</Tooltip>
+						</a>
+					</Link>
+					<div className="line" />
+				</Space>
+			</div>
+			<div className="anchor">
+
+				<Anchor className={"ul"}>
+					<LinkAntd href="#index" title="Index" />
+					<LinkAntd href="#about" title="About me" />
+					<LinkAntd href="#projects" title="Projects" />
+					<LinkAntd href="#skills" title="Skills" />
+					<LinkAntd href="#contact" title="Contact" />
+				</Anchor>
+			</div>
+
+			<style jsx>
+				{`
+					.social-network {
+						position: fixed;
+						bottom: 0px;
+						left: 5%;
+						font-size: 25px;
+					}
+					.line{
+						border-left: solid 1.5px ${theme.textPrimary};
+						height: 70px;
+						margin-left: calc(50% - 0.75px);
+					}
+					a{
+						color: ${theme.textPrimary};
+						margin-bottom: 20px;
+					}
+					a:hover{
+						color: ${theme.primary}
+					}
+
+					.anchor{
+						position: fixed;
+						right: 5%;
+						bottom: 40%;
+						color: ${theme.textPrimary};
+					}
+				`}
+			</style>
+		</>
+	)
+}
+
+export default React.memo(FloatInfo)
