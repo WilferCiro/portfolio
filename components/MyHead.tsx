@@ -5,10 +5,10 @@ import Head from 'next/head';
 
 const MyHead = () => {
 
-	const defaultDescription = "Welcome to my personal portfolio, do not hesitate to contact me";
-	const imageDefault = "/image-meta.png";
+	const defaultDescription = "Hello! Welcome to my personal portfolio, I hope the information presented here will be of use to you.";
 
 	const urlPage = "https://wilciro.vercel.app/";
+	const imageDefault = urlPage + "/image-meta.png";
 	const nombrePage = "Wilfer Ciro";
 	const lemaPage = "Portfolio";
 
@@ -100,7 +100,7 @@ const MyHead = () => {
 			<meta property="twitter:description" content={defaultDescription}/>
 			<meta property="og:description" content={defaultDescription}/>
 			<meta name="description" content={defaultDescription}/>
-						
+			
 			<meta property="twitter:image:src" content={imageDefault}/>
 			<meta property="og:image" content={imageDefault}/>
 
