@@ -7,6 +7,7 @@ import type { AppProps } from 'next/app'
 import dynamic from 'next/dynamic'
 
 // Custom
+import MyHead from '@/components/MyHead'
 const Header = dynamic(() => import('@/components/Header'))
 const Footer = dynamic(() => import('@/components/Footer'))
 const FloatInfo = dynamic(() => import('@/components/FloatInfo'))
@@ -16,6 +17,7 @@ import 'antd/dist/antd.dark.css';
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
+      <MyHead />
       <Header />
       <FloatInfo />
         <div className="main-content">

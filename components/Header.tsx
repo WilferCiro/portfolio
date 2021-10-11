@@ -80,9 +80,13 @@ const Header = () => {
 					}
 					.btn{
 						z-index: 20;
+						display: none;
 					}
 					@media (max-width: 767px) {
 						.show-mobile{
+							display: block;
+						}
+						.btn{
 							display: block;
 						}
 						.menu {

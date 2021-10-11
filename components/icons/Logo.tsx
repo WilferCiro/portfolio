@@ -1,4 +1,5 @@
-import * as React from "react";
+
+import Image from 'next/image';
 
 import { theme } from '@/styles/theme'
 
@@ -7,7 +8,13 @@ export const Logo = () => {
 	return (
 		<>
 			<div className="logo">
-				C
+				<Image 
+					alt="logo"
+					src="/img/logo.png"
+					width="322"
+					height="322"
+					layout="responsive"
+					/>
 			</div>
 
 			<style jsx>
