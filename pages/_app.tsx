@@ -35,7 +35,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             padding: 0px;
             color: ${theme.textPrimary};
             background: ${theme.bgPrimary};
-            font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+            font-family: Lato, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
           }
           .main-content{
