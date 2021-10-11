@@ -53,7 +53,7 @@ const AboutMeSection = () => {
 						overflow: hidden;
 						border-radius: 10% 50% 25% 30%;
 					}
-				`}
+				`} 
 			</style>
 		</>
 	)
