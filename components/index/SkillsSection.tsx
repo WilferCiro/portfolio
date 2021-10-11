@@ -13,8 +13,6 @@ import {
 } from 'antd';
 const { Meta } = Card;
 
-// Custom
-import { theme } from '@/styles/theme'
 
 const SkillsSection = () => {
 	return (
@@ -23,74 +21,74 @@ const SkillsSection = () => {
 				<Carousel>
 					<div>
 						<Row gutter={[16, 16]}>
-							<Col span={6}>
+							<Col xs={12} md={6}>
 								<Card
 									hoverable
-									style={{ width: "100%" }}
-									cover={<img alt="example" src="https://sigdeletras.com/images/blog/202004_react_leaflet/react.png" />}
+									style={{ width: "100%", height: "100%" }}
+									cover={<Image width={320} height={180} alt="example" src="/img/index/mips/img1.png" />}
 								>
 									<Meta title="Javascript" description="React JS, next JS, express" />
 								</Card>
 							</Col>
-							<Col span={6}>
+							<Col xs={12} md={6}>
 								<Card
 									hoverable
-									style={{ width: "100%" }}
-									cover={<img alt="example" src="https://sigdeletras.com/images/blog/202004_react_leaflet/react.png" />}
+									style={{ width: "100%", height: "100%" }}
+									cover={<Image width={320} height={180} alt="example" src="/img/index/mips/img1.png" />}
 								>
 									<Meta title="Python" description="Django, FastApi, Desktop, OpenCV" />
 								</Card>
 							</Col>
-							<Col span={6}>
+							<Col xs={12} md={6}>
 								<Card
 									hoverable
-									style={{ width: "100%" }}
-									cover={<img alt="example" src="https://sigdeletras.com/images/blog/202004_react_leaflet/react.png" />}
+									style={{ width: "100%", height: "100%" }}
+									cover={<Image width={320} height={180} alt="example" src="/img/index/mips/img1.png" />}
 								>
 									<Meta title="Dart" description="Flutter mobile" />
 								</Card>
 							</Col>
-							<Col span={6}>
+							<Col xs={12} md={6}>
 								<Card
 									hoverable
-									style={{ width: "100%" }}
-									cover={<img alt="example" src="https://sigdeletras.com/images/blog/202004_react_leaflet/react.png" />}
+									style={{ width: "100%", height: "100%" }}
+									cover={<Image width={320} height={180} alt="example" src="/img/index/mips/img1.png" />}
 								>
 									<Meta title="C && C++" description="Desktop, arduino, GTK, QT" />
 								</Card>
 							</Col>
-							<Col span={6}>
+							<Col xs={12} md={6}>
 								<Card
 									hoverable
-									style={{ width: "100%" }}
-									cover={<img alt="example" src="https://sigdeletras.com/images/blog/202004_react_leaflet/react.png" />}
+									style={{ width: "100%", height: "100%" }}
+									cover={<Image width={320} height={180} alt="example" src="/img/index/mips/img1.png" />}
 								>
 									<Meta title="GNU/Linux" description="Ubuntu based, Arch based" />
 								</Card>
 							</Col>
-							<Col span={6}>
+							<Col xs={12} md={6}>
 								<Card
 									hoverable
-									style={{ width: "100%" }}
-									cover={<img alt="example" src="https://sigdeletras.com/images/blog/202004_react_leaflet/react.png" />}
+									style={{ width: "100%", height: "100%" }}
+									cover={<Image width={320} height={180} alt="example" src="/img/index/mips/img1.png" />}
 								>
 									<Meta title="SQL" description="MySQL, PostgreSQL" />
 								</Card>
 							</Col>
-							<Col span={6}>
+							<Col xs={12} md={6}>
 								<Card
 									hoverable
-									style={{ width: "100%" }}
-									cover={<img alt="example" src="https://sigdeletras.com/images/blog/202004_react_leaflet/react.png" />}
+									style={{ width: "100%", height: "100%" }}
+									cover={<Image width={320} height={180} alt="example" src="/img/index/mips/img1.png" />}
 								>
 									<Meta title="No SQL" description="Mongo DB, Elastic Search" />
 								</Card>
 							</Col>
-							<Col span={6}>
+							<Col xs={12} md={6}>
 								<Card
 									hoverable
-									style={{ width: "100%" }}
-									cover={<img alt="example" src="https://sigdeletras.com/images/blog/202004_react_leaflet/react.png" />}
+									style={{ width: "100%", height: "100%" }}
+									cover={<Image width={320} height={180} alt="example" src="/img/index/mips/img1.png" />}
 								>
 									<Meta title="Develop tools" description="Git, Asana, Jira" />
 								</Card>
@@ -101,29 +99,29 @@ const SkillsSection = () => {
 					<div>
 
 						<Row gutter={[16, 16]}>
-							<Col span={6}>
+							<Col xs={12} md={6}>
 								<Card
 									hoverable
-									style={{ width: "100%" }}
-									cover={<img alt="example" src="https://sigdeletras.com/images/blog/202004_react_leaflet/react.png" />}
+									style={{ width: "100%", height: "100%" }}
+									cover={<Image width={320} height={180} alt="example" src="/img/index/mips/img1.png" />}
 								>
 									<Meta title="HDL" description="VHDL, Verilog" />
 								</Card>
 							</Col>
-							<Col span={6}>
+							<Col xs={12} md={6}>
 								<Card
 									hoverable
-									style={{ width: "100%" }}
-									cover={<img alt="example" src="https://sigdeletras.com/images/blog/202004_react_leaflet/react.png" />}
+									style={{ width: "100%", height: "100%" }}
+									cover={<Image width={320} height={180} alt="example" src="/img/index/mips/img1.png" />}
 								>
 									<Meta title="Embedded systems" description="Arduino, ESP32, raspberry pi" />
 								</Card>
 							</Col>
-							<Col span={6}>
+							<Col xs={12} md={6}>
 								<Card
 									hoverable
-									style={{ width: "100%" }}
-									cover={<img alt="example" src="https://sigdeletras.com/images/blog/202004_react_leaflet/react.png" />}
+									style={{ width: "100%", height: "100%" }}
+									cover={<Image width={320} height={180} alt="example" src="/img/index/mips/img1.png" />}
 								>
 									<Meta title="C#" description="Unity 3D" />
 								</Card>
@@ -138,9 +136,18 @@ const SkillsSection = () => {
 			<style jsx>
 				{`
 					section {
-						height: 100vh;
+						min-height: 100vh;
 						padding: 10px 20%;
 						align-items: center;
+						margin: 40px auto;
+					}
+					@media (max-width: 767px) {
+						.form {
+							width: 100%;
+						}
+						section{
+							padding: 20px 15px;
+						}
 					}
 				`}
 			</style>

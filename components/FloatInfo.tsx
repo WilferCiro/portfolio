@@ -94,12 +94,16 @@ const FloatInfo = () => {
 					a:hover{
 						color: ${theme.primary}
 					}
-
 					.anchor{
 						position: fixed;
 						right: 5%;
 						bottom: 40%;
 						color: ${theme.textPrimary};
+					}
+					@media (max-width: 767px) {
+						.social-network, .anchor{
+							display: none;
+						}
 					}
 				`}
 			</style>

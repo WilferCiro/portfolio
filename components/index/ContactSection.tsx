@@ -7,7 +7,8 @@ import {
 	Form,
 	Input,
 	Button,
-	message
+	message,
+	Divider
 } from 'antd';
 
 
@@ -42,6 +43,8 @@ const ContactSection = () => {
 		<>
 			<section id="contact">
 				<div className="form">
+					<h3>Contact Me</h3>
+					<Divider />
 					<Form
 						form={form}
 						name="basic"
@@ -97,6 +100,14 @@ const ContactSection = () => {
 					.form{
 						width: 50%;
 						margin: auto;
+					}
+					@media (max-width: 767px) {
+						.form {
+							width: 100%;
+						}
+						section{
+							padding: 20px 15px;
+						}
 					}
 				`}
 			</style>

@@ -17,6 +17,7 @@ export const Logo = () => {
 						width: 40px;
 						height: 40px;
 						border-radius: 5px;
+						line-height: 40px;
 						text-align: center;
 						font-size: 30px;
 						font-weight: bold;

@@ -5,11 +5,7 @@ import sgMail from '@sendgrid/mail'
 sgMail.setApiKey("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")
 
 
-type Data = {
-  name: string
-}
-
-export default async (req: NextApiRequest, res: NextApiResponse) => {
+const myFunct = async (req: NextApiRequest, res: NextApiResponse) => {
 
   const { email, subject, message, name } = req.body
   const msg = {
@@ -28,3 +24,5 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     res.status(500).json({ error: 'Error sending email' })
   }
 }
+
+export default myFunct;
