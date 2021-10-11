@@ -6,7 +6,7 @@ import Head from 'next/head';
 const MyHead = () => {
 
 	const defaultDescription = "Welcome to my personal portfolio, do not hesitate to contact me";
-	const imageDefault = "/favicon.png";
+	const imageDefault = "/image-meta.png";
 
 	const urlPage = "https://wilciro.vercel.app/";
 	const nombrePage = "Wilfer Ciro";
@@ -65,7 +65,7 @@ const MyHead = () => {
 			<meta charSet="UTF-8" />
 			<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 			
-			<meta name="author" content="Kiwi Peluditos"/>
+			<meta name="author" content="Wilfer Daniel Ciro Maya"/>
 			<link rel="manifest" href="/manifest.json" />
 			<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 			<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
