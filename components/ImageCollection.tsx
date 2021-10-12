@@ -1,5 +1,6 @@
-
-
+/*
+	Created by Wilfer Daniel Ciro Maya - 2021
+*/
 
 // NextJS and react
 import React, {useState} from 'react';

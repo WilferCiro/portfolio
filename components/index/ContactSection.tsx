@@ -1,3 +1,6 @@
+/*
+	Created by Wilfer Daniel Ciro Maya - 2021
+*/
 
 // React and NextJS
 import React, {useEffect, useState} from 'react';
@@ -14,7 +17,6 @@ import {
 	List,
 	Avatar
 } from 'antd';
-import { theme } from '@/styles/theme';
 import { HomeOutlined, MailFilled, PhoneFilled } from '@ant-design/icons';
 
 // Animations
@@ -22,6 +24,8 @@ import { motion, useAnimation } from 'framer-motion';
 import { animContainer, animItem } from '@/components/tools/animations';
 import { useInView } from 'react-intersection-observer';
 
+// Custom
+import { theme } from '@/styles/theme';
 
 const ContactSection = () => {
 

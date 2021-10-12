@@ -35,7 +35,7 @@ const FloatInfo = () => {
 				>
 					<Space direction="vertical">
 						<Link href="https://github.com/WilferCiro">
-							<a target="_blank">
+							<a target="_blank" rel="noreferrer">
 								<motion.div variants={animItem}>
 									<Tooltip placement="right" title={"Go to GitHub profile"}>
 										<GithubOutlined />
@@ -44,7 +44,7 @@ const FloatInfo = () => {
 							</a>
 						</Link>
 						<Link href="https://gitlab.com/WilferCiro">
-							<a target="_blank">
+							<a target="_blank" rel="noreferrer">
 								<motion.div variants={animItem}>
 									<Tooltip placement="right" title={"Go to GitLab profile"}>
 										<GitlabFilled />
@@ -53,7 +53,7 @@ const FloatInfo = () => {
 							</a>
 						</Link>
 						<Link href="https://www.linkedin.com/in/wilfer-ciro/">
-							<a target="_blank">
+							<a target="_blank" rel="noreferrer">
 								<motion.div variants={animItem}>
 									<Tooltip placement="right" title={"Go to LinkedIn profile"}>
 										<LinkedinFilled />
@@ -62,7 +62,7 @@ const FloatInfo = () => {
 							</a>
 						</Link>
 						<Link href="mailto:wilcirom@gmail.com">
-							<a target="_blank">
+							<a target="_blank" rel="noreferrer">
 								<motion.div variants={animItem}>
 									<Tooltip placement="right" title={"Send me an email"}>
 										<MailFilled />
@@ -71,7 +71,7 @@ const FloatInfo = () => {
 							</a>
 						</Link>
 						<Link href="https://www.instagram.com/wilcirom/">
-							<a target="_blank">
+							<a target="_blank" rel="noreferrer">
 								<motion.div variants={animItem}>
 									<Tooltip placement="right" title={"Go to Instagram profile"}>
 										<InstagramFilled />

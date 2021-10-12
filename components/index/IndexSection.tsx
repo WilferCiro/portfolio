@@ -1,9 +1,10 @@
+/*
+	Created by Wilfer Daniel Ciro Maya - 2021
+*/
 
+// React and nextJS
 import React from 'react';
-
 import Image from 'next/image'
-
-import { theme } from '@/styles/theme'
 
 // Antd
 import {
@@ -11,11 +12,12 @@ import {
 	Row
 } from 'antd';
 
+// Custom
+import { theme } from '@/styles/theme'
+
 // Animations
 import { motion } from 'framer-motion';
 import { animContainer, animItem } from '../tools/animations';
-
-
 
 const IndexSection = () => {
 	return (

@@ -5,10 +5,12 @@
 // NextJs and react
 import Link from 'next/link'
 import React from 'react'
-import { GithubOutlined, GitlabFilled, LinkedinFilled, MailFilled, InstagramFilled } from '@ant-design/icons'
 
 // Antd
 import { Space, Divider, Tooltip } from 'antd'
+import { GithubOutlined, GitlabFilled, LinkedinFilled, MailFilled, InstagramFilled } from '@ant-design/icons'
+
+// Custom
 import { theme } from '@/styles/theme'
 
 const Footer = () => {
@@ -22,35 +24,35 @@ const Footer = () => {
 				<Divider />
 				<Space size="large">
 					<Link href="https://github.com/WilferCiro">
-						<a target="_blank">
+						<a target="_blank" rel="noreferrer">
 							<Tooltip title={"Go to GitHub profile"}>
 								<GithubOutlined />
 							</Tooltip>
 						</a>
 					</Link>
 					<Link href="https://gitlab.com/WilferCiro">
-						<a target="_blank">
+						<a target="_blank" rel="noreferrer">
 							<Tooltip title={"Go to GitLab profile"}>
 								<GitlabFilled />
 							</Tooltip>
 						</a>
 					</Link>
 					<Link href="https://www.linkedin.com/in/wilfer-ciro/">
-						<a target="_blank">
+						<a target="_blank" rel="noreferrer">
 							<Tooltip title={"Go to LinkedIn profile"}>
 								<LinkedinFilled />
 							</Tooltip>
 						</a>
 					</Link>
 					<Link href="mailto:wilcirom@gmail.com">
-						<a target="_blank">
+						<a target="_blank" rel="noreferrer">
 							<Tooltip title={"Send me an email"}>
 								<MailFilled />
 							</Tooltip>
 						</a>
 					</Link>
 					<Link href="https://www.instagram.com/wilcirom/">
-						<a target="_blank">
+						<a target="_blank" rel="noreferrer">
 							<Tooltip title={"Go to Instagram profile"}>
 								<InstagramFilled />
 							</Tooltip>

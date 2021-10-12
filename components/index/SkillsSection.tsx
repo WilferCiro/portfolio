@@ -4,6 +4,7 @@
 
 // NextJS and react
 import React from 'react';
+import dynamic from 'next/dynamic'
 
 // Antd
 import {
@@ -13,7 +14,7 @@ import {
 
 // Custom
 import { theme } from '@/styles/theme';
-import SkillItem from '@/components/index/SkillItem';
+const SkillItem = dynamic(() => import('@/components/index/SkillItem'))
 
 const SkillsSection = () => {
 

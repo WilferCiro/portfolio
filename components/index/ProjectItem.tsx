@@ -1,16 +1,23 @@
+/*
+	Created by Wilfer Daniel Ciro Maya - 2021
+*/
 
 // NextJS and react
 import React, { useEffect } from "react"
+import dynamic from 'next/dynamic'
 
 // Animations
 import { motion, useAnimation } from 'framer-motion';
 import { animContainer, animItem } from '@/components/tools/animations';
 import { useInView } from 'react-intersection-observer';
 
+// Antd
+import { Divider, Tag } from "antd";
+
 // Custom
 import { theme } from "@/styles/theme";
-import ImageCollection from "@/components/ImageCollection";
-import { Divider, Tag } from "antd";
+const ImageCollection = dynamic(() => import('@/components/ImageCollection'))
+
 
 interface Props {
 	children: JSX.Element,

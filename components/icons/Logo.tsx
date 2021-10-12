@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 import { theme } from '@/styles/theme'
 
-export const Logo = () => {
+const Logo = () => {
 
 	return (
 		<>
@@ -34,3 +34,5 @@ export const Logo = () => {
 		</>
 	)
 };
+
+export default Logo;

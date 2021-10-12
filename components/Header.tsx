@@ -4,18 +4,20 @@
 
 // NextJs and react
 import React, { useState } from 'react'
-
+import Link from 'next/link'
+import dynamic from 'next/dynamic'
 
 // Custom
-import { Logo } from './icons/Logo'
 import { theme } from '@/styles/theme'
+const Logo = dynamic(() => import('@/components/icons/Logo'))
 
 // Antd
 import { Button } from 'antd'
 import { MenuOutlined, CloseOutlined } from '@ant-design/icons'
+
+// Animations
 import { motion } from 'framer-motion'
 import { animContainer, animItem } from './tools/animations'
-import Link from 'next/link'
 
 
 const Header = () => {

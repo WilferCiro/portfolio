@@ -1,7 +1,11 @@
+/*
+	Created by Wilfer Daniel Ciro Maya - 2021
+*/
+
+// NextJS and react
 import React from "react";
-
-
 import Head from 'next/head';
+
 
 const MyHead = () => {
 

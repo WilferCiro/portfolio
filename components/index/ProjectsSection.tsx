@@ -5,6 +5,7 @@
 // NextJS and react
 import React from 'react';
 import Link from 'next/link'
+import dynamic from 'next/dynamic'
 
 // Antd
 import {
@@ -13,11 +14,11 @@ import {
 	Button,
 	Tag
 } from 'antd';
+import { GitlabFilled, LinkOutlined, ContactsFilled } from '@ant-design/icons';
 
 // Custom
 import { theme } from '@/styles/theme'
-import { GitlabFilled, LinkOutlined, ContactsFilled } from '@ant-design/icons';
-import ProjectItem from './ProjectItem';
+const ProjectItem = dynamic(() => import('@/components/index/ProjectItem'))
 
 const ProjectsSection = () => {
 
@@ -69,12 +70,12 @@ const ProjectsSection = () => {
 					<>
 						<Space>
 							<Link href="https://kiwipeluditos.com">
-								<a target="_blank">
+								<a target="_blank" rel="noreferrer">
 									<Button icon={<LinkOutlined />} type="primary" ghost>Visit</Button>
 								</a>
 							</Link>
 							<Link href="https://kiwipeluditos.com/ayuda">
-								<a target="_blank">
+								<a target="_blank" rel="noreferrer">
 									<Button icon={<ContactsFilled />} type="primary" ghost>Contact page</Button>
 								</a>
 							</Link>
@@ -85,7 +86,7 @@ const ProjectsSection = () => {
 					<>
 						<Space>
 							<Link href="https://kiwipeluditos.com">
-								<a target="_blank">
+								<a target="_blank" rel="noreferrer">
 									<Button icon={<LinkOutlined />} type="primary" ghost>Visit</Button>
 								</a>
 							</Link>
@@ -97,12 +98,12 @@ const ProjectsSection = () => {
 					<>
 						<Space>
 							<Link href="https://wilferciro.gitlab.io/sintel/">
-								<a target="_blank">
+								<a target="_blank" rel="noreferrer">
 									<Button icon={<LinkOutlined />} type="primary" ghost>Visit</Button>
 								</a>
 							</Link>
 							<Link href="https://gitlab.com/WilferCiro/sintel">
-								<a target="_blank">
+								<a target="_blank" rel="noreferrer">
 									<Button icon={<GitlabFilled />} type="primary" ghost>View Code</Button>
 								</a>
 							</Link>
@@ -113,7 +114,7 @@ const ProjectsSection = () => {
 					<>
 						<Space>
 							<Link href="https://gitlab.com/WilferCiro/microprocesadormips">
-								<a target="_blank">
+								<a target="_blank" rel="noreferrer">
 									<Button icon={<GitlabFilled />} type="primary" ghost>View Code</Button>
 								</a>
 							</Link>
