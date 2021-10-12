@@ -30,6 +30,7 @@ const SkillsSection = () => {
 		{"title" : "HDL", "items" : ["VHDL", "Verilog"], "image" : "/img/index/langs/vhdl.png"},
 		{"title" : "Embedded systems", "items" : ["Arduino", "ESP32", "Raspberry pi"], "image" : "/img/index/langs/arduino.png"},
 		{"title" : "C#", "items" : ["Unity 3D"], "image" : "/img/index/langs/cnumeral.jpg"},
+		{"title" : "Kotlin", "items" : ["Android"], "image" : "/img/index/langs/kotlin.jpg"},
 	]
 
 	return (

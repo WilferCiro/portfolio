@@ -80,7 +80,7 @@ const ProjectItem = ({children, images, tags, right, title, description} : Props
 					position: relative;
 					margin-bottom: 80px;
 					padding: 15px 5px;
-					border-bottom: dashed 2px ${theme.textPrimary};
+					border-bottom: dashed 2px ${theme.textSecundary};
 				}
 				.project h3{
 					color: ${theme.primary};
@@ -99,7 +99,7 @@ const ProjectItem = ({children, images, tags, right, title, description} : Props
 				.description{
 					position: absolute;
 					background: ${theme.bgPrimary};
-					top: 25%;
+					top: 20%;
 					left: 45%;
 					width: 55%;
 					z-index: 2;
@@ -117,6 +117,24 @@ const ProjectItem = ({children, images, tags, right, title, description} : Props
 				}
 
 
+				@media (min-width: 767px) and (max-width: 1100px) {
+					.description{
+						position: static;
+						width: 100%;
+						margin: auto;
+						top: 0px;
+						left: 0px;
+						padding: 15px 10px;
+					}
+					.project {
+						display: flex;
+						justify-content: space-between;
+					}
+					.image{
+						margin: 0px;
+					}
+
+				}
 				@media (max-width: 767px) {
 					.image{
 						width: 100%;
