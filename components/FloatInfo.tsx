@@ -14,7 +14,6 @@ import {
 const LinkAntd = Anchor.Link;
 import {
 	GithubOutlined,
-	FacebookFilled,
 	LinkedinFilled,
 	MailFilled,
 	InstagramFilled,
