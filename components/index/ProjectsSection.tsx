@@ -52,6 +52,8 @@ const ProjectsSection = () => {
 	return (
 		<>
 			<section id="projects">
+				<h3>My projects</h3>
+				<Divider />
 				<div className="project">					
 					<div className="image">
 						<ImageCollection images={imagesKiwi} />
@@ -185,7 +187,9 @@ const ProjectsSection = () => {
 						padding: 10px 20%;
 						align-items: center;
 					}
-
+					h3 {
+						color: ${theme.primary}
+					}
 					.project{
 						width: 90%;
 						margin: auto;
@@ -252,6 +256,7 @@ const ProjectsSection = () => {
 							left: 0px;
 							box-shadow: none;
 							padding: 15px 10px;
+							background: transparent;
 						}
 					}
 				`}

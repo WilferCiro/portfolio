@@ -51,7 +51,7 @@ const Header = () => {
 						position: fixed;
 						top: 0px;
 						left: 0px;
-						z-index: 2;
+						z-index: 20;
 					}
 					ul{
 						margin: 0px;

@@ -17,7 +17,8 @@ import {
 	FacebookFilled,
 	LinkedinFilled,
 	MailFilled,
-	InstagramFilled
+	InstagramFilled,
+	GitlabFilled
 } from '@ant-design/icons';
 
 const FloatInfo = () => {
@@ -32,31 +33,31 @@ const FloatInfo = () => {
 							</Tooltip>
 						</a>
 					</Link>
-					<Link href="https://github.com/WilferCiro">
+					<Link href="https://gitlab.com/WilferCiro">
 						<a target="_blank">
-							<Tooltip placement="right" title={"Go to Facebook profile"}>
-								<FacebookFilled />
+							<Tooltip placement="right" title={"Go to GitLab profile"}>
+								<GitlabFilled />
 							</Tooltip>
 						</a>
 					</Link>
-					<Link href="https://github.com/WilferCiro">
-						<a target="_blank">
-							<Tooltip placement="right" title={"Go to Instagram profile"}>
-								<InstagramFilled />
-							</Tooltip>
-						</a>
-					</Link>
-					<Link href="https://github.com/WilferCiro">
+					<Link href="https://www.linkedin.com/in/wilfer-ciro/">
 						<a target="_blank">
 							<Tooltip placement="right" title={"Go to LinkedIn profile"}>
 								<LinkedinFilled />
 							</Tooltip>
 						</a>
 					</Link>
-					<Link href="https://github.com/WilferCiro">
+					<Link href="mailto:wilcirom@gmail.com">
 						<a target="_blank">
 							<Tooltip placement="right" title={"Send me an email"}>
 								<MailFilled />
+							</Tooltip>
+						</a>
+					</Link>
+					<Link href="https://www.instagram.com/wilcirom/">
+						<a target="_blank">
+							<Tooltip placement="right" title={"Go to Instagram profile"}>
+								<InstagramFilled />
 							</Tooltip>
 						</a>
 					</Link>

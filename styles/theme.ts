@@ -2,14 +2,14 @@
 const isDark = true;
 
 const themeLight = {
-	"primary" : "#800080",
+	"primary" : "#11A8CD",
 	"textPrimary" : "#CCD6F6",
 	"textSecundary" : "#76819D",
-	"bgPrimary" : "#0A192F"
+	"bgPrimary" : "#1E1E1E"
 }
 
 const themeDark = {
-	"primary" : "#800080",
+	"primary" : "#11A8CD",
 	"textPrimary" : "#0A192F",
 	"textSecundary" : "#76819D",
 	"bgPrimary" : "#CCD6F6"

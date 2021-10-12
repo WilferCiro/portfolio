@@ -30,7 +30,7 @@ const IndexSection = () => {
 						<div className="image">
 							<Image
 								alt="My Photo"
-								src={"/img/index/me.jpeg"}
+								src={"/img/index/me.png"}
 								layout={"responsive"}
 								width={350}
 								height={350}
