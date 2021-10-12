@@ -27,6 +27,9 @@ function MyApp({ Component, pageProps }: AppProps) {
 
       <style global jsx>
         {`
+          html {
+            scroll-behavior: smooth;
+          }
           * {
             box-sizing: border-box;
           }

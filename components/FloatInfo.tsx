@@ -86,14 +86,6 @@ const FloatInfo = () => {
 				</motion.div>
 			</div>
 			<div className="anchor">
-
-				<Anchor className={"ul"}>
-					<LinkAntd href="#index" title="Index" />
-					<LinkAntd href="#about" title="About me" />
-					<LinkAntd href="#projects" title="Projects" />
-					<LinkAntd href="#skills" title="Skills" />
-					<LinkAntd href="#contact" title="Contact" />
-				</Anchor>
 			</div>
 
 			<style jsx>

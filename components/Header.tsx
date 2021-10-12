@@ -15,6 +15,7 @@ import { Button } from 'antd'
 import { MenuOutlined, CloseOutlined } from '@ant-design/icons'
 import { motion } from 'framer-motion'
 import { animContainer, animItem } from './tools/animations'
+import Link from 'next/link'
 
 
 const Header = () => {
@@ -38,11 +39,24 @@ const Header = () => {
 						</div>
 						<motion.div variants={animItem}>
 							<ul>
-								<li>About me</li>
-								<li>Projects</li>
-								<li>Skills</li>
-								<li>Contact</li>
-								<li className="resume-btn">Resume</li>
+								<Link href="#index">
+									<a><li>Index</li></a>
+								</Link>
+								<Link href="#about">
+									<a><li>About me</li></a>
+								</Link>
+								<Link href="#projects">
+									<a><li>Projects</li></a>
+								</Link>
+								<Link href="#skills">
+									<a><li>Skills</li></a>
+								</Link>
+								<Link href="#contact">
+									<a><li>Contact</li></a>
+								</Link>
+								<Link href="#resume">
+									<a><li className="resume-btn">Resume</li></a>
+								</Link>
 							</ul>
 						</motion.div>
 					</div>
@@ -78,6 +92,9 @@ const Header = () => {
 					ul li:hover {
 						color: ${theme.primary};
 						cursor: pointer;
+					}
+					a{
+						color: ${theme.textPrimary}
 					}
 					.resume-btn{
 						border: solid 1px ${theme.primary};

@@ -1,6 +1,6 @@
 
 // React and NextJS
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
 // Antd
 import {
@@ -17,11 +17,24 @@ import {
 import { theme } from '@/styles/theme';
 import { HomeOutlined, MailFilled, PhoneFilled } from '@ant-design/icons';
 
+// Animations
+import { motion, useAnimation } from 'framer-motion';
+import { animContainer, animItem } from '@/components/tools/animations';
+import { useInView } from 'react-intersection-observer';
+
 
 const ContactSection = () => {
 
 	const [form] = Form.useForm()
 	const [loading, setLoading] = useState<boolean>(false);
+
+	const controls = useAnimation();
+	const [ref, inView] = useInView();
+	useEffect(() => {
+		if (inView) {
+			controls.start("visible");
+		}
+	}, [controls, inView]);
 
 	const onFinish = async (values: any) => {
 		setLoading(true);
@@ -66,81 +79,92 @@ const ContactSection = () => {
 	return (
 		<>
 			<section id="contact">
-				<div className="form">
-					<h3>Contact Me</h3>
-					<Divider />
-					<Row gutter={[30, 16]}>
-						<Col xs={24} md={12}>
-							<Form
-								form={form}
-								name="basic"
-								layout="vertical"
-								onFinish={onFinish}
-								onFinishFailed={onFinishFailed}
-								autoComplete="off"
-								>
-								<Form.Item
-									label="E mail"
-									name="email"
-									rules={[{ required: true, message: 'Please input your email!' }, { type: "email", message: "Please input a valid email!"}]}
-								>
-									<Input placeholder="Input your email" />
-								</Form.Item>
-								<Form.Item
-									label="Name"
-									name="name"
-									rules={[{ required: true, message: 'Please input your name!' }, {min: 8}]}
-								>
-									<Input placeholder="Input your name" />
-								</Form.Item>
-								<Form.Item
-									label="Subject"
-									name="subject"
-									rules={[{ required: true, message: 'Please input your subject!' }, {min: 8}]}
-								>
-									<Input placeholder="Input your subject" />
-								</Form.Item>
-								<Form.Item
-									label="Message"
-									name="message"
-									rules={[{ required: true, message: 'Please input your Message!' }, {min: 20}]}
-								>
-									<Input.TextArea placeholder="Input your message" />
-								</Form.Item>
+				<motion.div
+					ref={ref}
+					variants={animContainer}
+					initial="hidden"
+					animate={controls}
+				>
+					<div className="form">
+						<h3>Contact Me</h3>
+						<Divider />
+						<Row gutter={[30, 16]}>
+							<Col xs={24} md={12}>
+								<motion.div variants={animItem}>
+									<Form
+										form={form}
+										name="basic"
+										layout="vertical"
+										onFinish={onFinish}
+										onFinishFailed={onFinishFailed}
+										autoComplete="off"
+										>
+										<Form.Item
+											label="E mail"
+											name="email"
+											rules={[{ required: true, message: 'Please input your email!' }, { type: "email", message: "Please input a valid email!"}]}
+										>
+											<Input placeholder="Input your email" />
+										</Form.Item>
+										<Form.Item
+											label="Name"
+											name="name"
+											rules={[{ required: true, message: 'Please input your name!' }, {min: 8}]}
+										>
+											<Input placeholder="Input your name" />
+										</Form.Item>
+										<Form.Item
+											label="Subject"
+											name="subject"
+											rules={[{ required: true, message: 'Please input your subject!' }, {min: 8}]}
+										>
+											<Input placeholder="Input your subject" />
+										</Form.Item>
+										<Form.Item
+											label="Message"
+											name="message"
+											rules={[{ required: true, message: 'Please input your Message!' }, {min: 20}]}
+										>
+											<Input.TextArea placeholder="Input your message" />
+										</Form.Item>
 
-								<Form.Item>
-									<Button type="primary" htmlType="submit" block shape="round" loading={loading}>
-										Submit
-									</Button>
-								</Form.Item>
-							</Form>
-						</Col>
-						<Col xs={24} md={12}>
-							<div className="data-list">
-								<List
-									itemLayout="horizontal"
-									dataSource={data}
-									renderItem={(item: any) => (
-										<List.Item>
-											<List.Item.Meta
-											avatar={<Avatar icon={item.icon} />}
-											title={item.title}
-											description={item.body}
-											/>
-										</List.Item>
-									)}
-								/>
-							</div>
-						</Col>
-					</Row>
-				</div>
+										<Form.Item>
+											<Button type="primary" htmlType="submit" block shape="round" loading={loading}>
+												Submit
+											</Button>
+										</Form.Item>
+									</Form>
+								</motion.div>
+							</Col>
+							<Col xs={24} md={12}>
+								<div className="data-list">
+									<motion.div variants={animItem}>
+										<List
+											itemLayout="horizontal"
+											dataSource={data}
+											renderItem={(item: any) => (
+												<List.Item>
+													<List.Item.Meta
+													avatar={<Avatar icon={item.icon} />}
+													title={item.title}
+													description={item.body}
+													/>
+												</List.Item>
+											)}
+										/>
+									</motion.div>
+								</div>
+							</Col>
+						</Row>
+					</div>
+				</motion.div>
 			</section>
 
 			<style jsx>
 				{`
 					section {
 						min-height: 100vh;
-						padding: 10px 20%;
+						padding: 100px 20% 10px 20%;
 					}
 					h3 {
 						color: ${theme.primary}

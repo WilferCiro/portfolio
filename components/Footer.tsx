@@ -9,47 +9,49 @@ import { GithubOutlined, GitlabFilled, LinkedinFilled, MailFilled, InstagramFill
 
 // Antd
 import { Space, Divider, Tooltip } from 'antd'
+import { theme } from '@/styles/theme'
 
 const Footer = () => {
 
 	return (
 		<>
 			<footer>
+				<Divider />
 				Designed and created by Wilfer Daniel Ciro Maya<br />
 				&copy; 2021
 				<Divider />
 				<Space size="large">
 					<Link href="https://github.com/WilferCiro">
 						<a target="_blank">
-							<Tooltip placement="right" title={"Go to GitHub profile"}>
+							<Tooltip title={"Go to GitHub profile"}>
 								<GithubOutlined />
 							</Tooltip>
 						</a>
 					</Link>
 					<Link href="https://gitlab.com/WilferCiro">
 						<a target="_blank">
-							<Tooltip placement="right" title={"Go to GitLab profile"}>
+							<Tooltip title={"Go to GitLab profile"}>
 								<GitlabFilled />
 							</Tooltip>
 						</a>
 					</Link>
 					<Link href="https://www.linkedin.com/in/wilfer-ciro/">
 						<a target="_blank">
-							<Tooltip placement="right" title={"Go to LinkedIn profile"}>
+							<Tooltip title={"Go to LinkedIn profile"}>
 								<LinkedinFilled />
 							</Tooltip>
 						</a>
 					</Link>
 					<Link href="mailto:wilcirom@gmail.com">
 						<a target="_blank">
-							<Tooltip placement="right" title={"Send me an email"}>
+							<Tooltip title={"Send me an email"}>
 								<MailFilled />
 							</Tooltip>
 						</a>
 					</Link>
 					<Link href="https://www.instagram.com/wilcirom/">
 						<a target="_blank">
-							<Tooltip placement="right" title={"Go to Instagram profile"}>
+							<Tooltip title={"Go to Instagram profile"}>
 								<InstagramFilled />
 							</Tooltip>
 						</a>
@@ -67,8 +69,12 @@ const Footer = () => {
 					}
 					a{
 						font-size: 30px;
+						color: ${theme.primary};
 					}
 					@media (max-width: 767px) {
+						footer{
+							padding: 40px 5%;
+						}
 						a{
 							font-size: 22px;
 						}

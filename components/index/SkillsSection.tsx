@@ -1,136 +1,66 @@
-
+/*
+	Created by Wilfer Daniel Ciro Maya - 2021
+*/
 
 // NextJS and react
 import React from 'react';
-import Image from 'next/image'
 
 // Antd
 import {
-	Row,
-	Col,
-	Card,
-	Carousel,
-	Divider
+	Divider,
+	List
 } from 'antd';
-import { theme } from '@/styles/theme';
-const { Meta } = Card;
 
+// Custom
+import { theme } from '@/styles/theme';
+import SkillItem from '@/components/index/SkillItem';
 
 const SkillsSection = () => {
+
+	const data = [
+		{"title" : "Javascript", "items" : ["React JS", "Next JS", "Express"], "image" : "/img/index/langs/javascript.png"},
+		{"title" : "Python", "items" : ["Django", "FastApi", "Desktop", "OpenCV"], "image" : "/img/index/langs/python.jpg"},
+		{"title" : "Dart", "items" : ["Flutter mobile"], "image" : "/img/index/langs/flutter.png"},
+		{"title" : "C && C++", "items" : ["Desktop", "arduino", "GTK", "QT"], "image" : "/img/index/langs/cpp.png"},
+		{"title" : "GNU/Linux", "items" : ["Ubuntu based", "Arch based", "From scratch"], "image" : "/img/index/langs/linux.jpg"},
+		{"title" : "SQL", "items" : ["MySQL", "PostgreSQL"], "image" : "/img/index/langs/sql.png"},
+		{"title" : "No SQL", "items" : ["MongoDB", "Elastic Search"], "image" : "/img/index/langs/nosql.png"},
+		{"title" : "Development tools", "items" : ["Git", "Asana", "Jira"], "image" : "/img/index/langs/git.jpg"},
+		{"title" : "HDL", "items" : ["VHDL", "Verilog"], "image" : "/img/index/langs/vhdl.png"},
+		{"title" : "Embedded systems", "items" : ["Arduino", "ESP32", "Raspberry pi"], "image" : "/img/index/langs/arduino.png"},
+		{"title" : "C#", "items" : ["Unity 3D"], "image" : "/img/index/langs/cnumeral.jpg"},
+	]
+
 	return (
 		<>
 			<section id="skills">
 				<h3>My skills</h3>
 				<Divider />
-				<Carousel>
-					<div>
-						<Row gutter={[16, 16]}>
-							<Col xs={12} md={6}>
-								<Card
-									style={{ width: "100%", height: "100%" }}
-									cover={<Image width={800} height={400} alt="example" src="/img/index/langs/javascript.png" />}
-								>
-									<Meta title="Javascript" description="React JS, next JS, express" />
-								</Card>
-							</Col>
-							<Col xs={12} md={6}>
-								<Card
-									style={{ width: "100%", height: "100%" }}
-									cover={<Image width={800} height={400} alt="example" src="/img/index/langs/python.jpg" />}
-								>
-									<Meta title="Python" description="Django, FastApi, Desktop, OpenCV" />
-								</Card>
-							</Col>
-							<Col xs={12} md={6}>
-								<Card
-									style={{ width: "100%", height: "100%" }}
-									cover={<Image width={800} height={400} alt="example" src="/img/index/langs/flutter.png" />}
-								>
-									<Meta title="Dart" description="Flutter mobile" />
-								</Card>
-							</Col>
-							<Col xs={12} md={6}>
-								<Card
-									style={{ width: "100%", height: "100%" }}
-									cover={<Image width={800} height={400} alt="example" src="/img/index/langs/cpp.png" />}
-								>
-									<Meta title="C && C++" description="Desktop, arduino, GTK, QT" />
-								</Card>
-							</Col>
-							<Col xs={12} md={6}>
-								<Card
-									style={{ width: "100%", height: "100%" }}
-									cover={<Image width={800} height={400} alt="example" src="/img/index/langs/linux.jpg" />}
-								>
-									<Meta title="GNU/Linux" description="Ubuntu based, Arch based" />
-								</Card>
-							</Col>
-							<Col xs={12} md={6}>
-								<Card
-									style={{ width: "100%", height: "100%" }}
-									cover={<Image width={800} height={400} alt="example" src="/img/index/langs/sql.png" />}
-								>
-									<Meta title="SQL" description="MySQL, PostgreSQL" />
-								</Card>
-							</Col>
-							<Col xs={12} md={6}>
-								<Card
-									style={{ width: "100%", height: "100%" }}
-									cover={<Image width={800} height={400} alt="example" src="/img/index/langs/nosql.png" />}
-								>
-									<Meta title="No SQL" description="Mongo DB, Elastic Search" />
-								</Card>
-							</Col>
-							<Col xs={12} md={6}>
-								<Card
-									style={{ width: "100%", height: "100%" }}
-									cover={<Image width={800} height={400} alt="example" src="/img/index/langs/git.jpg" />}
-								>
-									<Meta title="Develop tools" description="Git, Asana, Jira" />
-								</Card>
-							</Col>
-						</Row>
-					</div>
 
-					<div>
-
-						<Row gutter={[16, 16]}>
-							<Col xs={12} md={6}>
-								<Card
-									style={{ width: "100%", height: "100%" }}
-									cover={<Image width={800} height={400} alt="example" src="/img/index/langs/vhdl.png" />}
-								>
-									<Meta title="HDL" description="VHDL, Verilog" />
-								</Card>
-							</Col>
-							<Col xs={12} md={6}>
-								<Card
-									style={{ width: "100%", height: "100%" }}
-									cover={<Image width={800} height={400} alt="example" src="/img/index/langs/arduino.png" />}
-								>
-									<Meta title="Embedded systems" description="Arduino, ESP32, raspberry pi" />
-								</Card>
-							</Col>
-							<Col xs={12} md={6}>
-								<Card
-									style={{ width: "100%", height: "100%" }}
-									cover={<Image width={800} height={400} alt="example" src="/img/index/langs/cnumeral.jpg" />}
-								>
-									<Meta title="C#" description="Unity 3D" />
-								</Card>
-							</Col>
-						</Row>
-
-					</div>
-				</Carousel>
-
+				<List
+					grid={{
+						gutter: 15,
+						xs: 2,
+						sm: 2,
+						md: 3,
+						lg: 3,
+						xl: 4,
+						xxl: 4,
+					}}
+					dataSource={data}
+					renderItem={item => (
+						<List.Item>
+							<SkillItem {...item} />
+						</List.Item>
+					)}
+				/>
 			</section>
 
 			<style jsx>
 				{`
 					section {
 						min-height: 100vh;
-						padding: 10px 20%;
+						padding: 100px 20% 10px 20%;
 						align-items: center;
 						margin: 40px auto;
 					}
@@ -138,9 +68,6 @@ const SkillsSection = () => {
 						color: ${theme.primary}
 					}
 					@media (max-width: 767px) {
-						.form {
-							width: 100%;
-						}
 						section{
 							padding: 20px 15px;
 						}

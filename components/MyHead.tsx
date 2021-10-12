@@ -43,8 +43,8 @@ const MyHead = () => {
 				"primaryImageOfPage": {
 					"@id": urlPage + "#primaryimage"
 				},
-				"datePublished": "2021-03-29T02:30:36+00:00",
-				"dateModified": "2021-03-28T18:57:03+00:00",
+				"datePublished": "2021-10-10T02:30:36+00:00",
+				"dateModified": "2021-10-10T18:57:03+00:00",
 				"inLanguage": "es-CO",
 				"potentialAction": [
 					{
@@ -71,7 +71,7 @@ const MyHead = () => {
 			<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
 			<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 
-			<meta name="theme-color" content="#800080" />
+			<meta name="theme-color" content="#11A8CD" />
 
 			<meta httpEquiv="Expires" content="0"/>
 			<meta httpEquiv="Last-Modified" content="0"/>
