@@ -20,48 +20,70 @@ import {
 	GitlabFilled
 } from '@ant-design/icons';
 
+// Animations
+import { motion } from 'framer-motion';
+import { animContainer, animItem } from '@/components/tools/animations';
+
 const FloatInfo = () => {
 	return (
 		<>
 			<div className="social-network">
-				<Space direction="vertical">
-					<Link href="https://github.com/WilferCiro">
-						<a target="_blank">
-							<Tooltip placement="right" title={"Go to GitHub profile"}>
-								<GithubOutlined />
-							</Tooltip>
-						</a>
-					</Link>
-					<Link href="https://gitlab.com/WilferCiro">
-						<a target="_blank">
-							<Tooltip placement="right" title={"Go to GitLab profile"}>
-								<GitlabFilled />
-							</Tooltip>
-						</a>
-					</Link>
-					<Link href="https://www.linkedin.com/in/wilfer-ciro/">
-						<a target="_blank">
-							<Tooltip placement="right" title={"Go to LinkedIn profile"}>
-								<LinkedinFilled />
-							</Tooltip>
-						</a>
-					</Link>
-					<Link href="mailto:wilcirom@gmail.com">
-						<a target="_blank">
-							<Tooltip placement="right" title={"Send me an email"}>
-								<MailFilled />
-							</Tooltip>
-						</a>
-					</Link>
-					<Link href="https://www.instagram.com/wilcirom/">
-						<a target="_blank">
-							<Tooltip placement="right" title={"Go to Instagram profile"}>
-								<InstagramFilled />
-							</Tooltip>
-						</a>
-					</Link>
-					<div className="line" />
-				</Space>
+				<motion.div
+					variants={animContainer}
+					initial="hidden"
+					animate="visible"
+				>
+					<Space direction="vertical">
+						<Link href="https://github.com/WilferCiro">
+							<a target="_blank">
+								<motion.div variants={animItem}>
+									<Tooltip placement="right" title={"Go to GitHub profile"}>
+										<GithubOutlined />
+									</Tooltip>
+								</motion.div>
+							</a>
+						</Link>
+						<Link href="https://gitlab.com/WilferCiro">
+							<a target="_blank">
+								<motion.div variants={animItem}>
+									<Tooltip placement="right" title={"Go to GitLab profile"}>
+										<GitlabFilled />
+									</Tooltip>
+								</motion.div>
+							</a>
+						</Link>
+						<Link href="https://www.linkedin.com/in/wilfer-ciro/">
+							<a target="_blank">
+								<motion.div variants={animItem}>
+									<Tooltip placement="right" title={"Go to LinkedIn profile"}>
+										<LinkedinFilled />
+									</Tooltip>
+								</motion.div>
+							</a>
+						</Link>
+						<Link href="mailto:wilcirom@gmail.com">
+							<a target="_blank">
+								<motion.div variants={animItem}>
+									<Tooltip placement="right" title={"Send me an email"}>
+										<MailFilled />
+									</Tooltip>
+								</motion.div>
+							</a>
+						</Link>
+						<Link href="https://www.instagram.com/wilcirom/">
+							<a target="_blank">
+								<motion.div variants={animItem}>
+									<Tooltip placement="right" title={"Go to Instagram profile"}>
+										<InstagramFilled />
+									</Tooltip>
+								</motion.div>
+							</a>
+						</Link>
+						<motion.div variants={animItem}>
+							<div className="line" />
+						</motion.div>
+					</Space>
+				</motion.div>
 			</div>
 			<div className="anchor">
 

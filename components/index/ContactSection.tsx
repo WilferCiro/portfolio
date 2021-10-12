@@ -70,7 +70,7 @@ const ContactSection = () => {
 					<h3>Contact Me</h3>
 					<Divider />
 					<Row gutter={[30, 16]}>
-						<Col span={12}>
+						<Col xs={24} md={12}>
 							<Form
 								form={form}
 								name="basic"
@@ -115,7 +115,7 @@ const ContactSection = () => {
 								</Form.Item>
 							</Form>
 						</Col>
-						<Col span={12}>
+						<Col xs={24} md={12}>
 							<div className="data-list">
 								<List
 									itemLayout="horizontal"
@@ -139,7 +139,7 @@ const ContactSection = () => {
 			<style jsx>
 				{`
 					section {
-						height: 100vh;
+						min-height: 100vh;
 						padding: 10px 20%;
 					}
 					h3 {

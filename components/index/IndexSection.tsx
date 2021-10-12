@@ -11,33 +11,49 @@ import {
 	Row
 } from 'antd';
 
+// Animations
+import { motion } from 'framer-motion';
+import { animContainer, animItem } from '../tools/animations';
+
+
+
 const IndexSection = () => {
 	return (
 		<>
 			<section id="index">
-				<Row align="middle" justify="center">
-					<Col xs={24} md={15}>
-						<div className="data">
-							<div>
-								<p className="my-name">Hi, my name is</p>
-								<h1>Wilfer Daniel Ciro Maya</h1>
-								<h2>Full stack developer</h2>
-								<p>Electronic Engineer than builds solutions for the world</p>
+				<motion.div
+					variants={animContainer}
+					initial="hidden"
+					animate="visible"
+				>
+					<Row align="middle" justify="center">
+						<Col xs={24} md={15}>
+							<div className="data">
+								<motion.div variants={animItem}>
+									<div>
+										<p className="my-name">Hi, my name is</p>
+										<h1>Wilfer Daniel Ciro Maya</h1>
+										<h2>Full stack developer</h2>
+										<p>Electronic Engineer than builds solutions for the world</p>
+									</div>
+								</motion.div>
 							</div>
-						</div>
-					</Col>
-					<Col xs={24} md={9}>
-						<div className="image">
-							<Image
-								alt="My Photo"
-								src={"/img/index/me.png"}
-								layout={"responsive"}
-								width={350}
-								height={350}
-							/>
-						</div>
-					</Col>
-				</Row>
+						</Col>
+						<Col xs={24} md={9}>
+							<div className="image">
+								<motion.div variants={animItem}>
+									<Image
+										alt="My Photo"
+										src={"/img/index/me.png"}
+										layout={"responsive"}
+										width={350}
+										height={350}
+									/>
+								</motion.div>
+							</div>
+						</Col>
+					</Row>
+				</motion.div>
 
 			</section>
 

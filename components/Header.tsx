@@ -13,6 +13,8 @@ import { theme } from '@/styles/theme'
 // Antd
 import { Button } from 'antd'
 import { MenuOutlined, CloseOutlined } from '@ant-design/icons'
+import { motion } from 'framer-motion'
+import { animContainer, animItem } from './tools/animations'
 
 
 const Header = () => {
@@ -21,24 +23,34 @@ const Header = () => {
 
 	return (
 		<>
-			<header>
-				<Logo />
-				<div className={showMenu ? "menu menu-show" : "menu"}>
-					<div className="show-mobile">
+			<motion.div
+				variants={animContainer}
+				initial="hidden"
+				animate="visible"
+			>
+				<header>
+					<motion.div variants={animItem}>
 						<Logo />
+					</motion.div>
+					<div className={showMenu ? "menu menu-show" : "menu"}>
+						<div className="show-mobile">
+							<Logo />
+						</div>
+						<motion.div variants={animItem}>
+							<ul>
+								<li>About me</li>
+								<li>Projects</li>
+								<li>Skills</li>
+								<li>Contact</li>
+								<li className="resume-btn">Resume</li>
+							</ul>
+						</motion.div>
 					</div>
-					<ul>
-						<li>About me</li>
-						<li>Projects</li>
-						<li>Skills</li>
-						<li>Contact</li>
-						<li className="resume-btn">Resume</li>
-					</ul>
-				</div>
-				<div className="btn">
-					<Button icon={showMenu ? <CloseOutlined /> : <MenuOutlined /> } shape="circle" size="large" onClick={e=> setShowMenu(!showMenu)}></Button>
-				</div>
-			</header>
+					<div className="btn">
+						<Button icon={showMenu ? <CloseOutlined /> : <MenuOutlined /> } shape="circle" size="large" onClick={e=> setShowMenu(!showMenu)}></Button>
+					</div>
+				</header>
+			</motion.div>
 
 			<style jsx>
 				{`
@@ -85,6 +97,7 @@ const Header = () => {
 					@media (max-width: 767px) {
 						.show-mobile{
 							display: block;
+							margin-left: 25px;
 						}
 						.btn{
 							display: block;
