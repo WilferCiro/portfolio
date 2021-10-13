@@ -69,7 +69,7 @@ const ParticlesBG = () => {
 							color: "#11A8CD",
 							distance: 150,
 							enable: true,
-							opacity: 0.1,
+							opacity: 0.2,
 							width: 1,
 						},
 						collisions: {
@@ -91,7 +91,7 @@ const ParticlesBG = () => {
 							value: 100,
 						},
 						opacity: {
-							value: 0.1,
+							value: 0.2,
 						},
 						shape: {
 							type: "circle",
@@ -114,7 +114,6 @@ const ParticlesBG = () => {
 					z-index: -1;
 					width: 100%;
 					height: 70vh;
-					filter: blur(1px);
 				}
 				@media (max-width: 767px) {		
 					.particles{
