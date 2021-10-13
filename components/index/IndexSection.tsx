@@ -17,9 +17,15 @@ import { theme } from '@/styles/theme'
 // Animations
 import { motion } from 'framer-motion';
 import { animContainer, animItem } from '../tools/animations';
-import MePhoto from './MePhoto';
+import MePhoto from '@/components/index/MePhoto';
+
+// Translate
+import useTranslation from "next-translate/useTranslation"
 
 const IndexSection = () => {
+
+	const { t } = useTranslation("home")
+	
 	return (
 		<>
 			<section id="index">
@@ -33,10 +39,10 @@ const IndexSection = () => {
 							<div className="data">
 								<motion.div variants={animItem}>
 									<div>
-										<p className="my-name">Hi, my name is</p>
+										<p className="my-name">{t("index_my-name")}</p>
 										<h1>Wilfer Daniel Ciro Maya</h1>
-										<h2>Full stack developer</h2>
-										<p>Electronic Engineer that builds solutions for the world</p>
+										<h2>{t("index_subtitle")}</h2>
+										<p>{t("index_description")}</p>
 									</div>
 								</motion.div>
 							</div>

@@ -19,8 +19,13 @@ import { MenuOutlined, CloseOutlined } from '@ant-design/icons'
 import { motion } from 'framer-motion'
 import { animContainer, animItem } from './tools/animations'
 
+// Translate
+import useTranslation from 'next-translate/useTranslation'
+
 
 const Header = () => {
+
+	const { t } = useTranslation("home")
 
 	const [showMenu, setShowMenu] = useState<boolean>(false);
 
@@ -42,22 +47,22 @@ const Header = () => {
 						<motion.div variants={animItem}>
 							<ul>
 								<Link href="#index">
-									<a><li>Index</li></a>
+									<a><li>{t("header_index")}</li></a>
 								</Link>
 								<Link href="#about">
-									<a><li>About me</li></a>
+									<a><li>{t("header_about")}</li></a>
 								</Link>
 								<Link href="#projects">
-									<a><li>Projects</li></a>
+									<a><li>{t("header_projects")}</li></a>
 								</Link>
 								<Link href="#skills">
-									<a><li>Skills</li></a>
+									<a><li>{t("header_skills")}</li></a>
 								</Link>
 								<Link href="#contact">
-									<a><li>Contact</li></a>
+									<a><li>{t("header_contact")}</li></a>
 								</Link>
 								<Link href="https://drive.google.com/file/d/1809hgJ9cdoK8OD85Sf3bCjVFKFOgx-7f/view?usp=sharing">
-									<a rel="noreferrer" target="_blank"><li className="resume-btn">Resume</li></a>
+									<a rel="noreferrer" target="_blank"><li className="resume-btn">{t("header_resume")}</li></a>
 								</Link>
 							</ul>
 						</motion.div>

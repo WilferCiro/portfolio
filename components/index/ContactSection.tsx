@@ -27,8 +27,10 @@ import { useInView } from 'react-intersection-observer';
 
 // Custom
 import { theme } from '@/styles/theme';
+import useTranslation from 'next-translate/useTranslation';
 
 const ContactSection = () => {
+	const { t } = useTranslation("home")
 
 	const [form] = Form.useForm()
 	const [loading, setLoading] = useState<boolean>(false);
@@ -65,17 +67,17 @@ const ContactSection = () => {
 
 	const data = [
 		{
-			title: 'Email',
+			title: t("email"),
 			body: "wilcirom@gmail.com",
 			icon: <MailFilled />
 		},
 		{
-			title: 'Phone',
+			title: t("phone"),
 			body: "3173587462",
 			icon: <PhoneFilled />
 		},
 		{
-			title: 'Address',
+			title: t("address"),
 			body: "Colombia, Quimbaya Quindío, ciudadela mz 20 # 28",
 			icon: <HomeOutlined />
 		}
@@ -91,7 +93,7 @@ const ContactSection = () => {
 					animate={controls}
 				>
 					<div className="form">
-						<h3>Contact Me</h3>
+						<h3>{t("contact_title")}</h3>
 						<Divider />
 						<Card>
 							<Row gutter={[30, 16]}>
@@ -106,37 +108,37 @@ const ContactSection = () => {
 											autoComplete="off"
 											>
 											<Form.Item
-												label="E mail"
+												label={t("email")}
 												name="email"
-												rules={[{ required: true, message: 'Please input your email!' }, { type: "email", message: "Please input a valid email!"}]}
+												rules={[{ required: true, message: t("contact_error-email") }, { type: "email"}]}
 											>
-												<Input placeholder="Input your email" />
+												<Input placeholder={t("contact_input-email")} />
 											</Form.Item>
 											<Form.Item
-												label="Name"
+												label={t("name")}
 												name="name"
-												rules={[{ required: true, message: 'Please input your name!' }, {min: 8}]}
+												rules={[{ required: true, message: t("contact_error-name") }, {min: 8}]}
 											>
-												<Input placeholder="Input your name" />
+												<Input placeholder={t("contact_input-name")} />
 											</Form.Item>
 											<Form.Item
-												label="Subject"
+												label={t("subject")}
 												name="subject"
-												rules={[{ required: true, message: 'Please input your subject!' }, {min: 8}]}
+												rules={[{ required: true, message: t("contact_error-subject") }, {min: 8}]}
 											>
-												<Input placeholder="Input your subject" />
+												<Input placeholder={t("contact_input-subject")} />
 											</Form.Item>
 											<Form.Item
-												label="Message"
+												label={t("message")}
 												name="message"
-												rules={[{ required: true, message: 'Please input your Message!' }, {min: 20}]}
+												rules={[{ required: true, message: t("contact_error-message") }, {min: 20}]}
 											>
-												<Input.TextArea placeholder="Input your message" />
+												<Input.TextArea placeholder={t("contact_input-message")} />
 											</Form.Item>
 
 											<Form.Item>
 												<Button type="primary" htmlType="submit" block shape="round" loading={loading}>
-													Submit
+													{t("submit")}
 												</Button>
 											</Form.Item>
 										</Form>

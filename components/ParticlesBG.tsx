@@ -12,13 +12,13 @@ import Particles from 'react-tsparticles'
 const ParticlesBG = () => {
 
 	const particlesInit = (main: any) => {
-	  console.log(main);
+	  //console.log(main);
   
 	  // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
 	};
   
 	const particlesLoaded = (container: any) => {
-	  console.log(container);
+	  //console.log(container);
 	};
 
 	return (

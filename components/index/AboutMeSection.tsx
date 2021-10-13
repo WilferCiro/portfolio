@@ -16,7 +16,13 @@ import { motion, useAnimation } from 'framer-motion';
 import { animContainer, animItem } from '@/components/tools/animations';
 import { useInView } from 'react-intersection-observer';
 
+// Translate
+import useTranslation from 'next-translate/useTranslation';
+
 const AboutMeSection = () => {
+
+	const { t } = useTranslation("home")
+	
 	const controls = useAnimation();
 	const [ref, inView] = useInView();
 	useEffect(() => {
@@ -46,7 +52,7 @@ const AboutMeSection = () => {
 					initial="hidden"
 					animate={controls}
 				>
-					<h3>About Me</h3>
+					<h3>{t("about_about-me")}</h3>
 					<Divider />
 					<Row gutter={[32, 16]} align="middle">
 						<Col xs={24} md={9}>
@@ -61,23 +67,23 @@ const AboutMeSection = () => {
 									/>
 								</motion.div>
 							</div>
-							<p>I am a person willing to learn new things every day, responsible and very passionate about programming.</p>
+							<p>{t("about_description")}</p>
 							<p>
-								<b>Profession: </b>Electronic engineer and fullstack developer<br />
-								<b>Spanish: </b>Native<br />
-								<b>English: </b>B1<br />
-								<b>Age: </b>{calculate_age()}<br />
+								<b>{t("about_title_profession")}: </b>{t("about_profession")}<br />
+								<b>{t("about_title_spanish")}: </b>{t("about_spanish")}<br />
+								<b>{t("about_title_english")}: </b>B1<br />
+								<b>{t("about_title_age")}: </b>{calculate_age()}<br />
 							</p>
 						</Col>
 						<Col xs={23} md={15}>
 							<motion.div variants={animItem}>
 								<Timeline mode="left">
-									<Timeline.Item label="1998-05-29">My birth</Timeline.Item>
-									<Timeline.Item color="green" label="2013-05-05">Start studying programming</Timeline.Item>
-									<Timeline.Item color="green" label="2014-12-12">Finish high school</Timeline.Item>
-									<Timeline.Item color="purple" label="2020-05-15">I started my first job as a fullstack Junior developer </Timeline.Item>
-									<Timeline.Item color="green" label="2020-08-10">I finished my university degree</Timeline.Item>
-									<Timeline.Item color="purple" label="2021-08-15">I started my second job as fullstack at Negozia CF</Timeline.Item>
+									<Timeline.Item label="1998-05-29">{t("about_my-birth")}</Timeline.Item>
+									<Timeline.Item color="green" label="2013-05-05">{t("about_start-programming")}</Timeline.Item>
+									<Timeline.Item color="green" label="2014-12-12">{t("about_finish-high-school")}</Timeline.Item>
+									<Timeline.Item color="purple" label="2020-05-15">{t("about_first-job")}</Timeline.Item>
+									<Timeline.Item color="green" label="2020-08-10">{t("about_finish-university")}</Timeline.Item>
+									<Timeline.Item color="purple" label="2021-08-15">{t("about_second-job")}</Timeline.Item>
 								</Timeline>
 							</motion.div>
 						</Col>

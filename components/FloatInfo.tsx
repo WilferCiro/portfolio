@@ -8,7 +8,8 @@ import { theme } from '@/styles/theme'
 import {
 	Space,
 	Tooltip,
-	Anchor
+	Anchor,
+	Button
 } from 'antd';
 // Antd
 const LinkAntd = Anchor.Link;
@@ -17,14 +18,21 @@ import {
 	LinkedinFilled,
 	MailFilled,
 	InstagramFilled,
-	GitlabFilled
+	GitlabFilled,
+	TranslationOutlined
 } from '@ant-design/icons';
 
 // Animations
 import { motion } from 'framer-motion';
 import { animContainer, animItem } from '@/components/tools/animations';
 
+// Translate
+import useTranslation from 'next-translate/useTranslation';
+
 const FloatInfo = () => {
+
+	const { t, lang } = useTranslation("home")
+	
 	return (
 		<>
 			<div className="social-network">
@@ -37,7 +45,7 @@ const FloatInfo = () => {
 						<Link href="https://github.com/WilferCiro">
 							<a target="_blank" rel="noreferrer">
 								<motion.div variants={animItem}>
-									<Tooltip placement="right" title={"Go to GitHub profile"}>
+									<Tooltip placement="right" title={t("goto_github")}>
 										<GithubOutlined />
 									</Tooltip>
 								</motion.div>
@@ -46,7 +54,7 @@ const FloatInfo = () => {
 						<Link href="https://gitlab.com/WilferCiro">
 							<a target="_blank" rel="noreferrer">
 								<motion.div variants={animItem}>
-									<Tooltip placement="right" title={"Go to GitLab profile"}>
+									<Tooltip placement="right" title={t("goto_gitlab")}>
 										<GitlabFilled />
 									</Tooltip>
 								</motion.div>
@@ -55,7 +63,7 @@ const FloatInfo = () => {
 						<Link href="https://www.linkedin.com/in/wilfer-ciro/">
 							<a target="_blank" rel="noreferrer">
 								<motion.div variants={animItem}>
-									<Tooltip placement="right" title={"Go to LinkedIn profile"}>
+									<Tooltip placement="right" title={t("goto_linkedin")}>
 										<LinkedinFilled />
 									</Tooltip>
 								</motion.div>
@@ -64,7 +72,7 @@ const FloatInfo = () => {
 						<Link href="mailto:wilcirom@gmail.com">
 							<a target="_blank" rel="noreferrer">
 								<motion.div variants={animItem}>
-									<Tooltip placement="right" title={"Send me an email"}>
+									<Tooltip placement="right" title={t("goto_mail")}>
 										<MailFilled />
 									</Tooltip>
 								</motion.div>
@@ -73,7 +81,7 @@ const FloatInfo = () => {
 						<Link href="https://www.instagram.com/wilcirom/">
 							<a target="_blank" rel="noreferrer">
 								<motion.div variants={animItem}>
-									<Tooltip placement="right" title={"Go to Instagram profile"}>
+									<Tooltip placement="right" title={t("goto_instagram")}>
 										<InstagramFilled />
 									</Tooltip>
 								</motion.div>
@@ -86,6 +94,20 @@ const FloatInfo = () => {
 				</motion.div>
 			</div>
 			<div className="anchor">
+				{
+					lang === "es" ? 
+					<Link href="/en">
+						<a>
+							<Button type="link" icon={<TranslationOutlined />}>Ver en inglés</Button>
+						</a>
+					</Link>
+					:
+					<Link href="/es">
+						<a>
+							<Button type="link" icon={<TranslationOutlined />}>View in spanish</Button>
+						</a>
+					</Link>
+				}
 			</div>
 
 			<style jsx>
@@ -110,12 +132,16 @@ const FloatInfo = () => {
 					}
 					.anchor{
 						position: fixed;
-						right: 5%;
-						bottom: 40%;
+						right: 1%;
+						bottom: 1%;
 						color: ${theme.textPrimary};
+						background: ${theme.textPrimary};
 					}
 					@media (max-width: 767px) {
 						.social-network, .anchor{
+							display: none;
+						}
+						.anchor{
 							display: none;
 						}
 					}

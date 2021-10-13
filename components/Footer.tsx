@@ -7,13 +7,18 @@ import Link from 'next/link'
 import React from 'react'
 
 // Antd
-import { Space, Divider, Tooltip } from 'antd'
-import { GithubOutlined, GitlabFilled, LinkedinFilled, MailFilled, InstagramFilled } from '@ant-design/icons'
+import { Space, Divider, Tooltip, Button } from 'antd'
+import { GithubOutlined, GitlabFilled, LinkedinFilled, MailFilled, InstagramFilled, TranslationOutlined } from '@ant-design/icons'
 
 // Custom
 import { theme } from '@/styles/theme'
 
+// Translation
+import useTranslation from 'next-translate/useTranslation'
+
 const Footer = () => {
+
+	const { t, lang } = useTranslation("home")
 
 	const today = new Date();
 	const age_now = today.getFullYear()
@@ -22,47 +27,63 @@ const Footer = () => {
 		<>
 			<footer>
 				<Divider />
-				Designed and created by Wilfer Daniel Ciro Maya<br />
+				{t("footer_developed")} Wilfer Daniel Ciro Maya<br />
 				&copy; {age_now}
 				<Divider />
 				<Space size="large">
 					<Link href="https://github.com/WilferCiro">
 						<a target="_blank" rel="noreferrer">
-							<Tooltip title={"Go to GitHub profile"}>
+							<Tooltip title={t("goto_github")}>
 								<GithubOutlined />
 							</Tooltip>
 						</a>
 					</Link>
 					<Link href="https://gitlab.com/WilferCiro">
 						<a target="_blank" rel="noreferrer">
-							<Tooltip title={"Go to GitLab profile"}>
+							<Tooltip title={t("goto_gitlab")}>
 								<GitlabFilled />
 							</Tooltip>
 						</a>
 					</Link>
 					<Link href="https://www.linkedin.com/in/wilfer-ciro/">
 						<a target="_blank" rel="noreferrer">
-							<Tooltip title={"Go to LinkedIn profile"}>
+							<Tooltip title={t("goto_linkedin")}>
 								<LinkedinFilled />
 							</Tooltip>
 						</a>
 					</Link>
 					<Link href="mailto:wilcirom@gmail.com">
 						<a target="_blank" rel="noreferrer">
-							<Tooltip title={"Send me an email"}>
+							<Tooltip title={t("goto_mail")}>
 								<MailFilled />
 							</Tooltip>
 						</a>
 					</Link>
 					<Link href="https://www.instagram.com/wilcirom/">
 						<a target="_blank" rel="noreferrer">
-							<Tooltip title={"Go to Instagram profile"}>
+							<Tooltip title={t("goto_instagram")}>
 								<InstagramFilled />
 							</Tooltip>
 						</a>
 					</Link>
-					<div className="line" />
 				</Space>
+					
+				<div>
+					{
+						lang === "es" ? 
+						<Link href="/en">
+							<a>
+								<Button type="link" icon={<TranslationOutlined />}>Ver en inglés</Button>
+							</a>
+						</Link>
+						:
+						<Link href="/es">
+							<a>
+								<Button type="link" icon={<TranslationOutlined />}>View in spanish</Button>
+							</a>
+						</Link>
+					}
+				</div>
 			</footer>
 
 			<style jsx>

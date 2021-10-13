@@ -1,0 +1,8 @@
+{
+	"locales": ["en", "es"], 
+	"defaultLocale": "en",
+	"pages": {
+		"/": ["home"],
+		"/404": ["404"]
+	}
+}

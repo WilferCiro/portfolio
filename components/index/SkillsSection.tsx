@@ -17,19 +17,23 @@ import {
 import { theme } from '@/styles/theme';
 const SkillItem = dynamic(() => import('@/components/index/SkillItem'))
 
+// Translate
+import useTranslation from 'next-translate/useTranslation'
+
 const SkillsSection = () => {
+	const { t } = useTranslation("home")
 
 	const data = [
 		{"title" : "Javascript", "items" : ["React JS", "Next JS", "Express"], "image" : "/img/index/langs/javascript.webp"},
-		{"title" : "Python", "items" : ["Django", "FastApi", "Desktop", "OpenCV"], "image" : "/img/index/langs/python.webp"},
+		{"title" : "Python", "items" : ["Django", "FastApi", t("skills_desktop"), "OpenCV"], "image" : "/img/index/langs/python.webp"},
 		{"title" : "Dart", "items" : ["Flutter mobile"], "image" : "/img/index/langs/flutter.webp"},
 		{"title" : "C && C++", "items" : ["Desktop", "arduino", "GTK", "QT"], "image" : "/img/index/langs/cpp.webp"},
 		{"title" : "GNU/Linux", "items" : ["Ubuntu based", "Arch based", "From scratch"], "image" : "/img/index/langs/linux.webp"},
 		{"title" : "SQL", "items" : ["MySQL", "PostgreSQL"], "image" : "/img/index/langs/sql.webp"},
 		{"title" : "No SQL", "items" : ["MongoDB", "Elastic Search"], "image" : "/img/index/langs/nosql.webp"},
-		{"title" : "Development tools", "items" : ["Git", "Asana", "Jira"], "image" : "/img/index/langs/git.webp"},
+		{"title" : t("skills_tools"), "items" : ["Git", "Asana", "Jira"], "image" : "/img/index/langs/git.webp"},
 		{"title" : "HDL", "items" : ["VHDL", "Verilog"], "image" : "/img/index/langs/vhdl.webp"},
-		{"title" : "Embedded systems", "items" : ["Arduino", "ESP32", "Raspberry pi"], "image" : "/img/index/langs/arduino.webp"},
+		{"title" : t("skills_embedded"), "items" : ["Arduino", "ESP32", "Raspberry pi"], "image" : "/img/index/langs/arduino.webp"},
 		{"title" : "C#", "items" : ["Unity 3D"], "image" : "/img/index/langs/cnumeral.webp"},
 		{"title" : "Kotlin", "items" : ["Android"], "image" : "/img/index/langs/kotlin.webp"},
 	]
@@ -37,7 +41,7 @@ const SkillsSection = () => {
 	return (
 		<>
 			<section id="skills">
-				<h3>My skills</h3>
+				<h3>{t("skills_title")}</h3>
 				<Divider />
 				<Card>
 					<List
