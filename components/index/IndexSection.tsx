@@ -18,6 +18,7 @@ import { theme } from '@/styles/theme'
 // Animations
 import { motion } from 'framer-motion';
 import { animContainer, animItem } from '../tools/animations';
+import MePhoto from './MePhoto';
 
 const IndexSection = () => {
 	return (
@@ -29,28 +30,22 @@ const IndexSection = () => {
 					animate="visible"
 				>
 					<Row align="middle" justify="center">
-						<Col xs={24} md={15}>
+						<Col xs={24} md={14}>
 							<div className="data">
 								<motion.div variants={animItem}>
 									<div>
 										<p className="my-name">Hi, my name is</p>
 										<h1>Wilfer Daniel Ciro Maya</h1>
 										<h2>Full stack developer</h2>
-										<p>Electronic Engineer than builds solutions for the world</p>
+										<p>Electronic Engineer that builds solutions for the world</p>
 									</div>
 								</motion.div>
 							</div>
 						</Col>
-						<Col xs={24} md={9}>
+						<Col xs={24} md={10}>
 							<div className="image">
 								<motion.div variants={animItem}>
-									<Image
-										alt="My Photo"
-										src={"/img/index/me.webp"}
-										layout={"responsive"}
-										width={350}
-										height={350}
-									/>
+									<MePhoto />
 								</motion.div>
 							</div>
 						</Col>
@@ -73,6 +68,7 @@ const IndexSection = () => {
 					.my-name{
 						color: ${theme.primary};
 						margin: 0px;
+						font-size: 20px;
 					}
 					h1{
 						color: ${theme.textPrimary};
@@ -83,10 +79,6 @@ const IndexSection = () => {
 						color: ${theme.textSecundary};
 						font-size: 35px;
 					}
-					.image{
-						overflow: hidden;
-						border-radius: 10% 50% 25% 30%;
-					}
 					@media (max-width: 767px) {
 						section {
 							padding: 100px 20px;
@@ -94,11 +86,6 @@ const IndexSection = () => {
 						}
 						h1{
 							font-size: 27px;
-						}
-						.image{
-							border-radius: 100%;
-							width: 90%;
-							margin: auto;
 						}
 						.data{
 							height: auto;
