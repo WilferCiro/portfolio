@@ -4,7 +4,6 @@
 
 // React and nextJS
 import React from 'react';
-import Image from 'next/image'
 
 // Antd
 import {
