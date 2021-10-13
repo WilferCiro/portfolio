@@ -26,99 +26,104 @@ const ParticlesBG = () => {
 			<div className="particles">
 				<Particles
 				id="tsparticles"
+				height={"90vh"}
 				init={particlesInit}
 				loaded={particlesLoaded}
 				options={{
 					background: {
-					color: {
-						value: "#000",
-					},
+						color: {
+							value: "#000",
+						},
 					},
 					fpsLimit: 60,
 					interactivity: {
 					detectsOn: "canvas",
 					events: {
 						onClick: {
-						enable: true,
-						mode: "push",
+							enable: true,
+							mode: "push",
 						},
 						onHover: {
-						enable: true,
-						mode: "repulse",
+							enable: true,
+							mode: "repulse",
 						},
 						resize: true,
 					},
 					modes: {
 						bubble: {
-						distance: 400,
-						duration: 2,
-						opacity: 0.2,
-						size: 40,
+							distance: 400,
+							duration: 2,
+							opacity: 0.2,
+							size: 40,
 						},
 						push: {
-						quantity: 4,
+							quantity: 4,
 						},
 						repulse: {
-						distance: 200,
-						duration: 0.2,
+							distance: 200,
+							duration: 0.2,
 						},
 					},
 					},
 					particles: {
-					color: {
-						value: "#11A8CD",
-					},
-					links: {
-						color: "#11A8CD",
-						distance: 150,
-						enable: true,
-						opacity: 0.1,
-						width: 1,
-					},
-					collisions: {
-						enable: true,
-					},
-					move: {
-						direction: "none",
-						enable: true,
-						outMode: "bounce",
-						random: false,
-						speed: 1,
-						straight: false,
-					},
-					number: {
-						density: {
-						enable: true,
-						value_area: 800,
+						color: {
+							value: "#11A8CD",
 						},
-						value: 80,
-					},
-					opacity: {
-						value: 0.1,
-					},
-					shape: {
-						type: "circle",
-					},
-					size: {
-						random: true,
-						value: 5,
-					},
+						links: {
+							color: "#11A8CD",
+							distance: 150,
+							enable: true,
+							opacity: 0.1,
+							width: 1,
+						},
+						collisions: {
+							enable: true,
+						},
+						move: {
+							direction: "none",
+							enable: true,
+							outMode: "bounce",
+							random: false,
+							speed: 1,
+							straight: false,
+						},
+						number: {
+							density: {
+								enable: true,
+								value_area: 800,
+							},
+							value: 80,
+						},
+						opacity: {
+							value: 0.1,
+						},
+						shape: {
+							type: "circle",
+						},
+						size: {
+							random: true,
+							value: 5,
+						},
 					},
 					detectRetina: true,
 				}}
 				/>
 			</div>
 			<style jsx>
-				{`
-					
+				{`					
+				.particles{
+					position: fixed;
+					top: 0px;
+					left: 0px;
+					z-index: -1;
+					width: 100%;
+					height: 70vh;
+				}
+				@media (max-width: 767px) {		
 					.particles{
-						position: fixed;
-						top: 0px;
-						left: 0px;
-						z-index: -1;
-						width: 100%;
-						height: 100%;
-					  }
+						height: 100vh;
+					}
+				}
 				`}
 			</style>
 		</>
