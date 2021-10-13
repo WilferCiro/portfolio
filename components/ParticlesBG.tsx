@@ -43,10 +43,6 @@ const ParticlesBG = () => {
 							enable: true,
 							mode: "push",
 						},
-						onHover: {
-							enable: true,
-							mode: "repulse",
-						},
 						resize: true,
 					},
 					modes: {
@@ -92,7 +88,7 @@ const ParticlesBG = () => {
 								enable: true,
 								value_area: 800,
 							},
-							value: 80,
+							value: 100,
 						},
 						opacity: {
 							value: 0.1,
@@ -102,7 +98,7 @@ const ParticlesBG = () => {
 						},
 						size: {
 							random: true,
-							value: 5,
+							value: 6,
 						},
 					},
 					detectRetina: true,
@@ -118,6 +114,7 @@ const ParticlesBG = () => {
 					z-index: -1;
 					width: 100%;
 					height: 70vh;
+					filter: blur(1px);
 				}
 				@media (max-width: 767px) {		
 					.particles{

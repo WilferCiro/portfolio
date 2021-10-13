@@ -25,6 +25,18 @@ const AboutMeSection = () => {
 		}
 	}, [controls, inView]);
 
+	const calculate_age = () => {
+		let today = new Date();
+		let birthDate = new Date("1998/05/29");  // create a date object directly from `dob1` argument
+		let age_now = today.getFullYear() - birthDate.getFullYear();
+		let m = today.getMonth() - birthDate.getMonth();
+		if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) 
+		{
+			age_now--;
+		}
+		return age_now;
+	}
+
 	return (
 		<>
 			<section id="about">
@@ -54,7 +66,7 @@ const AboutMeSection = () => {
 								<b>Profession: </b>Electronic engineer and fullstack developer<br />
 								<b>Spanish: </b>Native<br />
 								<b>English: </b>B1<br />
-								<b>Age: </b>23<br />
+								<b>Age: </b>{calculate_age()}<br />
 							</p>
 						</Col>
 						<Col xs={23} md={15}>

@@ -15,12 +15,15 @@ import { theme } from '@/styles/theme'
 
 const Footer = () => {
 
+	const today = new Date();
+	const age_now = today.getFullYear()
+
 	return (
 		<>
 			<footer>
 				<Divider />
 				Designed and created by Wilfer Daniel Ciro Maya<br />
-				&copy; 2021
+				&copy; {age_now}
 				<Divider />
 				<Space size="large">
 					<Link href="https://github.com/WilferCiro">
@@ -72,6 +75,9 @@ const Footer = () => {
 					a{
 						font-size: 30px;
 						color: ${theme.primary};
+					}
+					a:hover{
+						color: ${theme.textPrimary};
 					}
 					@media (max-width: 767px) {
 						footer{
