@@ -19,18 +19,18 @@ const SkillItem = dynamic(() => import('@/components/index/SkillItem'))
 const SkillsSection = () => {
 
 	const data = [
-		{"title" : "Javascript", "items" : ["React JS", "Next JS", "Express"], "image" : "/img/index/langs/javascript.png"},
-		{"title" : "Python", "items" : ["Django", "FastApi", "Desktop", "OpenCV"], "image" : "/img/index/langs/python.jpg"},
-		{"title" : "Dart", "items" : ["Flutter mobile"], "image" : "/img/index/langs/flutter.png"},
-		{"title" : "C && C++", "items" : ["Desktop", "arduino", "GTK", "QT"], "image" : "/img/index/langs/cpp.png"},
-		{"title" : "GNU/Linux", "items" : ["Ubuntu based", "Arch based", "From scratch"], "image" : "/img/index/langs/linux.jpg"},
-		{"title" : "SQL", "items" : ["MySQL", "PostgreSQL"], "image" : "/img/index/langs/sql.png"},
-		{"title" : "No SQL", "items" : ["MongoDB", "Elastic Search"], "image" : "/img/index/langs/nosql.png"},
-		{"title" : "Development tools", "items" : ["Git", "Asana", "Jira"], "image" : "/img/index/langs/git.jpg"},
-		{"title" : "HDL", "items" : ["VHDL", "Verilog"], "image" : "/img/index/langs/vhdl.png"},
-		{"title" : "Embedded systems", "items" : ["Arduino", "ESP32", "Raspberry pi"], "image" : "/img/index/langs/arduino.png"},
-		{"title" : "C#", "items" : ["Unity 3D"], "image" : "/img/index/langs/cnumeral.jpg"},
-		{"title" : "Kotlin", "items" : ["Android"], "image" : "/img/index/langs/kotlin.jpg"},
+		{"title" : "Javascript", "items" : ["React JS", "Next JS", "Express"], "image" : "/img/index/langs/javascript.webp"},
+		{"title" : "Python", "items" : ["Django", "FastApi", "Desktop", "OpenCV"], "image" : "/img/index/langs/python.webp"},
+		{"title" : "Dart", "items" : ["Flutter mobile"], "image" : "/img/index/langs/flutter.webp"},
+		{"title" : "C && C++", "items" : ["Desktop", "arduino", "GTK", "QT"], "image" : "/img/index/langs/cpp.webp"},
+		{"title" : "GNU/Linux", "items" : ["Ubuntu based", "Arch based", "From scratch"], "image" : "/img/index/langs/linux.webp"},
+		{"title" : "SQL", "items" : ["MySQL", "PostgreSQL"], "image" : "/img/index/langs/sql.webp"},
+		{"title" : "No SQL", "items" : ["MongoDB", "Elastic Search"], "image" : "/img/index/langs/nosql.webp"},
+		{"title" : "Development tools", "items" : ["Git", "Asana", "Jira"], "image" : "/img/index/langs/git.webp"},
+		{"title" : "HDL", "items" : ["VHDL", "Verilog"], "image" : "/img/index/langs/vhdl.webp"},
+		{"title" : "Embedded systems", "items" : ["Arduino", "ESP32", "Raspberry pi"], "image" : "/img/index/langs/arduino.webp"},
+		{"title" : "C#", "items" : ["Unity 3D"], "image" : "/img/index/langs/cnumeral.webp"},
+		{"title" : "Kotlin", "items" : ["Android"], "image" : "/img/index/langs/kotlin.webp"},
 	]
 
 	return (

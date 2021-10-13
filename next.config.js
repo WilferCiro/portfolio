@@ -9,5 +9,5 @@ module.exports = withPWA({
     skipWaiting: true,
     disable: process.env.NODE_ENV === 'development',
   },
-  reactStrictMode: true,
+  reactStrictMode: false,
 })

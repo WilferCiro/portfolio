@@ -25,10 +25,10 @@ const ProjectsSection = () => {
 	const projects = [
 		{
 			"images" : [
-				"/img/index/kiwipeluditos/img1.png",
-				"/img/index/kiwipeluditos/img2.png",
-				"/img/index/kiwipeluditos/img3.png",
-				"/img/index/kiwipeluditos/img4.png"
+				"/img/index/kiwipeluditos/img1.webp",
+				"/img/index/kiwipeluditos/img2.webp",
+				"/img/index/kiwipeluditos/img3.webp",
+				"/img/index/kiwipeluditos/img4.webp"
 			],
 			"title" : "Kiwi Peluditos",
 			"tags" : ["NextJS", "PostgreSQL", "Django", "FastAPI"],
@@ -48,9 +48,9 @@ const ProjectsSection = () => {
 		},
 		{
 			"images" : [
-				"/img/index/bdtgrado/img1.png",
-				"/img/index/bdtgrado/img2.png",
-				"/img/index/bdtgrado/img3.png"
+				"/img/index/bdtgrado/img1.webp",
+				"/img/index/bdtgrado/img2.webp",
+				"/img/index/bdtgrado/img3.webp"
 			],
 			"title" : "BD tgrado",
 			"tags" : ["MySQL", "Django"],
@@ -66,10 +66,10 @@ const ProjectsSection = () => {
 		},
 		{
 			"images" : [
-				"/img/index/sintel/img1.png",
-				"/img/index/sintel/img2.png",
-				"/img/index/sintel/img3.png",
-				"/img/index/sintel/img4.png"
+				"/img/index/sintel/img1.webp",
+				"/img/index/sintel/img2.webp",
+				"/img/index/sintel/img3.webp",
+				"/img/index/sintel/img4.webp"
 			],
 			"title" : "Sintel",
 			"tags" : ["Python3", "QT6", "VHDL", "Verilog"],
@@ -89,8 +89,8 @@ const ProjectsSection = () => {
 		},
 		{
 			"images" : [
-				"/img/index/mips/img1.png",
-				"/img/index/mips/img2.jpeg",
+				"/img/index/mips/img1.webp",
+				"/img/index/mips/img2.webp",
 			],
 			"title" : "32 bits MIPS",
 			"tags" : ["Verilog", "Ensambler"],
@@ -105,7 +105,7 @@ const ProjectsSection = () => {
 		},
 		{
 			"images" : [
-				"/img/index/sti/img1.png"
+				"/img/index/sti/img1.webp"
 			],
 			"title" : "Sti irrigation",
 			"tags" : ["Django", "python3", "QT5", "C", "C++", "Raspberry Pi", "Arduino"],

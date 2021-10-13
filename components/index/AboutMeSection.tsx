@@ -42,7 +42,7 @@ const AboutMeSection = () => {
 								<motion.div variants={animItem}>
 									<Image
 										alt="My Photo"
-										src={"/img/index/me2.jpg"}
+										src={"/img/index/me2.webp"}
 										layout={"responsive"}
 										width={350}
 										height={350}

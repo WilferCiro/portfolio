@@ -56,8 +56,8 @@ const Header = () => {
 								<Link href="#contact">
 									<a><li>Contact</li></a>
 								</Link>
-								<Link href="#resume">
-									<a><li className="resume-btn">Resume</li></a>
+								<Link href="https://drive.google.com/file/d/1809hgJ9cdoK8OD85Sf3bCjVFKFOgx-7f/view?usp=sharing">
+									<a rel="noreferrer" target="_blank"><li className="resume-btn">Resume</li></a>
 								</Link>
 							</ul>
 						</motion.div>
@@ -104,7 +104,7 @@ const Header = () => {
 					}
 					.resume-btn:hover{
 						background: ${theme.primary};
-						color: white;
+						color: white !important;
 					}
 					.show-mobile{
 						display: none;

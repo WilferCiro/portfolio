@@ -46,7 +46,7 @@ const IndexSection = () => {
 								<motion.div variants={animItem}>
 									<Image
 										alt="My Photo"
-										src={"/img/index/me.png"}
+										src={"/img/index/me.webp"}
 										layout={"responsive"}
 										width={350}
 										height={350}
