@@ -49,7 +49,7 @@ const ParticlesBG = () => {
 						bubble: {
 							distance: 400,
 							duration: 2,
-							opacity: 0.2,
+							opacity: 0.1,
 							size: 40,
 						},
 						push: {
@@ -57,7 +57,7 @@ const ParticlesBG = () => {
 						},
 						repulse: {
 							distance: 200,
-							duration: 0.2,
+							duration: 0.1,
 						},
 					},
 					},
@@ -69,7 +69,7 @@ const ParticlesBG = () => {
 							color: "#11A8CD",
 							distance: 150,
 							enable: true,
-							opacity: 0.2,
+							opacity: 0.1,
 							width: 1,
 						},
 						collisions: {
@@ -91,7 +91,7 @@ const ParticlesBG = () => {
 							value: 100,
 						},
 						opacity: {
-							value: 0.2,
+							value: 0.1,
 						},
 						shape: {
 							type: "circle",
