@@ -8,18 +8,21 @@ import React from "react";
 // Antd
 import { Result, Button } from "antd";
 import Link from "next/link";
+import useTranslation from 'next-translate/useTranslation'
 
-const View404 = () => {
+function View404() {
+
+	const { t } = useTranslation("404")
 
 	return (
 		<section>
 			<Result
 				status="404"
 				title="404"
-				subTitle="Sorry, the page you visited does not exist."
+				subTitle={t("error")}
 				extra={
 					<Link href="/">
-						<a><Button type="primary">Back Home</Button></a>
+						<a><Button type="primary">{t("back-home")}</Button></a>
 					</Link>					
 				}
 			/>
@@ -33,4 +36,5 @@ const View404 = () => {
 	)
 }
 
-export default React.memo(View404);
+
+export default View404;
