@@ -15,7 +15,8 @@ import {
 	Row,
 	Col,
 	List,
-	Avatar
+	Avatar,
+	Card
 } from 'antd';
 import { HomeOutlined, MailFilled, PhoneFilled } from '@ant-design/icons';
 
@@ -92,74 +93,76 @@ const ContactSection = () => {
 					<div className="form">
 						<h3>Contact Me</h3>
 						<Divider />
-						<Row gutter={[30, 16]}>
-							<Col xs={24} md={12}>
-								<motion.div variants={animItem}>
-									<Form
-										form={form}
-										name="basic"
-										layout="vertical"
-										onFinish={onFinish}
-										onFinishFailed={onFinishFailed}
-										autoComplete="off"
-										>
-										<Form.Item
-											label="E mail"
-											name="email"
-											rules={[{ required: true, message: 'Please input your email!' }, { type: "email", message: "Please input a valid email!"}]}
-										>
-											<Input placeholder="Input your email" />
-										</Form.Item>
-										<Form.Item
-											label="Name"
-											name="name"
-											rules={[{ required: true, message: 'Please input your name!' }, {min: 8}]}
-										>
-											<Input placeholder="Input your name" />
-										</Form.Item>
-										<Form.Item
-											label="Subject"
-											name="subject"
-											rules={[{ required: true, message: 'Please input your subject!' }, {min: 8}]}
-										>
-											<Input placeholder="Input your subject" />
-										</Form.Item>
-										<Form.Item
-											label="Message"
-											name="message"
-											rules={[{ required: true, message: 'Please input your Message!' }, {min: 20}]}
-										>
-											<Input.TextArea placeholder="Input your message" />
-										</Form.Item>
-
-										<Form.Item>
-											<Button type="primary" htmlType="submit" block shape="round" loading={loading}>
-												Submit
-											</Button>
-										</Form.Item>
-									</Form>
-								</motion.div>
-							</Col>
-							<Col xs={24} md={12}>
-								<div className="data-list">
+						<Card>
+							<Row gutter={[30, 16]}>
+								<Col xs={24} md={12}>
 									<motion.div variants={animItem}>
-										<List
-											itemLayout="horizontal"
-											dataSource={data}
-											renderItem={(item: any) => (
-												<List.Item>
-													<List.Item.Meta
-													avatar={<Avatar icon={item.icon} />}
-													title={item.title}
-													description={item.body}
-													/>
-												</List.Item>
-											)}
-										/>
+										<Form
+											form={form}
+											name="basic"
+											layout="vertical"
+											onFinish={onFinish}
+											onFinishFailed={onFinishFailed}
+											autoComplete="off"
+											>
+											<Form.Item
+												label="E mail"
+												name="email"
+												rules={[{ required: true, message: 'Please input your email!' }, { type: "email", message: "Please input a valid email!"}]}
+											>
+												<Input placeholder="Input your email" />
+											</Form.Item>
+											<Form.Item
+												label="Name"
+												name="name"
+												rules={[{ required: true, message: 'Please input your name!' }, {min: 8}]}
+											>
+												<Input placeholder="Input your name" />
+											</Form.Item>
+											<Form.Item
+												label="Subject"
+												name="subject"
+												rules={[{ required: true, message: 'Please input your subject!' }, {min: 8}]}
+											>
+												<Input placeholder="Input your subject" />
+											</Form.Item>
+											<Form.Item
+												label="Message"
+												name="message"
+												rules={[{ required: true, message: 'Please input your Message!' }, {min: 20}]}
+											>
+												<Input.TextArea placeholder="Input your message" />
+											</Form.Item>
+
+											<Form.Item>
+												<Button type="primary" htmlType="submit" block shape="round" loading={loading}>
+													Submit
+												</Button>
+											</Form.Item>
+										</Form>
 									</motion.div>
-								</div>
-							</Col>
-						</Row>
+								</Col>
+								<Col xs={24} md={12}>
+									<div className="data-list">
+										<motion.div variants={animItem}>
+											<List
+												itemLayout="horizontal"
+												dataSource={data}
+												renderItem={(item: any) => (
+													<List.Item>
+														<List.Item.Meta
+														avatar={<Avatar icon={item.icon} />}
+														title={item.title}
+														description={item.body}
+														/>
+													</List.Item>
+												)}
+											/>
+										</motion.div>
+									</div>
+								</Col>
+							</Row>
+						</Card>
 					</div>
 				</motion.div>
 			</section>

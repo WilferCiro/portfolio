@@ -9,7 +9,8 @@ import dynamic from 'next/dynamic'
 // Antd
 import {
 	Divider,
-	List
+	List,
+	Card
 } from 'antd';
 
 // Custom
@@ -38,24 +39,25 @@ const SkillsSection = () => {
 			<section id="skills">
 				<h3>My skills</h3>
 				<Divider />
-
-				<List
-					grid={{
-						gutter: 15,
-						xs: 2,
-						sm: 2,
-						md: 3,
-						lg: 3,
-						xl: 4,
-						xxl: 4,
-					}}
-					dataSource={data}
-					renderItem={item => (
-						<List.Item>
-							<SkillItem {...item} />
-						</List.Item>
-					)}
-				/>
+				<Card>
+					<List
+						grid={{
+							gutter: 15,
+							xs: 2,
+							sm: 2,
+							md: 3,
+							lg: 3,
+							xl: 4,
+							xxl: 4,
+						}}
+						dataSource={data}
+						renderItem={item => (
+							<List.Item>
+								<SkillItem {...item} />
+							</List.Item>
+						)}
+					/>
+				</Card>
 			</section>
 
 			<style jsx>
