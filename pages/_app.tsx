@@ -11,7 +11,7 @@ import MyHead from '@/components/MyHead'
 const Header = dynamic(() => import('@/components/Header'))
 const Footer = dynamic(() => import('@/components/Footer'))
 const FloatInfo = dynamic(() => import('@/components/FloatInfo'))
-//const ParticlesBG = dynamic(() => import('@/components/ParticlesBG'))
+const ParticlesBG = dynamic(() => import('@/components/ParticlesBG'))
 
 import { theme } from '../styles/theme'
 import 'antd/dist/antd.dark.css';
@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
-      {/*<ParticlesBG />*/}
+      <ParticlesBG />
       <MyHead />
       <Header />
       <FloatInfo />
