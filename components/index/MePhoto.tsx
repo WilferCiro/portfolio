@@ -9,104 +9,31 @@ const MePhoto = () => {
 
 	return (
 		<>
-			<div className="container">
-				<div className="box">
-					<div className="spin-container">
-					<div className="shape">
-						<div className="bd"></div>
-					</div>
-					</div>
-				</div>
-			</div>
+			<div className="headshot headshot-1"></div>
 
 			<style jsx>
-				{`					
-					.container {
-						display: flex;
-						align-items: center;
-						justify-content: center;
-						overflow: hidden;
-						padding: 20px;
-					}					
-					.box {
-						width: 50vmin;
-						height: 50vmin;
-						position: relative;
-					}					
-					.spin-container {
-						width: 100%;
-						height: 100%;
-						-webkit-animation: spin 12s linear infinite;
-								animation: spin 12s linear infinite;
-						position: relative;
+				{`
+					.headshot {
+						flex-shrink: 0;
+						margin: 20px;
+						height: calc(200px + 6vw);
+						width: calc(200px + 6vw);
+						border: calc(8px + 0.2vw) solid transparent;
+						background-origin: border-box;
+						background-clip: content-box, border-box;
+						background-size: cover;
+						box-sizing: border-box;
+						box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
 					}
 					
-					.shape {
-						width: 100%;
-						height: 100%;
-						transition: border-radius 1s ease-out;
-						border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
-						-webkit-animation: morph 8s ease-in-out infinite both alternate;
-								animation: morph 8s ease-in-out infinite both alternate;
-						position: absolute;
-						overflow: hidden;
-						z-index: 5;
+					.headshot-1 {
+						border-radius: 100%;
+						background-image: url(/img/index/me.webp), linear-gradient(to bottom right, #11A8CD, #562b7c, #11A8CD);
 					}
-					
-					.bd {
-						width: 142%;
-						height: 142%;
-						position: absolute;
-						left: -21%;
-						top: -21%;
-						background: url(/img/index/me.webp);
-						background-size: 80%;
-						background-position: center center;
-						display: flex;
-						color: #003;
-						font-size: 5vw;
-						font-weight: bold;
-						align-items: center;
-						justify-content: center;
-						text-align: center;
-						text-transform: uppercase;
-						animation: spin 12s linear infinite reverse;
-						opacity: 1;
-						z-index: 2;
-					}
-					
-					@-webkit-keyframes morph {
-						0% {
-							border-radius: 40% 60% 60% 40%/60% 30% 70% 40%;
-						}
-						100% {
-							border-radius: 40% 60%;
-						}
-					}
-					
-					@keyframes morph {
-						0% {
-							border-radius: 40% 60% 60% 40%/60% 30% 70% 40%;
-						}
-						100% {
-							border-radius: 40% 60%;
-						}
-					}
-					@-webkit-keyframes spin {
-						to {
-							transform: rotate(1turn);
-						}
-					}
-					@keyframes spin {
-						to {
-							transform: rotate(1turn);
-						}
-					}
-
 					@media (max-width: 767px) {
-						.box{
-							width: 70vmin;
-							height: 70vmin;
+						.headshot {
+							height: calc(250px + 6vw);
+							width: calc(250px + 6vw);
 						}
 					}
 				`}	
