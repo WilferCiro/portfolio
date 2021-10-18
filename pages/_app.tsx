@@ -41,8 +41,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             margin: 0px;
             padding: 0px;
             color: ${theme.textPrimary};
-            font-family: Lato, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+            font-family: Lato, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
           }
           .main-content{
             min-height: 100vh;

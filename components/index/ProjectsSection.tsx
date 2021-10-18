@@ -60,14 +60,7 @@ const ProjectsSection = () => {
 			"title" : "BD tgrado",
 			"tags" : ["MySQL", "Django"],
 			"description" : t("projects_tgrado-description"),
-			"children" : <Space>
-				<Link href="https://kiwipeluditos.com">
-					<a target="_blank" rel="noreferrer">
-						<Button icon={<LinkOutlined />} type="primary" ghost>{t("visit")}</Button>
-					</a>
-				</Link>
-				<Button icon={<GitlabFilled />} type="primary" ghost>{t("view_code")}</Button>
-			</Space>
+			"children" : <Tag color="magenta">{t("confidential")}</Tag>
 		},
 		{
 			"images" : [
