@@ -19,7 +19,7 @@ import { useInView } from 'react-intersection-observer';
 // Translate
 import useTranslation from 'next-translate/useTranslation';
 import JSONInput from 'react-json-editor-ajrm';
-import locale    from 'react-json-editor-ajrm/locale/en';
+import locale    from '@/locales/json/es';
 
 const AboutMeSection = () => {
 

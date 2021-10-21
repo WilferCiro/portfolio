@@ -1222,6 +1222,13 @@
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.4.tgz#fcf7205c25dff795ee79af1e30da2c9790808f11"
   integrity sha512-rZ5drC/jWjrArrS8BR6SIr4cWpW09RNTYt9AMZo3Jwwif+iacXAqgVjm0B0Bv/S1jhDXKHqRVNCbACkJ89RAnQ==
 
+"@types/react-json-editor-ajrm@^2.5.2":
+  version "2.5.2"
+  resolved "https://registry.yarnpkg.com/@types/react-json-editor-ajrm/-/react-json-editor-ajrm-2.5.2.tgz#bd106fd996801748dec5d71e971adbff78e92005"
+  integrity sha512-LMKyVGUuQr4zwT7hOfh5D/v9gr0ZKl0B9mGJU+E9l0JPL53yoEltDOcNRYB7Sa1ztiSlvxsmbQ1tZndC6s1RMw==
+  dependencies:
+    "@types/react" "*"
+
 "@types/react-pdf@^5.0.7":
   version "5.0.7"
   resolved "https://registry.yarnpkg.com/@types/react-pdf/-/react-pdf-5.0.7.tgz#befcde41da992998a55d41068b8033266923e431"
