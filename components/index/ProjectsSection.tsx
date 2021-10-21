@@ -55,7 +55,10 @@ const ProjectsSection = () => {
 			"images" : [
 				"/img/index/bdtgrado/img1.webp",
 				"/img/index/bdtgrado/img2.webp",
-				"/img/index/bdtgrado/img3.webp"
+				"/img/index/bdtgrado/img3.webp",
+				"/img/index/bdtgrado/img4.webp",
+				"/img/index/bdtgrado/img5.webp",
+				"/img/index/bdtgrado/img6.webp"
 			],
 			"title" : "BD tgrado",
 			"tags" : ["MySQL", "Django"],
@@ -130,7 +133,7 @@ const ProjectsSection = () => {
 				{`
 					section {
 						min-height: 100vh;
-						padding: 100px 20% 10px 20%;
+						padding: 100px 15% 10px 15%;
 						align-items: center;
 					}
 					h3 {

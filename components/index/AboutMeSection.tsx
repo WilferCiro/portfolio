@@ -18,6 +18,8 @@ import { useInView } from 'react-intersection-observer';
 
 // Translate
 import useTranslation from 'next-translate/useTranslation';
+import JSONInput from 'react-json-editor-ajrm';
+import locale    from 'react-json-editor-ajrm/locale/en';
 
 const AboutMeSection = () => {
 
@@ -54,13 +56,13 @@ const AboutMeSection = () => {
 				>
 					<h3>{t("about_about-me")}</h3>
 					<Divider />
-					<Row gutter={[32, 16]} align="middle">
-						<Col xs={24} md={9}>
+					<Row gutter={[20, 16]} align="middle">
+						<Col xs={24} md={10}>
 							<div className="image">
 								<motion.div variants={animItem}>
 									<Image
 										alt="My Photo"
-										src={"/img/index/me2.webp"}
+										src={"/img/index/me.webp"}
 										layout={"responsive"}
 										width={350}
 										height={350}
@@ -68,14 +70,24 @@ const AboutMeSection = () => {
 								</motion.div>
 							</div>
 							<p>{t("about_description")}</p>
-							<p>
-								<b>{t("about_title_profession")}: </b>{t("about_profession")}<br />
-								<b>{t("about_title_spanish")}: </b>{t("about_spanish")}<br />
-								<b>{t("about_title_english")}: </b>B1<br />
-								<b>{t("about_title_age")}: </b>{calculate_age()}<br />
-							</p>
+							<JSONInput viewOnly={true} locale={locale} id={"my_data"} height="260px" width="100%" placeholder=
+								{
+									{
+										"name" : "Wilfer Daniel Ciro Maya",
+										"spanish" : t("about_spanish"),
+										"english" : "B1",
+										"age" : calculate_age(),
+										"hobbies" : [
+											t("gym"),
+											t("series_movies"),
+											t("video_games"),
+											t("travel")
+										],
+										"profession" : t("about_profession")
+									}
+								} />
 						</Col>
-						<Col xs={23} md={15}>
+						<Col xs={23} md={14}>
 							<motion.div variants={animItem}>
 								<Timeline mode="left">
 									<Timeline.Item label="1998-05-29">{t("about_my-birth")}</Timeline.Item>
@@ -100,6 +112,20 @@ const AboutMeSection = () => {
 					h3{
 						color: ${theme.primary}
 					}
+
+					pre {
+						background-color: ghostwhite;
+						border: 1px solid silver;
+						padding: 10px 20px;
+						margin: 20px;
+						border-radius: 4px;
+						width: 100%;
+						margin-left: auto;
+						margin-right: auto;
+						white-space: pre-line;
+
+					}
+
 					.image{
 						margin: auto;
 						width: 70%;
