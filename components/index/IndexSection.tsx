@@ -4,12 +4,15 @@
 
 // React and nextJS
 import React from 'react';
+import Link from 'next/link'
 
 // Antd
 import {
+	Button,
 	Col,
 	Row
 } from 'antd';
+import { CloudDownloadOutlined } from '@ant-design/icons';
 
 // Custom
 import { theme } from '@/styles/theme'
@@ -43,6 +46,11 @@ const IndexSection = () => {
 										<h1>Wilfer Daniel Ciro Maya</h1>
 										<h2>{t("index_subtitle")}</h2>
 										<p>{t("index_description")}</p>
+										<Link href="https://drive.google.com/file/d/1809hgJ9cdoK8OD85Sf3bCjVFKFOgx-7f/view?usp=sharing">
+											<a target="_blank">
+												<Button type="primary" icon={<CloudDownloadOutlined />} ghost>{t("header_resume")}</Button>
+											</a>
+										</Link>
 									</div>
 								</motion.div>
 							</div>
@@ -88,12 +96,17 @@ const IndexSection = () => {
 						section {
 							padding: 100px 20px;
 							display: block;
+							text-align: center;
 						}
 						h1{
 							font-size: 27px;
 						}
 						.data{
 							height: auto;
+						}
+						.image{
+							margin: auto;
+							width: fit-content;
 						}
 						
 					}

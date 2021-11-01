@@ -16,8 +16,8 @@ const MePhoto = () => {
 					.headshot {
 						flex-shrink: 0;
 						margin: 20px;
-						height: calc(250px + 6vw);
-						width: calc(250px + 6vw);
+						width: auto;
+						height: 50vh;
 						background-origin: border-box;
 						background-clip: content-box, border-box;
 						background-size: cover;

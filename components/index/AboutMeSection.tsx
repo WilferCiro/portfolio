@@ -77,6 +77,7 @@ const AboutMeSection = () => {
 										"spanish" : t("about_spanish"),
 										"english" : "B1",
 										"age" : calculate_age(),
+										"county" : "Colombia 🇨🇴️",
 										"hobbies" : [
 											t("gym"),
 											t("series_movies"),

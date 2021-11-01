@@ -1,5 +1,5 @@
 {
-	"index_my-name" : "¡Hola!, mi nombre es",
+	"index_my-name" : "¡Hola!, soy",
 	"index_description" : "Ingeniero electrónico que construye soluciones para el mundo",
 
 	"index_subtitle" : "Desarrollador full stack",
@@ -52,7 +52,7 @@
 	"header_skills" : "Habilidades",
 	"header_contact" : "Contacto",
 	"header_resume" : "Resumen",
-	"footer_developed" : "Diseñado y creado por",
+	"footer_developed" : "Creado por",
 
 	"email" : "Correo electrónico",
 	"phone" : "Celular",

@@ -17,7 +17,10 @@ import { theme } from '../styles/theme'
 import 'antd/dist/antd.dark.css';
 
 function MyApp({ Component, pageProps }: AppProps) {
-
+  // TODO:
+  // Mermar texto en proyectos
+  // pasar de 4 a 3 en habilidades en tamaño más pequeño
+  // Agregar código GITHUB
   return (
     <>
       <ParticlesBG />

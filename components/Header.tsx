@@ -47,24 +47,36 @@ const Header = () => {
 						</div>
 						<motion.div variants={animItem}>
 							<ul>
-								<Link href="#index">
-									<a onClick={e=> showMenu ? setShowMenu(false) : null}><li>{t("header_index")}</li></a>
-								</Link>
-								<Link href="#about">
-									<a onClick={e=> showMenu ? setShowMenu(false) : null}><li>{t("header_about")}</li></a>
-								</Link>
-								<Link href="#projects">
-									<a onClick={e=> showMenu ? setShowMenu(false) : null}><li>{t("header_projects")}</li></a>
-								</Link>
-								<Link href="#skills">
-									<a onClick={e=> showMenu ? setShowMenu(false) : null}><li>{t("header_skills")}</li></a>
-								</Link>
-								<Link href="#contact">
-									<a onClick={e=> showMenu ? setShowMenu(false) : null}><li>{t("header_contact")}</li></a>
-								</Link>
-								<Link href="https://drive.google.com/file/d/1809hgJ9cdoK8OD85Sf3bCjVFKFOgx-7f/view?usp=sharing">
-									<a rel="noreferrer" target="_blank"><li className="resume-btn">{t("header_resume")}</li></a>
-								</Link>
+								<li>
+									<Link href="#index">
+										<a onClick={e=> showMenu ? setShowMenu(false) : null}>{t("header_index")}</a>
+									</Link>
+								</li>
+								<li>
+									<Link href="#about">
+										<a onClick={e=> showMenu ? setShowMenu(false) : null}>{t("header_about")}</a>
+									</Link>
+								</li>
+								<li>
+									<Link href="#projects">
+										<a onClick={e=> showMenu ? setShowMenu(false) : null}>{t("header_projects")}</a>
+									</Link>
+								</li>
+								<li>
+									<Link href="#skills">
+										<a onClick={e=> showMenu ? setShowMenu(false) : null}>{t("header_skills")}</a>
+									</Link>
+								</li>
+								<li>
+									<Link href="#contact">
+										<a onClick={e=> showMenu ? setShowMenu(false) : null}>{t("header_contact")}</a>
+									</Link>
+								</li>
+								<li className="resume-btn">
+									<Link href="https://drive.google.com/file/d/1809hgJ9cdoK8OD85Sf3bCjVFKFOgx-7f/view?usp=sharing">
+										<a rel="noreferrer" target="_blank">{t("header_resume")}</a>
+									</Link>
+								</li>
 							</ul>
 						</motion.div>
 					</div>

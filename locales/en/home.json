@@ -1,5 +1,5 @@
 {
-	"index_my-name" : "Hi, my name is",
+	"index_my-name" : "Hi, I am",
 	"index_description" : "Electronic Engineer that builds solutions for the world",
 	"index_subtitle" : "Full stack developer",
 	"about_about-me" : "About me",
@@ -51,7 +51,7 @@
 	"header_skills" : "Skills",
 	"header_contact" : "Contact",
 	"header_resume" : "Resume",
-	"footer_developed" : "Designed and created by",
+	"footer_developed" : "Created by",
 
 	"email" : "E mail",
 	"phone" : "Phone",
