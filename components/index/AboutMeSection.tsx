@@ -94,6 +94,7 @@ const AboutMeSection = () => {
 									<Timeline.Item label="1998-05-29">{t("about_my-birth")}</Timeline.Item>
 									<Timeline.Item color="green" label="2013-05-05">{t("about_start-programming")}</Timeline.Item>
 									<Timeline.Item color="green" label="2014-12-12">{t("about_finish-high-school")}</Timeline.Item>
+									<Timeline.Item color="green" label="2014-12-15">{t("about_finish-sena")}</Timeline.Item>
 									<Timeline.Item color="purple" label="2020-05-15">{t("about_first-job")}</Timeline.Item>
 									<Timeline.Item color="green" label="2020-08-10">{t("about_finish-university")}</Timeline.Item>
 									<Timeline.Item color="purple" label="2021-08-15">{t("about_second-job")}</Timeline.Item>

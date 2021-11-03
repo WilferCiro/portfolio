@@ -46,7 +46,7 @@ const IndexSection = () => {
 										<h1>Wilfer Daniel Ciro Maya</h1>
 										<h2>{t("index_subtitle")}</h2>
 										<p>{t("index_description")}</p>
-										<Link href="https://drive.google.com/file/d/1809hgJ9cdoK8OD85Sf3bCjVFKFOgx-7f/view?usp=sharing">
+										<Link href="https://drive.google.com/file/d/1HtbNVGocGdFbvCa7mgrWlFrlw-s6oGyD/view?usp=sharing">
 											<a target="_blank">
 												<Button type="primary" icon={<CloudDownloadOutlined />} ghost>{t("header_resume")}</Button>
 											</a>

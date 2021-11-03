@@ -73,7 +73,7 @@ const Header = () => {
 									</Link>
 								</li>
 								<li className="resume-btn">
-									<Link href="https://drive.google.com/file/d/1809hgJ9cdoK8OD85Sf3bCjVFKFOgx-7f/view?usp=sharing">
+									<Link href="https://drive.google.com/file/d/1HtbNVGocGdFbvCa7mgrWlFrlw-s6oGyD/view?usp=sharing">
 										<a rel="noreferrer" target="_blank">{t("header_resume")}</a>
 									</Link>
 								</li>
@@ -107,21 +107,24 @@ const Header = () => {
 					}
 					ul li {
 						float: left;
+					}
+					ul li a {
 						padding: 10px 20px;
 						transition: all 0.3s;
+						display: block;
 					}
-					ul li:hover {
+					ul li a:hover {
 						color: ${theme.primary};
 						cursor: pointer;
 					}
 					a{
 						color: ${theme.textPrimary}
 					}
-					.resume-btn{
+					.resume-btn a{
 						border: solid 1px ${theme.primary};
 						border-radius: 2px;
 					}
-					.resume-btn:hover{
+					.resume-btn a:hover{
 						background: ${theme.primary};
 						color: white !important;
 					}
