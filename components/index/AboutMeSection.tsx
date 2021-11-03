@@ -70,7 +70,7 @@ const AboutMeSection = () => {
 								</motion.div>
 							</div>
 							<p>{t("about_description")}</p>
-							<JSONInput viewOnly={true} locale={locale} id={"my_data"} height="260px" width="100%" placeholder=
+							<JSONInput viewOnly={true} locale={locale} id={"my_data"} height="270px" width="100%" placeholder=
 								{
 									{
 										"name" : "Wilfer Daniel Ciro Maya",
