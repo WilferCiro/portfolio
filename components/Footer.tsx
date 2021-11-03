@@ -7,11 +7,8 @@ import Link from 'next/link'
 import React from 'react'
 
 // Antd
-import { Space, Divider, Tooltip, Button } from 'antd'
-import { GithubOutlined, GitlabFilled, LinkedinFilled, MailFilled, InstagramFilled, TranslationOutlined } from '@ant-design/icons'
-
-// Custom
-import { theme } from '@/styles/theme'
+import { Divider, Button } from 'antd'
+import { TranslationOutlined } from '@ant-design/icons'
 
 // Translation
 import useTranslation from 'next-translate/useTranslation'
