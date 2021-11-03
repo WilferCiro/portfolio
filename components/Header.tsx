@@ -12,7 +12,7 @@ import { theme } from '@/styles/theme'
 const Logo = dynamic(() => import('@/components/icons/Logo'))
 
 // Antd
-import { Button } from 'antd'
+import { Button, Space } from 'antd'
 import { MenuOutlined, CloseOutlined } from '@ant-design/icons'
 
 // Animations
@@ -21,6 +21,7 @@ import { animContainer, animItem } from './tools/animations'
 
 // Translate
 import useTranslation from 'next-translate/useTranslation'
+import SocialMedia from './SocialMedia'
 
 
 const Header = () => {

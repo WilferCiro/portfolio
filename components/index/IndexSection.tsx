@@ -37,7 +37,14 @@ const IndexSection = () => {
 					initial="hidden"
 					animate="visible"
 				>
-					<Row align="middle" justify="center">
+					<Row align="middle" justify="center">						
+						<Col xs={24} md={10}>
+							<div className="image">
+								<motion.div variants={animItem}>
+									<MePhoto />
+								</motion.div>
+							</div>
+						</Col>
 						<Col xs={24} md={14}>
 							<div className="data">
 								<motion.div variants={animItem}>
@@ -52,13 +59,6 @@ const IndexSection = () => {
 											</a>
 										</Link>
 									</div>
-								</motion.div>
-							</div>
-						</Col>
-						<Col xs={24} md={10}>
-							<div className="image">
-								<motion.div variants={animItem}>
-									<MePhoto />
 								</motion.div>
 							</div>
 						</Col>

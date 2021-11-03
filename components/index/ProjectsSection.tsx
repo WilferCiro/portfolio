@@ -41,12 +41,12 @@ const ProjectsSection = () => {
 			"children" : <Space>
 				<Link href="https://kiwipeluditos.com">
 					<a target="_blank" rel="noreferrer">
-						<Button icon={<LinkOutlined />} type="primary" ghost>{t("visit")}</Button>
+						<Button icon={<LinkOutlined />} type="primary">{t("visit")}</Button>
 					</a>
 				</Link>
 				<Link href="https://kiwipeluditos.com/ayuda">
 					<a target="_blank" rel="noreferrer">
-						<Button icon={<ContactsFilled />} type="primary" ghost>{t("contact_page")}</Button>
+						<Button icon={<ContactsFilled />} type="primary">{t("contact_page")}</Button>
 					</a>
 				</Link>
 			</Space>
@@ -78,12 +78,12 @@ const ProjectsSection = () => {
 			"children" : <Space>
 				<Link href="https://wilferciro.gitlab.io/sintel/">
 					<a target="_blank" rel="noreferrer">
-						<Button icon={<LinkOutlined />} type="primary" ghost>{t("visit")}</Button>
+						<Button icon={<LinkOutlined />} type="primary">{t("visit")}</Button>
 					</a>
 				</Link>
 				<Link href="https://gitlab.com/WilferCiro/sintel">
 					<a target="_blank" rel="noreferrer">
-						<Button icon={<GitlabFilled />} type="primary" ghost>{t("view_code")}</Button>
+						<Button icon={<GitlabFilled />} type="primary">{t("view_code")}</Button>
 					</a>
 				</Link>
 			</Space>
@@ -99,7 +99,7 @@ const ProjectsSection = () => {
 			"children" : <Space>
 				<Link href="https://gitlab.com/WilferCiro/microprocesadormips">
 					<a target="_blank" rel="noreferrer">
-						<Button icon={<GitlabFilled />} type="primary" ghost>{t("view_code")}</Button>
+						<Button icon={<GitlabFilled />} type="primary">{t("view_code")}</Button>
 					</a>
 				</Link>
 			</Space>

@@ -87,9 +87,6 @@ const FloatInfo = () => {
 								</motion.div>
 							</a>
 						</Link>
-						<motion.div variants={animItem}>
-							<div className="line" />
-						</motion.div>
 					</Space>
 				</motion.div>
 			</div>
@@ -114,8 +111,8 @@ const FloatInfo = () => {
 				{`
 					.social-network {
 						position: fixed;
-						bottom: 0px;
-						left: 5%;
+						bottom: 25%;
+						left: 10px;
 						font-size: 25px;
 					}
 					.line{

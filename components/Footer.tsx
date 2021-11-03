@@ -15,6 +15,7 @@ import { theme } from '@/styles/theme'
 
 // Translation
 import useTranslation from 'next-translate/useTranslation'
+import SocialMedia from './SocialMedia'
 
 const Footer = () => {
 
@@ -28,45 +29,9 @@ const Footer = () => {
 			<footer>
 				<Divider />
 				{t("footer_developed")} Wilfer Daniel Ciro Maya<br />
-				&copy; {age_now}
+				{age_now}
 				<Divider />
-				<Space size="large">
-					<Link href="https://github.com/WilferCiro">
-						<a target="_blank" rel="noreferrer">
-							<Tooltip title={t("goto_github")}>
-								<GithubOutlined />
-							</Tooltip>
-						</a>
-					</Link>
-					<Link href="https://gitlab.com/WilferCiro">
-						<a target="_blank" rel="noreferrer">
-							<Tooltip title={t("goto_gitlab")}>
-								<GitlabFilled />
-							</Tooltip>
-						</a>
-					</Link>
-					<Link href="https://www.linkedin.com/in/wilfer-ciro/">
-						<a target="_blank" rel="noreferrer">
-							<Tooltip title={t("goto_linkedin")}>
-								<LinkedinFilled />
-							</Tooltip>
-						</a>
-					</Link>
-					<Link href="mailto:wilcirom@gmail.com">
-						<a target="_blank" rel="noreferrer">
-							<Tooltip title={t("goto_mail")}>
-								<MailFilled />
-							</Tooltip>
-						</a>
-					</Link>
-					<Link href="https://www.instagram.com/wilcirom/">
-						<a target="_blank" rel="noreferrer">
-							<Tooltip title={t("goto_instagram")}>
-								<InstagramFilled />
-							</Tooltip>
-						</a>
-					</Link>
-				</Space>
+				<SocialMedia />
 					
 				<div>
 					{
@@ -93,19 +58,9 @@ const Footer = () => {
 						padding: 40px 20%;
 						margin-top: 40px;
 					}
-					a{
-						font-size: 30px;
-						color: ${theme.primary};
-					}
-					a:hover{
-						color: ${theme.textPrimary};
-					}
 					@media (max-width: 767px) {
 						footer{
 							padding: 40px 5%;
-						}
-						a{
-							font-size: 22px;
 						}
 					}
 				`}	

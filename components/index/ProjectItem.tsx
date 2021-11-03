@@ -81,6 +81,7 @@ const ProjectItem = ({children, images, tags, right, title, description} : Props
 					margin-bottom: 80px;
 					padding: 15px 5px;
 					border-bottom: dashed 2px ${theme.textSecundary};
+					text-align: justify;
 				}
 				.project h3{
 					color: ${theme.primary};
