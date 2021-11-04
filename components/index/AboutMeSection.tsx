@@ -56,19 +56,8 @@ const AboutMeSection = () => {
 				>
 					<h3>{t("about_about-me")}</h3>
 					<Divider />
-					<Row gutter={[20, 16]} align="middle">
-						<Col xs={24} md={10}>
-							<div className="image">
-								<motion.div variants={animItem}>
-									<Image
-										alt="My Photo"
-										src={"/img/index/me.webp"}
-										layout={"responsive"}
-										width={350}
-										height={350}
-									/>
-								</motion.div>
-							</div>
+					<Row gutter={[20, 16]} align="top">
+						<Col xs={24} md={11}>
 							<p>{t("about_description")}</p>
 							<JSONInput viewOnly={true} locale={locale} id={"my_data"} height="270px" width="100%" placeholder=
 								{
@@ -88,7 +77,7 @@ const AboutMeSection = () => {
 									}
 								} />
 						</Col>
-						<Col xs={23} md={14}>
+						<Col xs={23} md={13}>
 							<motion.div variants={animItem}>
 								<Timeline mode="left">
 									<Timeline.Item label="1998-05-29">{t("about_my-birth")}</Timeline.Item>

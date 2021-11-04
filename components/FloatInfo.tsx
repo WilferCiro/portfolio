@@ -112,7 +112,7 @@ const FloatInfo = () => {
 					.social-network {
 						position: fixed;
 						bottom: 25%;
-						left: 10px;
+						left: 20px;
 						font-size: 25px;
 					}
 					.line{

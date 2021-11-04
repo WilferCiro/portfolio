@@ -2,25 +2,17 @@
 	Created by Wilfer Daniel Ciro Maya - 2021
 */
 
-// NextJS and react
-import React from 'react';
-import dynamic from 'next/dynamic'
+// React and nextJS
+import useTranslation from "next-translate/useTranslation";
+import React from "react";
 
 // Antd
-import {
-	Divider,
-	List,
-	Card
-} from 'antd';
 
 // Custom
-import { theme } from '@/styles/theme';
-const SkillItem = dynamic(() => import('@/components/index/SkillItem'))
 
-// Translate
-import useTranslation from 'next-translate/useTranslation'
+// Third Part
 
-const SkillsSection = () => {
+const Aditional = () => {
 	const { t } = useTranslation("home")
 
 	const data = [
@@ -39,49 +31,18 @@ const SkillsSection = () => {
 	]
 
 	return (
-		<>
-			<section id="skills">
-				<h3>{t("skills_title")}</h3>
-				<Divider />
-				<List
-					grid={{
-						gutter: 15,
-						xs: 2,
-						sm: 2,
-						md: 3,
-						lg: 3,
-						xl: 3,
-						xxl: 3,
-					}}
-					dataSource={data}
-					renderItem={item => (
-						<List.Item>
-							<SkillItem {...item} />
-						</List.Item>
-					)}
-				/>
-			</section>
+		<div id="aditional">
+			
 
 			<style jsx>
 				{`
-					section {
-						min-height: 100vh;
-						padding: 100px 20% 10px 20%;
-						align-items: center;
-						margin: 40px auto;
-					}
-					h3 {
-						color: ${theme.primary}
-					}
-					@media (max-width: 767px) {
-						section{
-							padding: 20px 15px;
-						}
+					.skill{
+						
 					}
 				`}
 			</style>
-		</>
+		</div>
 	)
 }
 
-export default React.memo(SkillsSection)
+export default React.memo(Aditional);
