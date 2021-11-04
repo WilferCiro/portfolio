@@ -4,20 +4,16 @@
 
 // Next and react
 import React, {useEffect} from "react"
-import Image from 'next/image'
 
 // Animations
-import { motion, useAnimation } from 'framer-motion';
-import { animContainer, animItem } from '@/components/tools/animations';
+import { useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 // Antd
 import {
-	Tag,
-	Card
+	Tag
 } from 'antd'
 import { theme } from "@/styles/theme";
-const { Meta } = Card;
 
 interface Props {
 	title: string,

@@ -9,8 +9,7 @@ import dynamic from 'next/dynamic'
 // Antd
 import {
 	Divider,
-	List,
-	Card
+	List
 } from 'antd';
 
 // Custom

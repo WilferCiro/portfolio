@@ -5,7 +5,6 @@
 
 // React and next
 import React, { useEffect } from 'react';
-import Image from 'next/image'
 
 // Antd
 import { Timeline, Divider, Row, Col } from 'antd';
