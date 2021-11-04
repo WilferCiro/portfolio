@@ -6,8 +6,9 @@
 import React, {useEffect} from "react"
 
 // Animations
-import { useAnimation } from 'framer-motion';
+import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { animContainer, animItem } from "@/components/tools/animations";
 
 // Antd
 import {
@@ -32,21 +33,28 @@ const SkillItem = ({title, items, image} : Props) => {
 
 	return (
 		<>
-
-			<div className="skill">
-				<div className="image"></div>
-				<div className="description">
-					<p>{title}</p>
-					<div className="">
-						{
-							items.map((item: string) => {
-								return <Tag key={Math.random()}>{item}</Tag>
-							})
-						}
+			<motion.div
+				ref={ref}
+				variants={animContainer}
+				initial="hidden"
+				animate={controls}
+			>
+				<motion.div variants={animItem}>
+					<div className="skill">
+						<div className="image"></div>
+						<div className="description">
+							<p>{title}</p>
+							<div className="">
+								{
+									items.map((item: string) => {
+										return <Tag key={Math.random()}>{item}</Tag>
+									})
+								}
+							</div>
+						</div>
 					</div>
-				</div>
-			</div>
-
+				</motion.div>
+			</motion.div>
 			<style jsx>
 			{`
 				.skill{

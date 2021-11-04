@@ -15,7 +15,6 @@ const AboutMeSection = dynamic(() => import('@/components/index/AboutMeSection')
 const ProjectsSection = dynamic(() => import('@/components/index/ProjectsSection'))
 const SkillsSection = dynamic(() => import('@/components/index/SkillsSection'))
 const ContactSection = dynamic(() => import('@/components/index/ContactSection'))
-const Aditional = dynamic(() => import('@/components/index/Aditional'))
 
 const Home: NextPage = () => {
   return (
@@ -26,7 +25,6 @@ const Home: NextPage = () => {
       <ProjectsSection />
       <SkillsSection />
       <ContactSection />
-      <Aditional />
     </>
   )
 }

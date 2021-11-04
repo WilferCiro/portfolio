@@ -19,7 +19,7 @@ import { theme } from '@/styles/theme'
 
 // Animations
 import { motion } from 'framer-motion';
-import { animContainer, animItem } from '../tools/animations';
+import { animContainer, animItem } from '@/components/tools/animations';
 import MePhoto from '@/components/index/MePhoto';
 
 // Translate
