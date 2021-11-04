@@ -60,34 +60,20 @@ const SkillItem = ({title, items, image} : Props) => {
 				.skill{
 					background: ${theme.bgPrimary};
 					width: 100%;
-					height: 140px;
-					border-radius: 10px;
+					height: 200px;
 					overflow: hidden;
 					position: relative;
-				}
-				.skill:hover .image{
-					width: calc(100% - 10px);
-					height: calc(100% - 15px);
-					position: absolute;
-					top: 5px;
-					left: 5px;
-					background-size: 100% 100%;
-					background-position: 0px 0px;
-					filter: blur(0px);
-					background-image: url(${image});
-					background-size: contain;
-					border-radius: 5px;
+					text-align: center;
 				}
 				.image{
-					background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), ${theme.bgPrimary}), url(${image});
-					background-size:     cover;
-					background-repeat:   no-repeat;
+					background-image: url(${image});
+					background-size: cover;
+					background-repeat: no-repeat;
 					background-position: center center;
-					filter: blur(1px);
-					width: 100%;
-					height: 50px;
+					width: 80px;
+					height: 80px;
 					transition: all 0.1s;
-					border-radius: 5px;
+					margin: 10px auto;
 				}
 				.description {
 					padding: 10px 15px;

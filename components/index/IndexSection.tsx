@@ -103,6 +103,7 @@ const IndexSection = () => {
 						}
 						.data{
 							height: auto;
+							display: block;
 						}
 						.image{
 							margin: auto;
