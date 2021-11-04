@@ -14,7 +14,7 @@ const FloatInfo = dynamic(() => import('@/components/FloatInfo'))
 const ParticlesBG = dynamic(() => import('@/components/ParticlesBG'))
 
 import { theme } from '../styles/theme'
-import 'antd/dist/antd.dark.css';
+//import 'antd/dist/antd.dark.css';
 
 function MyApp({ Component, pageProps }: AppProps) {
   // TODO:

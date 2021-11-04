@@ -38,14 +38,14 @@ const IndexSection = () => {
 					animate="visible"
 				>
 					<Row align="middle" justify="center">						
-						<Col xs={24} md={10}>
+						<Col xs={24} md={11}>
 							<div className="image">
 								<motion.div variants={animItem}>
 									<MePhoto />
 								</motion.div>
 							</div>
 						</Col>
-						<Col xs={24} md={14}>
+						<Col xs={24} md={13}>
 							<div className="data">
 								<motion.div variants={animItem}>
 									<div>
