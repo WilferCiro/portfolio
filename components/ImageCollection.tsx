@@ -19,6 +19,7 @@ const ImageCollection = ({images}: Props) => {
 	return (
 	<>
 		<Image
+			style={{borderRadius: "5px", overflow: "hidden"}}
 			alt="Project Image"
 			preview={{ visible: false }}
 			width={"100%"}

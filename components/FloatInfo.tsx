@@ -132,7 +132,7 @@ const FloatInfo = () => {
 						right: 1%;
 						bottom: 1%;
 						color: ${theme.textPrimary};
-						background: ${theme.textPrimary};
+						background: ${theme.bgPrimary};
 					}
 					@media (max-width: 767px) {
 						.social-network, .anchor{

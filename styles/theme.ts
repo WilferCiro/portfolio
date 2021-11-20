@@ -3,21 +3,24 @@ const isDark = true;
 
 const themeLight = {
 	"primary" : "#11A8CD",
-	"textPrimary" : "#CCD6F6",
+	"textPrimary" : "#0A192F",
 	"textSecundary" : "#76819D",
-	"bgPrimary" : "#1E1E1E"
+	"bgPrimary" : "#e1e1e1",
+	"bgSecundary": "#FFF"
 }
 
 const themeDark = {
 	"primary" : "#11A8CD",
-	"textPrimary" : "#0A192F",
+	"textPrimary" : "#CCD6F6",
 	"textSecundary" : "#76819D",
-	"bgPrimary" : "#CCD6F6"
+	"bgPrimary" : "#1E1E1E",
+	"bgSecundary": "#000"
 }
 
 export const theme = {
-	"primary" : !isDark ? themeDark.primary : themeLight.primary,
-	"textPrimary" : !isDark ? themeDark.textPrimary : themeLight.textPrimary,
-	"textSecundary" : !isDark ? themeDark.textSecundary : themeLight.textSecundary,
-	"bgPrimary" : !isDark ? themeDark.bgPrimary : themeLight.bgPrimary,
+	"primary" : isDark ? themeDark.primary : themeLight.primary,
+	"textPrimary" : isDark ? themeDark.textPrimary : themeLight.textPrimary,
+	"textSecundary" : isDark ? themeDark.textSecundary : themeLight.textSecundary,
+	"bgPrimary" : isDark ? themeDark.bgPrimary : themeLight.bgPrimary,
+	"bgSecundary" : isDark ? themeDark.bgSecundary : themeLight.bgSecundary,
 }

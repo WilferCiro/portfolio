@@ -52,7 +52,7 @@ const ProjectItem = ({children, images, tags, right, title, description} : Props
 							<div className="tags">
 								{
 									tags.map((item: string) => {
-										return <Tag key={Math.random()}>{item}</Tag>
+										return <Tag color={theme.primary} key={Math.random()}>{item}</Tag>
 									})
 								}
 							</div>
@@ -80,7 +80,6 @@ const ProjectItem = ({children, images, tags, right, title, description} : Props
 					position: relative;
 					margin-bottom: 80px;
 					padding: 15px 5px;
-					border-bottom: dashed 2px ${theme.textSecundary};
 					text-align: justify;
 				}
 				.project h3{
@@ -106,6 +105,7 @@ const ProjectItem = ({children, images, tags, right, title, description} : Props
 					z-index: 2;
 					padding: 20px 30px;
 					box-shadow: 2px 2px 5px black;
+					border-radius: 5px;
 				}
 				.description-right {
 					left: 0px;

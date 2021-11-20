@@ -1,10 +1,11 @@
 {
 	"index_my-name" : "¡Hola!, soy",
-	"index_description" : "Ingeniero electrónico que construye soluciones para el mundo",
+	"index_description" : "Constructor de soluciones para el mundo",
 
 	"index_subtitle" : "Desarrollador full stack",
 	"about_about-me" : "Sobre mi",
-	"about_description" : "Soy una persona apasionada por el aprendizaje, me gustan los retos, responsable y apasionado por lo que hago.",
+	"about_description" : "Empecé en el mundo TI desde muy jóven, siendo el 'rarito' del grupo de mis amigos por preferir estudiar que salir de fiesta, siempre he sido muy autodidacta, aprendo gracias al conocimiento que la web ofrece.",
+	"about_description2" : "Estudié Ingeniería Electrónica porque me apasiona mucho el mundo de los sistemas digitales, además de siempre tener pasión por la programación. Deseo ser un gran profesional que aporte en la construcción del futuro de la tecnología.",
 	"about_title_profession" : "Profesion",
 	"about_profession" : "Ingeniero electrónico y desarrollador full stack",
 	"about_title_spanish" : "Español", 
@@ -18,6 +19,8 @@
 	"about_first-job" : "Inicio como desarrollador Junior en Jaivaná",
 	"about_finish-university" : "Finalización de la carrera universitaria",
 	"about_second-job" : "Inicio de segundo empleo en Negozia CF",
+	"about_next" : "Continuo aprendizaje",
+	"about_timeline" : "Mi línea de tiempo",
 
 	"series_movies" : "Series y películas",
 	"gym" : "Gimnasio",

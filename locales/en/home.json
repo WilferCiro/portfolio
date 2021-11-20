@@ -1,9 +1,10 @@
 {
 	"index_my-name" : "Hi, I am",
-	"index_description" : "Electronic Engineer that builds solutions for the world",
+	"index_description" : "Builder of solutions for the world",
 	"index_subtitle" : "Full stack developer",
 	"about_about-me" : "About me",
-	"about_description" : "I am a person willing to learn new things every day, responsible and very passionate about programming",
+	"about_description" : "I started in the IT world from a very young age, being the 'weirdo' of the group of my friends for preferring to study than to go out partying, I have always been very self-taught, I learn thanks to the knowledge that the web offers.",
+	"about_description2" : "I studied Electronic Engineering because I am very passionate about the world of digital systems, in addition to always having a passion for programming. I want to be a great professional who contributes to the construction of the future of technology.",
 	"about_title_profession" : "Profession",
 	"about_profession" : "Electronic engineer and fullstack developer",
 	"about_title_spanish" : "Spanish", 
@@ -17,6 +18,8 @@
 	"about_first-job" : "I started my first job as a fullstack Junior developer at Jaivaná",
 	"about_finish-university" : "I finished my university degree",
 	"about_second-job" : "I started my second job as fullstack at Negozia CF",
+	"about_next" : "Continuous learning",
+	"about_timeline" : "My timeline",
 
 	"series_movies" : "Series and movies",
 	"gym" : "Gym",

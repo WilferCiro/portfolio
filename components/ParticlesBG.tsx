@@ -3,6 +3,7 @@
 */
 
 // NextJs and react
+import { theme } from '@/styles/theme';
 import React from 'react'
 
 // Particles
@@ -32,7 +33,7 @@ const ParticlesBG = () => {
 				options={{
 					background: {
 						color: {
-							value: "#000",
+							value: theme.bgSecundary,
 						},
 					},
 					fpsLimit: 60,

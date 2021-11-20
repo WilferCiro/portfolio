@@ -17,8 +17,9 @@ import { useInView } from 'react-intersection-observer';
 
 // Translate
 import useTranslation from 'next-translate/useTranslation';
-import JSONInput from 'react-json-editor-ajrm';
-import locale    from '@/locales/json/es';
+
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import style from '@/styles/json-code';
 
 const AboutMeSection = () => {
 
@@ -44,6 +45,22 @@ const AboutMeSection = () => {
 		return age_now;
 	}
 
+
+	const myData = {
+		"name" : "Wilfer Daniel Ciro Maya",
+		"spanish" : t("about_spanish"),
+		"english" : "B1",
+		"age" : calculate_age(),
+		"county" : "Colombia 🇨🇴️",
+		"hobbies" : [
+			t("gym"),
+			t("series_movies"),
+			t("video_games"),
+			t("travel")
+		],
+		"profession" : t("about_profession")
+	}
+
 	return (
 		<>
 			<section id="about">
@@ -53,39 +70,28 @@ const AboutMeSection = () => {
 					initial="hidden"
 					animate={controls}
 				>
-					<h3>{t("about_about-me")}</h3>
-					<Divider />
 					<Row gutter={[20, 16]} align="top">
 						<Col xs={24} md={11}>
+							<h3>{t("about_about-me")}</h3>
+							<Divider />
 							<p>{t("about_description")}</p>
-							<JSONInput viewOnly={true} locale={locale} id={"my_data"} height="270px" width="100%" placeholder=
-								{
-									{
-										"name" : "Wilfer Daniel Ciro Maya",
-										"spanish" : t("about_spanish"),
-										"english" : "B1",
-										"age" : calculate_age(),
-										"county" : "Colombia 🇨🇴️",
-										"hobbies" : [
-											t("gym"),
-											t("series_movies"),
-											t("video_games"),
-											t("travel")
-										],
-										"profession" : t("about_profession")
-									}
-								} />
+							<p>{t("about_description2")}</p>
+							<SyntaxHighlighter language="json" style={style} wrapLongLines={true}>
+								{JSON.stringify(myData, null, 4)}
+							</SyntaxHighlighter>
 						</Col>
 						<Col xs={23} md={13}>
+							<h3 className="h3-right">{t("about_timeline")}</h3>
+							<Divider />
 							<motion.div variants={animItem}>
-								<Timeline mode="left">
-									<Timeline.Item label="1998-05-29">{t("about_my-birth")}</Timeline.Item>
-									<Timeline.Item color="green" label="2013-05-05">{t("about_start-programming")}</Timeline.Item>
-									<Timeline.Item color="green" label="2014-12-12">{t("about_finish-high-school")}</Timeline.Item>
-									<Timeline.Item color="green" label="2014-12-15">{t("about_finish-sena")}</Timeline.Item>
-									<Timeline.Item color="purple" label="2020-05-15">{t("about_first-job")}</Timeline.Item>
-									<Timeline.Item color="green" label="2020-08-10">{t("about_finish-university")}</Timeline.Item>
-									<Timeline.Item color="purple" label="2021-08-15">{t("about_second-job")}</Timeline.Item>
+								<Timeline mode="left" pending={t("about_next") + "..."}>
+									<Timeline.Item label="29 de mayo de 1998">{t("about_my-birth")}</Timeline.Item>
+									<Timeline.Item color="green" label="Mayo de 2013">{t("about_start-programming")}</Timeline.Item>
+									<Timeline.Item color="green" label="Diciembre de 2014">{t("about_finish-high-school")}</Timeline.Item>
+									<Timeline.Item color="green" label="Diciembre de 2014">{t("about_finish-sena")}</Timeline.Item>
+									<Timeline.Item color="purple" label="15 de Mayo de 2020">{t("about_first-job")}</Timeline.Item>
+									<Timeline.Item color="green" label="Junio de 2020">{t("about_finish-university")}</Timeline.Item>
+									<Timeline.Item color="purple" label="15 de septiembre de 2021">{t("about_second-job")}</Timeline.Item>
 								</Timeline>
 							</motion.div>
 						</Col>
@@ -95,14 +101,12 @@ const AboutMeSection = () => {
 
 			<style jsx>
 				{`
-					section {
-						min-height: 100vh;
-						padding: 100px 20% 10px 20%;
-					}
 					h3{
 						color: ${theme.primary}
 					}
-
+					.h3-right{
+						text-align: right;
+					}
 					pre {
 						background-color: ghostwhite;
 						border: 1px solid silver;
@@ -115,7 +119,6 @@ const AboutMeSection = () => {
 						white-space: pre-line;
 
 					}
-
 					.image{
 						margin: auto;
 						width: 70%;
@@ -129,6 +132,9 @@ const AboutMeSection = () => {
 					@media (max-width: 767px) {
 						section{
 							padding: 20px 25px;
+						}
+						.h3-right{
+							text-align: left;
 						}
 					}
 				`} 

@@ -92,6 +92,8 @@ const ProjectsSection = () => {
 			"images" : [
 				"/img/index/mips/img1.webp",
 				"/img/index/mips/img2.webp",
+				"/img/index/mips/img3.webp",
+				"/img/index/mips/img4.webp",
 			],
 			"title" : "32 bits MIPS",
 			"tags" : ["Verilog", "Ensambler"],
@@ -131,23 +133,8 @@ const ProjectsSection = () => {
 
 			<style jsx>
 				{`
-					section {
-						min-height: 100vh;
-						padding: 100px 15% 10px 15%;
-						align-items: center;
-					}
 					h3 {
 						color: ${theme.primary}
-					}
-					@media (max-width: 767px) {
-						section{
-							padding: 20px 15px;
-						}
-					}
-					@media (min-width: 767px) and (max-width: 1100px) {
-						section{
-							padding: 20px 15%;
-						}
 					}
 				`}
 			</style>

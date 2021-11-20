@@ -171,10 +171,6 @@ const ContactSection = () => {
 
 			<style jsx>
 				{`
-					section {
-						min-height: 100vh;
-						padding: 100px 20% 10px 20%;
-					}
 					h3 {
 						color: ${theme.primary}
 					}
@@ -185,9 +181,6 @@ const ContactSection = () => {
 					@media (max-width: 767px) {
 						.form {
 							width: 100%;
-						}
-						section{
-							padding: 20px 15px;
 						}
 					}
 				`}

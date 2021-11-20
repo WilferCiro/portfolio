@@ -16,8 +16,8 @@ const MePhoto = () => {
 					.headshot {
 						flex-shrink: 0;
 						margin: 20px;
-						width: auto;
-						height: 50vh;
+						width: 25vw;
+    					height: 25vw;
 						background-origin: border-box;
 						background-clip: content-box, border-box;
 						background-size: cover;
@@ -26,6 +26,12 @@ const MePhoto = () => {
 					
 					.headshot-1 {
 						background-image: url(/img/index/me2.webp);
+					}
+					@media (min-width: 768px) and (max-width: 990px) {
+						.headshot {
+							width: 40vw;
+    						height: 40vw;
+						}
 					}
 					@media (max-width: 767px) {
 						.headshot {

@@ -10,6 +10,7 @@ import Link from 'next/link'
 import {
 	Button,
 	Col,
+	Divider,
 	Row
 } from 'antd';
 import { CloudDownloadOutlined } from '@ant-design/icons';
@@ -53,9 +54,10 @@ const IndexSection = () => {
 										<h1>Wilfer Daniel Ciro Maya</h1>
 										<h2>{t("index_subtitle")}</h2>
 										<p>{t("index_description")}</p>
+										<Divider />
 										<Link href="https://drive.google.com/file/d/1HtbNVGocGdFbvCa7mgrWlFrlw-s6oGyD/view?usp=sharing">
 											<a target="_blank">
-												<Button type="primary" icon={<CloudDownloadOutlined />} ghost>{t("header_resume")}</Button>
+												<Button type="primary" icon={<CloudDownloadOutlined />}>{t("header_resume")}</Button>
 											</a>
 										</Link>
 									</div>
@@ -69,10 +71,6 @@ const IndexSection = () => {
 
 			<style jsx>
 				{`
-					section {
-						min-height: 100vh;
-						padding: 10px 20%;
-					}
 					.data{
 						height: 100vh;
 						display: flex;
@@ -91,6 +89,11 @@ const IndexSection = () => {
 					h2{
 						color: ${theme.textSecundary};
 						font-size: 35px;
+						margin: 0px;
+					}
+					section {
+						min-height: 100vh;
+						padding: 10px 20%;
 					}
 					@media (max-width: 767px) {
 						section {
