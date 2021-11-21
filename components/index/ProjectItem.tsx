@@ -158,6 +158,13 @@ const ProjectItem = ({children, images, tags, right, title, description} : Props
 						padding: 15px 10px;
 						background: transparent;
 					}
+					.project{
+						background: ${theme.bgPrimary};
+						border-radius: 10px;
+						padding: 5px 15px;
+						margin-bottom: 10px;
+						border: solid 1px ${theme.borderColor};
+					}
 				}
 			`}
 			</style>

@@ -64,6 +64,7 @@ const SkillItem = ({title, items, image} : Props) => {
 					overflow: hidden;
 					position: relative;
 					text-align: center;
+					border-radius: 5px;
 				}
 				.image{
 					background-image: url(${image});

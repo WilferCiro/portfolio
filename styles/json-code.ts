@@ -24,22 +24,22 @@ const style = {
 	  "color": "#859900"
 	},
 	"hljs-number": {
-	  "color": "#2aa198"
+	  "color": "#0EA9CE"
 	},
 	"hljs-string": {
-	  "color": "#2aa198"
+	  "color": "#0EA9CE"
 	},
 	"hljs-meta .hljs-meta-string": {
-	  "color": "#2aa198"
+	  "color": "#0EA9CE"
 	},
 	"hljs-literal": {
-	  "color": "#2aa198"
+	  "color": "#0EA9CE"
 	},
 	"hljs-doctag": {
-	  "color": "#2aa198"
+	  "color": "#0EA9CE"
 	},
 	"hljs-regexp": {
-	  "color": "#2aa198"
+	  "color": "#0EA9CE"
 	},
 	"hljs-title": {
 	  "color": "#268bd2"
@@ -57,22 +57,22 @@ const style = {
 	  "color": "#268bd2"
 	},
 	"hljs-attribute": {
-	  "color": "#b58900"
+	  "color": "#FFF"
 	},
 	"hljs-attr": {
-	  "color": "#b58900"
+	  "color": "#FFF"
 	},
 	"hljs-variable": {
-	  "color": "#b58900"
+	  "color": "#FFF"
 	},
 	"hljs-template-variable": {
-	  "color": "#b58900"
+	  "color": "#FFF"
 	},
 	"hljs-class .hljs-title": {
-	  "color": "#b58900"
+	  "color": "#FFF"
 	},
 	"hljs-type": {
-	  "color": "#b58900"
+	  "color": "#FFF"
 	},
 	"hljs-symbol": {
 	  "color": "#cb4b16"

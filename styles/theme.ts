@@ -6,7 +6,8 @@ const themeLight = {
 	"textPrimary" : "#0A192F",
 	"textSecundary" : "#76819D",
 	"bgPrimary" : "#e1e1e1",
-	"bgSecundary": "#FFF"
+	"bgSecundary": "#FFF",
+	"borderColor" : "#303030"
 }
 
 const themeDark = {
@@ -14,7 +15,8 @@ const themeDark = {
 	"textPrimary" : "#CCD6F6",
 	"textSecundary" : "#76819D",
 	"bgPrimary" : "#1E1E1E",
-	"bgSecundary": "#000"
+	"bgSecundary": "#000",
+	"borderColor" : "#303030"
 }
 
 export const theme = {
@@ -23,4 +25,5 @@ export const theme = {
 	"textSecundary" : isDark ? themeDark.textSecundary : themeLight.textSecundary,
 	"bgPrimary" : isDark ? themeDark.bgPrimary : themeLight.bgPrimary,
 	"bgSecundary" : isDark ? themeDark.bgSecundary : themeLight.bgSecundary,
+	"borderColor" : isDark ? themeDark.borderColor : themeLight.borderColor,
 }
