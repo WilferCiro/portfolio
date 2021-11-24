@@ -12,7 +12,7 @@ import { TranslationOutlined } from '@ant-design/icons'
 
 // Translation
 import useTranslation from 'next-translate/useTranslation'
-import SocialMedia from './SocialMedia'
+import SocialMedia from '@/components/portfolio/SocialMedia'
 
 const Footer = () => {
 

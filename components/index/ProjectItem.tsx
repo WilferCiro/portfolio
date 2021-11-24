@@ -17,7 +17,7 @@ import { Divider, Tag } from "antd";
 // Custom
 import { theme } from "@/styles/theme";
 import { style } from "@/styles/index/project-item";
-const ImageCollection = dynamic(() => import('@/components/ImageCollection'))
+const ImageCollection = dynamic(() => import('@/components/portfolio/ImageCollection'))
 
 
 interface Props {

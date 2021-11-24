@@ -17,7 +17,7 @@ import { MenuOutlined, CloseOutlined } from '@ant-design/icons'
 
 // Animations
 import { motion } from 'framer-motion'
-import { animContainer, animItem } from './tools/animations'
+import { animContainer, animItem } from '@/components/tools/animations'
 
 // Translate
 import useTranslation from 'next-translate/useTranslation'

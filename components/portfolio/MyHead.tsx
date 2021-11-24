@@ -9,7 +9,7 @@ import Head from 'next/head';
 
 const MyHead = () => {
 
-	const defaultDescription = "Hello! Welcome to my personal portfolio, I hope the information presented here will be of use to you.";
+	const defaultDescription = "Hi, I am Wilfer Daniel Ciro Maya, Full stack developer - Builder of solutions for the world";
 
 	const urlPage = "https://wilciro.vercel.app/";
 	const imageDefault = urlPage + "/image-meta.png";

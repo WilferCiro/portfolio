@@ -7,11 +7,11 @@ import type { AppProps } from 'next/app'
 import dynamic from 'next/dynamic'
 
 // Custom
-import MyHead from '@/components/MyHead'
-const Header = dynamic(() => import('@/components/Header'))
-const Footer = dynamic(() => import('@/components/Footer'))
-const FloatInfo = dynamic(() => import('@/components/FloatInfo'))
-const ParticlesBG = dynamic(() => import('@/components/ParticlesBG'))
+import MyHead from '@/components/portfolio/MyHead'
+const Header = dynamic(() => import('@/components/portfolio/Header'))
+const Footer = dynamic(() => import('@/components/portfolio/Footer'))
+const FloatInfo = dynamic(() => import('@/components/portfolio/FloatInfo'))
+const ParticlesBG = dynamic(() => import('@/components/portfolio/ParticlesBG'))
 
 // Styles
 import { style } from '@/styles/app'

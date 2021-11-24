@@ -1450,10 +1450,10 @@ ansi-styles@^4.0.0, ansi-styles@^4.1.0:
   dependencies:
     color-convert "^2.0.1"
 
-antd@^4.17.0:
-  version "4.17.0"
-  resolved "https://registry.yarnpkg.com/antd/-/antd-4.17.0.tgz#6b21761ec0a10dfd15fe5822a45e68e9279b687c"
-  integrity sha512-V2xBGzBK+s2Iy7Re5JOcOBtAvaZtJ9t7R1fFOP51T6ynfSvJqaRtG4DjBu7i9inhXkCzrt7eGcX3vMqLCqXV8g==
+antd@^4.17.1:
+  version "4.17.1"
+  resolved "https://registry.yarnpkg.com/antd/-/antd-4.17.1.tgz#adec546ec2c36ac89de3b4133ec8062005b57aae"
+  integrity sha512-GNVuVnWJjFE1r3AGYc7vhy+gzlDAimAAZMTNCZdAncLBDN7gCTrf8euSb+C0TEqr7UV26yNGBQ9yGoeUcHUdSA==
   dependencies:
     "@ant-design/colors" "^6.0.0"
     "@ant-design/icons" "^4.7.0"
