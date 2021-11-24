@@ -17,7 +17,6 @@ import {
 import { GitlabFilled, LinkOutlined, ContactsFilled } from '@ant-design/icons';
 
 // Custom
-import { theme } from '@/styles/theme'
 const ProjectItem = dynamic(() => import('@/components/index/ProjectItem'))
 
 // Translation
@@ -118,27 +117,17 @@ const ProjectsSection = () => {
 	]
 
 	return (
-		<>
-			<section id="projects">
-				<h3>{t("projects_title")}</h3>
-				<Divider />
+		<section id="projects">
+			<h3>{t("projects_title")}</h3>
+			<Divider />
 
-				{
-					projects.map((project: any, index: number) => {
-						return <ProjectItem key={Math.random()} {...project} right={index % 2 !== 0} />
-					})
-				}
+			{
+				projects.map((project: any, index: number) => {
+					return <ProjectItem key={Math.random()} {...project} right={index % 2 !== 0} />
+				})
+			}
 
-			</section>
-
-			<style jsx>
-				{`
-					h3 {
-						color: ${theme.primary}
-					}
-				`}
-			</style>
-		</>
+		</section>
 	)
 }
 

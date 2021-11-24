@@ -9,7 +9,7 @@ import Image from 'next/image'
 
 // Antd
 import { Timeline, Divider, Row, Col, Typography } from 'antd';
-import { theme } from '@/styles/theme';
+import { style as aboutmeStyle } from '@/styles/index/about-me';
 
 // Animations
 import { motion, useAnimation } from 'framer-motion';
@@ -20,7 +20,7 @@ import { useInView } from 'react-intersection-observer';
 import useTranslation from 'next-translate/useTranslation';
 
 import SyntaxHighlighter from 'react-syntax-highlighter';
-import style from '@/styles/json-code';
+import { style as styleJSON } from '@/styles/json-code';
 
 const { Text } = Typography;
 
@@ -39,12 +39,11 @@ const AboutMeSection = () => {
 
 	const calculate_age = () => {
 		let today = new Date();
-		let birthDate = new Date("1998/05/29");  // create a date object directly from `dob1` argument
+		let birthDate = new Date("1998/05/29");
 		let age_now = today.getFullYear() - birthDate.getFullYear();
 		let m = today.getMonth() - birthDate.getMonth();
-		if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) 
-		{
-			age_now--;
+		if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate()))  {
+			age_now --;
 		}
 		return age_now;
 	}
@@ -85,13 +84,14 @@ const AboutMeSection = () => {
 										width={100}
 										height={100}
 										layout={"responsive"}
+										alt={"Foto de Wilfer Daniel Ciro Maya"}
 									/>
 								</div>
 								<p>{t("about_description")}</p>
 								<p>{t("about_description2")}</p>
 							</div>
 							<Divider />
-							<SyntaxHighlighter language="json" style={style} wrapLongLines={true}>
+							<SyntaxHighlighter language="json" style={styleJSON} wrapLongLines={true}>
 								{JSON.stringify(myData, null, 4)}
 							</SyntaxHighlighter>
 						</Col>
@@ -135,51 +135,7 @@ const AboutMeSection = () => {
 				</motion.div>
 			</section>
 
-			<style jsx>
-				{`
-					h3{
-						color: ${theme.primary}
-					}
-					.h3-right{
-						text-align: right;
-					}
-					pre {
-						background-color: ghostwhite;
-						border: 1px solid silver;
-						padding: 10px 20px;
-						margin: 20px;
-						border-radius: 4px;
-						width: 100%;
-						margin-left: auto;
-						margin-right: auto;
-						white-space: pre-line;
-
-					}
-					.my-description{
-
-					}
-					.image{
-						margin: auto;
-						width: 40%;
-						border-radius: 100%;
-						overflow: hidden;
-						margin-bottom: 10px;
-						float: left;
-						shape-outside:circle();
-					}
-					p{
-						text-align: justify;
-					}
-					@media (max-width: 767px) {
-						section{
-							padding: 20px 25px;
-						}
-						.h3-right{
-							text-align: left;
-						}
-					}
-				`} 
-			</style>
+			<style jsx>{aboutmeStyle}</style>
 		</>
 	)
 }

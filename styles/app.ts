@@ -1,0 +1,39 @@
+import css from 'styled-jsx/css'
+import { theme } from '@/styles/theme'
+
+export const style =  css.global`
+	html {
+		scroll-behavior: smooth;
+	}
+	* {
+		box-sizing: border-box;
+	}
+	body{
+		margin: 0px;
+		padding: 0px;
+		color: ${theme.textPrimary};
+		font-family: Lato, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	}
+	.main-content{
+		min-height: 100vh;
+	}
+	section {
+		min-height: 100vh;
+		padding: 100px 20% 10px 20%;
+	}
+	h3 {
+		color: ${theme.primary}
+	}
+	@media (min-width: 768px) and (max-width: 990px) {
+		section {
+			padding: 100px 20px;
+			display: block;
+			text-align: center;
+		}
+	}
+	@media (max-width: 767px) {
+		section{
+			padding: 20px 15px;
+		}
+	}
+`

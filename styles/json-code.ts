@@ -1,4 +1,4 @@
-const style = {
+export const style = {
 	"hljs": {
 	  "display": "block",
 	  "overflowX": "auto",
@@ -114,5 +114,3 @@ const style = {
 	  "fontWeight": "bold"
 	}
 };
-
-export default style;

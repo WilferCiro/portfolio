@@ -1,0 +1,32 @@
+import css from 'styled-jsx/css'
+import { theme } from '@/styles/theme'
+
+export const style =  css`
+	.skill{
+		background: ${theme.bgPrimary};
+		width: 100%;
+		height: 200px;
+		overflow: hidden;
+		position: relative;
+		text-align: center;
+		border-radius: 5px;
+	}
+	.skill:hover .image{
+		transform: scale(1.1);					
+	}
+	.image{
+		width: 80px;
+		height: 80px;
+		transition: all 0.1s;
+		margin: 10px auto;
+	}
+	.description {
+		padding: 10px 15px;
+		width: 100%;
+		margin-top: -10px;
+		background: ${theme.bgPrimary};
+	}
+	.description p{
+		color: ${theme.primary}
+	}
+`

@@ -78,7 +78,7 @@ const ContactSection = () => {
 		},
 		{
 			title: t("address"),
-			body: "Colombia, Quimbaya Quindío, ciudadela mz 20 # 28",
+			body: "Barrio Villa Liliana, conjunto residencial Cibeles, Armenia - Quindío, Colombia",
 			icon: <HomeOutlined />
 		}
 	]
