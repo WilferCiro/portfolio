@@ -1,34 +1,29 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Wilfer Ciro Portfolio
 
-## Getting Started
+####_This is a site made by React, Next, Antd_
 
-First, run the development server:
+####_Wilfer Daniel Ciro Maya_
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Description
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+_This site is a home page for my portfolio. It is the first independent project from Epicodus. It will show previous work history, schools attended and have links to my Github page._
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Setup/Installation Requirements
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+* _Open terminal or a similar app on your computer_
+* _git clone https://github.com/WilferCiro/portfolio.git_
+* _cd portfolio_
+* _yarn install_
+* _yarn dev_
+* _open localhost:3000_
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Contact Details
 
-## Learn More
+_Email: wilcirom@gmail.com_
+_LinkedIn: https://www.linkedin.com/in/wilfer-ciro/_
 
-To learn more about Next.js, take a look at the following resources:
+## Technologies Used
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+_React_
+_Next_
+_Antd design_

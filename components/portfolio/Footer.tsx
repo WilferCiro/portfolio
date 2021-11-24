@@ -8,7 +8,7 @@ import React from 'react'
 
 // Antd
 import { Divider, Button } from 'antd'
-import { TranslationOutlined } from '@ant-design/icons'
+import { TranslationOutlined, CodeOutlined } from '@ant-design/icons'
 
 // Translation
 import useTranslation from 'next-translate/useTranslation'
@@ -26,7 +26,10 @@ const Footer = () => {
 			<footer>
 				<Divider />
 				{t("footer_developed")} Wilfer Daniel Ciro Maya<br />
-				{age_now}
+				{age_now}<br />
+				<a href="https://github.com/WilferCiro/portfolio" rel="noreferrer" target="_blank">
+					<Button type="link" icon={<CodeOutlined />}>Ver código</Button>
+				</a>
 				<Divider />
 				<SocialMedia />
 					
