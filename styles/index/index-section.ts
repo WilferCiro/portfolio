@@ -8,17 +8,17 @@ export const style =  css`
 		align-items: center;
 	}
 	.my-name{
-		color: ${theme.primary};
+		color: var(--primary-color);
 		margin: 0px;
 		font-size: 20px;
 	}
 	h1{
-		color: ${theme.textPrimary};
+		color: var(--font-color);
 		font-size: 40px;
 		margin: 0px;
 	}
 	h2{
-		color: ${theme.textSecundary};
+		color: var(--secondary-font-color);
 		font-size: 35px;
 		margin: 0px;
 	}

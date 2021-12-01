@@ -26,7 +26,6 @@ import { animContainer, animItem } from '@/components/tools/animations';
 import { useInView } from 'react-intersection-observer';
 
 // Custom
-import { theme } from '@/styles/theme';
 import useTranslation from 'next-translate/useTranslation';
 
 const ContactSection = () => {
@@ -172,7 +171,7 @@ const ContactSection = () => {
 			<style jsx>
 				{`
 					h3 {
-						color: ${theme.primary}
+						color:  var(--primary-color)
 					}
 					.data-list{
 						width: 80%;

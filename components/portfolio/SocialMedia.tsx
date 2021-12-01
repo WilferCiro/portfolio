@@ -3,7 +3,6 @@
 */
 
 // React and nextJS
-import { theme } from "@/styles/theme";
 import { GithubOutlined, GitlabFilled, InstagramFilled, LinkedinFilled, MailFilled } from "@ant-design/icons";
 import { Space, Tooltip } from "antd";
 import useTranslation from "next-translate/useTranslation";
@@ -64,10 +63,10 @@ const SocialMedia = () => {
 				{`
 					a{
 						font-size: 30px;
-						color: ${theme.textPrimary};
+						color:  var(--font-color);
 					}
 					a:hover{
-						color: ${theme.primary};
+						color:  var(--primary-color);
 					}
 					@media (max-width: 767px) {
 						a{

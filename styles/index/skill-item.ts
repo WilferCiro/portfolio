@@ -3,7 +3,7 @@ import { theme } from '@/styles/theme'
 
 export const style =  css`
 	.skill{
-		background: ${theme.bgPrimary};
+		background: var(--heading-color);
 		width: 100%;
 		height: 200px;
 		overflow: hidden;
@@ -24,9 +24,9 @@ export const style =  css`
 		padding: 10px 15px;
 		width: 100%;
 		margin-top: -10px;
-		background: ${theme.bgPrimary};
+		background: var(--heading-color);
 	}
 	.description p{
-		color: ${theme.primary}
+		color: var(--primary-color)
 	}
 `

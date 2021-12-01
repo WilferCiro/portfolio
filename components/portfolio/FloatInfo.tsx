@@ -2,14 +2,13 @@
 import React from 'react';
 import Link from 'next/link'
 
-import { theme } from '@/styles/theme'
-
 // Antd
 import {
 	Space,
 	Tooltip,
 	Anchor,
-	Button
+	Button,
+	Switch
 } from 'antd';
 // Antd
 const LinkAntd = Anchor.Link;
@@ -19,7 +18,9 @@ import {
 	MailFilled,
 	InstagramFilled,
 	GitlabFilled,
-	TranslationOutlined
+	TranslationOutlined,
+	CheckOutlined,
+	CloseOutlined
 } from '@ant-design/icons';
 
 // Animations
@@ -28,10 +29,16 @@ import { animContainer, animItem } from '@/components/tools/animations';
 
 // Translate
 import useTranslation from 'next-translate/useTranslation';
+import { useThemeSwitcher } from 'react-css-theme-switcher';
 
 const FloatInfo = () => {
 
 	const { t, lang } = useTranslation("home")
+	const { switcher, themes, currentTheme } = useThemeSwitcher();
+
+	const setTheme = () => {
+		switcher({theme: currentTheme === "dark" ? themes.light : themes.dark})
+	}
 	
 	return (
 		<>
@@ -91,6 +98,14 @@ const FloatInfo = () => {
 				</motion.div>
 			</div>
 			<div className="anchor">
+				<div>
+					Dark Mode: <Switch
+						checkedChildren={<CheckOutlined />}
+						unCheckedChildren={<CloseOutlined />}
+						onChange={setTheme}
+						checked={currentTheme === "dark"}
+					/>
+				</div>
 				{
 					lang === "es" ? 
 					<Link href="/en">
@@ -116,23 +131,28 @@ const FloatInfo = () => {
 						font-size: 25px;
 					}
 					.line{
-						border-left: solid 1.5px ${theme.textPrimary};
+						border-left: solid 1.5px var(--font-color);
 						height: 70px;
 						margin-left: calc(50% - 0.75px);
 					}
 					a{
-						color: ${theme.textPrimary};
+						color: var(--font-color);
 						margin-bottom: 20px;
 					}
 					a:hover{
-						color: ${theme.primary}
+						color: var(--primary-color);
 					}
 					.anchor{
 						position: fixed;
 						right: 1%;
 						bottom: 1%;
-						color: ${theme.textPrimary};
-						background: ${theme.bgPrimary};
+						color: var(--font-color);
+						background: var(--bg-color);
+						padding: 10px 15px;
+						display: flex;
+						flex-direction: column;
+						gap: 15px;
+
 					}
 					@media (max-width: 767px) {
 						.social-network, .anchor{

@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "lessc --js --modify-var='primary-color=#0EA9CE' node_modules/antd/dist/antd.dark.less public/css/antd-dark.css & lessc --js --modify-var='primary-color=#0EA9CE' node_modules/antd/dist/antd.less public/css/antd-light.css & next build",
     "start": "next start",
     "lint": "next lint"
   },
@@ -20,6 +20,7 @@
     "next-pwa": "^5.4.0",
     "next-translate": "^1.2.0",
     "react": "^17.0.2",
+    "react-css-theme-switcher": "^0.3.0",
     "react-dom": "^17.0.2",
     "react-intersection-observer": "^8.32.3",
     "react-json-editor-ajrm": "^2.5.13",

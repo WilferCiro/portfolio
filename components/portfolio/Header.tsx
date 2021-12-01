@@ -8,7 +8,6 @@ import Link from 'next/link'
 import dynamic from 'next/dynamic'
 
 // Custom
-import { theme } from '@/styles/theme'
 const Logo = dynamic(() => import('@/components/icons/Logo'))
 
 // Antd
@@ -31,6 +30,9 @@ const Header = () => {
 
 	return (
 		<>
+			<div className="darkMode">
+
+			</div>
 			<motion.div
 				variants={animContainer}
 				initial="hidden"
@@ -91,7 +93,7 @@ const Header = () => {
 					header{
 						width: 100%;
 						padding: 10px 50px;
-						background: ${theme.bgPrimary};
+						background: var(--heading-color);
 						display: flex;
 						justify-content: space-between;
 						position: fixed;
@@ -114,18 +116,18 @@ const Header = () => {
 						display: block;
 					}
 					ul li a:hover {
-						color: ${theme.primary};
+						color:  var(--primary-color);
 						cursor: pointer;
 					}
 					a{
-						color: ${theme.textPrimary}
+						color: var(--font-color)
 					}
 					.resume-btn a{
-						border: solid 1px ${theme.primary};
+						border: solid 1px  var(--primary-color);
 						border-radius: 2px;
 					}
 					.resume-btn a:hover{
-						background: ${theme.primary};
+						background: var(--primary-color);
 						color: white !important;
 					}
 					.show-mobile{
@@ -147,7 +149,7 @@ const Header = () => {
 							overflow: hidden;
 							opacity: 0;
 							width: 0px;
-							background: ${theme.bgPrimary};
+							background: var(--bg-color);
 							z-index: 10;
 							position: fixed;
 							left: 0px;

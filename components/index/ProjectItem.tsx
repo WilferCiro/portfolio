@@ -15,7 +15,6 @@ import { useInView } from 'react-intersection-observer';
 import { Divider, Tag } from "antd";
 
 // Custom
-import { theme } from "@/styles/theme";
 import { style } from "@/styles/index/project-item";
 const ImageCollection = dynamic(() => import('@/components/portfolio/ImageCollection'))
 
@@ -53,7 +52,7 @@ const ProjectItem = ({children, images, tags, right, title, description} : Props
 							<div className="tags">
 								{
 									tags.map((item: string) => {
-										return <Tag color={theme.primary} key={Math.random()}>{item}</Tag>
+										return <Tag color={"#0EA9CE"} key={Math.random()}>{item}</Tag>
 									})
 								}
 							</div>

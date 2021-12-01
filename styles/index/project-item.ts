@@ -11,7 +11,7 @@ export const style =  css`
 		text-align: justify;
 	}
 	.project h3{
-		color: ${theme.primary};
+		color: var(--primary-color);
 		font-weight: bold;
 	}
 	.image{
@@ -26,13 +26,13 @@ export const style =  css`
 	}
 	.description{
 		position: absolute;
-		background: ${theme.bgPrimary};
+		background: var(--heading-color);
 		top: 20%;
 		left: 45%;
 		width: 55%;
 		z-index: 2;
 		padding: 20px 30px;
-		box-shadow: 2px 2px 5px black;
+		box-shadow: 2px 2px 5px var(--heading-color);
 		border-radius: 5px;
 	}
 	.description-right {
@@ -87,11 +87,11 @@ export const style =  css`
 			background: transparent;
 		}
 		.project{
-			background: ${theme.bgPrimary};
+			background: var(--bg-color);
 			border-radius: 10px;
 			padding: 5px 15px;
 			margin-bottom: 10px;
-			border: solid 1px ${theme.borderColor};
+			border: solid 1px var(--border-color);
 		}
 	}
 `

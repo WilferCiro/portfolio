@@ -12,10 +12,17 @@ const Header = dynamic(() => import('@/components/portfolio/Header'))
 const Footer = dynamic(() => import('@/components/portfolio/Footer'))
 const FloatInfo = dynamic(() => import('@/components/portfolio/FloatInfo'))
 const ParticlesBG = dynamic(() => import('@/components/portfolio/ParticlesBG'))
+import { ThemeSwitcherProvider } from 'react-css-theme-switcher';
 
 // Styles
 import { style } from '@/styles/app'
 //import 'antd/dist/antd.dark.css';
+
+const themes = {
+  light: 'css/antd-light.css',
+  dark: 'css/antd-dark.css',
+};
+
 
 function MyApp({ Component, pageProps }: AppProps) {
   // TODO:
@@ -23,7 +30,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   // pasar de 4 a 3 en habilidades en tamaño más pequeño
   // Agregar código GITHUB
   return (
-    <>
+    <ThemeSwitcherProvider defaultTheme="dark" themeMap={themes}>
       <ParticlesBG />
       <MyHead />
       <Header />
@@ -34,7 +41,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Footer />
 
       <style global jsx>{style}</style>
-    </>
+    </ThemeSwitcherProvider>
   )
 }
 export default MyApp

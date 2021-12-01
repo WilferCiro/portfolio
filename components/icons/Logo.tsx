@@ -1,8 +1,6 @@
 
 import Image from 'next/image';
 
-import { theme } from '@/styles/theme'
-
 const Logo = () => {
 
 	return (
@@ -20,7 +18,7 @@ const Logo = () => {
 			<style jsx>
 				{`
 					.logo{
-						background: ${theme.primary};
+						background: var(--primary-color);
 						width: 40px;
 						height: 40px;
 						border-radius: 5px;
