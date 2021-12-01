@@ -16,7 +16,7 @@ import { ThemeSwitcherProvider } from 'react-css-theme-switcher';
 
 // Styles
 import { style } from '@/styles/app'
-//import 'antd/dist/antd.dark.css';
+import 'css/antd-light.css';
 
 const themes = {
   light: 'css/antd-light.css',
