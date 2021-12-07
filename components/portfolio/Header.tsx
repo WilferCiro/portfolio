@@ -60,13 +60,13 @@ const Header = () => {
 									</Link>
 								</li>
 								<li>
-									<Link href="#projects">
-										<a onClick={e=> showMenu ? setShowMenu(false) : null}>{t("header_projects")}</a>
+									<Link href="#skills">
+										<a onClick={e=> showMenu ? setShowMenu(false) : null}>{t("header_skills")}</a>
 									</Link>
 								</li>
 								<li>
-									<Link href="#skills">
-										<a onClick={e=> showMenu ? setShowMenu(false) : null}>{t("header_skills")}</a>
+									<Link href="#projects">
+										<a onClick={e=> showMenu ? setShowMenu(false) : null}>{t("header_projects")}</a>
 									</Link>
 								</li>
 								<li>

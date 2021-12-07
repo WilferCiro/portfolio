@@ -4,18 +4,10 @@ import { theme } from '@/styles/theme'
 export const style =  css.global`
 	:root {
 		--primary-color: #0EA9CE;
-		--font-color: #0A192F;
-		--secondary-font-color: #76819D;
-		--bg-color: #fff;
-		--heading-color: #EFEFF4;
-		--border-color: #303030;
-	}
-	[data-theme="dark"] {
-		--primary-color: #0EA9CE;
 		--font-color: #CCD6F6;
 		--secondary-font-color: #76819D;
 		--bg-color: #161625;
-		--heading-color: #1E1E1E;
+		--heading-color: #282828;
 		--border-color: #303030;
 	}
 
@@ -29,6 +21,7 @@ export const style =  css.global`
 		margin: 0px;
 		padding: 0px;
 		color: var(--font-color);
+		background: #181719 !important;
 		font-family: Lato, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 	}
 	.main-content{

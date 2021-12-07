@@ -18,3 +18,8 @@ export const animItem = {
 		opacity: 1
 	}
 };
+
+export const rotateItem = {
+	hidden: { opacity: 0, scale: 0 },
+	visible: {	opacity: 1, rotate: 360, scale: 1 }
+};

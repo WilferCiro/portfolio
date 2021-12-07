@@ -25,6 +25,7 @@ import MePhoto from '@/components/index/MePhoto';
 
 // Translate
 import useTranslation from "next-translate/useTranslation"
+import ParticlesBG from '../portfolio/ParticlesBG';
 
 const IndexSection = () => {
 
@@ -32,6 +33,7 @@ const IndexSection = () => {
 	
 	return (
 		<>
+			<ParticlesBG />
 			<section id="index">
 				<motion.div
 					variants={animContainer}

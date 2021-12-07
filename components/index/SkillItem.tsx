@@ -8,7 +8,7 @@ import React, {useEffect} from "react"
 // Animations
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { animContainer, animItem } from "@/components/tools/animations";
+import { animContainer, animItem, rotateItem } from "@/components/tools/animations";
 
 // Antd
 import {
@@ -24,6 +24,7 @@ interface Props {
 
 const SkillItem = ({title, items, image} : Props) => {
 	const controls = useAnimation();
+	const controls2 = useAnimation()
 	const [ref, inView] = useInView();
 	useEffect(() => {
 		if (inView) {
@@ -41,7 +42,16 @@ const SkillItem = ({title, items, image} : Props) => {
 			>
 				<motion.div variants={animItem}>
 					<div className="skill">
-						<div className="image"></div>
+						<motion.div
+							variants={rotateItem}
+							transition={{
+								type: "spring",
+								stiffness: 260,
+								damping: 30
+							}}
+						>
+							<div className="image"></div>
+						</motion.div>
 						<div className="description">
 							<p>{title}</p>
 							<div className="">

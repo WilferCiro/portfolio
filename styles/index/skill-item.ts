@@ -11,9 +11,6 @@ export const style =  css`
 		text-align: center;
 		border-radius: 5px;
 	}
-	.skill:hover .image{
-		transform: scale(1.1);					
-	}
 	.image{
 		width: 80px;
 		height: 80px;

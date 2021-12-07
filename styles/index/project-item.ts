@@ -1,5 +1,4 @@
 import css from 'styled-jsx/css'
-import { theme } from '@/styles/theme'
 
 export const style =  css`
 	.project{
@@ -87,8 +86,8 @@ export const style =  css`
 			background: transparent;
 		}
 		.project{
-			background: var(--bg-color);
-			border-radius: 10px;
+			background: #141414;
+			border-radius: 5px;
 			padding: 5px 15px;
 			margin-bottom: 10px;
 			border: solid 1px var(--border-color);

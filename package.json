@@ -25,7 +25,6 @@
     "react-intersection-observer": "^8.32.3",
     "react-json-editor-ajrm": "^2.5.13",
     "react-syntax-highlighter": "^15.4.5",
-    "react-tsparticles": "^1.37.4",
     "sharp": "^0.29.3"
   },
   "devDependencies": {
