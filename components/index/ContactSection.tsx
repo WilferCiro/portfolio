@@ -27,6 +27,7 @@ import { useInView } from 'react-intersection-observer';
 
 // Custom
 import useTranslation from 'next-translate/useTranslation';
+import { suscribe } from 'services/subscribe.service';
 
 const ContactSection = () => {
 	const { t } = useTranslation("home")
@@ -44,20 +45,16 @@ const ContactSection = () => {
 
 	const onFinish = async (values: any) => {
 		setLoading(true);
-		let data = await fetch("/api/subscribe", {
-			"method": "POST",
-			"headers": { "content-type": "application/json" },
-			"body": JSON.stringify(values)
+		suscribe(values).then((result: any) => {
+			if (result.status === 200) {
+				form.resetFields()
+				message.success("Mensaje enviado con éxito")
+			}
+			else{
+				message.error("Ocurrió un error al enviar el mensaje, vuelva a intentar")
+			}
+			setLoading(false);
 		})
-
-		if (data.status === 200) {
-			form.resetFields()
-			message.success("Mensaje enviado con éxito")
-		}
-		else{
-			message.error("Ocurrió un error al enviar el mensaje, vuelva a intentar")
-		}
-		setLoading(false);
 	}
 
 	const onFinishFailed = (values: any) => {
@@ -105,32 +102,32 @@ const ContactSection = () => {
 											onFinish={onFinish}
 											onFinishFailed={onFinishFailed}
 											autoComplete="off"
-											>
+										>
 											<Form.Item
 												label={t("email")}
 												name="email"
-												rules={[{ required: true, message: t("contact_error-email") }, { type: "email"}]}
+												rules={[{ required: true, message: t("contact_error-email") }, { type: "email", message: "Ingrese un correo válido"}]}
 											>
 												<Input placeholder={t("contact_input-email")} />
 											</Form.Item>
 											<Form.Item
 												label={t("name")}
 												name="name"
-												rules={[{ required: true, message: t("contact_error-name") }, {min: 8}]}
+												rules={[{ required: true, message: t("contact_error-name") }]}
 											>
 												<Input placeholder={t("contact_input-name")} />
 											</Form.Item>
 											<Form.Item
 												label={t("subject")}
 												name="subject"
-												rules={[{ required: true, message: t("contact_error-subject") }, {min: 8}]}
+												rules={[{ required: true, message: t("contact_error-subject") }]}
 											>
 												<Input placeholder={t("contact_input-subject")} />
 											</Form.Item>
 											<Form.Item
 												label={t("message")}
 												name="message"
-												rules={[{ required: true, message: t("contact_error-message") }, {min: 20}]}
+												rules={[{ required: true, message: t("contact_error-message") }, {min: 20, message: "El mensaje debe contener al menos 20 caracteres"}]}
 											>
 												<Input.TextArea placeholder={t("contact_input-message")} />
 											</Form.Item>

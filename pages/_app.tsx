@@ -23,9 +23,9 @@ function MyApp({ Component, pageProps }: AppProps) {
       <MyHead />
       <Header />
       <FloatInfo />
-        <div className="main-content">
-          <Component {...pageProps} />
-        </div>
+      <div className="main-content">
+        <Component {...pageProps} />
+      </div>
       <Footer />
 
       <style global jsx>{style}</style>

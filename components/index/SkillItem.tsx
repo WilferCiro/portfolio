@@ -24,7 +24,6 @@ interface Props {
 
 const SkillItem = ({title, items, image} : Props) => {
 	const controls = useAnimation();
-	const controls2 = useAnimation()
 	const [ref, inView] = useInView();
 	useEffect(() => {
 		if (inView) {

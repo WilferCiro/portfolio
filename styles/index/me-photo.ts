@@ -1,5 +1,4 @@
 import css from 'styled-jsx/css'
-import { theme } from '@/styles/theme'
 
 export const style =  css`
 	.headshot {
