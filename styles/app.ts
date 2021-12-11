@@ -34,6 +34,12 @@ export const style =  css.global`
 	h3 {
 		color: var(--primary-color)
 	}
+	@media (min-width: 991px) and (max-width: 1380px) {
+		section {
+			padding: 100px 10% 10px 10%;
+			display: block;
+		}
+	}
 	@media (min-width: 768px) and (max-width: 990px) {
 		section {
 			padding: 100px 20px;
