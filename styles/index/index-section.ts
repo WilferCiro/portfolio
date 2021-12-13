@@ -26,6 +26,11 @@ export const style =  css`
 		padding: 0px 20% 0px 20%;
 		background: linear-gradient(180deg, var(--bg-color2) 0%, var(--bg-color2) 80%, var(--bg-color) 100%);
 	}
+	@media (min-width: 768px) and (max-width: 990px) {
+		section {
+			padding: 100px 20px;
+		}
+	}
 	@media (max-width: 767px) {
 		section {
 			padding: 100px 20px;

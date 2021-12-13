@@ -4,17 +4,12 @@
 */
 
 // React and next
-import React, { useEffect } from 'react';
+import React from 'react';
 import Image from 'next/image'
 
 // Antd
 import { Timeline, Divider, Row, Col, Typography } from 'antd';
 import { style as aboutmeStyle } from '@/styles/index/about-me';
-
-// Animations
-import { motion, useAnimation } from 'framer-motion';
-import { animContainer, animItem } from '@/components/tools/animations';
-import { useInView } from 'react-intersection-observer';
 
 // Translate
 import useTranslation from 'next-translate/useTranslation';
@@ -28,14 +23,6 @@ const { Text } = Typography;
 const AboutMeSection = () => {
 
 	const { t } = useTranslation("home")
-	
-	const controls = useAnimation();
-	const [ref, inView] = useInView();
-	useEffect(() => {
-		if (inView) {
-			controls.start("visible");
-		}
-	}, [controls, inView]);
 
 	const calculate_age = () => {
 		let today = new Date();
@@ -67,12 +54,6 @@ const AboutMeSection = () => {
 	return (
 		<>
 			<section id="about">
-				<motion.div
-					ref={ref}
-					variants={animContainer}
-					initial="hidden"
-					animate={controls}
-				>
 					<Row gutter={[30, 16]} align="top">
 						<Col xs={24} md={11}>
 							<h3>{t("about_about-me")}</h3>
@@ -98,7 +79,6 @@ const AboutMeSection = () => {
 						<Col xs={23} md={13}>
 							<h3 className="h3-right">{t("about_timeline")}</h3>
 							<Divider />
-							<motion.div variants={animItem}>
 								<Timeline mode="left" pending={t("about_next") + "..."}>
 									<Timeline.Item label="29 de mayo de 1998">
 										<Text>{t("about_my-birth")}</Text><br />
@@ -129,10 +109,8 @@ const AboutMeSection = () => {
 										<Text type="secondary">Como desarrollador full stack con tecnologías como: React, mongo DB, express</Text>
 									</Timeline.Item>
 								</Timeline>
-							</motion.div>
 						</Col>
 					</Row>
-				</motion.div>
 			</section>
 
 			<style jsx>{aboutmeStyle}</style>

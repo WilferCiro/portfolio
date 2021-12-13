@@ -12,11 +12,10 @@ interface Props {
 const Layout = ({children}: Props ) => {
 
     const { status } = useThemeSwitcher();
-
     return (
         <>
             {
-                status === 'loading' ?
+                status !== 'loaded' ?
                     <div className="bg">
                         <div className="arc"></div>
                         <h1><span>LOADING</span></h1>
