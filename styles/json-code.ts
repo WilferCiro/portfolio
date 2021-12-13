@@ -3,7 +3,7 @@ export const style = {
 	  "display": "block",
 	  "overflowX": "auto",
 	  "padding": "0.5em",
-	  "background": "#1E1E1E",
+	  "background": "var(--bg-color2)",
 	  "color": "#839496",
 	  "fontSize": "12px",
 	  "borderRadius": "5px"
@@ -57,22 +57,22 @@ export const style = {
 	  "color": "#268bd2"
 	},
 	"hljs-attribute": {
-	  "color": "#FFF"
+	  "color": "var(--font-color)"
 	},
 	"hljs-attr": {
-	  "color": "#FFF"
+	  "color": "var(--font-color)"
 	},
 	"hljs-variable": {
-	  "color": "#FFF"
+	  "color": "var(--font-color)"
 	},
 	"hljs-template-variable": {
-	  "color": "#FFF"
+	  "color": "var(--font-color)"
 	},
 	"hljs-class .hljs-title": {
-	  "color": "#FFF"
+	  "color": "var(--font-color)"
 	},
 	"hljs-type": {
-	  "color": "#FFF"
+	  "color": "var(--font-color)"
 	},
 	"hljs-symbol": {
 	  "color": "#cb4b16"

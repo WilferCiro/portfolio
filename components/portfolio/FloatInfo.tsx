@@ -6,7 +6,8 @@ import Link from 'next/link'
 import {
 	Space,
 	Tooltip,
-	Button
+	Button,
+	Switch
 } from 'antd';
 // Antd
 import {
@@ -25,10 +26,19 @@ import { animContainer, animItem } from '@/components/tools/animations';
 // Translate
 import useTranslation from 'next-translate/useTranslation';
 import { floatInfoStyle } from '@/styles/layout/float-info';
+import { useThemeSwitcher } from 'react-css-theme-switcher';
+import { setIsLight } from 'services/cookies';
 
 const FloatInfo = () => {
 
 	const { t, lang } = useTranslation("home")
+
+	const { switcher, themes, currentTheme } = useThemeSwitcher();
+
+	const toggleDarkMode = () => {
+		setIsLight(currentTheme === "dark" ? "true": "false")
+		switcher({ theme: currentTheme === "dark" ? themes.light : themes.dark });
+	};
 
 	return (
 		<>
@@ -102,6 +112,15 @@ const FloatInfo = () => {
 						</a>
 					</Link>
 				}
+			</div>
+
+			<div className="theme-swhitch">
+				<Switch
+					checkedChildren={"🌞"}
+					unCheckedChildren={"🌚"}
+					onChange={toggleDarkMode}
+					checked={currentTheme === "dark"}
+					/>
 			</div>
 
 			<style jsx>{floatInfoStyle}</style>

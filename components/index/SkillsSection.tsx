@@ -65,7 +65,7 @@ const SkillsSection = () => {
 				{`
 					section{
 						position: relative;
-						background: #1E1E1E;
+						background: var(--bg-color2);
 					}
 				`}
 			</style>

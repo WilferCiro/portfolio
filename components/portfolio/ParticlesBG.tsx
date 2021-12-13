@@ -40,7 +40,8 @@ const ParticlesBG = () => {
 					list-style: none;
 					width: 20px;
 					height: 20px;
-					background: rgba(255, 255, 255, 0.1);
+					background: var(--font-color);
+					opacity: 0.1;
 					animation: animate 15s linear infinite;
 					bottom: -150px;
 				}
@@ -126,7 +127,7 @@ const ParticlesBG = () => {
 						opacity: 0;
 					}
 					30% {
-						opacity: 1;
+						opacity: 0.1;
 					}
 					100% {
 						transform: translateY(-1000px) rotate(720deg);

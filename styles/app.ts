@@ -1,12 +1,22 @@
 import css from 'styled-jsx/css'
-import { theme } from '@/styles/theme'
 
 export const style =  css.global`
 	:root {
 		--primary-color: #0EA9CE;
+		--font-color: #1E1E1E;
+		--secondary-font-color: #76819D;
+		--bg-color: #F0F2F5;
+		--bg-color2: #E5EBF3;
+		--heading-color: #FFF;
+		--border-color: #FFF;
+	}
+
+	[data-theme="dark"] {
+		--primary-color: #0EA9CE;
 		--font-color: #CCD6F6;
 		--secondary-font-color: #76819D;
-		--bg-color: #161625;
+		--bg-color: #181719;
+		--bg-color2: #1E1E1E;
 		--heading-color: #282828;
 		--border-color: #303030;
 	}
@@ -21,7 +31,7 @@ export const style =  css.global`
 		margin: 0px;
 		padding: 0px;
 		color: var(--font-color);
-		background: #181719 !important;
+		background: var(--bg-color) !important;
 		font-family: Lato, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 	}
 	.main-content{
@@ -32,7 +42,7 @@ export const style =  css.global`
 		padding: 100px 20% 10px 20%;
 	}
 	h3 {
-		color: var(--primary-color)
+		color: var(--primary-color) !important;
 	}
 	@media (min-width: 991px) and (max-width: 1380px) {
 		section {

@@ -31,6 +31,17 @@ export const floatInfoStyle =  css`
 		z-index: 100;
 
 	}
+	.theme-swhitch{
+		position: fixed;
+		bottom: 0px;
+		left: 0px;
+		z-index: 100;
+		width: 60px;
+		height: 60px;
+		background: white;
+		border-top-right-radius: 100%;
+		padding-top: 30px;
+	}
 	@media (max-width: 767px) {
 		.social-network, .anchor{
 			display: none;

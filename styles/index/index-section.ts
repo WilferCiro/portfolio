@@ -24,7 +24,7 @@ export const style =  css`
 	section {
 		min-height: 100vh;
 		padding: 0px 20% 0px 20%;
-		background: linear-gradient(180deg, rgba(30,30,30,1) 0%, rgba(30,30,30,1) 80%, rgba(24,23,25,1) 100%);
+		background: linear-gradient(180deg, var(--bg-color2) 0%, var(--bg-color2) 80%, var(--bg-color) 100%);
 	}
 	@media (max-width: 767px) {
 		section {
