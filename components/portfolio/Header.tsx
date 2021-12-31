@@ -27,6 +27,7 @@ const Header = () => {
 
 	const { t } = useTranslation("home")
 
+
 	const [showMenu, setShowMenu] = useState<boolean>(false);
 
 	const links = [
@@ -39,9 +40,6 @@ const Header = () => {
 
 	return (
 		<>
-			<div className="darkMode">
-
-			</div>
 			<motion.div
 				variants={animContainer}
 				initial="hidden"
@@ -82,6 +80,7 @@ const Header = () => {
 					</div>
 				</header>
 			</motion.div>
+			{/*<ModalCV ref={refModal} />*/}
 
 			<style jsx>{headerStyle}</style>
 		</>

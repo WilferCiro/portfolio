@@ -31,7 +31,7 @@ export const style =  css`
 		width: 55%;
 		z-index: 2;
 		padding: 20px 30px;
-		box-shadow: 2px 2px 5px var(--heading-color);
+		box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
 		border-radius: 5px;
 	}
 	.description-right {
@@ -86,7 +86,7 @@ export const style =  css`
 			background: transparent;
 		}
 		.project{
-			background: #141414;
+			background: var(--heading-color);
 			border-radius: 5px;
 			padding: 5px 15px;
 			margin-bottom: 10px;

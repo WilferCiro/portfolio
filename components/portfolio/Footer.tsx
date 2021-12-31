@@ -55,7 +55,7 @@ const Footer = () => {
 				{`
 					footer{
 						text-align:center;
-						padding: 40px 20%;
+						padding: 10px 10%;
 						margin-top: 40px;
 					}
 					@media (max-width: 767px) {

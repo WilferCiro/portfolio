@@ -117,19 +117,17 @@ const ProjectsSection = () => {
 	]
 
 	return (
-		<>
-			<section id="projects">
-				<h3>{t("projects_title")}</h3>
-				<Divider />
+		<section id="projects">
+			<h3>{t("projects_title")}</h3>
+			<Divider />
 
-				{
-					projects.map((project: any, index: number) => {
-						return <ProjectItem key={Math.random()} {...project} right={index % 2 !== 0} />
-					})
-				}
+			{
+				projects.map((project: any, index: number) => {
+					return <ProjectItem key={Math.random()} {...project} right={index % 2 !== 0} />
+				})
+			}
 
-			</section>
-		</>
+		</section>
 	)
 }
 

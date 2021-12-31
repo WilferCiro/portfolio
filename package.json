@@ -22,6 +22,7 @@
     "next-translate": "^1.2.0",
     "react": "^17.0.2",
     "react-css-theme-switcher": "^0.3.0",
+    "react-doc-viewer": "^0.1.5",
     "react-dom": "^17.0.2",
     "react-intersection-observer": "^8.32.3",
     "react-json-editor-ajrm": "^2.5.13",

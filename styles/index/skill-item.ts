@@ -4,7 +4,7 @@ export const style =  css`
 	.skill{
 		background: var(--heading-color);
 		width: 100%;
-		height: 200px;
+		height: 220px;
 		overflow: hidden;
 		position: relative;
 		text-align: center;

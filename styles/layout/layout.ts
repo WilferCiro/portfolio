@@ -2,7 +2,7 @@ import css from 'styled-jsx/css'
 
 export const layoutStyle =  css`
     .bg {
-        background: #161625;
+        background: #181719;
         overflow: hidden;
         top: 0;
         right: 0;
