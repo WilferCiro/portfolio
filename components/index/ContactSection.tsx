@@ -69,13 +69,8 @@ const ContactSection = () => {
 		},
 		{
 			title: t("phone"),
-			body: "3173587462",
+			body: "+57 317 358 xxxx",
 			icon: <PhoneFilled />
-		},
-		{
-			title: t("address"),
-			body: "Barrio Villa Liliana, conjunto residencial Cibeles, Armenia - Quindío, Colombia",
-			icon: <HomeOutlined />
 		}
 	]
 

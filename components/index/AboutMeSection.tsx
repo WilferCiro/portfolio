@@ -16,6 +16,7 @@ import useTranslation from 'next-translate/useTranslation';
 
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { style as styleJSON } from '@/styles/json-code';
+import { calculate_age } from 'services/tools.service';
 
 const { Text } = Typography;
 
@@ -23,18 +24,6 @@ const { Text } = Typography;
 const AboutMeSection = () => {
 
 	const { t } = useTranslation("home")
-
-	const calculate_age = () => {
-		let today = new Date();
-		let birthDate = new Date("1998/05/29");
-		let age_now = today.getFullYear() - birthDate.getFullYear();
-		let m = today.getMonth() - birthDate.getMonth();
-		if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate()))  {
-			age_now --;
-		}
-		return age_now;
-	}
-
 
 	const myData = {
 		"name" : "Wilfer Daniel Ciro Maya",
@@ -54,63 +43,63 @@ const AboutMeSection = () => {
 	return (
 		<>
 			<section id="about">
-					<Row gutter={[30, 16]} align="top">
-						<Col xs={24} md={11}>
-							<h3>{t("about_about-me")}</h3>
-							<Divider />
-							<div className="my-description">
-								<div className="image">
-									<Image
-										src={"/img/index/me.webp"}
-										width={100}
-										height={100}
-										layout={"responsive"}
-										alt={"Foto de Wilfer Daniel Ciro Maya"}
-									/>
-								</div>
-								<p>{t("about_description")}</p>
-								<p>{t("about_description2")}</p>
+				<Row gutter={[30, 16]} align="top">
+					<Col xs={24} md={11}>
+						<h3>{t("about_about-me")}</h3>
+						<Divider />
+						<div className="my-description">
+							<div className="image">
+								<Image
+									src={"/img/index/me.webp"}
+									width={100}
+									height={100}
+									layout={"responsive"}
+									alt={"Foto de Wilfer Daniel Ciro Maya"}
+								/>
 							</div>
-							<Divider />
-							<SyntaxHighlighter language="json" style={styleJSON} wrapLongLines={true}>
-								{JSON.stringify(myData, null, 4)}
-							</SyntaxHighlighter>
-						</Col>
-						<Col xs={23} md={13}>
-							<h3 className="h3-right">{t("about_timeline")}</h3>
-							<Divider />
-								<Timeline mode="left" pending={t("about_next") + "..."}>
-									<Timeline.Item label="29 de mayo de 1998">
-										<Text>{t("about_my-birth")}</Text><br />
-										<Text type="secondary">En La Unión Antioquia - Colombia</Text>
-									</Timeline.Item>
-									<Timeline.Item color="green" label="Mayo de 2013">
-										<Text>{t("about_start-programming")}</Text><br />
-										<Text type="secondary">De forma &quot;Autodidacta&quot; a través de textos y videotutoriales</Text>
-									</Timeline.Item>
-									<Timeline.Item color="green" label="Diciembre de 2014">
-										<Text>{t("about_finish-high-school")}</Text><br />
-										<Text type="secondary">En el colegio Policarpa Salavarrieta de Quimbaya, Quindío</Text>
-									</Timeline.Item>
-									<Timeline.Item color="green" label="Diciembre de 2014">
-										<Text>{t("about_finish-sena")}</Text><br />
-										<Text type="secondary">Donde aprendí HTML, CSS, PHP y MySQL</Text>
-									</Timeline.Item>
-									<Timeline.Item color="purple" label="15 de Mayo de 2020">
-										<Text>{t("about_first-job")}</Text><br />
-										<Text type="secondary">Inicia mi vida laboral como desarrollador Junior Full Stack, desarrollando con Java, SQL, no SQL, Flutter, React y Nextjs</Text>
-									</Timeline.Item>
-									<Timeline.Item color="green" label="Junio de 2020">
-										<Text>{t("about_finish-university")}</Text><br />
-										<Text type="secondary">Graduado de Ingeniería Electrónica con profundización en Sistemas digitales</Text>
-									</Timeline.Item>
-									<Timeline.Item color="purple" label="15 de septiembre de 2021">
-										<Text>{t("about_second-job")}</Text><br />
-										<Text type="secondary">Como desarrollador full stack con tecnologías como: React, mongo DB, express</Text>
-									</Timeline.Item>
-								</Timeline>
-						</Col>
-					</Row>
+							<p>{t("about_description")}</p>
+							<p>{t("about_description2")}</p>
+						</div>
+						<Divider />
+						<SyntaxHighlighter language="json" style={styleJSON} wrapLongLines={true}>
+							{JSON.stringify(myData, null, 4)}
+						</SyntaxHighlighter>
+					</Col>
+					<Col xs={23} md={13}>
+						<h3 className="h3-right">{t("about_timeline")}</h3>
+						<Divider />
+							<Timeline mode="left" pending={t("about_next") + "..."}>
+								<Timeline.Item label={t("about_birth_date")}>
+									<Text>{t("about_my-birth")}</Text><br />
+									<Text type="secondary">{t("about_birth_place")}</Text>
+								</Timeline.Item>
+								<Timeline.Item color="green" label={t("about_start-programming_date")}>
+									<Text>{t("about_start-programming")}</Text><br />
+									<Text type="secondary">{t("about_start-programming_description")}</Text>
+								</Timeline.Item>
+								<Timeline.Item color="green" label={t("about_finish-high-school_date")}>
+									<Text>{t("about_finish-high-school")}</Text><br />
+									<Text type="secondary">{t("about_finish-high-school_description")}</Text>
+								</Timeline.Item>
+								<Timeline.Item color="green" label={t("about_finish-sena_date")}>
+									<Text>{t("about_finish-sena")}</Text><br />
+									<Text type="secondary">{t("about_finish-sena_description")}</Text>
+								</Timeline.Item>
+								<Timeline.Item color="purple" label={t("about_first-job_date")}>
+									<Text>{t("about_first-job")}</Text><br />
+									<Text type="secondary">{t("about_first-job_description")}</Text>
+								</Timeline.Item>
+								<Timeline.Item color="green" label={t("about_finish-university_date")}>
+									<Text>{t("about_finish-university")}</Text><br />
+									<Text type="secondary">{t("about_finish-university_description")}</Text>
+								</Timeline.Item>
+								<Timeline.Item color="purple" label={t("about_second-job_date")}>
+									<Text>{t("about_second-job")}</Text><br />
+									<Text type="secondary">{t("about_second-job_description")}</Text>
+								</Timeline.Item>
+							</Timeline>
+					</Col>
+				</Row>
 			</section>
 
 			<style jsx>{aboutmeStyle}</style>
