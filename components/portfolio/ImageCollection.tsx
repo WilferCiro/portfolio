@@ -30,8 +30,8 @@ const ImageCollection = ({images}: Props) => {
 		<div style={{ display: 'none' }}>
 			<Image.PreviewGroup preview={{ visible, onVisibleChange: vis => setVisible(vis) }}>
 				{
-					images.map((image: string) => {
-						return <Image key={Math.random()} src={image} alt={"Project image"} />
+					images.map((image: string, index: number) => {
+						return <Image key={"image-" + index} src={image} alt={"Project image"} />
 					})
 				}
 			</Image.PreviewGroup>

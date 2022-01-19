@@ -18,7 +18,7 @@ import {
 	Avatar,
 	Card
 } from 'antd';
-import { HomeOutlined, MailFilled, PhoneFilled } from '@ant-design/icons';
+import { MailFilled, PhoneFilled } from '@ant-design/icons';
 
 // Animations
 import { motion, useAnimation } from 'framer-motion';

@@ -51,8 +51,8 @@ const ProjectItem = ({children, images, tags, right, title, description} : Props
 							<ImageCollection images={images} />
 							<div className="tags">
 								{
-									tags.map((item: string) => {
-										return <Tag color={"#0EA9CE"} key={Math.random()}>{item}</Tag>
+									tags.map((item: string, index: number) => {
+										return <Tag color={"#0EA9CE"} key={"color-" + index}>{item}</Tag>
 									})
 								}
 							</div>

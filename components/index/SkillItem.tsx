@@ -55,8 +55,8 @@ const SkillItem = ({title, items, image} : Props) => {
 							<p>{title}</p>
 							<div className="">
 								{
-									items.map((item: string) => {
-										return <Tag key={Math.random()}>{item}</Tag>
+									items.map((item: string, index: number) => {
+										return <Tag key={"item-" + index}>{item}</Tag>
 									})
 								}
 							</div>
@@ -78,27 +78,3 @@ const SkillItem = ({title, items, image} : Props) => {
 }
 
 export default React.memo(SkillItem)
-
-/*
-
-			<motion.div
-				ref={ref}
-				variants={animContainer}
-				initial="hidden"
-				animate={controls}
-			>
-				<motion.div variants={animItem}>
-					<Card
-						style={{ width: "100%", height: "100%" }}
-						cover={<Image width={800} height={400} alt="example" src={image} />}
-					>
-						<Meta title={title} description={
-							items.map((item: string) => {
-								return <Tag key={Math.random()}>{item}</Tag>
-							})
-						} />
-					</Card>
-				</motion.div>
-			</motion.div>
-
-*/

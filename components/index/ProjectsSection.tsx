@@ -123,7 +123,7 @@ const ProjectsSection = () => {
 
 			{
 				projects.map((project: any, index: number) => {
-					return <ProjectItem key={Math.random()} {...project} right={index % 2 !== 0} />
+					return <ProjectItem key={"project-" + index} {...project} right={index % 2 !== 0} />
 				})
 			}
 
