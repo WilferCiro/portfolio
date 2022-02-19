@@ -69,7 +69,7 @@ const ContactSection = () => {
 		},
 		{
 			title: t("phone"),
-			body: "+57 317 358 xxxx",
+			body: "+57 317 358 7462",
 			icon: <PhoneFilled />
 		}
 	]

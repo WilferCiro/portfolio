@@ -27,8 +27,10 @@ const AboutMeSection = () => {
 
 	const myData = {
 		"name" : "Wilfer Daniel Ciro Maya",
-		"spanish" : t("about_spanish"),
-		"english" : "B1",
+		"languages" : {
+			"spanish" : t("about_spanish"),
+			"english" : "B1",
+		},
 		"age" : calculate_age(),
 		"county" : "Colombia 🇨🇴️",
 		"hobbies" : [

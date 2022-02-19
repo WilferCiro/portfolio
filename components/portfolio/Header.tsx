@@ -26,8 +26,6 @@ import { headerStyle } from '@/styles/layout/header'
 const Header = () => {
 
 	const { t } = useTranslation("home")
-
-
 	const [showMenu, setShowMenu] = useState<boolean>(false);
 
 	const links = [
