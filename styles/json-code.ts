@@ -24,22 +24,22 @@ export const style = {
 	  "color": "#859900"
 	},
 	"hljs-number": {
-	  "color": "#0EA9CE"
+	  "color": "var(--primary-color)"
 	},
 	"hljs-string": {
-	  "color": "#0EA9CE"
+	  "color": "var(--primary-color)"
 	},
 	"hljs-meta .hljs-meta-string": {
-	  "color": "#0EA9CE"
+	  "color": "var(--primary-color)"
 	},
 	"hljs-literal": {
-	  "color": "#0EA9CE"
+	  "color": "var(--primary-color)"
 	},
 	"hljs-doctag": {
-	  "color": "#0EA9CE"
+	  "color": "var(--primary-color)"
 	},
 	"hljs-regexp": {
-	  "color": "#0EA9CE"
+	  "color": "var(--primary-color)"
 	},
 	"hljs-title": {
 	  "color": "#268bd2"

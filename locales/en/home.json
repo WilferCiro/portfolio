@@ -18,6 +18,7 @@
 	"about_first-job" : "I started my first job as a fullstack Junior developer at Jaivaná",
 	"about_finish-university" : "I finished my university degree",
 	"about_second-job" : "I started my second job as fullstack at Negozia CF",
+	"about_mintic-job" : "I started my way like tutor in misión tic",
 	"about_next" : "Continuous learning",
 	"about_timeline" : "My timeline",
 
@@ -33,6 +34,10 @@
 	"about_finish-university_description" : "Electronic engineering graduate with a deepening in digital systems",
 	"about_second-job_date" : "September 15, 2021",
 	"about_second-job_description" : "As a full stack developer with technologies such as: React, mongo DB, express",
+
+	"about_mintic-job_date" : "April 18, 2022",
+	"about_mintic-job_description" : "As tutor in the misión tic project from national goverment of Colombia",
+
 	"about_finish-sena_date" : "December, 2014",
 	"about_finish-sena_description" : "Where I learned HTML, CSS, PHP and MySQL",
 
@@ -69,7 +74,7 @@
 	"header_projects" : "Projects",
 	"header_skills" : "Skills",
 	"header_contact" : "Contact",
-	"header_resume" : "Resume",
+	"header_resume" : "View resume in PDF",
 	"footer_developed" : "Created by",
 
 	"email" : "E mail",

@@ -19,6 +19,7 @@
 	"about_first-job" : "Inicio como desarrollador Junior en Jaivaná",
 	"about_finish-university" : "Finalización de la carrera universitaria",
 	"about_second-job" : "Inicio de segundo empleo en Negozia CF",
+	"about_mintic-job" : "Empecé mi camino como tutor en misión tic",
 	"about_next" : "Continuo aprendizaje",
 	"about_timeline" : "Mi línea de tiempo",
 
@@ -34,6 +35,10 @@
 	"about_finish-university_description" : "Graduado de Ingeniería Electrónica con profundización en Sistemas digitales",
 	"about_second-job_date" : "15 de septiembre de 2021",
 	"about_second-job_description" : "Como desarrollador full stack con tecnologías como: React, mongo DB, express",
+
+	"about_mintic-job_date" : "Abril 18, 2022",
+	"about_mintic-job_description" : "Como tutor en el proyecto Misión Tic del gobierno nacional de Colombia",
+
 	"about_finish-sena_date" : "Diciembre de 2014",
 	"about_finish-sena_description" : "Donde aprendí HTML, CSS, PHP y MySQL",
 
@@ -70,7 +75,7 @@
 	"header_projects" : "Proyectos",
 	"header_skills" : "Habilidades",
 	"header_contact" : "Contacto",
-	"header_resume" : "Resumen",
+	"header_resume" : "Ver resumen en PDF",
 	"footer_developed" : "Creado por",
 
 	"email" : "Correo electrónico",
