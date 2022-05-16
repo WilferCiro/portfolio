@@ -2,9 +2,7 @@ import css from 'styled-jsx/css'
 
 export const style =  css`
 	.data{
-		height: 100vh;
-		display: flex;
-		align-items: center;
+		text-align: center;
 	}
 	.my-name{
 		color: var(--primary-color);
@@ -22,32 +20,18 @@ export const style =  css`
 		margin: 0px;
 	}
 	section {
-		min-height: 100vh;
-		padding: 0px 20% 0px 20%;
-		background: linear-gradient(180deg, var(--bg-color2) 0%, var(--bg-color2) 80%, var(--bg-color) 100%);
+		min-height: calc(100vh - 100px);
+		padding: 10px 20% 10px 20%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		border-radius: 10px;
 	}
+
 	@media (min-width: 768px) and (max-width: 990px) {
-		section {
-			padding: 100px 20px;
-		}
 	}
 	@media (max-width: 767px) {
-		section {
-			padding: 100px 20px;
-			display: block;
-			text-align: center;
-		}
-		h1{
-			font-size: 27px;
-		}
-		.data{
-			height: auto;
-			display: block;
-		}
-		.image{
-			margin: auto;
-			width: fit-content;
-		}
 		
 	}
 `

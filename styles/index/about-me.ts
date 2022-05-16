@@ -1,9 +1,6 @@
 import css from 'styled-jsx/css'
 
 export const style =  css`
-	.h3-right{
-		text-align: right;
-	}
 	pre {
 		background-color: ghostwhite;
 		border: 1px solid silver;

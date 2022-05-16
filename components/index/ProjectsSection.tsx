@@ -117,7 +117,7 @@ const ProjectsSection = () => {
 	]
 
 	return (
-		<section id="projects">
+		<section id="projects" className='clear-to-dark'>
 			<h3>{t("projects_title")}</h3>
 			<Divider />
 

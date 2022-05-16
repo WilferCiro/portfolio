@@ -33,11 +33,11 @@ const FloatInfo = () => {
 
 	const { t, lang } = useTranslation("home")
 
-	const { switcher, themes, currentTheme } = useThemeSwitcher();
+	//const { switcher, themes, currentTheme } = useThemeSwitcher();
 
 	const toggleDarkMode = () => {
-		setIsLight(currentTheme === "dark" ? "true": "false")
-		switcher({ theme: currentTheme === "dark" ? themes.light : themes.dark });
+		/*setIsLight(currentTheme === "dark" ? "true": "false")
+		switcher({ theme: currentTheme === "dark" ? themes.light : themes.dark });*/
 	};
 
 	return (
@@ -112,15 +112,6 @@ const FloatInfo = () => {
 						</a>
 					</Link>
 				}
-			</div>
-
-			<div className="theme-swhitch">
-				<Switch
-					checkedChildren={"🌞"}
-					unCheckedChildren={"🌚"}
-					onChange={toggleDarkMode}
-					checked={currentTheme === "dark"}
-					/>
 			</div>
 
 			<style jsx>{floatInfoStyle}</style>

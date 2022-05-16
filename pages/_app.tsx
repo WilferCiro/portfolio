@@ -15,8 +15,6 @@ const FloatInfo = dynamic(() => import('@/components/portfolio/FloatInfo'))
 // Styles
 import { style } from '@/styles/app'
 //import '/public/css/antd-dark.css';
-import { ThemeSwitcherProvider } from 'react-css-theme-switcher'
-import Layout from '@/components/portfolio/Layout'
 //import '@/styles/antd.css'
 import { getIsLight } from 'services/cookies'
 
@@ -30,24 +28,15 @@ const themes = {
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <ThemeSwitcherProvider
-        defaultTheme={isLight ? "light" : "dark"}
-        themeMap={themes}
-      >
-        <Layout>
-          <>
-            <MyHead />
-            <Header />
-            <FloatInfo />
-            <div className="main-content">
-              <Component {...pageProps} />
-            </div>
-            <Footer />
+        <MyHead />
+        <FloatInfo />
+        <Header />
+        <div className="main-content">
+          <Component {...pageProps} />
+        </div>
+        <Footer />
 
-            <style global jsx>{style}</style>
-          </>
-        </Layout>
-      </ThemeSwitcherProvider>
+        <style global jsx>{style}</style>
     </>
   )
 }

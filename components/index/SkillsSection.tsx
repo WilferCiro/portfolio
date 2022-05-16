@@ -39,33 +39,28 @@ const SkillsSection = () => {
 
 	return (
 		<>
-			<section id="skills">
-				<ParticlesBG />
+			<section id="skills" className='dark-to-clear'>
 				<h3>{t("skills_title")}</h3>
-				<Divider />
-				<List
-					grid={{
-						gutter: 15,
-						xs: 2,
-						sm: 2,
-						md: 3,
-						lg: 4,
-						xl: 4,
-						xxl: 4,
-					}}
-					dataSource={data}
-					renderItem={item => (
-						<List.Item>
-							<SkillItem {...item} />
-						</List.Item>
-					)}
-				/>
+				<hr />
+				<div className="skills">
+					{
+						data.map((item: any, index: number) => {
+							return <SkillItem {...item} key={"item-" + index} />
+						})
+					}
+				</div>
+							
 			</section>
 			<style jsx>
 				{`
 					section{
 						position: relative;
-						background: var(--bg-color2);
+						background: linear-gradient(180deg, var(--bg-color) 0%, var(--bg-color) 80%, var(--bg-color2) 100%);	
+					}
+					.skills{
+						display: grid;
+						grid-template-columns: 1fr 1fr 1fr 1fr;
+						grid-gap: 10px;
 					}
 				`}
 			</style>

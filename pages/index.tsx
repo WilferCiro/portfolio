@@ -7,7 +7,6 @@ import dynamic from 'next/dynamic'
 import type { NextPage } from 'next'
 
 // Antd
-import { BackTop } from 'antd';
 
 // Custom
 const IndexSection = dynamic(() => import('@/components/index/IndexSection'))
@@ -19,11 +18,10 @@ const ContactSection = dynamic(() => import('@/components/index/ContactSection')
 const Home: NextPage = () => {
   return (
     <>
-      <BackTop />
       <IndexSection />
       <AboutMeSection />
-      <SkillsSection />
       <ProjectsSection />
+      <SkillsSection />
       <ContactSection />
     </>
   )
