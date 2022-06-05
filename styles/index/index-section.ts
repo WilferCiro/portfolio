@@ -21,7 +21,7 @@ export const style =  css`
 	}
 	section {
 		min-height: calc(100vh - 100px);
-		padding: 10px 20% 10px 20%;
+		padding: 10px 5% 10px 5%;
 		display: flex;
 		flex-direction: column;
 		align-items: center;

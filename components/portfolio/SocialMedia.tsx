@@ -4,10 +4,10 @@
 
 // React and nextJS
 import { GithubOutlined, GitlabFilled, InstagramFilled, LinkedinFilled, MailFilled } from "@ant-design/icons";
-import { Space, Tooltip } from "antd";
 import useTranslation from "next-translate/useTranslation";
 import Link from "next/link";
 import React from "react";
+import Tooltip from "../controls/Tooltip";
 
 // Antd
 
@@ -21,7 +21,7 @@ const SocialMedia = () => {
 
 	return (
 		<>
-			<Space size="large">
+			<div className="space">
 				<Link href="https://github.com/WilferCiro">
 					<a target="_blank" rel="noreferrer">
 						<Tooltip title={t("goto_github")}>
@@ -57,7 +57,7 @@ const SocialMedia = () => {
 						</Tooltip>
 					</a>
 				</Link>
-			</Space>
+			</div>
 
 			<style jsx>
 				{`
@@ -67,6 +67,13 @@ const SocialMedia = () => {
 					}
 					a:hover{
 						color:  var(--primary-color);
+					}
+					.space{
+						display: flex;
+						gap: 20px;
+						align-items: center;
+						justify-content: center;
+						margin: 25px;
 					}
 					@media (max-width: 767px) {
 						a{

@@ -9,14 +9,15 @@ import React from 'react'
 import { style } from '@/styles/controls/button'
 
 interface Props {
-    text: string
+    text: string,
+	icon?: React.ReactChild
 }
 
-const Button = ({text} : Props) => {
+const Button = ({text, icon} : Props) => {
 
 	return (
 		<>
-			<button>{text}</button>
+			<button>{icon && icon} {text}</button>
 
 			<style jsx>{style}</style>	
 		</>

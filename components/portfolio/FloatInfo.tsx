@@ -5,7 +5,6 @@ import Link from 'next/link'
 // Antd
 import {
 	Space,
-	Tooltip,
 	Button,
 	Switch
 } from 'antd';
@@ -21,13 +20,12 @@ import {
 
 // Animations
 import { motion } from 'framer-motion';
-import { animContainer, animItem } from '@/components/tools/animations';
+import { animContainer } from '@/components/tools/animations';
 
 // Translate
 import useTranslation from 'next-translate/useTranslation';
 import { floatInfoStyle } from '@/styles/layout/float-info';
-import { useThemeSwitcher } from 'react-css-theme-switcher';
-import { setIsLight } from 'services/cookies';
+import Tooltip from '../controls/Tooltip';
 
 const FloatInfo = () => {
 
@@ -43,59 +41,41 @@ const FloatInfo = () => {
 	return (
 		<>
 			<div className="social-network">
-				<motion.div
-					variants={animContainer}
-					initial="hidden"
-					animate="visible"
-				>
-					<Space direction="vertical">
-						<Link href="https://github.com/WilferCiro">
-							<a target="_blank" rel="noreferrer">
-								<motion.div variants={animItem}>
-									<Tooltip placement="right" title={t("goto_github")}>
-										<GithubOutlined />
-									</Tooltip>
-								</motion.div>
-							</a>
-						</Link>
-						<Link href="https://gitlab.com/WilferCiro">
-							<a target="_blank" rel="noreferrer">
-								<motion.div variants={animItem}>
-									<Tooltip placement="right" title={t("goto_gitlab")}>
-										<GitlabFilled />
-									</Tooltip>
-								</motion.div>
-							</a>
-						</Link>
-						<Link href="https://www.linkedin.com/in/wilfer-ciro/">
-							<a target="_blank" rel="noreferrer">
-								<motion.div variants={animItem}>
-									<Tooltip placement="right" title={t("goto_linkedin")}>
-										<LinkedinFilled />
-									</Tooltip>
-								</motion.div>
-							</a>
-						</Link>
-						<Link href="mailto:wilcirom@gmail.com">
-							<a target="_blank" rel="noreferrer">
-								<motion.div variants={animItem}>
-									<Tooltip placement="right" title={t("goto_mail")}>
-										<MailFilled />
-									</Tooltip>
-								</motion.div>
-							</a>
-						</Link>
-						<Link href="https://www.instagram.com/wilcirom/">
-							<a target="_blank" rel="noreferrer">
-								<motion.div variants={animItem}>
-									<Tooltip placement="right" title={t("goto_instagram")}>
-										<InstagramFilled />
-									</Tooltip>
-								</motion.div>
-							</a>
-						</Link>
-					</Space>
-				</motion.div>
+				<Link href="https://github.com/WilferCiro">
+					<a target="_blank" rel="noreferrer">
+						<Tooltip title={t("goto_github")}>
+							<GithubOutlined />
+						</Tooltip>
+					</a>
+				</Link>
+				<Link href="https://gitlab.com/WilferCiro">
+					<a target="_blank" rel="noreferrer">
+						<Tooltip title={t("goto_gitlab")}>
+							<GitlabFilled />
+						</Tooltip>
+					</a>
+				</Link>
+				<Link href="https://www.linkedin.com/in/wilfer-ciro/">
+					<a target="_blank" rel="noreferrer">
+						<Tooltip title={t("goto_linkedin")}>
+							<LinkedinFilled />
+						</Tooltip>
+					</a>
+				</Link>
+				<Link href="mailto:wilcirom@gmail.com">
+					<a target="_blank" rel="noreferrer">
+						<Tooltip title={t("goto_mail")}>
+							<MailFilled />
+						</Tooltip>
+					</a>
+				</Link>
+				<Link href="https://www.instagram.com/wilcirom/">
+					<a target="_blank" rel="noreferrer">
+						<Tooltip title={t("goto_instagram")}>
+							<InstagramFilled />
+						</Tooltip>
+					</a>
+				</Link>
 			</div>
 			<div className="anchor">
 				{

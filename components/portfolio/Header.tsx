@@ -17,7 +17,6 @@ import { headerStyle } from '@/styles/layout/header'
 
 const Header = () => {
 
-
 	return (
 		<>
 			<header>

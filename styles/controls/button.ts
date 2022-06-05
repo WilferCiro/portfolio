@@ -8,6 +8,7 @@ export const style =  css`
         border: none;
 	}
     button:hover {
-        opacity: 0.5;
+        opacity: 0.8;
+        cursor: pointer;
     }
 `

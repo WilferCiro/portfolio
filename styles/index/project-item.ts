@@ -2,43 +2,34 @@ import css from 'styled-jsx/css'
 
 export const style =  css`
 	.project{
-		width: 90%;
+		width: 100%;
 		margin: auto;
 		position: relative;
-		margin-bottom: 80px;
+		margin-bottom: 10px;
 		padding: 15px 5px;
 		text-align: justify;
+		height: 100%;
 	}
 	.project h3{
 		color: var(--primary-color);
 		font-weight: bold;
 	}
 	.image{
-		width: 50%;
-	}
-	.image-right {
-		margin-left: 50%;
-		text-align: right;
+		width: 100%;
 	}
 	img{
 		width: 100%;
 	}
 	.description{
-		position: absolute;
 		background: var(--heading-color);
-		top: 20%;
-		left: 45%;
-		width: 55%;
 		z-index: 2;
 		padding: 20px 30px;
 		box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
 		border-radius: 5px;
 	}
-	.description-right {
-		left: 0px;
-	}
 	.tags {
 		width: 80%;
+		margin-top: 20px;
 	}
 	.image-right .tags{
 		margin-left: 20%;

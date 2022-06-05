@@ -12,10 +12,11 @@ import { animContainer, animItem } from '@/components/tools/animations';
 import { useInView } from 'react-intersection-observer';
 
 // Antd
-import { Divider, Tag } from "antd";
+import { Divider } from "antd";
 
 // Custom
 import { style } from "@/styles/index/project-item";
+import Tag from "../controls/Tag";
 const ImageCollection = dynamic(() => import('@/components/portfolio/ImageCollection'))
 
 
@@ -39,35 +40,26 @@ const ProjectItem = ({children, images, tags, right, title, description} : Props
 	
 	return (
 		<>
-			<motion.div
-				ref={ref}
-				variants={animContainer}
-				initial="hidden"
-				animate={controls}
-			>
-				<motion.div variants={animItem}>
-					<div className="project">
-						<div className={right ? "image image-right" : "image"}>
-							<ImageCollection images={images} />
-							<div className="tags">
-								{
-									tags.map((item: string, index: number) => {
-										return <Tag color={"#0EA9CE"} key={"color-" + index}>{item}</Tag>
-									})
-								}
-							</div>
-						</div>
-							
-						<div className={right ? "description description-right" : "description"}>
-							<h3>{title}</h3>
-							<p>{description}</p>
-							<Divider />
-							{children}
-						</div>
-
+			<div className="project">
+				<div className={right ? "image image-right" : "image"}>
+					<ImageCollection images={images} />
+				</div>
+					
+				<div className={right ? "description description-right" : "description"}>
+					<h3>{title}</h3>
+					<p>{description}</p>
+					<Divider />
+					{children}
+					<div className="tags">
+						{
+							tags.map((item: string, index: number) => {
+								return <Tag key={"color-" + index} text={item} />
+							})
+						}
 					</div>
-				</motion.div>
-			</motion.div>
+				</div>
+
+			</div>
 
 			<style jsx>{style}</style>
 		</>

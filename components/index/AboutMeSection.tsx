@@ -8,7 +8,6 @@ import React from 'react';
 import Image from 'next/image'
 
 // Antd
-import { Timeline, Divider, Row, Col, Typography } from 'antd';
 import { style as aboutmeStyle } from '@/styles/index/about-me';
 
 // Translate
@@ -17,8 +16,6 @@ import useTranslation from 'next-translate/useTranslation';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { style as styleJSON } from '@/styles/json-code';
 import { calculate_age } from 'services/tools.service';
-
-const { Text } = Typography;
 
 
 const AboutMeSection = () => {
@@ -52,21 +49,20 @@ const AboutMeSection = () => {
 					<div className="image">
 						<Image
 							src={"/img/index/me.webp"}
-							width={100}
-							height={100}
+							width={80}
+							height={80}
 							layout={"responsive"}
 							alt={"Foto de Wilfer Daniel Ciro Maya"}
 						/>
 					</div>
-					<p>{t("about_description")}</p>
-					<p>{t("about_description2")}</p>
+					<div className="">
+						<p>{t("about_description")}</p>
+						<p>{t("about_description2")}</p>
+					</div>
 				</div>
-				<hr />
 				<SyntaxHighlighter language="json" style={styleJSON} wrapLongLines={true}>
 					{JSON.stringify(myData, null, 4)}
 				</SyntaxHighlighter>
-
-
 
 				<h3>{t("about_timeline")}</h3>
 				<hr />

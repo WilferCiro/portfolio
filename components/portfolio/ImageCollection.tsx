@@ -4,11 +4,7 @@
 
 // NextJS and react
 import React, {useState} from 'react';
-
-// Antd
-import {
-	Image
-} from 'antd'
+import Image from 'next/image';
 
 interface Props {
 	images: Array<string>
@@ -19,15 +15,14 @@ const ImageCollection = ({images}: Props) => {
 	return (
 	<>
 		<Image
-			style={{borderRadius: "5px", overflow: "hidden"}}
 			alt="Project Image"
-			preview={{ visible: false }}
-			width={"100%"}
-			height={"300"}
+			width={"1365"}
+			height={"613"}
+			layout={"responsive"}
 			src={images[0]}
 			onClick={() => setVisible(true)}
 		/>
-		<div style={{ display: 'none' }}>
+		{/* <div style={{ display: 'none' }}>
 			<Image.PreviewGroup preview={{ visible, onVisibleChange: vis => setVisible(vis) }}>
 				{
 					images.map((image: string, index: number) => {
@@ -35,7 +30,7 @@ const ImageCollection = ({images}: Props) => {
 					})
 				}
 			</Image.PreviewGroup>
-		</div>
+			</div> */}
 	</>
 	);
 }

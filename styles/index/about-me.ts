@@ -13,12 +13,12 @@ export const style =  css`
 		white-space: pre-line;
 
 	}
-	.my-description{
-
+	.clear{
+		clear: both;
 	}
 	.image{
 		margin: auto;
-		width: 40%;
+		width: 35%;
 		border-radius: 100%;
 		overflow: hidden;
 		margin-bottom: 10px;
@@ -28,6 +28,13 @@ export const style =  css`
 	p{
 		text-align: justify;
 	}
+
+	ul {
+		list-style: none;
+		position: flex;
+		flex-direction: row;
+	}
+
 	@media (max-width: 767px) {
 		section{
 			padding: 20px 25px;

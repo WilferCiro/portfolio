@@ -9,7 +9,6 @@ import React, {useEffect, useState} from 'react';
 import {
 	Form,
 	Input,
-	Button,
 	message,
 	Divider,
 	Row,
@@ -21,13 +20,13 @@ import {
 import { MailFilled, PhoneFilled } from '@ant-design/icons';
 
 // Animations
-import { motion, useAnimation } from 'framer-motion';
-import { animContainer, animItem } from '@/components/tools/animations';
+import { useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 // Custom
 import useTranslation from 'next-translate/useTranslation';
 import { suscribe } from 'services/subscribe.service';
+import Button from '../controls/Button';
 
 const ContactSection = () => {
 	const { t } = useTranslation("home")
@@ -77,67 +76,24 @@ const ContactSection = () => {
 	return (
 		<>
 			<section id="contact">
-				<motion.div
-					ref={ref}
-					variants={animContainer}
-					initial="hidden"
-					animate={controls}
-				>
 					<div className="form">
 						<h3>{t("contact_title")}</h3>
 						<Divider />
 						<Card>
 							<Row gutter={[30, 16]}>
 								<Col xs={24} md={12}>
-									<motion.div variants={animItem}>
-										<Form
-											form={form}
-											name="basic"
-											layout="vertical"
-											onFinish={onFinish}
-											onFinishFailed={onFinishFailed}
-											autoComplete="off"
-										>
-											<Form.Item
-												label={t("email")}
-												name="email"
-												rules={[{ required: true, message: t("contact_error-email") }, { type: "email", message: "Ingrese un correo válido"}]}
-											>
 												<Input placeholder={t("contact_input-email")} />
-											</Form.Item>
-											<Form.Item
-												label={t("name")}
-												name="name"
-												rules={[{ required: true, message: t("contact_error-name") }]}
-											>
+											
 												<Input placeholder={t("contact_input-name")} />
-											</Form.Item>
-											<Form.Item
-												label={t("subject")}
-												name="subject"
-												rules={[{ required: true, message: t("contact_error-subject") }]}
-											>
+											
 												<Input placeholder={t("contact_input-subject")} />
-											</Form.Item>
-											<Form.Item
-												label={t("message")}
-												name="message"
-												rules={[{ required: true, message: t("contact_error-message") }, {min: 20, message: "El mensaje debe contener al menos 20 caracteres"}]}
-											>
+											
 												<Input.TextArea placeholder={t("contact_input-message")} />
-											</Form.Item>
-
-											<Form.Item>
-												<Button type="primary" htmlType="submit" block shape="round" loading={loading}>
-													{t("submit")}
-												</Button>
-											</Form.Item>
-										</Form>
-									</motion.div>
+											
+												<Button text={t("submit")} />
 								</Col>
 								<Col xs={24} md={12}>
 									<div className="data-list">
-										<motion.div variants={animItem}>
 											<List
 												itemLayout="horizontal"
 												dataSource={data}
@@ -151,13 +107,11 @@ const ContactSection = () => {
 													</List.Item>
 												)}
 											/>
-										</motion.div>
 									</div>
 								</Col>
 							</Row>
 						</Card>
 					</div>
-				</motion.div>
 			</section>
 
 			<style jsx>

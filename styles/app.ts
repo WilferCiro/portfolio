@@ -16,10 +16,9 @@ export const style =  css.global`
 		--bg-color: #181719;
 		--bg-color2: #1E1E1E;
 		--heading-color: #282828;
+		--heading-color-opacity: #282828CC; 
 		--border-color: #303030;
-
 	}
-
 	[data-theme="dark"] {
 		--primary-color: #0EA9CE;
 		--font-color: #CCD6F6;
@@ -27,6 +26,7 @@ export const style =  css.global`
 		--bg-color: #181719;
 		--bg-color2: #1E1E1E;
 		--heading-color: #282828;
+		--heading-color-opacity: #282828CC;
 		--border-color: #303030;
 	}
 
@@ -58,6 +58,10 @@ export const style =  css.global`
 	}
 	section.clear-to-dark{
 		background: linear-gradient(180deg, var(--bg-color2) 0%, var(--bg-color2) 80%, var(--bg-color) 100%);	
+	}
+	hr {
+		border: 0px;
+		border-bottom: 0.2px solid var(--heading-color-opacity);
 	}
 
 	h3 {

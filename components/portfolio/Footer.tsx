@@ -7,12 +7,12 @@ import Link from 'next/link'
 import React from 'react'
 
 // Antd
-import { Divider, Button } from 'antd'
 import { TranslationOutlined, CodeOutlined } from '@ant-design/icons'
 
 // Translation
 import useTranslation from 'next-translate/useTranslation'
 import SocialMedia from '@/components/portfolio/SocialMedia'
+import Button from '../controls/Button'
 
 const Footer = () => {
 
@@ -24,13 +24,9 @@ const Footer = () => {
 	return (
 		<>
 			<footer>
-				<Divider />
-				{t("footer_developed")} Wilfer Daniel Ciro Maya<br />
-				{age_now}<br />
-				<a href="https://github.com/WilferCiro/portfolio" rel="noreferrer" target="_blank">
-					<Button type="link" icon={<CodeOutlined />}>Ver código</Button>
-				</a>
-				<Divider />
+				<hr />
+				{t("footer_developed")}<br /> Wilfer Daniel Ciro Maya <br /><br /> {age_now}<br />
+				<hr />
 				<SocialMedia />
 					
 				<div>
@@ -38,16 +34,20 @@ const Footer = () => {
 						lang === "es" ? 
 						<Link href="/en">
 							<a>
-								<Button type="link" icon={<TranslationOutlined />}>Ver en inglés</Button>
+								<Button icon={<TranslationOutlined />} text={"Ver en inglés"} />
 							</a>
 						</Link>
 						:
 						<Link href="/es">
 							<a>
-								<Button type="link" icon={<TranslationOutlined />}>View in spanish</Button>
+								<Button icon={<TranslationOutlined />} text={"View in spanish"} />
 							</a>
 						</Link>
 					}
+
+					<a href="https://github.com/WilferCiro/portfolio" rel="noreferrer" target="_blank">
+						<Button icon={<CodeOutlined />} text={"View code"} />
+					</a>
 				</div>
 			</footer>
 
@@ -55,8 +55,13 @@ const Footer = () => {
 				{`
 					footer{
 						text-align:center;
-						padding: 10px 10%;
+						padding: 10px;
+						width: 60vw;
+						margin: auto;
 						margin-top: 40px;
+					}
+					hr {
+						margin: 40px;
 					}
 					@media (max-width: 767px) {
 						footer{

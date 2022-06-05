@@ -6,7 +6,7 @@ export const headerStyle =  css`
 		margin: 15px auto;
 		border-radius: 10px;
 		padding: 10px 50px;
-		background: var(--heading-color);
+		background: var(--heading-color-opacity);
 
 		position: fixed;
 		width: 54%;
@@ -16,6 +16,8 @@ export const headerStyle =  css`
 
 		display: flex;
 		justify-content: space-between;
+
+		backdrop-filter: blur(8px);
 	}
 
 	header button {
@@ -24,6 +26,7 @@ export const headerStyle =  css`
 		padding: 5px 15px;
 		border: none;
 		cursor: pointer;
+		color: var(--font-color);
 	}
 	header button:hover {
 		opacity: 0.5;

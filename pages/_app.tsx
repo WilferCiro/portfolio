@@ -16,14 +16,7 @@ const FloatInfo = dynamic(() => import('@/components/portfolio/FloatInfo'))
 import { style } from '@/styles/app'
 //import '/public/css/antd-dark.css';
 //import '@/styles/antd.css'
-import { getIsLight } from 'services/cookies'
 
-const isLight = getIsLight()
-
-const themes = {
-  light: '/css/antd-light.css',
-  dark: '/css/antd-dark.css',
-};
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

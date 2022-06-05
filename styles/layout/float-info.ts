@@ -3,6 +3,8 @@ import css from 'styled-jsx/css'
 export const floatInfoStyle =  css`
 	.social-network {
 		position: fixed;
+		display: flex;
+		flex-direction: column;
 		bottom: calc(50% - 114px);
 		left: 20px;
 		font-size: 25px;

@@ -120,13 +120,20 @@ const ProjectsSection = () => {
 		<section id="projects" className='clear-to-dark'>
 			<h3>{t("projects_title")}</h3>
 			<Divider />
+			<div className="projects-list">
+				{
+					projects.map((project: any, index: number) => {
+						return <ProjectItem key={"project-" + index} {...project} right={index % 2 !== 0} />
+					})
+				}
+			</div>
 
-			{
-				projects.map((project: any, index: number) => {
-					return <ProjectItem key={"project-" + index} {...project} right={index % 2 !== 0} />
-				})
-			}
-
+			<style jsx>{`
+				.projects-list {
+					display: grid;
+					grid-template-columns: 1fr 1fr;
+				}
+			`}</style>
 		</section>
 	)
 }
