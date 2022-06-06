@@ -11,6 +11,7 @@ export const style =  css.global`
 		--border-color: #FFF;*/
 
 		--primary-color: #0EA9CE;
+		--primary-color-opacity: #0EA9CECC;
 		--font-color: #CCD6F6;
 		--secondary-font-color: #76819D;
 		--bg-color: #181719;
@@ -21,6 +22,7 @@ export const style =  css.global`
 	}
 	[data-theme="dark"] {
 		--primary-color: #0EA9CE;
+		--primary-color-opacity: #0EA9CECC;
 		--font-color: #CCD6F6;
 		--secondary-font-color: #76819D;
 		--bg-color: #181719;
@@ -42,6 +44,9 @@ export const style =  css.global`
 		color: var(--font-color);
 		background: var(--bg-color) !important;
 		font-family: Lato, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	}
+	a{
+		text-decoration: none;
 	}
 	.main-content{
 		min-height: 100vh;

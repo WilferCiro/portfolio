@@ -11,10 +11,8 @@ import { useInView } from 'react-intersection-observer';
 import { animContainer, animItem, rotateItem } from "@/components/tools/animations";
 
 // Antd
-import {
-	Tag
-} from 'antd'
 import { style } from "@/styles/index/skill-item";
+import Tag from "../controls/Tag";
 
 interface Props {
 	title: string,
@@ -52,11 +50,12 @@ const SkillItem = ({title, items, image} : Props) => {
 							<div className="image"></div>
 						</motion.div>
 						<div className="description">
+							<div className="image2"></div>
 							<p>{title}</p>
 							<div className="">
 								{
 									items.map((item: string, index: number) => {
-										return <Tag key={"item-" + index}>{item}</Tag>
+										return <Tag key={"item-" + index} text={item} />
 									})
 								}
 							</div>
@@ -67,6 +66,12 @@ const SkillItem = ({title, items, image} : Props) => {
 			<style jsx>{style}</style>
 			<style jsx>{`
 				.image{
+					background-image: url(${image});
+					background-size: cover;
+					background-repeat: no-repeat;
+					background-position: center center;
+				}
+				.image2{
 					background-image: url(${image});
 					background-size: cover;
 					background-repeat: no-repeat;

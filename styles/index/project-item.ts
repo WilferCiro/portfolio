@@ -9,16 +9,11 @@ export const style =  css`
 		padding: 15px 5px;
 		text-align: justify;
 		height: 100%;
+		display: flex;
 	}
 	.project h3{
 		color: var(--primary-color);
 		font-weight: bold;
-	}
-	.image{
-		width: 100%;
-	}
-	img{
-		width: 100%;
 	}
 	.description{
 		background: var(--heading-color);

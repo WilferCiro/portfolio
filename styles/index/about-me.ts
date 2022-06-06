@@ -11,7 +11,6 @@ export const style =  css`
 		margin-left: auto;
 		margin-right: auto;
 		white-space: pre-line;
-
 	}
 	.clear{
 		clear: both;
@@ -23,7 +22,6 @@ export const style =  css`
 		overflow: hidden;
 		margin-bottom: 10px;
 		float: left;
-		shape-outside:circle();
 	}
 	p{
 		text-align: justify;
@@ -33,6 +31,13 @@ export const style =  css`
 		list-style: none;
 		position: flex;
 		flex-direction: row;
+	}
+	.about_description{
+		width: 65%;
+		margin-left: 35%;
+		margin-top: 20px;
+		display: block;
+		position: relative;
 	}
 
 	@media (max-width: 767px) {

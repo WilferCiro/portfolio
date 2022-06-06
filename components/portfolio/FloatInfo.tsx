@@ -4,23 +4,12 @@ import Link from 'next/link'
 
 // Antd
 import {
-	Space,
-	Button,
-	Switch
-} from 'antd';
-// Antd
-import {
 	GithubOutlined,
 	LinkedinFilled,
 	MailFilled,
 	InstagramFilled,
 	GitlabFilled,
-	TranslationOutlined
 } from '@ant-design/icons';
-
-// Animations
-import { motion } from 'framer-motion';
-import { animContainer } from '@/components/tools/animations';
 
 // Translate
 import useTranslation from 'next-translate/useTranslation';
@@ -76,22 +65,6 @@ const FloatInfo = () => {
 						</Tooltip>
 					</a>
 				</Link>
-			</div>
-			<div className="anchor">
-				{
-					lang === "es" ? 
-					<Link href="/en">
-						<a>
-							<Button type="link" icon={<TranslationOutlined />}>Ver en inglés</Button>
-						</a>
-					</Link>
-					:
-					<Link href="/es">
-						<a>
-							<Button type="link" icon={<TranslationOutlined />}>View in spanish</Button>
-						</a>
-					</Link>
-				}
 			</div>
 
 			<style jsx>{floatInfoStyle}</style>

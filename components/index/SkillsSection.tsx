@@ -6,18 +6,11 @@
 import React from 'react';
 import dynamic from 'next/dynamic'
 
-// Antd
-import {
-	Divider,
-	List
-} from 'antd';
-
 // Custom
 const SkillItem = dynamic(() => import('@/components/index/SkillItem'))
 
 // Translate
 import useTranslation from 'next-translate/useTranslation'
-import ParticlesBG from '../portfolio/ParticlesBG';
 
 const SkillsSection = () => {
 	const { t } = useTranslation("home")
@@ -30,7 +23,7 @@ const SkillsSection = () => {
 		{"title" : "GNU/Linux", "items" : ["Ubuntu based", "Arch based", "From scratch"], "image" : "/img/index/langs/linux.webp"},
 		{"title" : "SQL", "items" : ["MySQL", "PostgreSQL"], "image" : "/img/index/langs/sql.webp"},
 		{"title" : "No SQL", "items" : ["MongoDB", "Elastic Search"], "image" : "/img/index/langs/nosql.webp"},
-		{"title" : t("skills_tools"), "items" : ["Git", "Asana", "Jira"], "image" : "/img/index/langs/git.webp"},
+		{"title" : t("skills_tools"), "items" : ["Git", "Asana", "Jira", "SonarQube", "Jenkins"], "image" : "/img/index/langs/git.webp"},
 		{"title" : "HDL", "items" : ["VHDL", "Verilog", "FPGA"], "image" : "/img/index/langs/vhdl.webp"},
 		{"title" : t("skills_embedded"), "items" : ["Arduino", "ESP32", "Raspberry pi"], "image" : "/img/index/langs/arduino.webp"},
 		{"title" : "C#", "items" : ["Unity 3D"], "image" : "/img/index/langs/cnumeral.webp"},

@@ -45,6 +45,10 @@ const AboutMeSection = () => {
 
 				<h3>{t("about_about-me")}</h3>
 				<hr />
+
+
+				
+
 				<div className="my-description">
 					<div className="image">
 						<Image
@@ -55,14 +59,16 @@ const AboutMeSection = () => {
 							alt={"Foto de Wilfer Daniel Ciro Maya"}
 						/>
 					</div>
-					<div className="">
-						<p>{t("about_description")}</p>
-						<p>{t("about_description2")}</p>
+					<div>
+						<SyntaxHighlighter language="json" style={styleJSON} wrapLongLines={true}>
+							{JSON.stringify(myData, null, 4)}
+						</SyntaxHighlighter>
+						<cite className="about_description">
+							<p>{t("about_description")}</p>
+							<p>{t("about_description2")}</p>
+						</cite>
 					</div>
 				</div>
-				<SyntaxHighlighter language="json" style={styleJSON} wrapLongLines={true}>
-					{JSON.stringify(myData, null, 4)}
-				</SyntaxHighlighter>
 
 				<h3>{t("about_timeline")}</h3>
 				<hr />

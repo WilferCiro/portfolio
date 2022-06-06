@@ -9,17 +9,19 @@ export const style =  css`
 
     .tooltip .tooltiptext {
         visibility: hidden;
-        width: 120px;
-        background-color: black;
+        width: 150px;
         color: #fff;
         text-align: center;
-        padding: 5px 0;
+        padding: 8px 0;
         border-radius: 6px;
         font-size: 15px;
         margin-left: 15px;
+        line-height: 18px;
 
         position: absolute;
         z-index: 1;
+		background: var(--heading-color-opacity);
+		backdrop-filter: blur(8px);
     }
 
     .tooltip:hover .tooltiptext {

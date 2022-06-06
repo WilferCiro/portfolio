@@ -8,12 +8,6 @@ import Link from 'next/link'
 import dynamic from 'next/dynamic'
 
 // Antd
-import {
-	Space,
-	Divider,
-	Button,
-	Tag
-} from 'antd';
 import { GitlabFilled, LinkOutlined, ContactsFilled } from '@ant-design/icons';
 
 // Custom
@@ -21,6 +15,8 @@ const ProjectItem = dynamic(() => import('@/components/index/ProjectItem'))
 
 // Translation
 import useTranslation from 'next-translate/useTranslation';
+import Button from '../controls/Button';
+import Tag from '../controls/Tag';
 
 const ProjectsSection = () => {
 	
@@ -37,18 +33,18 @@ const ProjectsSection = () => {
 			"title" : "Kiwi Peluditos",
 			"tags" : ["NextJS", "PostgreSQL", "Django", "FastAPI"],
 			"description" : t("projects_kiwi-description"),
-			"children" : <Space>
+			"children" : <>
 				<Link href="https://kiwipeluditos.com">
 					<a target="_blank" rel="noreferrer">
-						<Button icon={<LinkOutlined />} type="primary">{t("visit")}</Button>
+						<Button icon={<LinkOutlined />} text={t("visit")} />
 					</a>
 				</Link>
 				<Link href="https://kiwipeluditos.com/ayuda">
 					<a target="_blank" rel="noreferrer">
-						<Button icon={<ContactsFilled />} type="primary">{t("contact_page")}</Button>
+						<Button icon={<ContactsFilled />} text={t("contact_page")} />
 					</a>
 				</Link>
-			</Space>
+			</>
 		},
 		{
 			"images" : [
@@ -62,7 +58,7 @@ const ProjectsSection = () => {
 			"title" : "BD tgrado",
 			"tags" : ["MySQL", "Django"],
 			"description" : t("projects_tgrado-description"),
-			"children" : <Tag color="magenta">{t("confidential")}</Tag>
+			"children" : <Tag text={t("confidential")} />
 		},
 		{
 			"images" : [
@@ -74,18 +70,18 @@ const ProjectsSection = () => {
 			"title" : "Sintel",
 			"tags" : ["Python3", "QT6", "VHDL", "Verilog"],
 			"description" : t("projects_sintel-description"),
-			"children" : <Space>
+			"children" : <>
 				<Link href="https://wilferciro.gitlab.io/sintel/">
 					<a target="_blank" rel="noreferrer">
-						<Button icon={<LinkOutlined />} type="primary">{t("visit")}</Button>
+						<Button icon={<LinkOutlined />} text={t("visit")} />
 					</a>
 				</Link>
 				<Link href="https://gitlab.com/WilferCiro/sintel">
 					<a target="_blank" rel="noreferrer">
-						<Button icon={<GitlabFilled />} type="primary">{t("view_code")}</Button>
+						<Button icon={<GitlabFilled />} text={t("view_code")} />
 					</a>
 				</Link>
-			</Space>
+			</>
 		},
 		{
 			"images" : [
@@ -97,13 +93,13 @@ const ProjectsSection = () => {
 			"title" : "32 bits MIPS",
 			"tags" : ["Verilog", "Ensambler"],
 			"description" : t("projects_mips-description"),
-			"children" : <Space>
+			"children" : <>
 				<Link href="https://gitlab.com/WilferCiro/microprocesadormips">
 					<a target="_blank" rel="noreferrer">
-						<Button icon={<GitlabFilled />} type="primary">{t("view_code")}</Button>
+						<Button icon={<GitlabFilled />} text={t("view_code")} />
 					</a>
 				</Link>
-			</Space>
+			</>
 		},
 		{
 			"images" : [
@@ -112,14 +108,14 @@ const ProjectsSection = () => {
 			"title" : "Sti irrigation",
 			"tags" : ["Django", "python3", "QT5", "C", "C++", "Raspberry Pi", "Arduino"],
 			"description" : t("projects_sti-description"),
-			"children" : <Tag color="magenta">{t("confidential")}</Tag>
+			"children" : <Tag text={t("confidential")} />
 		}
 	]
 
 	return (
 		<section id="projects" className='clear-to-dark'>
 			<h3>{t("projects_title")}</h3>
-			<Divider />
+			<hr />
 			<div className="projects-list">
 				{
 					projects.map((project: any, index: number) => {
@@ -130,8 +126,6 @@ const ProjectsSection = () => {
 
 			<style jsx>{`
 				.projects-list {
-					display: grid;
-					grid-template-columns: 1fr 1fr;
 				}
 			`}</style>
 		</section>

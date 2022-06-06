@@ -27,9 +27,19 @@ export const headerStyle =  css`
 		border: none;
 		cursor: pointer;
 		color: var(--font-color);
+		height: 100%;
+		display: flex;
+		align-items: center;
+		gap: 5px;
 	}
 	header button:hover {
 		opacity: 0.5;
+	}
+
+	.left-icons{
+		display: flex;
+		gap: 25px;
+		align-items: center;
 	}
 	
 	@media (min-width: 768px) and (max-width: 990px) {

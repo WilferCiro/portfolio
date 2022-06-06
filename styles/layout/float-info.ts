@@ -5,10 +5,16 @@ export const floatInfoStyle =  css`
 		position: fixed;
 		display: flex;
 		flex-direction: column;
+		gap: 15px;
 		bottom: calc(50% - 114px);
 		left: 20px;
 		font-size: 25px;
 		z-index: 100;
+		padding: 15px 10px;
+		border-radius: 70px;
+		background: var(--heading-color-opacity);
+		backdrop-filter: blur(8px);
+
 	}
 	.line{
 		border-left: solid 1.5px var(--font-color);
@@ -17,10 +23,15 @@ export const floatInfoStyle =  css`
 	}
 	a{
 		color: var(--font-color);
-		margin-bottom: 20px;
+		width: 40px;
+		height: 40px;
+		text-align: center;
+		line-height: 40px;
+		transition: all 0.5s;
 	}
 	a:hover{
-		color: var(--primary-color);
+		background: var(--secondary-font-color);
+		border-radius: 100%;
 	}
 	.anchor{
 		position: fixed;

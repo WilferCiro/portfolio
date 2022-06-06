@@ -48,8 +48,7 @@ const ProjectItem = ({children, images, tags, right, title, description} : Props
 				<div className={right ? "description description-right" : "description"}>
 					<h3>{title}</h3>
 					<p>{description}</p>
-					<Divider />
-					{children}
+					<hr />
 					<div className="tags">
 						{
 							tags.map((item: string, index: number) => {
@@ -57,6 +56,8 @@ const ProjectItem = ({children, images, tags, right, title, description} : Props
 							})
 						}
 					</div>
+					<hr />
+					{children}
 				</div>
 
 			</div>
