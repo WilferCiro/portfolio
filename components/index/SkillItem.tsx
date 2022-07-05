@@ -47,7 +47,6 @@ const SkillItem = ({title, items, image} : Props) => {
 								damping: 30
 							}}
 						>
-							<div className="image"></div>
 						</motion.div>
 						<div className="description">
 							<div className="image2"></div>

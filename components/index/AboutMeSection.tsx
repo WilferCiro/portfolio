@@ -36,7 +36,10 @@ const AboutMeSection = () => {
 			t("video_games"),
 			t("travel")
 		],
-		"profession" : t("about_profession")
+		"profession" : [
+			"Fullstack developer", "Ingeniero electrónico"
+		],
+		"description" : t("about_description")
 	}
 
 	return (
@@ -63,10 +66,6 @@ const AboutMeSection = () => {
 						<SyntaxHighlighter language="json" style={styleJSON} wrapLongLines={true}>
 							{JSON.stringify(myData, null, 4)}
 						</SyntaxHighlighter>
-						<cite className="about_description">
-							<p>{t("about_description")}</p>
-							<p>{t("about_description2")}</p>
-						</cite>
 					</div>
 				</div>
 
@@ -74,39 +73,46 @@ const AboutMeSection = () => {
 				<hr />
 				<ul>
 					<li>
-						<h3>{t("about_birth_date")}</h3>
-						<p>{t("about_my-birth")}</p>
-						<p>{t("about_birth_place")}</p>
+						<h4>{t("about_birth_date")}</h4>
+						<div className="content">
+							<p>{t("about_birth_place")}</p>
+						</div>
 					</li>
 					<li>
-						<h3>{t("about_start-programming_date")}</h3>
-						<p>{t("about_start-programming")}</p>
-						<p>{t("about_start-programming_description")}</p>
+						<h4>{t("about_start-programming_date")}</h4>
+						<div className="content">
+							<p>{t("about_start-programming_description")}</p>
+						</div>
 					</li>
 					<li>
-						<h3>{t("about_finish-high-school_date")}</h3>
-						<p>{t("about_finish-high-school")}</p>
-						<p>{t("about_finish-high-school_description")}</p>
+						<h4>{t("about_finish-high-school_date")}</h4>
+						<div className="content">
+							<p>{t("about_finish-high-school_description")}</p>
+						</div>
 					</li>
 					<li>
-						<h3>{t("about_finish-sena_date")}</h3>
-						<p>{t("about_finish-sena")}</p>
-						<p>{t("about_finish-sena_description")}</p>
+						<h4>{t("about_finish-sena_date")}</h4>
+						<div className="content">
+							<p>{t("about_finish-sena_description")}</p>
+						</div>
 					</li>
 					<li>
-						<h3>{t("about_first-job_date")}</h3>
-						<p>{t("about_first-job")}</p>
-						<p>{t("about_first-job_description")}</p>
+						<h4>{t("about_first-job_date")}</h4>
+						<div className="content">
+							<p>{t("about_first-job_description")}</p>
+						</div>
 					</li>
 					<li>
-						<h3>{t("about_finish-university_date")}</h3>
-						<p>{t("about_finish-university")}</p>
-						<p>{t("about_finish-university_description")}</p>
+						<h4>{t("about_finish-university_date")}</h4>
+						<div className="content">
+							<p>{t("about_finish-university_description")}</p>
+						</div>
 					</li>
 					<li>
-						<h3>{t("about_second-job_date")}</h3>
-						<p>{t("about_second-job")}</p>
-						<p>{t("about_second-job_description")}</p>
+						<h4>{t("about_second-job_date")}</h4>
+						<div className="content">
+							<p>{t("about_second-job_description")}</p>
+						</div>
 					</li>
 				</ul>
 			</section>

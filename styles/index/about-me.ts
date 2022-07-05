@@ -32,6 +32,22 @@ export const style =  css`
 		position: flex;
 		flex-direction: row;
 	}
+	ul li {
+		display: grid;
+		grid-template-columns: 20% 80%;
+		align-items: center;
+	}
+	
+	.content {
+		width: 100%;
+		border: solid 1px black;
+		padding: 20px 30px;
+		border-radius: 10px;
+	}
+	ul li * {
+		margin: 0px;
+	}
+
 	.about_description{
 		width: 65%;
 		margin-left: 35%;

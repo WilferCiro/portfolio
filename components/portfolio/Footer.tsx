@@ -55,13 +55,13 @@ const Footer = () => {
 				{`
 					footer{
 						text-align:center;
-						padding: 10px;
-						width: 60vw;
+						padding: 10px 0px;
 						margin: auto;
+						width: 100%;
 						margin-top: 40px;
 					}
 					hr {
-						margin: 40px;
+						margin: 40px 0px;
 					}
 					@media (max-width: 767px) {
 						footer{

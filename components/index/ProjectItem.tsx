@@ -7,12 +7,10 @@ import React, { useEffect } from "react"
 import dynamic from 'next/dynamic'
 
 // Animations
-import { motion, useAnimation } from 'framer-motion';
-import { animContainer, animItem } from '@/components/tools/animations';
+import { useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 // Antd
-import { Divider } from "antd";
 
 // Custom
 import { style } from "@/styles/index/project-item";

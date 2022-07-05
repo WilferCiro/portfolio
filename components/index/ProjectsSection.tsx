@@ -17,6 +17,7 @@ const ProjectItem = dynamic(() => import('@/components/index/ProjectItem'))
 import useTranslation from 'next-translate/useTranslation';
 import Button from '../controls/Button';
 import Tag from '../controls/Tag';
+import Space from '../controls/Space';
 
 const ProjectsSection = () => {
 	
@@ -33,7 +34,7 @@ const ProjectsSection = () => {
 			"title" : "Kiwi Peluditos",
 			"tags" : ["NextJS", "PostgreSQL", "Django", "FastAPI"],
 			"description" : t("projects_kiwi-description"),
-			"children" : <>
+			"children" : <Space>
 				<Link href="https://kiwipeluditos.com">
 					<a target="_blank" rel="noreferrer">
 						<Button icon={<LinkOutlined />} text={t("visit")} />
@@ -44,7 +45,7 @@ const ProjectsSection = () => {
 						<Button icon={<ContactsFilled />} text={t("contact_page")} />
 					</a>
 				</Link>
-			</>
+			</Space>
 		},
 		{
 			"images" : [
@@ -70,7 +71,7 @@ const ProjectsSection = () => {
 			"title" : "Sintel",
 			"tags" : ["Python3", "QT6", "VHDL", "Verilog"],
 			"description" : t("projects_sintel-description"),
-			"children" : <>
+			"children" : <Space>
 				<Link href="https://wilferciro.gitlab.io/sintel/">
 					<a target="_blank" rel="noreferrer">
 						<Button icon={<LinkOutlined />} text={t("visit")} />
@@ -81,7 +82,7 @@ const ProjectsSection = () => {
 						<Button icon={<GitlabFilled />} text={t("view_code")} />
 					</a>
 				</Link>
-			</>
+			</Space>
 		},
 		{
 			"images" : [

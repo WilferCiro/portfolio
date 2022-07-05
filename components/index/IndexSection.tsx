@@ -11,12 +11,15 @@ import Link from 'next/link'
 import { style } from '@/styles/index/index-section'
 
 // Animations
-import MePhoto from '@/components/index/MePhoto';
 
 // Translate
 import useTranslation from "next-translate/useTranslation"
-import ParticlesBG from '../portfolio/ParticlesBG';
 import Button from '../controls/Button';
+import dynamic from 'next/dynamic';
+
+const MePhoto = dynamic(() => import('@/components/index/MePhoto'), {
+	ssr: false,
+})
 
 const IndexSection = () => {
 
@@ -24,7 +27,6 @@ const IndexSection = () => {
 	
 	return (
 		<>
-			<ParticlesBG />
 			<section id="index" className='clear-to-dark'>					
 				<div>
 					<MePhoto />

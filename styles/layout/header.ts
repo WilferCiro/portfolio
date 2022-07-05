@@ -41,6 +41,83 @@ export const headerStyle =  css`
 		gap: 25px;
 		align-items: center;
 	}
+
+	.menu-dialog{
+		border: none;
+		width: 80%;
+		height: 80vh;
+		padding: 20px 50px;
+		border-radius: 10px;
+		background: var(--heading-color-opacity);
+		backdrop-filter: blur(5px);
+	}
+	.menu-dialog::backdrop{
+		background: rgba(0, 0, 0, 0.8);
+	}
+
+	.menu-dialog[open] {
+		border: 1px solid rgba(0, 0, 0, 0.3);
+		border-radius: 6px;
+		box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+		-webkit-animation: show-dialog 0.5s ease normal;
+	}
+	.menu-dialog.hide {
+		-webkit-animation: hide-dialog 0.5s ease normal;
+	}
+
+	.menu-dialog[open]::backdrop {
+		-webkit-animation: show-backdrop 0.5s ease 0.2s normal;
+	}
+	.menu-dialog.hide::backdrop {
+		-webkit-animation: hide-backdrop 0.5s ease 0.2s normal;
+	}
+	@-webkit-keyframes show-dialog {
+		from {
+			opacity: 0;
+			transform: translateY(-100%);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0%);
+		}
+	}
+	@-webkit-keyframes hide-dialog{
+		to {
+			opacity: 0;
+			transform: translateY(-100%);
+		}
+	}
+	
+	@-webkit-keyframes show-backdrop {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+	@-webkit-keyframes hide-backdrop{
+		to {
+			opacity: 0;
+		}
+	}
+
+
+
+	.menu{
+		font-size: 4vw;
+		list-style: none;
+		text-align: center;
+	}
+	.menu li {
+		margin-top: 20px;
+	}
+	.menu li a {
+		color: white;
+	}
+	.menu li a:hover {
+		color: var(--primary-color);
+	}
 	
 	@media (min-width: 768px) and (max-width: 990px) {
 		header{

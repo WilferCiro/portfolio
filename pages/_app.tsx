@@ -11,6 +11,7 @@ import MyHead from '@/components/portfolio/MyHead'
 const Header = dynamic(() => import('@/components/portfolio/Header'))
 const Footer = dynamic(() => import('@/components/portfolio/Footer'))
 const FloatInfo = dynamic(() => import('@/components/portfolio/FloatInfo'))
+import ParticlesBG from '@/components/portfolio/ParticlesBG';
 
 // Styles
 import { style } from '@/styles/app'
@@ -21,13 +22,14 @@ import { style } from '@/styles/app'
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
+        <ParticlesBG />
         <MyHead />
         <FloatInfo />
         <Header />
         <div className="main-content">
           <Component {...pageProps} />
+          <Footer />
         </div>
-        <Footer />
 
         <style global jsx>{style}</style>
     </>

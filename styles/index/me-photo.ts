@@ -2,8 +2,8 @@ import css from 'styled-jsx/css'
 
 export const style =  css`
 	.headshot {
-		width: 250px;
-		height: 250px;
+		width: 400px;
+		height: 400px;
 		margin: auto;
 	}
 

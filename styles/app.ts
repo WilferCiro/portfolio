@@ -19,6 +19,7 @@ export const style =  css.global`
 		--heading-color: #282828;
 		--heading-color-opacity: #282828CC; 
 		--border-color: #303030;
+		--font-family: Lato, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 	}
 	[data-theme="dark"] {
 		--primary-color: #0EA9CE;
@@ -43,7 +44,7 @@ export const style =  css.global`
 		padding: 0px;
 		color: var(--font-color);
 		background: var(--bg-color) !important;
-		font-family: Lato, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+		font-family: var(--font-family);
 	}
 	a{
 		text-decoration: none;
@@ -72,6 +73,18 @@ export const style =  css.global`
 	h3 {
 		color: var(--primary-color) !important;
 	}
+
+	input, textarea {
+		padding: 10px 15px;
+		border-radius: 10px;
+		border: none;
+		transition: all 0.1s;
+		font-family: var(--font-family);
+	}
+	input:focus, textarea:focus {
+		outline: solid 2px var(--primary-color);
+	}
+
 	@media (min-width: 991px) and (max-width: 1380px) {
 	}
 	@media (min-width: 768px) and (max-width: 990px) {
