@@ -57,7 +57,7 @@ const IndexSection = () => {
 										<h2>{t("index_subtitle")}</h2>
 										<p>{t("index_description")}</p>
 										<Divider />
-										<Link href="https://drive.google.com/file/d/1HtbNVGocGdFbvCa7mgrWlFrlw-s6oGyD/view?usp=sharing">
+										<Link href="https://drive.google.com/file/d/1KeP3WUR0Cl7UBaBmlFkR6gmfSgAce2On/view?usp=sharing">
 											<a target="_blank">
 												<Button type="primary" icon={<CloudDownloadOutlined />}>{t("header_resume")}</Button>
 											</a>

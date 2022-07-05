@@ -66,7 +66,7 @@ const Header = () => {
 									})
 								}
 								<li className="resume-btn">
-									<Link href="https://drive.google.com/file/d/1HtbNVGocGdFbvCa7mgrWlFrlw-s6oGyD/view?usp=sharing">
+									<Link href="https://drive.google.com/file/d/1KeP3WUR0Cl7UBaBmlFkR6gmfSgAce2On/view?usp=sharing">
 										<a rel="noreferrer" target="_blank">{t("header_resume")}</a>
 									</Link>
 								</li>
