@@ -1,0 +1,28 @@
+---
+interface Props {
+  title: string;
+}
+
+const data = Astro.props;
+---
+
+<div class="container">
+  <div class="line"></div>
+  <h2>{data.title}</h2>
+</div>
+
+<style>
+  .container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+  .line {
+    width: 40px;
+    border-bottom: solid 4px var(--primary-color);
+  }
+  h2 {
+    color: var(--primary-color);
+  }
+</style>

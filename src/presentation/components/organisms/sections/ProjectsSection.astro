@@ -1,0 +1,11 @@
+---
+import Button from "../../atoms/Button.astro";
+import TitlePage from "../../atoms/TitlePage.astro";
+import ProjectsList from "../../molecules/ProjectsList.astro";
+---
+
+<header>
+  <TitlePage title="Mis últimos proyectos"></TitlePage>
+</header>
+<ProjectsList max={3} />
+<a href="/projects"><Button label={`Ver todos los proyectos`} /></a>

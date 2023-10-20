@@ -1,0 +1,38 @@
+---
+import worksLists from "../../../../data/works-list";
+import TitlePage from "../../atoms/TitlePage.astro";
+import WorkCardPrimary from "../../atoms/WorkCardPrimary.astro";
+import WorkCardSecondary from "../../atoms/WorkCardSecondary.astro";
+
+const allWorks = worksLists;
+---
+
+<TitlePage title="Experiencia laboral"></TitlePage>
+<div class="container">
+  <div class="primary">
+    <WorkCardPrimary {...allWorks[0]} />
+  </div>
+  <div class="secondary">
+    {
+      ([...allWorks].splice(1, allWorks.length + 1) || []).map((work) => {
+        return <WorkCardSecondary {...work} />;
+      })
+    }
+  </div>
+</div>
+
+<style>
+  .container {
+    display: grid;
+    grid-template-columns: 0.7fr 1fr;
+    gap: 50px;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .secondary {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+</style>

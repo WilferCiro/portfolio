@@ -1,0 +1,25 @@
+---
+import PresentationSection from "../presentation/components/organisms/sections/PresentationSection.astro";
+import ProjectsSection from "../presentation/components/organisms/sections/ProjectsSection.astro";
+import WorkExperienceSection from "../presentation/components/organisms/sections/WorkExperienceSection.astro";
+import Layout from "../presentation/layouts/Layout.astro";
+---
+
+<Layout title="Inicio">
+  <PresentationSection />
+  <section id="projects">
+    <ProjectsSection />
+  </section>
+  <section id="experience">
+    <WorkExperienceSection />
+  </section>
+  <section id="contact">
+  </section>
+</Layout>
+
+<style>
+  section {
+    width: 80%;
+    margin: auto;
+  }
+</style>

@@ -1,0 +1,67 @@
+---
+import allProjects from "../../data/projects-list";
+import DatesArray from "../../presentation/components/atoms/DatesArray.astro";
+import CarouselImages from "../../presentation/components/molecules/CarouselImages.astro";
+import StackList from "../../presentation/components/molecules/StackList.astro";
+import Layout from "../../presentation/layouts/Layout.astro";
+
+export function getStaticPaths() {
+  return Object.keys(allProjects).map((key) => {
+    return {
+      params: { id: key },
+    };
+  });
+}
+
+const { id } = Astro.params;
+
+if (!id || typeof id === "undefined") {
+  return Astro.redirect("/");
+}
+const project = allProjects[id];
+---
+
+<Layout title={`Proyecto ${project?.name}`}>
+  <div class="container">
+    <div>
+      <CarouselImages images={project.images} id={id} />
+    </div>
+    <div>
+      <h2 transition:name={`project-title-${id}`}>
+        {project?.name}
+      </h2>
+      <h3>
+        Proyecto {project.owner}
+      </h3>
+      <DatesArray dates={project.dates} />
+      <p transition:name={`project-description-${id}`}>
+        {project.description}
+      </p>
+      <StackList stack={project.stack} />
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .container {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    align-items: center;
+    height: 100vh;
+    width: 80%;
+    margin: auto;
+    gap: 50px;
+    justify-content: space-around;
+  }
+  .image {
+    width: 35vw;
+  }
+  h2,
+  h3 {
+    margin: 0px;
+    margin-bottom: 5px;
+  }
+  h3 {
+    font-weight: 300;
+  }
+</style>

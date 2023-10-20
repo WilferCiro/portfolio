@@ -1,0 +1,23 @@
+---
+const { label, buttonSize } = Astro.props;
+---
+
+<button>
+  {label}
+</button>
+
+<style define:vars={{ buttonSize }}>
+  button {
+    border: solid 2px var(--primary-color);
+    color: var(--primary-color);
+    border-radius: var(--border-radius);
+    padding: 10px 25px;
+    background-color: white;
+    cursor: pointer;
+    width: var(--buttonSize);
+  }
+  button:hover {
+    background: var(--primary-color);
+    color: white;
+  }
+</style>

@@ -1,0 +1,32 @@
+---
+import LinkedInIcon from "./icons/LinkedInIcon.astro";
+import GithubIcon from "./icons/GithubIcon.astro";
+import EmailIcon from "./icons/EmailIcon.astro";
+---
+
+<ul>
+  <li>
+    <a href="https://www.linkedin.com/in/wilfer-ciro/" target="_blank"
+      ><LinkedInIcon /></a>
+  </li>
+  <li>
+    <a href="https://github.com/WilferCiro" target="_blank"><GithubIcon /></a>
+  </li>
+  <li><a href="mailto:wilcirom@gmail.com" target="_blank"><EmailIcon /></a></li>
+</ul>
+
+<style>
+  ul {
+    display: flex;
+    gap: 15px;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+  }
+  ul li a {    
+    color: white;
+  }
+  ul li a: hover {    
+    color: var(--text-color);
+  }
+</style>

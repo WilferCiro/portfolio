@@ -1,0 +1,90 @@
+---
+interface Props {
+  images: string[];
+  id: string;
+}
+
+const { images, id } = Astro.props;
+---
+
+<img
+  src={`/images/projects/${id}/${images[0]}`}
+  id="main"
+  transition:name={`project-image-${id}`}
+/>
+<div id="thumbnails">
+  {
+    images.map((image: string) => {
+      return (
+        <img
+          src={`/images/projects/${id}/${image}`}
+          alt="Imagen del proyecto"
+        />
+      );
+    })
+  }
+</div>
+
+<style>
+  #main,
+  #thumbnails img {
+    border-radius: 10px;
+  }
+
+  * {
+    transition: all 0.5s ease;
+  }
+
+  #thumbnails {
+    text-align: center;
+  }
+  #thumbnails img {
+    width: 100px;
+    height: 60px;
+    margin: 6px;
+    cursor: pointer;
+    object-fit: cover;
+  }
+  @media only screen and (max-width: 480px) {
+    #thumbnails img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  #thumbnails img:hover {
+    transform: scale(1.05);
+  }
+
+  #main {
+    width: 100%;
+    height: 500px;
+    object-fit: scale-down;
+    display: block;
+    margin: 20px auto;
+  }
+  @media only screen and (max-width: 480px) {
+    #main {
+      width: 100%;
+    }
+  }
+
+  .hidden {
+    opacity: 0;
+  }
+</style>
+
+<script async>
+  var thumbnails = document.getElementById("thumbnails");
+  var imgs = thumbnails?.getElementsByTagName("img") || [];
+  var main = document.getElementById("main");
+
+  for (let i = 0; i < imgs.length; i++) {
+    let img = imgs[i];
+
+    img.addEventListener("click", function () {
+      if (main && "src" in main) {
+        main.src = this.src;
+      }
+    });
+  }
+</script>

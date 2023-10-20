@@ -1,0 +1,29 @@
+---
+
+import TitlePage from "../presentation/components/atoms/TitlePage.astro";
+import ProjectsList from "../presentation/components/molecules/ProjectsList.astro";
+import Layout from "../presentation/layouts/Layout.astro";
+---
+
+<Layout title="Listado de proyectos">
+  <section>
+    <TitlePage title="Lista de todos mis proyectos" />
+    <p>
+      Descubre todos los proyectos que he desarrollado a lo largo de mi carrera
+    </p>
+    <ProjectsList />
+  </section>
+</Layout>
+
+<style>
+  .container {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  section {
+    width: 70%;
+    margin: auto;
+    margin-top: 100px;
+  }
+</style>

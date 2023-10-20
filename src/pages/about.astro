@@ -1,0 +1,52 @@
+---
+import { Image } from "astro:assets";
+import Photo1 from "../presentation/media/images/photo1.png";
+import Layout from "../presentation/layouts/Layout.astro";
+---
+
+<Layout title="Sobre mi">
+  <div class="container">
+    <div>
+      <Image
+        class="image"
+        src={Photo1}
+        alt="foto de Wilfer Daniel Ciro Maya"
+        transition:name=`me-photo`
+      />
+    </div>
+    <div>
+      <h2 transition:name=`me-name`>Wilfer Daniel Ciro Maya</h2>
+      <h3 transition:name=`me-profession`>Fullstack developer</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam numquam
+        optio doloremque iste, impedit assumenda fugiat eius nulla
+        exercitationem delectus aut, quibusdam qui. Iste voluptatum neque nobis,
+        ducimus laboriosam quasi.
+      </p>
+      <a href="/"><button>Atrás</button></a>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .container {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    width: 70%;
+    margin: auto;
+    gap: 50px;
+    justify-content: space-around;
+  }
+  .image {
+    width: 35vw;
+    height: 35vw;
+    border-radius: 100%;
+  }
+  h2, h3 {
+    margin: 5px;
+  }
+  h3 {
+    font-weight: 300;
+  }
+</style>

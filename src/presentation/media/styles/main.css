@@ -1,0 +1,60 @@
+:root {
+  --primary-color: #1f6cab;
+  --secondary-color: #082a3a;
+  --subtitle-color: #223440;
+  --body-color: #4a5167;
+  --border-radius: 5px;
+
+  --gray1: #9093a4;
+
+  --mobile-size: 400px;
+  --tablet-size: 740px;
+  --laptop-size: 1024px;
+  --hd-laptop-size: 1440px;
+}
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  font-family: system-ui, sans-serif;
+  padding: 0px;
+  margin: 0px;
+  color: var(--body-color);
+  font-size: 17px;
+}
+code {
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
+a {
+  color: var(--body-color);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--primary-color);
+  opacity: 0.7;
+}
+
+h1 {
+  font-size: 50px;
+}
+h2 {
+  font-size: 40px;
+}
+h3 {
+  font-size: 28px;
+}
+h4 {
+  font-size: 24px;
+  font-weight: 500;
+}
+h5 {
+  font-size: 20px;
+}
+
+p {
+  font-size: 17px;
+  line-height: 24px;
+}

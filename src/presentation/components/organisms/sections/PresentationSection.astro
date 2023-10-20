@@ -1,0 +1,122 @@
+---
+import { Image } from "astro:assets";
+import Photo1 from "../../../media/images/photo1.png";
+import Button from "../../atoms/Button.astro";
+---
+
+<ul class="color-cards">
+  <li class="card1"></li>
+  <li class="card2"></li>
+  <li class="card3"></li>
+</ul>
+<div class="container">
+  <div class="">
+    <h4 class="greetings">--- ¡Hola! soy</h4>
+    <h1 transition:name=`me-name`>Wilfer Daniel Ciro Maya</h1>
+    <h4 class="profession" transition:name=`me-profession`>Full stack developer</h4>
+    <h5 class="creator">Creador de soluciones para el mundo</h5>
+    <Button label="Ver CV" buttonSize="150px" />
+  </div>
+  <div>
+    <a href="/about">
+      <Image
+        class="image"
+        src={Photo1}
+        alt="foto de Wilfer Daniel Ciro Maya"
+        transition:name=`me-photo`
+      />
+    </a>
+  </div>
+</div>
+
+<style>
+  .color-cards {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    height: 100vh;
+    width: 40%;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    z-index: -1;
+  }
+  .card1,
+  .card2,
+  .card3 {
+    width: 100%;
+    height: 33%;
+    background-color: var(--primary-color);
+  }
+  .card2 {
+    opacity: 0.8;
+    height: 34%;
+  }
+  .card3 {
+    opacity: 0.6;
+  }
+
+  .container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 10%;
+    width: 75%;
+  }
+  .image {
+    width: 32vw;
+    height: 32vw;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    margin: 0px;
+  }
+  h1 {
+    font-size: 55px;
+  }
+
+  .greetings {
+    color: var(--primary-color);
+  }
+  .creator {
+    margin-top: 10px;
+    font-weight: normal;
+    margin-bottom: 50px;
+  }
+  .profession {
+    font-weight: 400;
+  }
+
+  @media (min-width: 740px) and (max-width: 1024px) {
+    .container {
+      width: 90%;
+      margin: auto;
+    }
+    .image {
+      width: 45vw;
+      height: 45vw;
+    }
+  }
+  @media (max-width: 740px) {
+    .container {
+      flex-direction: column-reverse;
+      justify-content: center;
+      width: 90%;
+      margin: auto;
+      text-align: center;
+      gap: 40px;
+    }
+    .image {
+      width: 60vw;
+      height: 60vw;
+    }
+    .color-cards {
+      width: 30%;
+    }
+  }
+</style>

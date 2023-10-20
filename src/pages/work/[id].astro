@@ -1,0 +1,69 @@
+---
+import worksLists from "../../data/works-list";
+import Layout from "../../presentation/layouts/Layout.astro";
+import StackList from "../../presentation/components/molecules/StackList.astro";
+
+export function getStaticPaths() {
+  return worksLists.map((work) => {
+    return {
+      params: { id: work.name },
+    };
+  });
+}
+
+const { id } = Astro.params;
+
+const work = worksLists.find(({ name }) => name === id);
+if (!id || typeof id === "undefined" || !work) {
+  return Astro.redirect("/");
+}
+---
+
+<Layout title={`Proyecto ${work?.name}`}>
+  <div class="container">
+    <div>
+      <img
+        src={"/images/works/" + work?.images[0]}
+        alt="Foto de empresa"
+        transition:name={`work-${work?.name}`}
+        class="image"
+      />
+    </div>
+    <div>
+      <h2 transition:name={`work-name-${work?.name}`}>{work?.name}</h2>
+      <h3 transition:name={`work-profession-${work?.name}`}>
+        Fullstack developer
+      </h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam numquam
+        optio doloremque iste, impedit assumenda fugiat eius nulla
+        exercitationem delectus aut, quibusdam qui. Iste voluptatum neque nobis,
+        ducimus laboriosam quasi.
+      </p>
+      <StackList stack={work.stack} />
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .container {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    width: 70%;
+    margin: auto;
+    gap: 50px;
+    justify-content: space-around;
+  }
+  .image {
+    width: 35vw;
+    height: 35vw;
+  }
+  h2,
+  h3 {
+    margin: 5px;
+  }
+  h3 {
+    font-weight: 300;
+  }
+</style>

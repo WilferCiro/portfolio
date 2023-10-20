@@ -1,0 +1,27 @@
+---
+import type { StackSchema } from "../../../domain/schemas/StackSchema";
+import CardStack from "../atoms/CardStack.astro";
+interface Props {
+  stack: StackSchema[];
+}
+
+const { stack } = Astro.props;
+---
+
+<div class="container">
+  {
+    stack.map((item) => {
+      return <CardStack stack={item} />;
+    })
+  }
+</div>
+
+<style>
+    .container {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+</style>

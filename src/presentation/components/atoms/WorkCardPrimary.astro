@@ -1,0 +1,37 @@
+---
+import type { WorkSchema } from "../../../domain/schemas/WorkSchema";
+interface Props extends WorkSchema {}
+
+const data = Astro.props;
+---
+
+<div class="card">
+  <img
+    src={"/images/works/" + data.images[0]}
+    alt="Foto de empresa"
+    transition:name={`work-${data.name}`}
+    class="image"
+  />
+  <div>
+    <h4>{data.name}</h4>
+    <p>{data.description}</p>
+    <a href={`/work/${data.name}`}>
+      <button>Conocer más</button>
+    </a>
+  </div>
+</div>
+
+<style>
+  .card {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .image {
+    width: 100%;
+    display: block;
+  }
+</style>

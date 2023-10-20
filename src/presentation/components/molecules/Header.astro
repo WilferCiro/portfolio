@@ -1,0 +1,50 @@
+---
+import SocialLinks from "../atoms/SocialLinks.astro";
+
+const currentPath = Astro.url.pathname;
+---
+
+<header>
+  <div class="container">
+    <ul class="menu">
+      <li><a href="#home">Inicio</a></li>
+      <li><a href="/about" class={currentPath === '/about' ? 'active' : ''}>Sobre mi</a></li>
+      <li><a href="#projects">Proyectos</a></li>
+      <li><a href="#experience">Experiencia</a></li>
+      <li><a href="#contact">Contáctame</a></li>
+    </ul>
+    <SocialLinks />
+  </div>
+</header>
+
+<style>
+  header {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    padding: 30px 20px;
+    z-index: 2;
+  }
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    margin: auto;
+  }
+
+  .menu {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .active {
+    color: red;
+  }
+</style>

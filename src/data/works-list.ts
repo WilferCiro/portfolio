@@ -1,0 +1,113 @@
+import { StackList } from "../domain/enums/StackList";
+import type { WorkSchema } from "../domain/schemas/WorkSchema";
+import allProjects from "./projects-list";
+
+const worksLists: WorkSchema[] = [
+  {
+    name: "Option",
+    dates: ["", ""],
+    description: "",
+    images: ["option.jpg"],
+    projects: [allProjects.AIEPWeb3, allProjects.codelcoForm],
+    stack: [
+      StackList.NestJS,
+      StackList.Express,
+      StackList.NextJS,
+      StackList.ReactJS,
+      StackList.MongoDB,
+      StackList.Web3,
+      StackList.Ethereum,
+      StackList.Azure,
+      StackList.GCP,
+      StackList.AWS,
+    ],
+  },
+  {
+    name: "Negozia CF",
+    dates: ["", ""],
+    description: "",
+    images: ["negozia.png"],
+    projects: [
+      allProjects.boNegozia,
+      allProjects.dashboardNegozia,
+      allProjects.dniReader,
+    ],
+    stack: [
+      StackList.NestJS,
+      StackList.Express,
+      StackList.ReactJS,
+      StackList.NextJS,
+      StackList.AWS,
+      StackList.Python,
+      StackList.Flask,
+      StackList.OpenCV,
+    ],
+  },
+  {
+    name: "Misión TIC 2022",
+    dates: ["", ""],
+    description: "",
+    images: ["udea.jpg"],
+    projects: [
+      allProjects.boNegozia,
+      allProjects.dashboardNegozia,
+      allProjects.dniReader,
+    ],
+    stack: [
+      StackList.Python,
+      StackList.Java,
+      StackList.SpringBoot,
+      StackList.PostgreSQL,
+      StackList.Html,
+      StackList.Css,
+      StackList.ReactJS,
+      StackList.Flutter,
+    ],
+  },
+  {
+    name: "Jaivaná",
+    dates: ["", ""],
+    description: "",
+    images: ["jaivana.png"],
+    projects: [allProjects.laferre],
+    stack: [
+      StackList.ReactJS,
+      StackList.NextJS,
+      StackList.ElasticSearch,
+      StackList.PostgreSQL,
+      StackList.Flutter,
+      StackList.Java,
+    ],
+  },
+  {
+    name: "Freelance",
+    dates: ["", ""],
+    description: "",
+    images: ["freelance.png"],
+    projects: [
+      allProjects.bdTgrado,
+      allProjects.kiwipeluditos,
+      allProjects.davinci,
+      allProjects.stiIrrigation,
+      allProjects.sintel,
+    ],
+    stack: [
+      StackList.NestJS,
+      StackList.ReactJS,
+      StackList.NextJS,
+      StackList.AWS,
+      StackList.GCP,
+      StackList.Python,
+      StackList.Flask,
+      StackList.Django,
+      StackList.PostgreSQL,
+      StackList.MySQL,
+      StackList.MongoDB,
+      StackList.PHP,
+      StackList.C,
+      StackList.CPP,
+    ],
+  },
+];
+
+export default worksLists;

@@ -1,0 +1,31 @@
+---
+import allProjects from "../../../data/projects-list";
+import Button from "../atoms/Button.astro";
+import ProjectCard from "../atoms/ProjectCard.astro";
+
+interface Props {
+  max?: number;
+}
+
+const { max } = Astro.props;
+const projects = allProjects;
+const count = Object.keys(projects).length;
+---
+
+<div class="container">
+  {
+    Object.keys(projects)
+      .slice(0, max ?? count)
+      .map((key: string) => {
+        return <ProjectCard {...projects[key]} id={key} />;
+      })
+  }
+</div>
+
+<style>
+  .container {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+</style>
