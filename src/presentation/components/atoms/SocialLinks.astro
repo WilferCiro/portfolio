@@ -6,13 +6,23 @@ import EmailIcon from "./icons/EmailIcon.astro";
 
 <ul>
   <li>
-    <a href="https://www.linkedin.com/in/wilfer-ciro/" target="_blank"
-      ><LinkedInIcon /></a>
+    <a
+      href="https://www.linkedin.com/in/wilfer-ciro/"
+      target="_blank"
+      title="Ir a LinkedIn"
+      ><LinkedInIcon />
+    </a>
   </li>
   <li>
-    <a href="https://github.com/WilferCiro" target="_blank"><GithubIcon /></a>
+    <a href="https://github.com/WilferCiro" target="_blank" title="Ir a Github"
+      ><GithubIcon />
+    </a>
   </li>
-  <li><a href="mailto:wilcirom@gmail.com" target="_blank"><EmailIcon /></a></li>
+  <li>
+    <a href="mailto:wilcirom@gmail.com" target="_blank" title="Enviar un Email"
+      ><EmailIcon />
+    </a>
+  </li>
 </ul>
 
 <style>
@@ -23,10 +33,10 @@ import EmailIcon from "./icons/EmailIcon.astro";
     margin: 0px;
     list-style: none;
   }
-  ul li a {    
+  ul li a {
     color: var(--primary-color);
   }
-  ul li a: hover {    
+  ulli a: hover {
     color: var(--text-color);
   }
 </style>
