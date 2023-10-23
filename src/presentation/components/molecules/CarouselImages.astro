@@ -71,6 +71,12 @@ const { images, id } = Astro.props;
   .hidden {
     opacity: 0;
   }
+
+  @media (max-width: 740px) {
+    #main {
+      height: 300px;
+    }
+  }
 </style>
 
 <script async is:inline>

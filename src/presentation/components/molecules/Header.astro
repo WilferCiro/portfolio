@@ -1,32 +1,42 @@
 ---
 import SocialLinks from "../atoms/SocialLinks.astro";
+import MenuIcon from "../atoms/icons/MenuIcon.astro";
 
 const currentPath = Astro.url.pathname;
 ---
 
 <header>
-  <div class="container">
+  <div class="menu-button" id="button-menu">
+    <MenuIcon />
+  </div>
+  <div class="container" id="menu">
     <ul class="menu">
       <li><a href="/">Inicio</a></li>
       <li>
         <a href="/about" class={currentPath === "/about" ? "active" : ""}
-          >Sobre mi</a>
+          >Sobre mi</a
+        >
       </li>
       <li>
         <a href="/projects" class={currentPath === "/projects" ? "active" : ""}
-          >Proyectos</a>
+          >Proyectos</a
+        >
       </li>
       <li>
         <a
           href="/#experience"
-          class={currentPath === "/experience" ? "active" : ""}>Experiencia</a>
+          class={currentPath === "/experience" ? "active" : ""}>Experiencia</a
+        >
       </li>
       <li>
         <a href="/#contact" class={currentPath === "/contact" ? "active" : ""}
-          >Contáctame</a>
+          >Contáctame</a
+        >
       </li>
     </ul>
-    <SocialLinks />
+    <div class="social-links">
+      <SocialLinks />
+    </div>
   </div>
 </header>
 
@@ -37,7 +47,7 @@ const currentPath = Astro.url.pathname;
     left: 0px;
     width: 100%;
     padding: 30px 20px;
-    z-index: 2;
+    z-index: 3;
     background-color: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(5px);
   }
@@ -47,6 +57,9 @@ const currentPath = Astro.url.pathname;
     justify-content: space-between;
     width: 70%;
     margin: auto;
+  }
+  .menu-button {
+    display: none;
   }
 
   .menu {
@@ -62,4 +75,41 @@ const currentPath = Astro.url.pathname;
   .active {
     color: var(--primary-color);
   }
+
+  @media (max-width: 740px) {
+    header {
+      padding: 20px 10px;
+    }
+    .menu-button {
+      display: block;
+    }
+    .container {
+      position: fixed;
+      left: 0px;
+      top: 0px;
+      height: 100vh;
+      background-color: white;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 70px 10px;
+      z-index: -1;
+      display: none;
+    }
+    .displayed {
+      display: flex;
+    }
+    .menu {
+      flex-direction: column;
+    }
+  }
 </style>
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+    const button = document.getElementById("button-menu");
+    const menu = document.getElementById("menu");
+    button?.addEventListener("click", () => {
+      menu?.classList.toggle('displayed');
+    });
+  });
+</script>

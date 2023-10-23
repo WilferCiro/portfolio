@@ -29,4 +29,11 @@ const { reviews } = Astro.props;
     grid-template-columns: repeat(2, 1fr);
     gap: 50px;
   }
+  @media (max-width: 740px) {
+    .container {
+      width: 90%;
+      grid-template-columns: 1fr;
+      padding-top: 100px;
+    }
+  }
 </style>

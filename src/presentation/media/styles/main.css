@@ -16,9 +16,6 @@
 * {
   box-sizing: border-box;
 }
-html {
-  scroll-behavior: smooth;
-}
 html,
 body {
   font-family: system-ui, sans-serif;

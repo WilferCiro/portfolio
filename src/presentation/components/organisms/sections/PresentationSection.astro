@@ -13,19 +13,21 @@ import Button from "../../atoms/Button.astro";
   <div class="">
     <h3 class="greetings">--- ¡Hola! soy</h3>
     <h1 transition:name=`me-name`>Wilfer Daniel Ciro Maya</h1>
-    <h4 class="profession" transition:name=`me-profession`>Full stack developer</h4>
+    <h4 class="profession" transition:name=`me-profession`>
+      Full stack developer
+    </h4>
     <h5 class="creator">Creador de soluciones para el mundo</h5>
-    <Button label="Ver CV" buttonSize="150px" />
+    <a href="/about">
+      <Button label="Conoce más sobre mí" buttonSize="100%" />
+    </a>
   </div>
   <div>
-    <a href="/about">
-      <Image
-        class="image"
-        src={Photo1}
-        alt="foto de Wilfer Daniel Ciro Maya"
-        transition:name=`me-photo`
-      />
-    </a>
+    <Image
+      class="image"
+      src={Photo1}
+      alt="foto de Wilfer Daniel Ciro Maya"
+      transition:name=`me-photo`
+    />
   </div>
 </div>
 
@@ -120,6 +122,12 @@ import Button from "../../atoms/Button.astro";
     }
     .color-cards {
       width: 30%;
+    }
+    h1 {
+      font-size: 35px;
+    }
+    h4 {
+      font-size: 30px;
     }
   }
 </style>
