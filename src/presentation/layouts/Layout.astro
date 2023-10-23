@@ -1,9 +1,9 @@
 ---
 import { ViewTransitions } from "astro:transitions";
-import Header from '../components/molecules/Header.astro';
+import Header from "../components/molecules/Header.astro";
 import "../media/styles/main.css";
 import Footer from "../components/molecules/Footer.astro";
-
+import JsonLD from "../components/atoms/JsonLD.astro";
 interface Props {
   title: string;
 }
@@ -11,15 +11,52 @@ interface Props {
 const { title } = Astro.props;
 ---
 
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <meta
+      name="keywords"
+      content="Wilfer Daniel Ciro Maya, developer, desarrollador fullstack, portfolio, portafolio"
+    />
+    <meta name="theme-color" content="#11A8CD" />
+    <meta name="author" content="Wilfer Daniel Ciro Maya" />
+
+    <title>Wilfer Ciro — {title}</title>
+    <meta name="title" content={`Wilfer Ciro — ${title}`} />
+    <meta
+      name="description"
+      content="Soy un apasionado desarrollador fullstack con experiencia en tecnologías web modernas. Me encanta crear aplicaciones web innovadoras y soluciones tecnológicas para problemas complejos"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://wilciro.vercel.app/" />
+    <meta property="og:title" content={`Wilfer Ciro — ${title}`} />
+    <meta
+      property="og:description"
+      content="Soy un apasionado desarrollador fullstack con experiencia en tecnologías web modernas. Me encanta crear aplicaciones web innovadoras y soluciones tecnológicas para problemas complejos"
+    />
+    <meta
+      property="og:image"
+      content="https://wilciro.vercel.app/image-meta.png"
+    />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://wilciro.vercel.app/" />
+    <meta property="twitter:title" content={`Wilfer Ciro — ${title}`} />
+    <meta
+      property="twitter:description"
+      content="Soy un apasionado desarrollador fullstack con experiencia en tecnologías web modernas. Me encanta crear aplicaciones web innovadoras y soluciones tecnológicas para problemas complejos"
+    />
+    <meta
+      property="twitter:image"
+      content="https://wilciro.vercel.app/image-meta.png"
+    />
+
+    <JsonLD />
     <ViewTransitions />
   </head>
   <body>

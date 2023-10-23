@@ -27,7 +27,7 @@ const posts = await Astro.glob("../../data/description_works/*.md");
 const currentPost = posts.find(({ file }) => file?.includes(`${work.id}.md`));
 ---
 
-<Layout title={`Proyecto ${work?.name}`}>
+<Layout title={`Experiencia en ${work?.name}`}>
   <div class="container">
     <div class="description">
       <div>

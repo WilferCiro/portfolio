@@ -1,0 +1,37 @@
+---
+const schema = {
+  "@context": "http://schema.org",
+  "@type": "Person",
+  name: "Wilfer Daniel Ciro Maya",
+  jobTitle: "Desarrollador Fullstack",
+  url: "https://wilciro.vercel.app/",
+  gender: "male",
+  sameAs: [
+    "https://www.linkedin.com/in/wilfer-ciro/",
+    "https://github.com/WilferCiro",
+  ],
+  email: "wilcirom@gmail.com",
+  telephone: "+573173587462",
+  image: "https://wilciro.vercel.app/img/index/me2.webp",
+  description:
+    "Soy un apasionado desarrollador fullstack con experiencia en tecnologías web modernas. Me encanta crear aplicaciones web innovadoras y soluciones tecnológicas para problemas complejos.",
+  skills: "Typescript, React, Node.js, MongoDB, SQL, Git, Python, C, C++ etc.",
+  alumniOf: {
+    "@type": "Organization",
+    name: "Universidad del Quindío",
+    sameAs: "https://www.uniquindio.edu.co/",
+  },
+  worksFor: {
+    "@type": "Organization",
+    name: "Option",
+    url: "https://option.tech/",
+    sameAs: "https://www.linkedin.com/company/option/",
+  },
+  colleague: [
+    "https://www.linkedin.com/in/andres-jimenez-garcia-3b68791a0/",
+    "https://www.linkedin.com/in/carolina-bravo-gallego-643148164/",
+  ],
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)}></script>
