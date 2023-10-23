@@ -4,6 +4,8 @@ import Header from "../components/molecules/Header.astro";
 import "../media/styles/main.css";
 import Footer from "../components/molecules/Footer.astro";
 import JsonLD from "../components/atoms/JsonLD.astro";
+import { Analytics } from '@vercel/analytics/react';
+
 interface Props {
   title: string;
 }
@@ -66,6 +68,7 @@ const { title } = Astro.props;
     <main>
       <slot />
     </main>
+    <Analytics />
     <Footer />
   </body>
 </html>
