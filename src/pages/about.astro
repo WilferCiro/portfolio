@@ -2,11 +2,14 @@
 import { Image } from "astro:assets";
 import Photo1 from "../presentation/media/images/photo1.png";
 import Layout from "../presentation/layouts/Layout.astro";
+import AboutHobbies from "../presentation/components/molecules/AboutHobbies.astro";
+import BackButton from "../presentation/components/atoms/BackButton.astro";
 ---
 
 <Layout title="Sobre mi">
   <div class="container">
     <div>
+      <BackButton href="/" />
       <Image
         class="image"
         src={Photo1}
@@ -18,12 +21,21 @@ import Layout from "../presentation/layouts/Layout.astro";
       <h2 transition:name=`me-name`>Wilfer Daniel Ciro Maya</h2>
       <h3 transition:name=`me-profession`>Fullstack developer</h3>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam numquam
-        optio doloremque iste, impedit assumenda fugiat eius nulla
-        exercitationem delectus aut, quibusdam qui. Iste voluptatum neque nobis,
-        ducimus laboriosam quasi.
+        Como full stack developer comprometido, responsable y apasionado por la
+        programación, tengo una amplia experiencia en el desarrollo de software
+        y en la implementación de soluciones innovadoras. Me siento cómodo
+        trabajando en diferentes lenguajes de programación y frameworks, así
+        como en la creación de aplicaciones web, móviles y de escritorio.
       </p>
-      <a href="/"><button>Atrás</button></a>
+      <p>
+        He trabajado en equipos multidisciplinarios, colaborando en la creación
+        de soluciones a medida para clientes de diferentes sectores. Soy capaz
+        de entender los requerimientos y necesidades del cliente, y proponer
+        soluciones que cumplan con sus expectativas. Además, cuento con
+        habilidades en la gestión de proyectos y en la comunicación asertiva con
+        los diferentes miembros del equipo.
+      </p>
+      <AboutHobbies />
     </div>
   </div>
 </Layout>
@@ -43,7 +55,8 @@ import Layout from "../presentation/layouts/Layout.astro";
     height: 35vw;
     border-radius: 100%;
   }
-  h2, h3 {
+  h2,
+  h3 {
     margin: 5px;
   }
   h3 {

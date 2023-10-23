@@ -1,0 +1,53 @@
+---
+import CoffeeIcon from "../atoms/icons/CoffeeIcon.astro";
+import VideoGameIcon from "../atoms/icons/VideoGameIcon.astro";
+import CatIcon from "../atoms/icons/CatIcon.astro";
+import BookIcon from "../atoms/icons/BookIcon.astro";
+import RobotIcon from "../atoms/icons/RobotIcon.astro";
+import GymIcon from "../atoms/icons/GymIcon.astro";
+import TitlePage from "../atoms/TitlePage.astro";
+---
+
+<TitlePage title="Mis hobbies" />
+<ul>
+  <li>
+    <CoffeeIcon />
+    Barismo
+  </li>
+  <li>
+    <VideoGameIcon />
+    Video juegos
+  </li>
+  <li>
+    <CatIcon />
+    Gatos
+  </li>
+  <li>
+    <BookIcon />
+    Leer
+  </li>
+  <li>
+    <RobotIcon />
+    Robótica
+  </li>
+  <li>
+    <GymIcon />
+    Gimnasio
+  </li>
+</ul>
+
+<style>
+  ul {
+    padding: 0px;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+  }
+</style>

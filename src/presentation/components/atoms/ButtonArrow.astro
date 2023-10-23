@@ -1,0 +1,25 @@
+---
+import ArrowIcon from "./icons/ArrowIcon.astro";
+const { label } = Astro.props;
+---
+
+<button>
+  {label} <ArrowIcon />
+</button>
+
+<style>
+  button {
+    border: none;
+    padding: 5px 10px;
+    background-color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--gray2);
+    transition: all 0.2s;
+  }
+  button:hover {
+    gap: 15px;
+  }
+</style>

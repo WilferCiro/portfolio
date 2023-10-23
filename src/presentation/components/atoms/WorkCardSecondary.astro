@@ -1,5 +1,7 @@
 ---
 import type { WorkSchema } from "../../../domain/schemas/WorkSchema";
+import ButtonArrow from "./ButtonArrow.astro";
+import DatesArray from "./DatesArray.astro";
 interface Props extends WorkSchema {}
 const data = Astro.props;
 ---
@@ -13,9 +15,10 @@ const data = Astro.props;
   />
   <div>
     <h4>{data.name}</h4>
-    <p>{data.description}</p>
-    <a href={`/work/${data.name}`}>
-      <button>Conocer más</button>
+    <p>{data.position}</p>
+    <DatesArray dates={data.dates} />
+    <a href={`/work/${data.name}`} rel="referrer">
+      <ButtonArrow label="Conocer más" />
     </a>
   </div>
 </div>
@@ -30,7 +33,16 @@ const data = Astro.props;
   }
   .image {
     width: 150px;
-    height: 100px;
+    height: 120px;
+    display: block;
+    object-fit: scale-down;
+  }
+  h4,
+  p {
+    margin: 0px;
+  }
+  a {
+    margin-top: 10px;
     display: block;
   }
 </style>

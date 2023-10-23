@@ -1,24 +1,19 @@
 ---
-import allProjects from "../../../data/projects-list";
-import Button from "../atoms/Button.astro";
+import type { IndividualProjectSchema } from "../../../domain/schemas/ProjectsSchema";
 import ProjectCard from "../atoms/ProjectCard.astro";
 
 interface Props {
-  max?: number;
+  projects?: IndividualProjectSchema[];
 }
 
-const { max } = Astro.props;
-const projects = allProjects;
-const count = Object.keys(projects).length;
+const { projects } = Astro.props;
 ---
 
 <div class="container">
   {
-    Object.keys(projects)
-      .slice(0, max ?? count)
-      .map((key: string) => {
-        return <ProjectCard {...projects[key]} id={key} />;
-      })
+    (projects || []).map((project) => {
+      return <ProjectCard {...project} />;
+    })
   }
 </div>
 
@@ -27,5 +22,12 @@ const count = Object.keys(projects).length;
     display: grid;
     gap: 40px;
     grid-template-columns: repeat(3, 1fr);
+  }
+  @media (max-width: 740px) {
+    .container {
+      grid-template-columns: 1fr;
+      width: 100%;
+      margin: auto;
+    }
   }
 </style>

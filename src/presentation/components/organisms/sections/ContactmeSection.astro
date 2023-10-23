@@ -1,14 +1,94 @@
 ---
+import TitlePage from "../../atoms/TitlePage.astro";
+import EmailIcon from "../../atoms/icons/EmailIcon.astro";
+import WhatsappIcon from "../../atoms/icons/WhatsappIcon.astro";
 import LinkedInIcon from "../../atoms/icons/LinkedInIcon.astro";
-
+import FormContact from "../../molecules/FormContact.astro";
 ---
 
-<h3>Contáctame</h3>
+<div class="container">
+  <TitlePage title="Contáctame" />
+  <div class="body">
+    <div class="info">
+      <p class="subtitle">
+        Ponte en contacto conmigo a través de alguno de mis enlaces, o envíame
+        un mensaje con el formulario
+      </p>
 
-<p>Ponte en contacto conmigo a través de alguno de mis enlaces, o envíame un mensaje con el formulario</p>
-
-<ul>
-    <li>
+      <div class="item-link">
         <LinkedInIcon />
-    </li>
-</ul>
+        <div>
+          <h4>LinkedIn</h4>
+          <p>
+            <a href="https://www.linkedin.com/in/wilfer-ciro/" target="_blank"
+              >https://www.linkedin.com/in/wilfer-ciro/</a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="item-link">
+        <EmailIcon />
+        <div>
+          <h4>Correo electrónico</h4>
+          <p>
+            <a href="mailto:wilcirom@gmail.com" target="_blank"
+              >wilcirom@gmail.com</a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="item-link">
+        <WhatsappIcon />
+        <div>
+          <h4>Whatsapp</h4>
+          <p>
+            <a href="https://wa.me/+573173587462" target="_blank"
+              >+57 3173587462</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="form">
+      <FormContact />
+    </div>
+  </div>
+</div>
+
+<style>
+  .container {
+    height: 80vh;
+  }
+  .body {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    justify-content: space-around;
+  }
+  .form {
+    width: 400px;
+    margin: auto;
+  }
+  .info {
+    width: 460px;
+    margin: auto;
+  }
+  .item-link {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    border: solid 1px var(--gray1);
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 5px 10px;
+  }
+  h4 {
+    margin: 0px;
+  }
+  p {
+    margin: 0px;
+  }
+  .subtitle {
+    margin-bottom: 30px;
+  }
+</style>

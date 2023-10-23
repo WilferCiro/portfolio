@@ -1,4 +1,5 @@
 ---
+import ContactmeSection from "../presentation/components/organisms/sections/ContactmeSection.astro";
 import PresentationSection from "../presentation/components/organisms/sections/PresentationSection.astro";
 import ProjectsSection from "../presentation/components/organisms/sections/ProjectsSection.astro";
 import WorkExperienceSection from "../presentation/components/organisms/sections/WorkExperienceSection.astro";
@@ -14,12 +15,19 @@ import Layout from "../presentation/layouts/Layout.astro";
     <WorkExperienceSection />
   </section>
   <section id="contact">
+    <ContactmeSection />
   </section>
 </Layout>
 
 <style>
   section {
     width: 80%;
-    margin: auto;
+    margin: 100px auto;
+  }
+
+  @media (max-width: 740px) {
+    section {
+      width: 95%;
+    }
   }
 </style>

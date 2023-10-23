@@ -1,14 +1,12 @@
 ---
 import type { IndividualProjectSchema } from "../../../domain/schemas/ProjectsSchema";
-interface Props extends IndividualProjectSchema {
-  id: string;
-}
+interface Props extends IndividualProjectSchema {}
 
 const { id, ...data } = Astro.props;
 ---
 
 <div class="card">
-  <a href={`/project/${id}`}>
+  <a href={`/project/${id}`} rel="referrer">
     <img
       class="image"
       src={`/images/projects/${id}/${data.images[0]}`}

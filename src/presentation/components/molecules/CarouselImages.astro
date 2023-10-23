@@ -73,18 +73,28 @@ const { images, id } = Astro.props;
   }
 </style>
 
-<script async>
-  var thumbnails = document.getElementById("thumbnails");
-  var imgs = thumbnails?.getElementsByTagName("img") || [];
-  var main = document.getElementById("main");
+<script async is:inline>
+var thumbnails = document.getElementById("thumbnails");
+var imgs = thumbnails?.getElementsByTagName("img") || [];
+var main = document.getElementById("main");
 
-  for (let i = 0; i < imgs.length; i++) {
-    let img = imgs[i];
+for (let i = 0; i < imgs.length; i++) {
+  let img = imgs[i];
 
-    img.addEventListener("click", function () {
-      if (main && "src" in main) {
+  img.addEventListener("click", function () {
+    if (main && "src" in main) {
+      // Aplica una transición tipo parallax al cambiar la imagen principal
+      main.style.transition = "transform 0.5s, opacity 0.5s";
+      main.style.transform = "translateY(50px) scale(0.9)";
+      main.style.opacity = "0";
+
+      setTimeout(() => {
         main.src = this.src;
-      }
-    });
-  }
+        // Restaura la posición y opacidad después de cambiar la imagen
+        main.style.transform = "translateY(0) scale(1)";
+        main.style.opacity = "1";
+      }, 200);
+    }
+  });
+}
 </script>

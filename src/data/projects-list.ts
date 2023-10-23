@@ -3,6 +3,7 @@ import type { ProjectsSchema } from "../domain/schemas/ProjectsSchema";
 
 const allProjects: ProjectsSchema = {
   kiwipeluditos: {
+    id: "kiwipeluditos",
     name: "Kiwipeluditos",
     owner: "Propio",
     dates: ["2022-01-01", "2022-01-01"],
@@ -29,12 +30,13 @@ const allProjects: ProjectsSchema = {
     ],
   },
   AIEPWeb3: {
+    id: "AIEPWeb3",
     name: "Certificados web3",
     owner: "AIEP chile",
     dates: ["2022-01-01", "2022-01-01"],
     description:
       "Plataforma creada para la universidad AIEP de chile, la cual permite generar NFTs de certificados de estudiante a través de la red Ethereum utilizando Web3",
-    images: ["image1.png", "image2.png"],
+    images: ["image1.png", "image2.png", "image3.png", "image4.png"],
     stack: [
       StackList.NestJS,
       StackList.NodeJS,
@@ -47,6 +49,7 @@ const allProjects: ProjectsSchema = {
     ],
   },
   bdTgrado: {
+    id: "bdTgrado",
     name: "BD tgrado",
     owner: "Programa de Ingeniería Electrónica de la Universidad del Quindío",
     dates: ["2022-01-01", "2022-01-01"],
@@ -74,7 +77,24 @@ const allProjects: ProjectsSchema = {
       },
     ],
   },
+  ddd: {
+    name: "Backends con arquitectura DDD",
+    id: "ddd",
+    owner: "Freelance",
+    dates: ["2022-05-01", "Actual"],
+    description:
+      "Repositorio con proyectos backend con distintos lenguajes y frameworks utilizando arquitectura hexagonal, además de diferentes gestores de bases de datos",
+    images: ["image1.png"],
+    stack: [StackList.NestJS, StackList.PHP, StackList.Flask],
+    links: [
+      {
+        title: "Repositorio",
+        href: "https://github.com/WilferCiro/hexagonal",
+      },
+    ],
+  },
   codelco: {
+    id: "codelco",
     name: "Formularios de datos",
     owner: "Para Codelco Chile",
     dates: ["2022-01-01", "2022-01-01"],
@@ -84,6 +104,7 @@ const allProjects: ProjectsSchema = {
     stack: [StackList.NestJS, StackList.ReactJS, StackList.Azure],
   },
   dniReader: {
+    id: "dniReader",
     name: "Lector de cédula de ciudadanía colombiana",
     owner: "Para Negozia CF",
     dates: ["2022-01-01", "2022-01-01"],
@@ -99,6 +120,7 @@ const allProjects: ProjectsSchema = {
     ],
   },
   boNegozia: {
+    id: "boNegozia",
     name: "Backoffice Negozia CF",
     owner: "Para Negozia CF",
     dates: ["2022-01-01", "2022-01-01"],
@@ -115,6 +137,7 @@ const allProjects: ProjectsSchema = {
     ],
   },
   dashboardNegozia: {
+    id: "dashboardNegozia",
     name: "Dashboard Negozia CF",
     owner: "Para Negozia CF",
     dates: ["2022-01-01", "2022-01-01"],
@@ -129,11 +152,12 @@ const allProjects: ProjectsSchema = {
     ],
   },
   laferre: {
+    id: "laferre",
     name: "La Ferre",
     owner: "Jaivaná",
     dates: ["2022-01-01", "2022-01-01"],
     description:
-      "Ecommerce completo de venta de productos ferreteros, creado para la ferretería ___",
+      "Ecommerce completo de venta de productos ferreteros, creado para la ferretería Sumatec",
     images: ["image1.jpg", "image2.jpg"],
     stack: [
       StackList.Java,
@@ -146,6 +170,7 @@ const allProjects: ProjectsSchema = {
     ],
   },
   stiIrrigation: {
+    id: "stiIrrigation",
     name: "STI irrigation",
     owner: "Freelance",
     dates: ["2022-01-01", "2022-01-01"],
@@ -162,6 +187,7 @@ const allProjects: ProjectsSchema = {
     ],
   },
   sintel: {
+    id: "sintel",
     name: "Sintel",
     owner: "Trabajo de grado",
     dates: ["2022-01-01", "2022-01-01"],
@@ -188,6 +214,7 @@ const allProjects: ProjectsSchema = {
     ],
   },
   davinci: {
+    id: "davinci",
     name: "Davinci",
     owner: "Policarpa Salavarrieta (Quimbaya, Quindío)",
     dates: ["2022-01-01", "2022-01-01"],

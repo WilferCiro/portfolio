@@ -7,11 +7,24 @@ const currentPath = Astro.url.pathname;
 <header>
   <div class="container">
     <ul class="menu">
-      <li><a href="#home">Inicio</a></li>
-      <li><a href="/about" class={currentPath === '/about' ? 'active' : ''}>Sobre mi</a></li>
-      <li><a href="#projects">Proyectos</a></li>
-      <li><a href="#experience">Experiencia</a></li>
-      <li><a href="#contact">Contáctame</a></li>
+      <li><a href="/">Inicio</a></li>
+      <li>
+        <a href="/about" class={currentPath === "/about" ? "active" : ""}
+          >Sobre mi</a>
+      </li>
+      <li>
+        <a href="/projects" class={currentPath === "/projects" ? "active" : ""}
+          >Proyectos</a>
+      </li>
+      <li>
+        <a
+          href="/experience"
+          class={currentPath === "/experience" ? "active" : ""}>Experiencia</a>
+      </li>
+      <li>
+        <a href="/contact" class={currentPath === "/contact" ? "active" : ""}
+          >Contáctame</a>
+      </li>
     </ul>
     <SocialLinks />
   </div>
@@ -25,6 +38,8 @@ const currentPath = Astro.url.pathname;
     width: 100%;
     padding: 30px 20px;
     z-index: 2;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(5px);
   }
   .container {
     display: flex;
@@ -45,6 +60,6 @@ const currentPath = Astro.url.pathname;
   }
 
   .active {
-    color: red;
+    color: var(--primary-color);
   }
 </style>

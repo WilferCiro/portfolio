@@ -2,6 +2,11 @@
 import worksLists from "../../data/works-list";
 import Layout from "../../presentation/layouts/Layout.astro";
 import StackList from "../../presentation/components/molecules/StackList.astro";
+import ButtonArrow from "../../presentation/components/atoms/ButtonArrow.astro";
+import ReviewsList from "../../presentation/components/molecules/ReviewsList.astro";
+import ProjectsList from "../../presentation/components/molecules/ProjectsList.astro";
+import TitlePage from "../../presentation/components/atoms/TitlePage.astro";
+import BackButton from "../../presentation/components/atoms/BackButton.astro";
 
 export function getStaticPaths() {
   return worksLists.map((work) => {
@@ -17,43 +22,68 @@ const work = worksLists.find(({ name }) => name === id);
 if (!id || typeof id === "undefined" || !work) {
   return Astro.redirect("/");
 }
+
+const posts = await Astro.glob("../../data/description_works/*.md");
+const currentPost = posts.find(({ file }) => file?.includes(`${work.id}.md`));
 ---
 
 <Layout title={`Proyecto ${work?.name}`}>
   <div class="container">
-    <div>
-      <img
-        src={"/images/works/" + work?.images[0]}
-        alt="Foto de empresa"
-        transition:name={`work-${work?.name}`}
-        class="image"
-      />
+    <div class="description">
+      <div>
+        <BackButton href="/#experience" />
+        <img
+          src={"/images/works/" + work?.images[0]}
+          alt="Foto de empresa"
+          transition:name={`work-${work?.name}`}
+          class="image"
+        />
+      </div>
+      <div>
+        <h2 transition:name={`work-name-${work?.name}`}>{work?.name}</h2>
+        <h3 transition:name={`work-profession-${work?.name}`}>
+          Fullstack developer
+        </h3>
+        {currentPost && <currentPost.Content />}
+        {
+          work.link && (
+            <a href={work.link} target="_blank">
+              <ButtonArrow label="Ir al sitio de la empresa" />
+            </a>
+          )
+        }
+        <StackList stack={work.stack} />
+      </div>
     </div>
     <div>
-      <h2 transition:name={`work-name-${work?.name}`}>{work?.name}</h2>
-      <h3 transition:name={`work-profession-${work?.name}`}>
-        Fullstack developer
-      </h3>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam numquam
-        optio doloremque iste, impedit assumenda fugiat eius nulla
-        exercitationem delectus aut, quibusdam qui. Iste voluptatum neque nobis,
-        ducimus laboriosam quasi.
-      </p>
-      <StackList stack={work.stack} />
+      <TitlePage title="Testimonios" />
+      <ReviewsList reviews={work?.reviews || []} />
     </div>
+    {
+      work.projects.length > 0 && (
+        <div>
+          <TitlePage title="Proyectos en los que Participé y Contribuí" />
+          <ProjectsList projects={work.projects} />
+        </div>
+      )
+    }
   </div>
 </Layout>
 
 <style>
   .container {
-    display: flex;
-    align-items: center;
-    height: 100vh;
-    width: 70%;
+    width: 80%;
     margin: auto;
     gap: 50px;
-    justify-content: space-around;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+  }
+  .description {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    height: 100vh;
   }
   .image {
     width: 35vw;

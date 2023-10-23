@@ -1,0 +1,61 @@
+---
+import Button from "../atoms/Button.astro";
+---
+
+<div>
+  <div class="form-group">
+    <input type="email" class="input-field" placeholder="  " id="email" />
+    <label for="email" class="label-text">Correo electrónico</label>
+  </div>
+
+  <div class="form-group">
+    <input type="text" class="input-field" placeholder=" " id="subject" />
+    <label for="subject" class="label-text">Asunto</label>
+  </div>
+
+  <div class="form-group">
+    <textarea rows="4" class="text-area-field" placeholder=" " id="message"
+    ></textarea>
+    <label for="message" class="label-text">Mensaje</label>
+  </div>
+
+  <Button label="Enviar mensaje" buttonSize="100%" />
+</div>
+<style>
+  .form-group {
+    position: relative;
+    margin-bottom: 10px;
+  }
+  .form-group .input-field,
+  .form-group .text-area-field {
+    font-size: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    transition: border-color 0.3s ease;
+    resize: vertical; /* Para permitir que el textarea sea redimensionado verticalmente */
+  }
+
+  /* Estilo para el label flotante */
+  .form-group .label-text {
+    position: absolute;
+    left: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--primary-color); /* Color del label flotante */
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+
+  /* Estilo para el label flotante cuando el input o textarea tiene valor o está enfocado */
+  .form-group .input-field:focus + .label-text,
+  .form-group .input-field:not(:placeholder-shown) + .label-text,
+  .form-group .text-area-field:focus + .label-text,
+  .form-group .text-area-field:not(:placeholder-shown) + .label-text {
+    font-size: 0.8rem; /* Tamaño del label flotante cuando está enfocado o tiene valor */
+    transform: translateY(-1.8rem);
+    background-color: white;
+    padding: 0px 5px;
+  }
+</style>

@@ -1,0 +1,32 @@
+---
+import type { ReviewSchema } from "../../../domain/schemas/WorkSchema";
+
+interface Props {
+  reviews: ReviewSchema[];
+}
+
+const { reviews } = Astro.props;
+---
+
+<div class="container">
+  {
+    reviews.map((review) => {
+      return (
+        <div>
+          <h4>{review.who}</h4>
+          <p>{review.date}</p>
+          <p>{review.relationship}</p>
+          <p>{review.description}</p>
+        </div>
+      );
+    })
+  }
+</div>
+
+<style>
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+  }
+</style>

@@ -1,4 +1,5 @@
 ---
+import DateIcon from "./icons/DateIcon.astro";
 interface Props {
   dates: string[];
 }
@@ -6,5 +7,17 @@ const { dates } = Astro.props;
 ---
 
 <p>
+  <DateIcon size={20} />
   {dates[0]} - {dates[1]}
 </p>
+
+<style>
+  p {
+    margin: 0px;
+    color: var(--gray1);
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+</style>

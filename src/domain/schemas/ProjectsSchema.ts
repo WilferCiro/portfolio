@@ -2,6 +2,7 @@ import type { StackSchema } from "./StackSchema";
 
 export interface IndividualProjectSchema {
   name: string;
+  id: string;
   owner: string;
   dates: string[];
   description: string;
