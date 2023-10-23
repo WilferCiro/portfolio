@@ -6,6 +6,7 @@ const currentPath = Astro.url.pathname;
 ---
 
 <header>
+  <button id="button-theme">Tema</button>
   <div class="menu-button" id="button-menu">
     <MenuIcon />
   </div>
@@ -88,7 +89,6 @@ const currentPath = Astro.url.pathname;
       left: 0px;
       top: 0px;
       height: 100vh;
-      background-color: white;
       flex-direction: column;
       justify-content: space-between;
       padding: 70px 10px;
@@ -108,8 +108,26 @@ const currentPath = Astro.url.pathname;
   document.addEventListener("astro:page-load", () => {
     const button = document.getElementById("button-menu");
     const menu = document.getElementById("menu");
+    const themeBtn = document.getElementById("button-theme");
     button?.addEventListener("click", () => {
-      menu?.classList.toggle('displayed');
+      menu?.classList.toggle("displayed");
     });
+
+    const setTheme = (theme: string) => {
+      localStorage.setItem("theme", theme);
+      document.documentElement.setAttribute("data-theme", theme);
+    };
+
+    themeBtn?.addEventListener("click", () => {
+      const currentTheme = document.documentElement.getAttribute("data-theme");
+      let targetTheme = "light";
+      if (currentTheme === "light") {
+        targetTheme = "dark";
+      }
+      setTheme(targetTheme);
+    });
+
+    const themeCurrent = localStorage.getItem("theme") || "light";
+    setTheme(themeCurrent);
   });
 </script>

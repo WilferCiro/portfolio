@@ -13,6 +13,17 @@
   --laptop-size: 1024px;
   --hd-laptop-size: 1440px;
 }
+
+html[data-theme="light"] {
+  --bg-color1: rgb(240, 240, 240);
+  --body-color: #4a5167;
+}
+
+html[data-theme="dark"] {
+  --bg-color1: #171321;
+  --body-color: white;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -22,6 +33,7 @@ body {
   padding: 0px;
   margin: 0px;
   color: var(--body-color);
+  background-color: var(--bg-color1);
   font-size: 17px;
 }
 code {
