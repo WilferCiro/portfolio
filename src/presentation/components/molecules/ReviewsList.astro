@@ -1,6 +1,6 @@
 ---
 import type { ReviewSchema } from "../../../domain/schemas/WorkSchema";
-
+import QuoteIcon from "../atoms/icons/QuoteIcon.astro";
 interface Props {
   reviews: ReviewSchema[];
 }
@@ -12,11 +12,15 @@ const { reviews } = Astro.props;
   {
     reviews.map((review) => {
       return (
-        <div>
-          <h4>{review.who}</h4>
-          <p>{review.date}</p>
-          <p>{review.relationship}</p>
-          <p>{review.description}</p>
+        <div class="card">
+          <img src={review.photo} alt={review.who} class="image" />
+          <p class="quote-icon">
+            <QuoteIcon />
+          </p>
+          <p class="description">{review.description}</p>
+          <p class="who">
+            {review.who} - {review.relationship}
+          </p>
         </div>
       );
     })
@@ -24,16 +28,80 @@ const { reviews } = Astro.props;
 </div>
 
 <style>
+  :root {
+    --shadow-insset: rgba(30, 30, 30, 0.5);
+  }
   .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 50px;
+    grid-column-gap: 100px;
+    background-color: var(--secondary-color);
+    color: white;
+    border-radius: 20px;
+  }
+
+  .quote-icon {
+    position: absolute;
+    opacity: 0.7;
+    left: 15px;
+    top: 5px;
+  }
+  .image {
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    display: block;
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    z-index: 2;
+    box-shadow: var(--shadow-insset) 0px 2px 2px 0px,
+      var(--shadow-insset) 0px 4px 4px 0px, var(--shadow-insset) 0px 8px 8px 0px,
+      var(--shadow-insset) 0px 16px 16px 0px,
+      var(--shadow-insset) 0px 32px 32px 0px;
+  }
+  .card {
+    border-radius: 20px;
+    position: relative;
+    padding: 30px 20px;
+  }
+  .description {
+    font-style: italic;
+    padding-left: 60px;
+    min-height: 120px;
+  }
+  .who {
+    text-align: right;
+  }
+  @media (min-width: 740px) and (max-width: 1000px) {
+    .description {
+      padding-left: 0px;
+      min-height: 200px;
+    }
+    .image {
+      position: relative;
+      display: block;
+      margin: auto;
+      top: 0px;
+      left: 0px;
+    }
+    .quote-icon {
+      top: 100px;
+      left: -20px;
+    }
+    .container {
+      grid-column-gap: 50px;
+    }
   }
   @media (max-width: 740px) {
     .container {
       width: 90%;
       grid-template-columns: 1fr;
-      padding-top: 100px;
+      padding-top: 0px;
+    }
+    .image {
+      top: 80px;
+      left: -30px;
     }
   }
 </style>

@@ -5,10 +5,10 @@ const allProjects: ProjectsSchema = {
   kiwipeluditos: {
     id: "kiwipeluditos",
     name: "Kiwipeluditos",
-    owner: "Propio",
+    owner: "Personal",
     dates: ["2022-01-01", "2022-01-01"],
     description:
-      "Plataforma web donde las personas pueden registrar sus mascotas y generar un código QR que al ser escaneado envía la ubicación. También permite gestionar vacunas y enfermedades.",
+      "Plataforma web que permite a los usuarios registrar a sus mascotas y generar un código QR. Al escanearlo, se proporciona la ubicación de la mascota. Además, la plataforma facilita la gestión de vacunas y enfermedades de las mascotas.",
     images: ["image1.webp", "image2.webp", "image3.webp", "image4.webp"],
     stack: [
       StackList.NestJS,
@@ -35,7 +35,7 @@ const allProjects: ProjectsSchema = {
     owner: "AIEP chile",
     dates: ["2022-01-01", "2022-01-01"],
     description:
-      "Plataforma creada para la universidad AIEP de chile, la cual permite generar NFTs de certificados de estudiante a través de la red Ethereum utilizando Web3",
+      "Esta plataforma fue desarrollada específicamente para la Universidad AIEP de Chile. Permite la creación de NFTs para certificados de estudiantes mediante la red Ethereum, utilizando tecnología Web3.",
     images: ["image1.png", "image2.png", "image3.png", "image4.png"],
     stack: [
       StackList.NestJS,
@@ -54,7 +54,7 @@ const allProjects: ProjectsSchema = {
     owner: "Programa de Ingeniería Electrónica de la Universidad del Quindío",
     dates: ["2022-01-01", "2022-01-01"],
     description:
-      "Plataforma creada para la gestión completa de los trabajos de grado de los estudiantes, permite manejar desde el preinforme, el informe y las notas de los evaluadores.",
+      "Esta plataforma tiene por objetivo gestionar de forma integral los trabajos de grado de los estudiantes. Permite el manejo completo, desde el preinforme hasta el informe final, incluyendo las evaluaciones de los revisores y las calificaciones correspondientes.",
     images: [
       "image1.png",
       "image2.webp",

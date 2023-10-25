@@ -7,8 +7,12 @@ const data = Astro.props;
 ---
 
 <div class="container">
+  <p class="bg-text">.::..::.▾...:::..</p>
   <div class="line"></div>
-  <h2>{data.title}</h2>
+  <div class="title-container">
+    <h2>{data.title}</h2>
+    <slot />
+  </div>
 </div>
 
 <style>
@@ -16,18 +20,36 @@ const data = Astro.props;
     display: flex;
     align-items: center;
     gap: 15px;
-    margin-bottom: 30px;
+    width: 100%;
   }
   .line {
     width: 40px;
     border-bottom: solid 4px var(--primary-color);
   }
+  .title-container {
+    width: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+  }
   h2 {
+    color: var(--primary-color);
+    margin: 0px;
+  }
+  .bg-text {
+    opacity: 0.2;
+    font-size: 70px;
+    letter-spacing: 6px;
+    position: absolute;
+    margin-top: -20px;
     color: var(--primary-color);
   }
   @media (max-width: 740px) {
     h2 {
       font-size: 26px;
+    }
+    .bg-text {
+      font-size: 50px;
     }
   }
 </style>

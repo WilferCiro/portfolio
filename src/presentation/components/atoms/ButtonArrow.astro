@@ -3,23 +3,23 @@ import ArrowIcon from "./icons/ArrowIcon.astro";
 const { label } = Astro.props;
 ---
 
-<button>
+<div>
   {label} <ArrowIcon />
-</button>
+</div>
 
 <style>
-  button {
-    border: none;
+  div {
     padding: 5px 10px;
-    background-color: var(--bg-color1);
+    background-color: transparent;
     cursor: pointer;
     display: flex;
     align-items: center;
-    gap: 10px;
-    color: var(--gray2);
-    transition: all 0.2s;
-  }
-  button:hover {
     gap: 15px;
+    color: var(--text-color3);
+    transition: all 0.2s;
+    font-size: 17px;
+  }
+  div:hover {
+    gap: 20px;
   }
 </style>

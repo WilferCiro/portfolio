@@ -8,11 +8,11 @@ const { label, buttonSize } = Astro.props;
 
 <style define:vars={{ buttonSize }}>
   button {
-    border: solid 2px var(--primary-color);
-    color: var(--primary-color);
+    border: none;
+    color: white;
     border-radius: var(--border-radius);
     padding: 10px 25px;
-    background-color: white;
+    background-color: var(--primary-color);
     cursor: pointer;
     width: var(--buttonSize);
   }

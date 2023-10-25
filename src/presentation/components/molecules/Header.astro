@@ -1,63 +1,71 @@
 ---
 import SocialLinks from "../atoms/SocialLinks.astro";
-import MenuIcon from "../atoms/icons/MenuIcon.astro";
+import Tooltip from "../atoms/Tooltip.astro";
+import CompassIcon from "../atoms/icons/CompassIcon.astro";
+import HomeIcon from "../atoms/icons/HomeIcon.astro";
+import AboutMeIcon from "../atoms/icons/AboutMeIcon.astro";
+import WorkIcon from "../atoms/icons/WorkIcon.astro";
+import ContactIcon from "../atoms/icons/ContactIcon.astro";
+import MoonIcon from "../atoms/icons/MoonIcon.astro";
 
 const currentPath = Astro.url.pathname;
 ---
 
 <header>
-  <button id="button-theme">Tema</button>
-  <div class="menu-button" id="button-menu">
-    <MenuIcon />
-  </div>
-  <div class="container" id="menu">
-    <ul class="menu">
-      <li><a href="/">Inicio</a></li>
-      <li>
+  <ul class="menu">
+    <li>
+      <Tooltip title="Inicio"><a href="/"><HomeIcon /></a></Tooltip>
+    </li>
+    <li>
+      <Tooltip title="Sobre mi">
         <a href="/about" class={currentPath === "/about" ? "active" : ""}
-          >Sobre mi</a
-        >
-      </li>
-      <li>
+          ><AboutMeIcon />
+        </a>
+      </Tooltip>
+    </li>
+    <li>
+      <Tooltip title="Proyectos">
         <a href="/projects" class={currentPath === "/projects" ? "active" : ""}
-          >Proyectos</a
-        >
-      </li>
-      <li>
+          ><CompassIcon />
+        </a>
+      </Tooltip>
+    </li>
+    <li>
+      <Tooltip title="Experiencia">
         <a
           href="/#experience"
-          class={currentPath === "/experience" ? "active" : ""}>Experiencia</a
-        >
-      </li>
-      <li>
-        <a href="/#contact" class={currentPath === "/contact" ? "active" : ""}
-          >Contáctame</a
-        >
-      </li>
-    </ul>
-    <div class="social-links">
-      <SocialLinks />
-    </div>
-  </div>
+          class={currentPath === "/experience" ? "active" : ""}
+          ><WorkIcon />
+        </a>
+      </Tooltip>
+    </li>
+    <li>
+      <Tooltip title="Contáctame">
+        <a href="/contact" class={currentPath === "/contact" ? "active" : ""}
+          ><ContactIcon />
+        </a>
+      </Tooltip>
+    </li>
+    <li class="theme-option">
+      <Tooltip title="Alternar tema">
+        <a id="button-theme"><MoonIcon /></a>
+      </Tooltip>
+    </li>
+  </ul>
 </header>
+
+<div class="social-links">
+  <SocialLinks />
+</div>
 
 <style>
   header {
     position: fixed;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    padding: 30px 20px;
-    z-index: 3;
-    background-color: rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(5px);
-  }
-  .container {
+    left: 20px;
+    height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 70%;
-    margin: auto;
+    z-index: 3;
   }
   .menu-button {
     display: none;
@@ -66,40 +74,68 @@ const currentPath = Astro.url.pathname;
   .menu {
     list-style: none;
     display: flex;
-    gap: 40px;
+    flex-direction: column;
+    gap: 10px;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     padding: 0px;
     margin: 0px;
+    padding: 12px;
+    border-radius: 16px;
+    background-color: var(--bg-color2-opacity);
+    backdrop-filter: blur(var(--blur-size));
+    box-shadow: var(--shadow) 0px 2px 2px 0px, var(--shadow) 0px 4px 4px 0px,
+      var(--shadow) 0px 8px 8px 0px, var(--shadow) 0px 16px 16px 0px,
+      var(--shadow) 0px 32px 32px 0px;
+  }
+  .menu li a {
+    border-radius: 10px;
+    background-color: var(--bg-color1);
+    display: block;
+    padding: 6px 8px;
+    var(--text-color3);
+    transition: all 0.3s;
+  }
+  .menu li a:hover {
+    color: var(--body-color);
+  }
+  .theme-option {
+    margin-top: 20px;
   }
 
   .active {
     color: var(--primary-color);
+    border: solid 1px red;
+  }
+
+  .social-links {
+    top: 20px;
+    right: 20px;
+    position: fixed;
+    padding: 10px 12px;
+    border-radius: 16px;
+    z-index: 3;
+    background-color: var(--bg-color2-opacity);
+    backdrop-filter: blur(var(--blur-size));
+    box-shadow: var(--shadow) 0px 2px 2px 0px, var(--shadow) 0px 4px 4px 0px,
+      var(--shadow) 0px 8px 8px 0px, var(--shadow) 0px 16px 16px 0px,
+      var(--shadow) 0px 32px 32px 0px;
   }
 
   @media (max-width: 740px) {
     header {
-      padding: 20px 10px;
-    }
-    .menu-button {
-      display: block;
-    }
-    .container {
-      position: fixed;
+      bottom: 15px;
       left: 0px;
-      top: 0px;
-      height: 100vh;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: 70px 10px;
-      z-index: -1;
-      display: none;
+      height: auto;
+      width: 100%;
+      justify-content: center;
     }
-    .displayed {
-      display: flex;
+    .theme-option {
+      margin-top: 0px;
+      margin-left: 20px;
     }
     .menu {
-      flex-direction: column;
+      flex-direction: row;
     }
   }
 </style>

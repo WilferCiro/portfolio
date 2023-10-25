@@ -1,4 +1,4 @@
-### Codelco:
+#### Codelco:
 
 Diseñé y desarrollé una plataforma de formularios de ingesta de
 datos utilizando React y Nest.js. Esto permitió a los stakeholders
@@ -9,7 +9,7 @@ código y la continuidad de la entrega de software, y creé pruebas
 automatizadas para garantizar la calidad del código y la
 estabilidad del sistema.
 
-### Kitchen Center:
+#### Kitchen Center:
 
 Realicé el mantenimiento y actualización regular del sistema de
 ventas y backofce utilizando React, Nest.js y Shopify GraphQL.

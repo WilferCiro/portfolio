@@ -1,0 +1,25 @@
+---
+import { Image } from "astro:assets";
+import Photo1 from "../../media/images/me2.jpg";
+---
+
+<Image src={Photo1} alt="Foto de Wilfer Ciro" transition:name=`me-photo` />
+
+<style>
+  img {
+    -webkit-mask: url(../../media/images/bg-photo.svg) no-repeat center;
+    mask: url(../../media/images/bg-photo.svg) no-repeat center;
+    width: 35vw;
+    height: 35vw;
+    display: block;
+    aspect-ratio: 1;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+  @media (max-width: 740px) {
+    img {
+      width: 65vw;
+      height: 65vw;
+    }
+  }
+</style>

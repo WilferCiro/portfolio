@@ -6,6 +6,8 @@ export interface ReviewSchema {
   relationship: string;
   description: string;
   date: string;
+  photo?: string;
+  linkedIn?: string;
 }
 export interface WorkSchema {
   name: string;

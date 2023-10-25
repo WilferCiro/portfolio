@@ -1,5 +1,6 @@
 ---
 import type { IndividualProjectSchema } from "../../../domain/schemas/ProjectsSchema";
+import ButtonArrow from "./ButtonArrow.astro";
 interface Props extends IndividualProjectSchema {}
 
 const { id, ...data } = Astro.props;
@@ -18,9 +19,23 @@ const { id, ...data } = Astro.props;
     <h4 transition:name=`project-title-${id}`>{data.name}</h4>
     <p transition:name=`project-description-${id}`>{data.description}</p>
   </div>
+  <footer class="buttons">
+    <a href={`/project/${id}`} rel="referrer">
+      <ButtonArrow label="Ver más" />
+    </a>
+  </footer>
 </div>
 
 <style>
+  .card {
+    padding: 10px 15px;
+    border-radius: 15px;
+    background-color: var(--bg-color1);
+    transition: background-color 0.2s;
+    box-shadow: var(--shadow) 0px 2px 2px 0px, var(--shadow) 0px 4px 4px 0px,
+      var(--shadow) 0px 8px 8px 0px, var(--shadow) 0px 16px 16px 0px,
+      var(--shadow) 0px 32px 32px 0px;
+  }
   .image {
     width: 100%;
     height: 240px;
@@ -37,10 +52,17 @@ const { id, ...data } = Astro.props;
     margin: 0px;
   }
   p {
-    color: var(--gray1);
+    color: var(--text-color3);
+    font-size: 15px;
   }
   .description {
     margin-top: 15px;
     padding: 4px;
+    min-height: 160px;
+  }
+  .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
   }
 </style>

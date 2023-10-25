@@ -4,18 +4,14 @@ import Photo1 from "../presentation/media/images/photo1.png";
 import Layout from "../presentation/layouts/Layout.astro";
 import AboutHobbies from "../presentation/components/molecules/AboutHobbies.astro";
 import BackButton from "../presentation/components/atoms/BackButton.astro";
+import ImageWEffect from "../presentation/components/atoms/ImageWEffect.astro";
 ---
 
 <Layout title="Sobre mi">
   <div class="container">
     <div>
       <BackButton href="/" />
-      <Image
-        class="image"
-        src={Photo1}
-        alt="foto de Wilfer Daniel Ciro Maya"
-        transition:name=`me-photo`
-      />
+      <ImageWEffect />
     </div>
     <div>
       <h2 transition:name=`me-name`>Wilfer Daniel Ciro Maya</h2>
@@ -62,12 +58,15 @@ import BackButton from "../presentation/components/atoms/BackButton.astro";
   h3 {
     font-weight: 300;
   }
+  p {
+    color: var(--text-color3 );
+  }
 
-  
   @media (max-width: 740px) {
     .container {
       display: block;
       height: auto;
+      width: 90%;
       padding-top: 90px;
     }
   }

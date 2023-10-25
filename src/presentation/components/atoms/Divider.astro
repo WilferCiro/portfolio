@@ -1,0 +1,15 @@
+---
+interface Props {
+  size?: string;
+}
+
+const { size } = Astro.props;
+---
+
+<div class="divider"></div>
+
+<style define:vars={{size: size || "30px"}}>
+  .divider {
+    height: var(--size);
+  }
+</style>

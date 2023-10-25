@@ -6,6 +6,9 @@ import CarouselImages from "../../presentation/components/molecules/CarouselImag
 import StackList from "../../presentation/components/molecules/StackList.astro";
 import Layout from "../../presentation/layouts/Layout.astro";
 import ButtonArrow from "../../presentation/components/atoms/ButtonArrow.astro";
+import TitlePage from "../../presentation/components/atoms/TitlePage.astro";
+import Divider from "../../presentation/components/atoms/Divider.astro";
+
 export function getStaticPaths() {
   return Object.keys(allProjects).map((key) => {
     return {
@@ -24,46 +27,47 @@ const project = allProjects[id];
 
 <Layout title={`Proyecto ${project?.name}`}>
   <div class="container">
+    <!--BackButton /-->
+    <TitlePage title={project?.name} transition:name={`project-title-${id}`}
+      ><DatesArray dates={project.dates} />
+    </TitlePage>
+    <Divider />
+
+    <CarouselImages images={project.images} id={id} />
+    <Divider />
     <div>
-      <BackButton />
-      <CarouselImages images={project.images} id={id} />
-    </div>
-    <div>
-      <h2 transition:name={`project-title-${id}`}>
-        {project?.name}
-      </h2>
       <h3>
-        Proyecto {project.owner}
+        Proyecto: {project.owner}
       </h3>
-      <DatesArray dates={project.dates} />
       <p transition:name={`project-description-${id}`}>
         {project.description}
       </p>
-      {
-        (project.links || []).map((link) => {
-          return (
-            <a href={link.href} target="_blank">
-              <ButtonArrow label={link.title} />
-            </a>
-          );
-        })
-      }
       <StackList stack={project.stack} />
+      <Divider />
+      <footer>
+        {
+          (project.links || []).map((link) => {
+            return (
+              <a href={link.href} target="_blank">
+                <ButtonArrow label={link.title} />
+              </a>
+            );
+          })
+        }
+      </footer>
     </div>
   </div>
 </Layout>
 
 <style>
   .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     align-items: center;
     height: 100vh;
-    width: 80%;
+    width: 740px;
     margin: auto;
+    margin-top: 50px;
     gap: 50px;
     padding: 20px;
-    background-color: var(--bg-color1);
     border-radius: 10px;
   }
 
@@ -83,25 +87,15 @@ const project = allProjects[id];
     padding: 20px;
   }
 
-  h2 {
-    margin: 0;
-    margin-bottom: 10px;
-    font-size: 24px;
-    color: #333333;
-  }
-
   h3 {
     margin: 0;
-    margin-bottom: 5px;
-    font-size: 18px;
-    color: #555555;
-    font-weight: 400;
+    margin-bottom: 30px;
+    font-size: 23px;
   }
 
   p {
-    margin: 0;
-    margin-bottom: 20px;
-    color: #666666;
+    margin: 20px 0px;
+    color: var(--text-color3);
     line-height: 1.5;
   }
 
@@ -116,6 +110,11 @@ const project = allProjects[id];
     color: #666666;
   }
 
+  footer {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
   @media (max-width: 740px) {
     .container {
       display: block;

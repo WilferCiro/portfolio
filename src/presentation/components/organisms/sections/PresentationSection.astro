@@ -1,61 +1,53 @@
 ---
-import { Image } from "astro:assets";
-import Photo1 from "../../../media/images/photo1.png";
-import Button from "../../atoms/Button.astro";
+import ImageWEffect from "../../atoms/ImageWEffect.astro";
+import ButtonArrow from "../../atoms/ButtonArrow.astro";
 ---
 
-<ul class="color-cards">
-  <li class="card1"></li>
-  <li class="card2"></li>
-  <li class="card3"></li>
-</ul>
+<div>
+  <p class="bg-name">:▾:...</p>
+  <p class="bg-name2">.::..::.▾...:::..</p>
+</div>
+
 <div class="container">
-  <div class="">
-    <h3 class="greetings">--- ¡Hola! soy</h3>
-    <h1 transition:name=`me-name`>Wilfer Daniel Ciro Maya</h1>
-    <h4 class="profession" transition:name=`me-profession`>
-      Full stack developer
-    </h4>
-    <h5 class="creator">Creador de soluciones para el mundo</h5>
-    <a href="/about">
-      <Button label="Conoce más sobre mí" buttonSize="100%" />
-    </a>
+  <div>
+    <div class="front">
+      <h3 class="greetings">— ¡Hola! soy</h3>
+      <h1 transition:name=`me-name`>Wilfer Daniel Ciro Maya</h1>
+      <h4 class="profession" transition:name=`me-profession`>
+        Full stack developer
+      </h4>
+      <h5 class="creator">Creador de soluciones para el mundo</h5>
+      <a href="/about">
+        <ButtonArrow label="Conoce más sobre mí" />
+      </a>
+    </div>
   </div>
   <div>
-    <Image
-      class="image"
-      src={Photo1}
-      alt="foto de Wilfer Daniel Ciro Maya"
-      transition:name=`me-photo`
-    />
+    <ImageWEffect />
   </div>
 </div>
 
 <style>
-  .color-cards {
+  .bg-name {
+    font-size: 250px;
     position: absolute;
-    right: 0px;
-    top: 0px;
-    height: 100vh;
-    width: 40%;
-    list-style: none;
-    padding: 0px;
-    margin: 0px;
-    z-index: -1;
+    opacity: 0.1;
+    margin-top: 30px;
+    color: var(--primary-color);
+    z-index: inherit;
+    z-index: 1;
+    overflow-wrap: anywhere;
   }
-  .card1,
-  .card2,
-  .card3 {
-    width: 100%;
-    height: 33%;
-    background-color: var(--primary-color);
+  .bg-name2 {
+    font-size: 250px;
+    position: absolute;
+    opacity: 0.1;
+    margin-top: 230px;
+    color: var(--primary-color);
+    overflow-wrap: anywhere;
   }
-  .card2 {
-    opacity: 0.8;
-    height: 34%;
-  }
-  .card3 {
-    opacity: 0.6;
+  .front {
+    z-index: 3;
   }
 
   .container {
@@ -66,11 +58,6 @@ import Button from "../../atoms/Button.astro";
     margin-left: 10%;
     width: 75%;
   }
-  .image {
-    width: 32vw;
-    height: 32vw;
-  }
-
   h1,
   h2,
   h3,
@@ -92,6 +79,7 @@ import Button from "../../atoms/Button.astro";
     margin-top: 10px;
     font-weight: normal;
     margin-bottom: 50px;
+    color: var(--text-color3);
   }
   .profession {
     font-weight: 400;
@@ -116,10 +104,6 @@ import Button from "../../atoms/Button.astro";
       text-align: center;
       gap: 40px;
     }
-    .image {
-      width: 60vw;
-      height: 60vw;
-    }
     .color-cards {
       width: 30%;
     }
@@ -128,6 +112,18 @@ import Button from "../../atoms/Button.astro";
     }
     h4 {
       font-size: 30px;
+    }
+
+    .bg-name {
+      font-size: 100px;
+      margin-top: -20px;
+      overflow: hidden;
+      width: 90%;
+    }
+    .bg-name2 {
+      font-size: 100px;
+      overflow: hidden;
+      width: 90%;
     }
   }
 </style>

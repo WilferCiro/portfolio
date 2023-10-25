@@ -12,16 +12,34 @@
   --tablet-size: 740px;
   --laptop-size: 1024px;
   --hd-laptop-size: 1440px;
+
+  --blur-size: 10px;
 }
 
 html[data-theme="light"] {
   --bg-color1: rgb(240, 240, 240);
-  --body-color: #4a5167;
+  --bg-color2: rgb(200, 200, 200);
+  --bg-color2-opacity: rgba(200, 200, 200, 0.7);
+  --shadow: rgba(200, 200, 200, 0.25);
+
+  --text-color1: rgb(20, 20, 20);
+  --text-color2: rgb(40, 40, 40);
+  --text-color3: rgb(80, 80, 80);
+
+  --border-color: rgba(218, 218, 218, 0.08);
 }
 
 html[data-theme="dark"] {
-  --bg-color1: #171321;
-  --body-color: white;
+  --bg-color1: rgb(13, 13, 13);
+  --bg-color2: rgb(30, 30, 30);
+  --bg-color2-opacity: rgb(30, 30, 30, 0.7);
+  --shadow: rgba(0, 0, 0, 0.25);
+
+  --text-color1: rgb(230, 230, 230);
+  --text-color2: rgb(200, 200, 200);
+  --text-color3: rgb(150, 150, 150);
+
+  --border-color: rgba(218, 218, 218, 0.08);
 }
 
 * {
@@ -32,9 +50,10 @@ body {
   font-family: system-ui, sans-serif;
   padding: 0px;
   margin: 0px;
-  color: var(--body-color);
+  color: var(--text-color1);
   background-color: var(--bg-color1);
   font-size: 17px;
+  transition: background-color 0.3s;
 }
 code {
   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
@@ -42,7 +61,7 @@ code {
 }
 
 a {
-  color: var(--body-color);
+  color: var(--text-color1);
   text-decoration: none;
 }
 a:hover {

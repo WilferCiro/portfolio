@@ -1,6 +1,7 @@
 ---
 import allProjects from "../../../../data/projects-list";
 import Button from "../../atoms/Button.astro";
+import Divider from "../../atoms/Divider.astro";
 import TitlePage from "../../atoms/TitlePage.astro";
 import ProjectsList from "../../molecules/ProjectsList.astro";
 
@@ -12,8 +13,12 @@ const projects = Object.keys(allProjects)
   }));
 ---
 
-<header>
-  <TitlePage title="Mis últimos proyectos" />
-</header>
+<TitlePage title="Proyectos recientes"
+  ><a href="/projects"
+    ><Button
+      label={`Ver todos los proyectos (${Object.keys(allProjects).length})`}
+    />
+  </a>
+</TitlePage>
+<Divider />
 <ProjectsList projects={projects} />
-<a href="/projects"><Button label={`Ver todos los proyectos`} /></a>

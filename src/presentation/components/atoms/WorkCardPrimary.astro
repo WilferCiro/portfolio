@@ -18,7 +18,7 @@ const data = Astro.props;
     <h4>{data.name}</h4>
     <p>{data.position}</p>
     <DatesArray dates={data.dates} />
-    <a href={`/work/${data.name}`} rel="referrer">
+    <a href={`/work/${data.id}`} rel="referrer">
       <ButtonArrow label="Conocer más" />
     </a>
   </div>
