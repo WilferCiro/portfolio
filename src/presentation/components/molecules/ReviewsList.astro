@@ -95,13 +95,21 @@ const { reviews } = Astro.props;
   }
   @media (max-width: 740px) {
     .container {
-      width: 90%;
+      width: 100%;
       grid-template-columns: 1fr;
-      padding-top: 0px;
+      padding: 5px 10px;
     }
     .image {
-      top: 80px;
-      left: -30px;
+      position: relative;
+      top: 10px;
+      left: calc(50% - 50px);
+    }
+    .card {
+      width: 100%;
+      padding: 0;
+    }
+    .description{
+      padding: 0;
     }
   }
 </style>

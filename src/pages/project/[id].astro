@@ -1,6 +1,5 @@
 ---
 import allProjects from "../../data/projects-list";
-import BackButton from "../../presentation/components/atoms/BackButton.astro";
 import DatesArray from "../../presentation/components/atoms/DatesArray.astro";
 import CarouselImages from "../../presentation/components/molecules/CarouselImages.astro";
 import StackList from "../../presentation/components/molecules/StackList.astro";
@@ -27,7 +26,6 @@ const project = allProjects[id];
 
 <Layout title={`Proyecto ${project?.name}`}>
   <div class="container">
-    <!--BackButton /-->
     <TitlePage title={project?.name} transition:name={`project-title-${id}`}
       ><DatesArray dates={project.dates} />
     </TitlePage>
@@ -62,18 +60,13 @@ const project = allProjects[id];
 <style>
   .container {
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     width: 740px;
     margin: auto;
-    margin-top: 50px;
-    gap: 50px;
     padding: 20px;
+    padding-top: 50px;
+    gap: 50px;
     border-radius: 10px;
-  }
-
-  .image-container {
-    width: 100%;
-    max-width: 400px;
   }
 
   .image {

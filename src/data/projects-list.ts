@@ -110,7 +110,7 @@ const allProjects: ProjectsSchema = {
     dates: ["2022-01-01", "2022-01-01"],
     description:
       "Proyecto que permite leer la información de la cédula de ciudadanía a través de visión artificial, además de realizar comparaciones de la huella dactilar y la foto de la persona",
-    images: ["image1.png"],
+    images: ["image1.jpg"],
     stack: [
       StackList.Python,
       StackList.Flask,

@@ -6,7 +6,6 @@ import ButtonArrow from "../../presentation/components/atoms/ButtonArrow.astro";
 import ReviewsList from "../../presentation/components/molecules/ReviewsList.astro";
 import ProjectsList from "../../presentation/components/molecules/ProjectsList.astro";
 import TitlePage from "../../presentation/components/atoms/TitlePage.astro";
-import BackButton from "../../presentation/components/atoms/BackButton.astro";
 import Divider from "../../presentation/components/atoms/Divider.astro";
 import DatesArray from "../../presentation/components/atoms/DatesArray.astro";
 
@@ -27,44 +26,47 @@ if (!id || typeof id === "undefined" || !work) {
 
 const posts = await Astro.glob("../../data/description_works/*.md");
 const currentPost = posts.find(({ file }) => file?.includes(`${work.id}.md`));
+
+const imgError = work?.images[0].replace("webp", "jpg");
 ---
 
 <Layout title={`Experiencia en ${work?.name}`}>
   <div class="container">
     <div class="description">
-      <div>
-        <img
-          src={"/images/works/" + work?.images[0]}
-          alt="Foto de empresa"
-          transition:name={`work-${work?.name}`}
-          class="image"
-        />
-      </div>
-      <div>
-        <TitlePage
-          title={work?.name}
-          transition:name={`work-name-${work?.name}`}
-          ><DatesArray dates={work.dates} />
-        </TitlePage>
-        <h3 transition:name={`work-profession-${work?.name}`}>
-          Fullstack developer
-        </h3>
-        {currentPost && <currentPost.Content />}
-        <StackList stack={work.stack} />
-        <Divider />
-        {
-          work.link && (
-            <a href={work.link} target="_blank">
-              <ButtonArrow label="Ir al sitio de la empresa" />
-            </a>
-          )
-        }
-      </div>
+      <TitlePage title={work?.name} transition:name={`work-name-${work?.name}`}
+        ><DatesArray dates={work.dates} />
+      </TitlePage>
+      <h3 transition:name={`work-profession-${work?.name}`}>
+        Fullstack developer
+      </h3>
+      <Divider />
+      <img
+        src={"/images/works/" + work?.images[0]}
+        alt="Foto de empresa"
+        transition:name={`work-${work?.name}`}
+        class="image"
+        onerror={`this.src='/images/works/${imgError}'`}
+      />
+      {currentPost && <currentPost.Content />}
+      <StackList stack={work.stack} />
+      <Divider />
+      {
+        work.link && (
+          <a href={work.link} target="_blank">
+            <ButtonArrow label="Ir al sitio de la empresa" />
+          </a>
+        )
+      }
     </div>
-    <div>
-      <h2>Testimonios</h2>
-      <ReviewsList reviews={work?.reviews || []} />
-    </div>
+    {
+      (work?.reviews || []).length > 0 && (
+        <div>
+          <h2>Testimonios</h2>
+          <Divider />
+          <ReviewsList reviews={work?.reviews || []} />
+        </div>
+      )
+    }
     {
       work.projects.length > 0 && (
         <div>
@@ -85,14 +87,18 @@ const currentPost = posts.find(({ file }) => file?.includes(`${work.id}.md`));
     border-radius: 10px;
   }
   .description {
-    display: grid;
-    grid-template-columns: 0.8fr 1fr;
-    align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    max-width: 740px;
+    width: 95%;
+    margin: auto;
+    padding-top: 70px;
   }
   .image {
-    width: 30vw;
-    height: 30vw;
+    width: 250px;
+    height: 250px;
+    border-radius: 20px;
+    margin: auto;
+    display: block;
   }
   h4,
   h3 {
@@ -108,13 +114,14 @@ const currentPost = posts.find(({ file }) => file?.includes(`${work.id}.md`));
 
   @media (max-width: 740px) {
     .container {
-      width: 90%;
+      width: 95%;
       flex-direction: column;
       padding-top: 100px;
     }
     .description {
       display: block;
       height: fit-content;
+      padding-top: 10px;
     }
   }
 </style>

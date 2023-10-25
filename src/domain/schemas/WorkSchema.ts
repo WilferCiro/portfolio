@@ -5,7 +5,6 @@ export interface ReviewSchema {
   who: string;
   relationship: string;
   description: string;
-  date: string;
   photo?: string;
   linkedIn?: string;
 }

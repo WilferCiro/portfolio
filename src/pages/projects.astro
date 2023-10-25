@@ -1,6 +1,5 @@
 ---
 import allProjects from "../data/projects-list";
-import BackButton from "../presentation/components/atoms/BackButton.astro";
 import Divider from "../presentation/components/atoms/Divider.astro";
 import TitlePage from "../presentation/components/atoms/TitlePage.astro";
 import ProjectsList from "../presentation/components/molecules/ProjectsList.astro";
@@ -32,7 +31,8 @@ const projects = Object.keys(allProjects).map((key: string) => ({
   section {
     width: 70%;
     margin: auto;
-    margin-top: 100px;
+    padding-top: 70px;
+    min-height: 100vh;
   }
 
   @media (max-width: 740px) {

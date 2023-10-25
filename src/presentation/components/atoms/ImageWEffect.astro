@@ -1,6 +1,4 @@
 ---
-import { Image } from "astro:assets";
-import Photo1 from "../../media/images/me2.jpg";
 
 interface Props {
   transition?: string;
@@ -8,11 +6,12 @@ interface Props {
 const { transition } = Astro.props;
 ---
 
-<Image
-  src={Photo1}
+<img
+  src={"/images/me/me.webp"}
   alt="Foto de Wilfer Ciro"
   transition:name={transition || "me-photo"}
   class="img"
+  onerror="this.src='/images/me/me.jpg'"
 />
 
 <style>
