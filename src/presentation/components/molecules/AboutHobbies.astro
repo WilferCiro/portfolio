@@ -10,7 +10,7 @@ import Divider from "../atoms/Divider.astro";
 ---
 
 <Divider size="60px" />
-<TitlePage title="Mis hobbies" />
+<h3>Mis hobbies</h3>
 <ul>
   <li>
     <CoffeeIcon />
@@ -54,5 +54,9 @@ import Divider from "../atoms/Divider.astro";
     flex-direction: column;
     gap: 5px;
     width: 80px;
+  }
+
+  h3 {
+    color: var(--primary-color);
   }
 </style>
