@@ -36,7 +36,7 @@ const allProjects: ProjectsSchema = {
     dates: ["2022-01-01", "2022-01-01"],
     description:
       "Esta plataforma fue desarrollada específicamente para la Universidad AIEP de Chile. Permite la creación de NFTs para certificados de estudiantes mediante la red Ethereum, utilizando tecnología Web3.",
-    images: ["image1.png", "image2.png", "image3.png", "image4.png"],
+    images: ["image1.webp", "image2.png", "image3.png", "image4.png"],
     stack: [
       StackList.NestJS,
       StackList.NodeJS,
@@ -56,7 +56,7 @@ const allProjects: ProjectsSchema = {
     description:
       "Esta plataforma tiene por objetivo gestionar de forma integral los trabajos de grado de los estudiantes. Permite el manejo completo, desde el preinforme hasta el informe final, incluyendo las evaluaciones de los revisores y las calificaciones correspondientes.",
     images: [
-      "image1.png",
+      "image1.webp",
       "image2.webp",
       "image3.webp",
       "image4.webp",
