@@ -17,8 +17,7 @@ import SocialLinks from "../../atoms/SocialLinks.astro";
     <div class="photo-container">
       <ImageWEffect transition="contact-photo" />
     </div>
-    <h3>Wilfer Daniel Ciro Maya</h3>
-    <h5>Fullstack developer</h5>
+    <header>Wilfer Daniel Ciro Maya</header>
     <div class="quote">
       <p class="quote-icon">
         <QuoteIcon />
@@ -31,8 +30,8 @@ import SocialLinks from "../../atoms/SocialLinks.astro";
         href="mailto:wilcirom@gmail.com?subject=Hola, construyamos juntos soluciones para el mundo"
         >Envíame un correo</a
       >
-      <a href="https://wa.me/+573173587462" target="_blank">Envía un whats</a>
-      <a>Agenta una cita</a>
+      <a href="https://wa.me/+573173587462" target="_blank">Envíame un Whatsapp</a>
+      <a href="https://wa.me/+573173587462" target="_blank">Agenda una cita</a>
     </footer>
     <div class="social">
       <SocialLinks />
@@ -64,26 +63,32 @@ import SocialLinks from "../../atoms/SocialLinks.astro";
     gap: 10px;
     justify-content: center;
     font-style: italic;
+    position: relative;
   }
   .quote-icon {
     opacity: 0.5;
   }
 
-  h3,
+  header,
   h5 {
     margin: 5px 0px;
   }
-  h3 {
+  header {
     color: var(--text-color2);
   }
   h5 {
     color: var(--text-color3);
   }
+  header {
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-weight: 500;    
+  }
   footer {
     display: flex;
     align-items: center;
     gap: 10px;
-    width: 70%;
+    width: 80%;
     margin: 10px auto;
   }
   footer a {
@@ -114,8 +119,11 @@ import SocialLinks from "../../atoms/SocialLinks.astro";
       width: 100%;
     }
     .quote {
-      width: 80%;
+      width: 90%;
       margin: auto;
+    }
+    .quote-icon {
+      display: none;
     }
   }
 </style>

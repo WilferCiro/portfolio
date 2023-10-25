@@ -2,18 +2,19 @@
 import Layout from "../presentation/layouts/Layout.astro";
 import AboutHobbies from "../presentation/components/molecules/AboutHobbies.astro";
 import ImageWEffect from "../presentation/components/atoms/ImageWEffect.astro";
+import TitlePage from "../presentation/components/atoms/TitlePage.astro";
+import Divider from "../presentation/components/atoms/Divider.astro";
 ---
 
 <Layout title="Sobre mi">
   <div class="container">
-    <div>
-      <div class="photo-container">
-        <ImageWEffect />
-      </div>
+    <TitlePage title="Wilfer Daniel Ciro Maya" transition_name="me-name" />
+    <h3 transition:name="me-profession">Fullstack developer</h3>
+    <Divider />
+    <div class="photo-container">
+      <ImageWEffect />
     </div>
-    <div>
-      <h2 transition:name=`me-name`>Wilfer Daniel Ciro Maya</h2>
-      <h3 transition:name=`me-profession`>Fullstack developer</h3>
+    <div transition:name="me-description">
       <p>
         Como full stack developer comprometido, responsable y apasionado por la
         programación, tengo una amplia experiencia en el desarrollo de software
@@ -29,25 +30,19 @@ import ImageWEffect from "../presentation/components/atoms/ImageWEffect.astro";
         habilidades en la gestión de proyectos y en la comunicación asertiva con
         los diferentes miembros del equipo.
       </p>
-      <AboutHobbies />
     </div>
+    <AboutHobbies />
   </div>
 </Layout>
 
 <style>
   .container {
-    display: flex;
-    align-items: center;
-    height: 100vh;
-    width: 70%;
+    min-height: 100vh;
+    max-width: 740px;
+    width: 90%;
     margin: auto;
     gap: 50px;
-    justify-content: space-around;
-  }
-  .image {
-    width: 35vw;
-    height: 35vw;
-    border-radius: 100%;
+    padding-top: 70px;
   }
   h2,
   h3 {
@@ -61,8 +56,8 @@ import ImageWEffect from "../presentation/components/atoms/ImageWEffect.astro";
   }
 
   .photo-container {
-    width: 35vw;
-    height: 35vw;
+    width: 20vw;
+    height: 20vw;
     margin: auto;
   }
 

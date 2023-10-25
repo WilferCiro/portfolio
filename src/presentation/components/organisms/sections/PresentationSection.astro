@@ -11,12 +11,12 @@ import ButtonArrow from "../../atoms/ButtonArrow.astro";
 <div class="container">
   <div>
     <div class="front">
-      <h3 class="greetings">— ¡Hola! soy</h3>
-      <h1 transition:name=`me-name`>Wilfer Daniel Ciro Maya</h1>
-      <h4 class="profession" transition:name=`me-profession`>
+      <p class="greetings">— ¡Hola! soy</p>
+      <h1 transition:name="me-name">Wilfer Daniel Ciro Maya</h1>
+      <h2 class="profession" transition:name=`me-profession`>
         Full stack developer
-      </h4>
-      <h5 class="creator">Creador de soluciones para el mundo</h5>
+      </h2>
+      <h3 class="creator" transition:name="me-description">Creador de soluciones para el mundo</h3>
       <a href="/about">
         <ButtonArrow label="Conoce más sobre mí" />
       </a>
@@ -29,8 +29,8 @@ import ButtonArrow from "../../atoms/ButtonArrow.astro";
 
 <style>
   .photo-container {
-    width: 35vw;
-    height: 35vw;
+    width: 32vw;
+    height: 32vw;
     margin: auto;
   }
   .bg-name {
@@ -61,24 +61,28 @@ import ButtonArrow from "../../atoms/ButtonArrow.astro";
     align-items: center;
     justify-content: space-between;
     margin-left: 10%;
-    width: 75%;
+    width: 80%;
   }
   h1,
   h2,
-  h3,
-  h4,
-  h5 {
+  h3 {
     margin: 0px;
   }
   h1 {
-    font-size: 55px;
+    font-size: 50px;
   }
-  h4 {
-    font-size: 40px;
+  h2 {
+    font-size: 30px;
+  }
+  h3 {
+    font-size: 25px;
   }
 
   .greetings {
     color: var(--primary-color);
+    font-size: 25px;
+    font-weight: 600;
+    margin: 0px;
   }
   .creator {
     margin-top: 10px;
@@ -90,14 +94,19 @@ import ButtonArrow from "../../atoms/ButtonArrow.astro";
     font-weight: 400;
   }
 
-  @media (min-width: 740px) and (max-width: 1024px) {
+  @media (min-width: 740px) and (max-width: 1000px) {
     .container {
+      flex-direction: column-reverse;
+      justify-content: center;
       width: 90%;
       margin: auto;
+      text-align: center;
+      gap: 40px;
     }
-    .image {
-      width: 45vw;
-      height: 45vw;
+    .photo-container {
+      width: 55vw;
+      height: 55vw;
+      margin: 0px;
     }
   }
   @media (max-width: 740px) {

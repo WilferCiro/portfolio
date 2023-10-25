@@ -15,15 +15,17 @@ const { id, ...data } = Astro.props;
       transition:name=`project-image-${id}`
     />
   </a>
-  <div class="description">
-    <h4 transition:name=`project-title-${id}`>{data.name}</h4>
-    <p transition:name=`project-description-${id}`>{data.description}</p>
+  <div>
+    <div class="description">
+      <header transition:name=`project-title-${id}`>{data.name}</header>
+      <p transition:name=`project-description-${id}`>{data.description}</p>
+    </div>
+    <footer class="buttons">
+      <a href={`/project/${id}`} rel="referrer">
+        <ButtonArrow label="Ver más" />
+      </a>
+    </footer>
   </div>
-  <footer class="buttons">
-    <a href={`/project/${id}`} rel="referrer">
-      <ButtonArrow label="Ver más" />
-    </a>
-  </footer>
 </div>
 
 <style>
@@ -47,13 +49,18 @@ const { id, ...data } = Astro.props;
   .image:hover {
     scale: 1.05;
   }
-  h4,
+
   p {
     margin: 0px;
   }
   p {
     color: var(--text-color3);
     font-size: 15px;
+  }
+  header {
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-weight: 500;
   }
   .description {
     margin-top: 15px;
@@ -64,5 +71,17 @@ const { id, ...data } = Astro.props;
     display: flex;
     align-items: center;
     justify-content: flex-end;
+  }
+
+  @media (min-width: 740px) and (max-width: 1000px) {
+    .card {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+    .image {
+      width: 300px;
+      height: 180px;
+    }
   }
 </style>

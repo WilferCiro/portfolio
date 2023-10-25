@@ -19,13 +19,18 @@ const data = Astro.props;
   />
   <div class="description">
     <div>
-      <h4>{data.position}</h4>
+      <header>{data.position}</header>
       <p>{data.name}</p>
       <Divider size="15px" />
       <DatesArray dates={data.dates} />
     </div>
     <div>
-      <a href={`/work/${data.id}`} rel="referrer" class="link">
+      <a
+        href={`/work/${data.id}`}
+        rel="referrer"
+        class="link"
+        aria-label={`Ir a la descripción de ${data.name}`}
+      >
         <Tooltip title="Ver más">
           <RightArrow />
         </Tooltip>
@@ -59,9 +64,13 @@ const data = Astro.props;
     align-items: center;
     justify-content: space-between;
   }
-  h4,
   p {
     margin: 0px;
+  }
+  header {
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-weight: 500;
   }
   @media (max-width: 740px) {
     .card {
