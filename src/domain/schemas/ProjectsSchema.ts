@@ -8,6 +8,7 @@ export interface IndividualProjectSchema {
   description: string;
   images: string[];
   stack: StackSchema[];
+  complete?: string;
   links?: {
     title: string;
     href: string;

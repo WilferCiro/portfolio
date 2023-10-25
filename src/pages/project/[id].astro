@@ -40,6 +40,9 @@ const project = allProjects[id];
       <p transition:name={`project-description-${id}`}>
         {project.description}
       </p>
+      <p>
+        {project.complete && project.complete}
+      </p>
       <StackList stack={project.stack} />
       <Divider />
       <footer>
