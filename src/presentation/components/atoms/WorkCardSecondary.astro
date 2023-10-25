@@ -2,26 +2,36 @@
 import type { WorkSchema } from "../../../domain/schemas/WorkSchema";
 import ButtonArrow from "./ButtonArrow.astro";
 import DatesArray from "./DatesArray.astro";
+import Divider from "./Divider.astro";
+import Tooltip from "./Tooltip.astro";
+import RightArrow from "./icons/RightArrow.astro";
 interface Props extends WorkSchema {}
 const data = Astro.props;
 ---
 
-<div class="card">
-  <img
-    class="image"
-    src={"/images/works/" + data.images[0]}
-    alt="Foto de empresa"
-    transition:name={`work-${data.name}`}
-  />
-  <div>
-    <h4>{data.name}</h4>
-    <p>{data.position}</p>
-    <DatesArray dates={data.dates} />
-    <a href={`/work/${data.id}`} rel="referrer">
-      <ButtonArrow label="Conocer más" />
-    </a>
+<a href={`/work/${data.id}`} rel="referrer" class="link">
+  <div class="card">
+    <img
+      class="image"
+      src={"/images/works/" + data.images[0]}
+      alt="Foto de empresa"
+      transition:name={`work-${data.name}`}
+    />
+    <div class="body">
+      <div>
+        <h4>{data.position}</h4>
+        <p class="company">{data.name}</p>
+        <Divider size="15px" />
+        <DatesArray dates={data.dates} />
+      </div>
+      <div>
+        <Tooltip title="Ver más">
+          <RightArrow />
+        </Tooltip>
+      </div>
+    </div>
   </div>
-</div>
+</a>
 
 <style>
   .card {
@@ -29,11 +39,21 @@ const data = Astro.props;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 20px;
+    gap: 30px;
+    border-radius: 16px;
+    padding: 10px 30px;
+    background-color: var(--bg-color2-opacity);
+  }
+  .body {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
   .image {
-    width: 150px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
     display: block;
     object-fit: scale-down;
   }
@@ -41,8 +61,22 @@ const data = Astro.props;
   p {
     margin: 0px;
   }
-  a {
-    margin-top: 10px;
-    display: block;
+  h4 {
+    font-size: 20px;
+  }
+  .company {
+    color: var(--text-color2);
+  }
+  @media (max-width: 740px) {
+    .image {
+      width: 50px;
+      height: 50px;
+      border-radius: 10px;
+    }
+    .card {
+      gap: 10px;
+      align-items: flex-start;
+      padding: 10px 10px;
+    }
   }
 </style>

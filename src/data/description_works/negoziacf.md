@@ -1,6 +1,6 @@
 Diseñé y desarrollé una plataforma administrativa con tecnologías 
 como React, Next.js, Express y Nest.js. La creación de esta 
-plataforma permitió una gestión de datos más efciente y 
+plataforma permitió una gestión de datos más eficiente y 
 automatizada, además de reducción de tiempo para los clientes. 
 Creé una API RESTful que permitió una comunicación fuida y 
 confable entre el front‑end y el back‑end. Para mejorar el 

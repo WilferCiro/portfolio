@@ -3,9 +3,10 @@ import SocialLinks from "../atoms/SocialLinks.astro";
 ---
 
 <footer>
-  <div>
-    Creado por Wilfer Daniel Ciro Maya<br />
-    Ver código fuente de este portafolio
+  <div class="credits">
+    <div>2023</div>
+    <div>Creado por <b>Wilfer Daniel Ciro Maya</b></div>
+    <div>Ver código fuente de este portafolio</div>
   </div>
   <div>
     <SocialLinks />
@@ -17,11 +18,18 @@ import SocialLinks from "../atoms/SocialLinks.astro";
     width: 100%;
     text-align: center;
     margin-top: 40px;
-    padding: 60px;
+    padding: 40px 60px;
     background-color: var(--bg-color2);
+    color: var(--text-color3);
     display: flex;
     align-items: center;
     justify-content: space-around;
+    font-size: 14px;
+  }
+  .credits {
+    display: flex;
+    align-items: center;
+    gap: 20px;
   }
 
   @media (max-width: 740px) {
@@ -30,6 +38,10 @@ import SocialLinks from "../atoms/SocialLinks.astro";
       flex-direction: column;
       align-items: center;
       gap: 10px;
+      padding-bottom: 110px;
+    }
+    .credits {
+      flex-direction: column;
     }
   }
 </style>

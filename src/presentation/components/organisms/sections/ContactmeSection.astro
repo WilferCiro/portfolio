@@ -4,104 +4,118 @@ import EmailIcon from "../../atoms/icons/EmailIcon.astro";
 import WhatsappIcon from "../../atoms/icons/WhatsappIcon.astro";
 import LinkedInIcon from "../../atoms/icons/LinkedInIcon.astro";
 import FormContact from "../../molecules/FormContact.astro";
+import Divider from "../../atoms/Divider.astro";
+import QuoteIcon from "../../atoms/icons/QuoteIcon.astro";
+import ImageWEffect from "../../atoms/ImageWEffect.astro";
+import SocialLinks from "../../atoms/SocialLinks.astro";
 ---
 
 <div class="container">
   <TitlePage title="Contáctame" />
+  <Divider />
   <div class="body">
-    <div class="info">
-      <p class="subtitle">
-        Ponte en contacto conmigo a través de alguno de mis enlaces, o envíame
-        un mensaje con el formulario
-      </p>
-
-      <div class="item-link">
-        <LinkedInIcon />
-        <div>
-          <h4>LinkedIn</h4>
-          <p>
-            <a href="https://www.linkedin.com/in/wilfer-ciro/" target="_blank"
-              >https://www.linkedin.com/in/wilfer-ciro/</a
-            >
-          </p>
-        </div>
-      </div>
-      <div class="item-link">
-        <EmailIcon />
-        <div>
-          <h4>Correo electrónico</h4>
-          <p>
-            <a href="mailto:wilcirom@gmail.com" target="_blank"
-              >wilcirom@gmail.com</a
-            >
-          </p>
-        </div>
-      </div>
-      <div class="item-link">
-        <WhatsappIcon />
-        <div>
-          <h4>Whatsapp</h4>
-          <p>
-            <a href="https://wa.me/+573173587462" target="_blank"
-              >+57 3173587462</a
-            >
-          </p>
-        </div>
-      </div>
+    <div class="photo-container">
+      <ImageWEffect transition="contact-photo" />
     </div>
-    <div class="form">
-      <FormContact />
+    <h3>Wilfer Daniel Ciro Maya</h3>
+    <h5>Fullstack developer</h5>
+    <div class="quote">
+      <p class="quote-icon">
+        <QuoteIcon />
+      </p>
+      <p>Contáctame y construyamos juntos soluciones para el mundo.</p>
+    </div>
+    <Divider />
+    <footer>
+      <a
+        href="mailto:wilcirom@gmail.com?subject=Hola, construyamos juntos soluciones para el mundo"
+        >Envíame un correo</a
+      >
+      <a href="https://wa.me/+573173587462" target="_blank">Envía un whats</a>
+      <a>Agenta una cita</a>
+    </footer>
+    <div class="social">
+      <SocialLinks />
     </div>
   </div>
 </div>
 
 <style>
-  .container {
-    height: 80vh;
-  }
   .body {
-    display: flex;
-    align-items: center;
-    gap: 100px;
-    justify-content: space-around;
-  }
-  .form {
-    width: 400px;
+    box-shadow: var(--shadow) 0px 2px 2px 0px, var(--shadow) 0px 4px 4px 0px,
+      var(--shadow) 0px 8px 8px 0px, var(--shadow) 0px 16px 16px 0px,
+      var(--shadow) 0px 32px 32px 0px;
+    border-radius: 16px;
+    width: 740px;
+    max-width: 95%;
     margin: auto;
+    padding: 30px 0px;
+    text-align: center;
   }
-  .info {
-    width: 460px;
+  .photo-container {
+    width: 10vw;
+    height: 10vw;
     margin: auto;
-  }
-  .item-link {
-    display: flex;
-    gap: 15px;
-    align-items: center;
-    border: solid 1px var(--gray1);
-    margin-bottom: 10px;
-    border-radius: 10px;
-    padding: 5px 10px;
-  }
-  h4 {
-    margin: 0px;
-  }
-  p {
-    margin: 0px;
-  }
-  .subtitle {
-    margin-bottom: 30px;
   }
 
+  .quote {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    font-style: italic;
+  }
+  .quote-icon {
+    opacity: 0.5;
+  }
+
+  h3,
+  h5 {
+    margin: 5px 0px;
+  }
+  h3 {
+    color: var(--text-color2);
+  }
+  h5 {
+    color: var(--text-color3);
+  }
+  footer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 70%;
+    margin: 10px auto;
+  }
+  footer a {
+    display: block;
+    padding: 10px 15px;
+    border-radius: 40px;
+    border: solid 2px var(--border-color);
+    width: 33%;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  .social {
+    margin: auto;
+    width: fit-content;
+    margin-top: 50px;
+  }
   @media (max-width: 740px) {
-    .container {
-      height: auto;
-    }
-    .body {
+    .photo-container {
+      width: 150px;
+      height: 150px;
       display: block;
     }
-    .info,
-    .form {
+    footer {
+      flex-direction: column;
+      margin-top: 0px;
+    }
+    footer a {
       width: 100%;
+    }
+    .quote {
+      width: 80%;
+      margin: auto;
     }
   }
 </style>

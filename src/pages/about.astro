@@ -11,7 +11,9 @@ import ImageWEffect from "../presentation/components/atoms/ImageWEffect.astro";
   <div class="container">
     <div>
       <BackButton href="/" />
-      <ImageWEffect />
+      <div class="photo-container">
+        <ImageWEffect />
+      </div>
     </div>
     <div>
       <h2 transition:name=`me-name`>Wilfer Daniel Ciro Maya</h2>
@@ -59,7 +61,13 @@ import ImageWEffect from "../presentation/components/atoms/ImageWEffect.astro";
     font-weight: 300;
   }
   p {
-    color: var(--text-color3 );
+    color: var(--text-color3);
+  }
+
+  .photo-container {
+    width: 35vw;
+    height: 35vw;
+    margin: auto;
   }
 
   @media (max-width: 740px) {
@@ -68,6 +76,10 @@ import ImageWEffect from "../presentation/components/atoms/ImageWEffect.astro";
       height: auto;
       width: 90%;
       padding-top: 90px;
+    }
+    .photo-container {
+      width: 65vw;
+      height: 65vw;
     }
   }
 </style>

@@ -1,0 +1,23 @@
+---
+import ContactmeSection from "../presentation/components/organisms/sections/ContactmeSection.astro";
+import Layout from "../presentation/layouts/Layout.astro";
+---
+
+<Layout title="Contáctame">
+  <section>
+    <ContactmeSection />
+  </section>
+</Layout>
+
+<style>
+  section {
+    width: 80%;
+    margin: auto;
+    margin-top: 100px;
+  }
+  @media (max-width: 740px) {
+    section {
+      width: 95%;
+    }
+  }
+</style>

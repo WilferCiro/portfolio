@@ -1,6 +1,7 @@
 ---
 import allProjects from "../data/projects-list";
 import BackButton from "../presentation/components/atoms/BackButton.astro";
+import Divider from "../presentation/components/atoms/Divider.astro";
 import TitlePage from "../presentation/components/atoms/TitlePage.astro";
 import ProjectsList from "../presentation/components/molecules/ProjectsList.astro";
 import Layout from "../presentation/layouts/Layout.astro";
@@ -13,8 +14,8 @@ const projects = Object.keys(allProjects).map((key: string) => ({
 
 <Layout title="Listado de proyectos">
   <section>
-    <TitlePage title="Lista de todos mis proyectos" />
-    <BackButton href="/#projects" />
+    <TitlePage title="Mis proyectos" />
+    <Divider />
     <p>
       Descubre todos los proyectos que he desarrollado a lo largo de mi carrera
     </p>

@@ -1,0 +1,52 @@
+---
+import QuoteIcon from "../../atoms/icons/QuoteIcon.astro";
+---
+
+<div class="container">
+  <div class="body">
+    <p class="quote-icon">
+      <QuoteIcon />
+    </p>
+    <p class="phrase">
+      Por curioso que parezca, necesitamos, entre muchas otras cosas, una
+      educación para la alegría, para la dicha, para el bienestar. Nadie nos
+      enseña a gozar a fondo de la vida sin sentir culpa.
+    </p>
+    <p class="author">Mario Mendoza — La importancia de morir a tiempo —</p>
+  </div>
+</div>
+
+<style>
+  .container {
+    background-color: var(--secondary-color);
+    height: auto;
+    padding: 30px 0px;
+    color: rgb(230, 230, 230);
+    position: relative;
+  }
+  .body {
+    max-width: 740px;
+    width: 90%;
+    margin: auto;
+  }
+  .phrase {
+    font-style: italic;
+  }
+  .author {
+    text-align: right;
+  }
+  .quote-icon {
+    opacity: 0.3;
+    position: absolute;
+    margin-top: -10px;
+    margin-left: -60px;
+  }
+  @media (max-width: 740px) {
+
+    .quote-icon {
+        margin-left: 0px;
+        margin-top: -30px;
+    }
+  }
+
+</style>

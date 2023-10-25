@@ -22,12 +22,17 @@ import ButtonArrow from "../../atoms/ButtonArrow.astro";
       </a>
     </div>
   </div>
-  <div>
+  <div class="photo-container">
     <ImageWEffect />
   </div>
 </div>
 
 <style>
+  .photo-container {
+    width: 35vw;
+    height: 35vw;
+    margin: auto;
+  }
   .bg-name {
     font-size: 250px;
     position: absolute;
@@ -104,9 +109,6 @@ import ButtonArrow from "../../atoms/ButtonArrow.astro";
       text-align: center;
       gap: 40px;
     }
-    .color-cards {
-      width: 30%;
-    }
     h1 {
       font-size: 35px;
     }
@@ -124,6 +126,11 @@ import ButtonArrow from "../../atoms/ButtonArrow.astro";
       font-size: 100px;
       overflow: hidden;
       width: 90%;
+    }
+    .photo-container {
+      width: 65vw;
+      height: 65vw;
+      margin: 0px;
     }
   }
 </style>

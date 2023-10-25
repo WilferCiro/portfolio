@@ -20,13 +20,13 @@ html[data-theme="light"] {
   --bg-color1: rgb(240, 240, 240);
   --bg-color2: rgb(200, 200, 200);
   --bg-color2-opacity: rgba(200, 200, 200, 0.7);
-  --shadow: rgba(200, 200, 200, 0.25);
+  --shadow: rgba(150, 150, 150, 0.10);
 
   --text-color1: rgb(20, 20, 20);
   --text-color2: rgb(40, 40, 40);
   --text-color3: rgb(80, 80, 80);
 
-  --border-color: rgba(218, 218, 218, 0.08);
+  --border-color: rgba(80, 80, 80, 0.8);
 }
 
 html[data-theme="dark"] {
