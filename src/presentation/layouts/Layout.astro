@@ -8,10 +8,15 @@ interface Props {
   title: string;
   keywords?: string;
   image?: string;
+  description?: string;
 }
 
 const { title } = Astro.props;
-const image = Astro.props.image || "https://wilciro.vercel.app/image-meta.png";
+const image =
+  "https://wilciro.vercel.app" + (Astro.props.image || "/image-meta.png");
+const description =
+  Astro.props.description ||
+  "Soy un apasionado desarrollador fullstack con experiencia en tecnologías web modernas. Me encanta crear aplicaciones web innovadoras y soluciones tecnológicas para problemas complejos";
 const keywords =
   Astro.props.keywords ||
   "Wilfer Daniel Ciro Maya, developer, desarrollador fullstack, portfolio, portafolio";
@@ -32,25 +37,16 @@ const keywords =
 
     <title>Wilfer Ciro — {title}</title>
     <meta name="title" content={`Wilfer Ciro — ${title}`} />
-    <meta
-      name="description"
-      content="Soy un apasionado desarrollador fullstack con experiencia en tecnologías web modernas. Me encanta crear aplicaciones web innovadoras y soluciones tecnológicas para problemas complejos"
-    />
+    <meta name="description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://wilciro.vercel.app/" />
     <meta property="og:title" content={`Wilfer Ciro — ${title}`} />
-    <meta
-      property="og:description"
-      content="Soy un apasionado desarrollador fullstack con experiencia en tecnologías web modernas. Me encanta crear aplicaciones web innovadoras y soluciones tecnológicas para problemas complejos"
-    />
+    <meta property="og:description" content={description} />
     <meta property="og:image" content={image} />
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://wilciro.vercel.app/" />
     <meta property="twitter:title" content={`Wilfer Ciro — ${title}`} />
-    <meta
-      property="twitter:description"
-      content="Soy un apasionado desarrollador fullstack con experiencia en tecnologías web modernas. Me encanta crear aplicaciones web innovadoras y soluciones tecnológicas para problemas complejos"
-    />
+    <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={image} />
 
     <link rel="manifest" href="/manifest.json" />

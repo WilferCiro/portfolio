@@ -18,6 +18,7 @@ const currentPath = Astro.url.pathname;
             }
           />
           <div>
+            - {currentPath}
             <p
               transition:name={
                 currentPath === url ? "" : `title-${frontmatter.id}`
