@@ -1,0 +1,103 @@
+---
+import DatesArray from "../components/atoms/DatesArray.astro";
+import TitlePageBlog from "../components/atoms/TitlePageBlog.astro";
+import NavBlog from "../components/molecules/NavBlog.astro";
+import Layout from "./Layout.astro";
+
+const { frontmatter } = Astro.props;
+---
+
+<Layout title={frontmatter.title}>
+  <section>
+    <TitlePageBlog title={frontmatter.title}>
+      <DatesArray dates={[frontmatter.year]} />
+    </TitlePageBlog>
+    <img
+      src={frontmatter.image}
+      alt=`Imagen de ${frontmatter.title}`
+      class="title_page"
+      transition:name={`image-${frontmatter.id}`}
+    />
+    <div id="slot" transition:name={`title-${frontmatter.id}`}>
+      <slot />
+    </div>
+
+    <div class="happy-codding">Happy coding...</div>
+  </section>
+  <NavBlog />
+</Layout>
+<style>
+  section {
+    width: 95%;
+    max-width: 740px;
+    margin: auto;
+    padding-top: 70px;
+    color: var(--text-color3);
+  }
+  .title_page {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-top: 30px;
+  }
+
+  .happy-codding {
+    color: white;
+    background-color: var(--secondary-color);
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-top: 50px;
+    text-align: right;
+    font-style: italic;
+  }
+
+  @media (min-width: 740px) and (max-width: 1200px) {
+    section {
+      margin-left: 100px;
+      max-width: 700px;
+    }
+  }
+</style>
+<style is:inline>
+  #slot h2,
+  #slot h3,
+  #slot h4,
+  #slot h5 {
+    color: var(--text-color1);
+  }
+  h1 {
+    font-size: 35px;
+    color: var(--primary-color);
+  }
+  #slot h2 {
+    font-size: 25px;
+  }
+  #slot h3 {
+    font-size: 20px;
+  }
+  #slot pre {
+    padding: 10px 15px;
+    border-radius: 10px;
+    box-shadow: var(--shadow) 0px 2px 2px 0px, var(--shadow) 0px 4px 4px 0px,
+      var(--shadow) 0px 8px 8px 0px, var(--shadow) 0px 16px 16px 0px,
+      var(--shadow) 0px 32px 32px 0px;
+    font-size: 14px;
+  }
+  #slot p code {
+    background-color: var(--secondary-color);
+    color: white;
+    font-size: 14px;
+    padding: 3px 5px;
+    border-radius: 3px;
+  }
+  #slot a {
+    color: var(--primary-color);
+    text-decoration: underline;
+  }
+  #slot img {
+    max-width: 100%;
+    margin: auto;
+    display: block;
+  }
+</style>

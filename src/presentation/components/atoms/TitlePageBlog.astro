@@ -1,0 +1,61 @@
+---
+interface Props {
+  title: string;
+  transition_name?: string;
+}
+
+const data = Astro.props;
+---
+
+<p class="bg-text">.::..::.▾...:::..</p>
+<div class="container" transition:name={data.transition_name || ""}>
+  <div class="title-container">
+    <div class="line"></div>
+    <h1>{data.title}</h1>
+  </div>
+  <slot />
+</div>
+
+<style>
+  .container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .line {
+    width: 40px;
+    border-bottom: solid 4px var(--primary-color);
+  }
+  .title-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  h1 {
+    color: var(--primary-color);
+    margin: 0px;
+  }
+  .bg-text {
+    opacity: 0.2;
+    font-size: 70px;
+    letter-spacing: 6px;
+    position: absolute;
+    margin-top: -20px;
+    color: var(--primary-color);
+  }
+  @media (max-width: 740px) {
+    h1 {
+      font-size: 30px;
+    }
+    .bg-text {
+      font-size: 50px;
+    }
+    .container,
+    .title-container {
+      flex-direction: column;
+      align-items: normal;
+      gap: 10px;
+    }
+  }
+</style>

@@ -1,0 +1,26 @@
+---
+import Divider from "../../atoms/Divider.astro";
+import TitlePage from "../../atoms/TitlePage.astro";
+import ListBlog from "../../molecules/ListBlog.astro";
+---
+
+<div class="container">
+  <TitlePage title="Entradas de blog" />
+  <Divider />
+  <div class="list">
+    <ListBlog />
+  </div>
+</div>
+
+<style>
+  .list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 1000px) {
+    .list {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+</style>

@@ -8,7 +8,7 @@ const { dates } = Astro.props;
 
 <p>
   <DateIcon size={20} />
-  {dates[0]} - {dates[1]}
+  {dates.join(" - ")}
 </p>
 
 <style>

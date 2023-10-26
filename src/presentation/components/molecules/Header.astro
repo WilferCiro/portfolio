@@ -4,17 +4,31 @@ import Tooltip from "../atoms/Tooltip.astro";
 import CompassIcon from "../atoms/icons/CompassIcon.astro";
 import HomeIcon from "../atoms/icons/HomeIcon.astro";
 import AboutMeIcon from "../atoms/icons/AboutMeIcon.astro";
-import WorkIcon from "../atoms/icons/WorkIcon.astro";
 import ContactIcon from "../atoms/icons/ContactIcon.astro";
 import MoonIcon from "../atoms/icons/MoonIcon.astro";
+import BackIcon from "../atoms/icons/BackIcon.astro";
 
 const currentPath = Astro.url.pathname;
 ---
 
 <header transition:persist>
   <ul class="menu">
+    {
+      currentPath !== "/" && (
+        <li class="back-button">
+          <Tooltip title="Atrás">
+            <a href="javascript:history.back()" aria-label="Retroceder">
+              <BackIcon />
+            </a>
+          </Tooltip>
+        </li>
+      )
+    }
+
     <li>
-      <Tooltip title="Inicio"><a href="/" aria-label="Ir al inicio de la página"><HomeIcon /></a></Tooltip>
+      <Tooltip title="Inicio"
+        ><a href="/" aria-label="Ir al inicio de la página"><HomeIcon /></a>
+      </Tooltip>
     </li>
     <li>
       <Tooltip title="Sobre mi">
@@ -37,16 +51,6 @@ const currentPath = Astro.url.pathname;
       </Tooltip>
     </li>
     <li>
-      <Tooltip title="Experiencia">
-        <a
-          href="/#experience"
-          class={currentPath === "/experience" ? "active" : ""}
-          aria-label="Ver mi experiencia profesional"
-          ><WorkIcon />
-        </a>
-      </Tooltip>
-    </li>
-    <li>
       <Tooltip title="Contáctame">
         <a
           href="/contact"
@@ -58,11 +62,7 @@ const currentPath = Astro.url.pathname;
     </li>
     <li class="theme-option">
       <Tooltip title="Alternar tema" transition:persist>
-        <div
-          id="button-theme"
-          data-theme-toggle
-          ><MoonIcon />
-        </div>
+        <div id="button-theme" data-theme-toggle><MoonIcon /></div>
       </Tooltip>
     </li>
   </ul>
@@ -101,7 +101,8 @@ const currentPath = Astro.url.pathname;
       var(--shadow) 0px 8px 8px 0px, var(--shadow) 0px 16px 16px 0px,
       var(--shadow) 0px 32px 32px 0px;
   }
-  .menu li a, #button-theme {
+  .menu li a,
+  #button-theme {
     border-radius: 10px;
     background-color: var(--bg-color1);
     display: block;
@@ -111,11 +112,15 @@ const currentPath = Astro.url.pathname;
     border: solid 1px var(--bg-color1);
     cursor: pointer;
   }
-  .menu li a:hover, #button-theme:hover {
+  .menu li a:hover,
+  #button-theme:hover {
     color: var(--bg-color3);
   }
   .theme-option {
     margin-top: 20px;
+  }
+  .back-button {
+    margin-bottom: 20px;
   }
   .active {
     color: var(--primary-color);
@@ -145,6 +150,10 @@ const currentPath = Astro.url.pathname;
     .theme-option {
       margin-top: 0px;
       margin-left: 20px;
+    }
+    .back-button {
+      margin-right: 20px;
+      margin-bottom: 0px;
     }
     .menu {
       flex-direction: row;

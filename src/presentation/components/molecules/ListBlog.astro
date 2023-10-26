@@ -1,0 +1,66 @@
+---
+import DatesArray from "../atoms/DatesArray.astro";
+const posts = await Astro.glob("../../../pages/blog/*{.md,.mdx}");
+const currentPath = Astro.url.pathname;
+---
+
+{
+  posts.map(({ frontmatter, url }) => {
+    return (
+      <a href={url}>
+        <div class={currentPath === url ? "blog-item active" : "blog-item"}>
+          <img
+            src={frontmatter.image}
+            alt={`Imagen de ${frontmatter.title}`}
+            class="image"
+            transition:name={
+              currentPath === url ? "" : `image-${frontmatter.id}`
+            }
+          />
+          <div>
+            <p
+              transition:name={
+                currentPath === url ? "" : `title-${frontmatter.id}`
+              }
+            >
+              {frontmatter.title}
+            </p>
+            <DatesArray dates={[frontmatter.year]} />
+          </div>
+        </div>
+      </a>
+    );
+  })
+}
+
+<style>
+  .active {
+    border: solid 2px var(--primary-color);
+  }
+  .blog-item {
+    width: 90%;
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  p {
+    color: var(--text-color1);
+    font-weight: 500;
+    margin: 6px;
+  }
+  .dates {
+    float: right;
+  }
+  .clear {
+    clear: both;
+  }
+</style>
