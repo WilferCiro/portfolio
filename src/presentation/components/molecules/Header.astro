@@ -12,7 +12,6 @@ const currentPath = Astro.url.pathname;
 
 <header transition:persist>
   <ul class="menu">
-    {currentPath}
     <li>
       <Tooltip title="Inicio"
         ><a href="/" aria-label="Ir al inicio de la página"><HomeIcon /></a>
@@ -110,10 +109,6 @@ const currentPath = Astro.url.pathname;
   .back-button {
     margin-bottom: 20px;
   }
-  .active {
-    color: var(--primary-color);
-    border: solid 1px var(--primary-color);
-  }
   .social-links {
     top: 20px;
     right: 20px;
@@ -126,6 +121,10 @@ const currentPath = Astro.url.pathname;
     box-shadow: var(--shadow) 0px 2px 2px 0px, var(--shadow) 0px 4px 4px 0px,
       var(--shadow) 0px 8px 8px 0px, var(--shadow) 0px 16px 16px 0px,
       var(--shadow) 0px 32px 32px 0px;
+  }
+  .active {
+    color: var(--primary-color);
+    border: solid 1px var(--primary-color);
   }
   @media (max-width: 740px) {
     header {
