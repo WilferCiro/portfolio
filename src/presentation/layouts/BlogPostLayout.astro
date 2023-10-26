@@ -7,7 +7,11 @@ import Layout from "./Layout.astro";
 const { frontmatter } = Astro.props;
 ---
 
-<Layout title={frontmatter.title}>
+<Layout
+  title={frontmatter.title}
+  keywords={frontmatter.keywords}
+  image={frontmatter.title_image}
+>
   <section>
     <TitlePageBlog title={frontmatter.title}>
       <DatesArray dates={[frontmatter.year]} />
