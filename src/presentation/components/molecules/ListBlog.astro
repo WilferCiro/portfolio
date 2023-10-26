@@ -5,7 +5,8 @@ const currentPath = Astro.url.pathname;
 ---
 
 {
-  posts.map(({ frontmatter, url }) => {
+  posts.map(({ frontmatter, url: urlString }) => {
+    const url = urlString + "/";
     return (
       <a href={url}>
         <div class={currentPath === url ? "blog-item active" : "blog-item"}>
@@ -18,8 +19,6 @@ const currentPath = Astro.url.pathname;
             }
           />
           <div>
-            - {currentPath} 
-            - {url}
             <p
               transition:name={
                 currentPath === url ? "" : `title-${frontmatter.id}`

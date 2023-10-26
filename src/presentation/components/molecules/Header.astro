@@ -34,7 +34,7 @@ const currentPath = Astro.url.pathname;
       <Tooltip title="Sobre mi">
         <a
           href="/about"
-          class={currentPath === "/about" ? "active" : ""}
+          class={currentPath === "/about/" ? "active" : ""}
           aria-label="Ir al mi descripción"
           ><AboutMeIcon />
         </a>
@@ -44,7 +44,7 @@ const currentPath = Astro.url.pathname;
       <Tooltip title="Proyectos">
         <a
           href="/projects"
-          class={currentPath === "/projects" ? "active" : ""}
+          class={currentPath === "/projects/" ? "active" : ""}
           aria-label="Ver la página de proyectos"
           ><CompassIcon />
         </a>
@@ -54,7 +54,7 @@ const currentPath = Astro.url.pathname;
       <Tooltip title="Contáctame">
         <a
           href="/contact"
-          class={currentPath === "/contact" ? "active" : ""}
+          class={currentPath === "/contact/" ? "active" : ""}
           aria-label="Ir a la página de contacto"
           ><ContactIcon />
         </a>
