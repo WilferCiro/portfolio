@@ -6,25 +6,13 @@ import HomeIcon from "../atoms/icons/HomeIcon.astro";
 import AboutMeIcon from "../atoms/icons/AboutMeIcon.astro";
 import ContactIcon from "../atoms/icons/ContactIcon.astro";
 import MoonIcon from "../atoms/icons/MoonIcon.astro";
-import BackIcon from "../atoms/icons/BackIcon.astro";
 
 const currentPath = Astro.url.pathname;
 ---
 
 <header transition:persist>
   <ul class="menu">
-    {
-      currentPath !== "/" && (
-        <li class="back-button">
-          <Tooltip title="Atrás">
-            <a href="javascript:history.back()" aria-label="Retroceder">
-              <BackIcon />
-            </a>
-          </Tooltip>
-        </li>
-      )
-    }
-
+    {currentPath}
     <li>
       <Tooltip title="Inicio"
         ><a href="/" aria-label="Ir al inicio de la página"><HomeIcon /></a>
