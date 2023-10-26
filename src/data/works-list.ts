@@ -11,7 +11,7 @@ const worksLists: WorkSchema[] = [
     link: "https://www.option.tech/",
     description: "",
     images: ["option.webp"],
-    projects: [allProjects.AIEPWeb3, allProjects.codelco],
+    projects: [/*allProjects.AIEPWeb3,*/ allProjects.codelco],
     stack: [
       StackList.NestJS,
       StackList.Express,
