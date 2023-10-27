@@ -20,7 +20,8 @@ html[data-theme="light"] {
   --bg-color1: rgb(240, 240, 240);
   --bg-color2: rgb(200, 200, 200);
   --bg-color2-opacity: rgba(200, 200, 200, 0.7);
-  --shadow: rgba(150, 150, 150, 0.10);
+  --bg-color1-opacity: rgb(240, 240, 240, 0.7);
+  --shadow: rgba(150, 150, 150, 0.1);
 
   --text-color1: rgb(20, 20, 20);
   --text-color2: rgb(40, 40, 40);
@@ -33,6 +34,7 @@ html[data-theme="dark"] {
   --bg-color1: rgb(13, 13, 13);
   --bg-color2: rgb(30, 30, 30);
   --bg-color2-opacity: rgb(30, 30, 30, 0.7);
+  --bg-color1-opacity: rgb(13, 13, 13, 0.7);
   --shadow: rgba(0, 0, 0, 0.25);
 
   --text-color1: rgb(230, 230, 230);

@@ -10,7 +10,7 @@ title_image: /images/blogs/face-recognition/title-image.png
 id: face_login_python
 ---
 
-En este artículo, se detallará el proceso para crear un sistema de inicio de sesión utilizando Python y reconocimiento facial en entornos web. Se hará uso de librerías básicas sin profundizar demasiado en el ámbito de la inteligencia artificial, ya que este tema se reservará para un artículo futuro.
+En este artículo, se explicará el procedimiento para desarrollar un sistema de inicio de sesión en entornos web mediante Python y reconocimiento facial. Se emplearán librerías básicas sin adentrarse profundamente en el campo de la inteligencia artificial, ya que este tema será abordado en un artículo futuro.
 
 ## Enlaces
 
@@ -52,9 +52,8 @@ cd frontend
 touch index.html style.css main.js
 ```
 
-**index.html**
-
 ```html
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -82,9 +81,8 @@ touch index.html style.css main.js
 </html>
 ```
 
-**main.js**
-
 ```javascript
+// main.js
 const video = document.getElementById("video");
 const canvas = document.getElementById("canvas");
 const capturedImage = document.getElementById("capturedImage");
@@ -137,9 +135,11 @@ captureBtn.addEventListener("click", function () {
 });
 ```
 
+El código mencionado anteriormente se encarga de capturar el evento de clic del botón. Al hacerlo, toma una imagen desde la cámara web y la envía al servidor mediante una solicitud HTTP. Los datos se transmiten en forma de formulario multipart, ya que se trata de un archivo multimedia.
+
 ### Backend
 
-Vamos a crear un proyecto en html y javascript vanilla para este ejemplo
+Ahora creamos lo necesario para nuestro backend con flask
 
 ```sh
 cd backend
@@ -147,9 +147,8 @@ touch index.py service.py
 mkdir models
 ```
 
-**index.py**
-
 ```python
+# index.py
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import service
@@ -168,9 +167,10 @@ def login():
     return jsonify({'error': 'La cara no coincide con ninguna persona conocida'})
 ```
 
-**service.py**
+En el código previo, se establece un servidor Flask junto con un punto final (endpoint) que recibe la imagen y luego invoca el servicio para su comparación posterior.
 
 ```python
+# service.py
 import face_recognition
 import os
 
@@ -206,7 +206,9 @@ def login(image_file):
     return found_id
 ```
 
-Ejecutamos el proyecto
+En este fragmento de código, se compara la imagen recibida como parámetro con las fotografías almacenadas actualmente en la carpeta "models/". Si se encuentran coincidencias, se devuelve el nombre del archivo correspondiente.
+
+Finalmente, ejecutamos el proyecto
 
 ```sh
 flask --app index run
@@ -214,7 +216,7 @@ flask --app index run
 
 Ahora debe estar disponible en el puerto 5000 así: `http://localhost:5000`
 
-Lo único que faltaría ahora es agregar las imágenes de muestra a la carpeta models/, allí vamos a agregar diferentes imágenes de diferentes personas con el formato: ID-NOMBRE.png, ahora abrimos nuestro archivo html, permitimos el acceso a la cámara y listo! todo debe funcionar correctamente.
+Lo único que resta por hacer es agregar las imágenes de muestra a la carpeta "models/". En esa carpeta, se deben incluir diversas imágenes de diferentes personas con el formato: ID-NOMBRE.png. Posteriormente, abrimos nuestro archivo HTML, permitimos el acceso a la cámara y ¡listo! Todo debería funcionar correctamente.
 
 ## ¿Qué sigue?
 

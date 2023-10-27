@@ -24,7 +24,7 @@ const data = Astro.props;
         <Divider size="15px" />
         <DatesArray dates={data.dates} />
       </div>
-      <div>
+      <div class="arrow">
         <Tooltip title="Ver más">
           <RightArrow />
         </Tooltip>
@@ -69,6 +69,9 @@ const data = Astro.props;
   }
   .company {
     color: var(--text-color2);
+  }
+  .arrow {
+    color: var(--text-color3);
   }
   @media (max-width: 740px) {
     .image {

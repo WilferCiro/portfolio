@@ -1,0 +1,85 @@
+<div class="container">
+  <div class="circle circle1"></div>
+  <div class="circle circle2"></div>
+  <div class="circle circle3"></div>
+  <div class="circle circle4"></div>
+  <div class="circle circle5"></div>
+  <div class="wave">
+    <svg
+      viewBox="0 0 500 150"
+      preserveAspectRatio="none"
+      style="height: 100%; width: 100%;"
+      ><path
+        d="M-0.84,92.28 C123.87,90.30 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+        style="stroke: none; fill: #1f6cab;"></path>
+    </svg>
+  </div>
+</div>
+
+<style>
+  .wave {
+    height: 100px;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    bottom: 0px;
+    opacity: 0.4;
+    filter: blur(20px);
+  }
+  .circle {
+    position: absolute;
+    border-radius: 30% 70% 67% 33% / 40% 40% 60% 60% ;
+    background-color: var(--primary-color);
+    filter: blur(50px);
+    opacity: 0.4;
+  }
+  .circle1 {
+    top: -20px;
+    left: -30px;
+    width: 350px;
+    height: 350px;
+  }
+  .circle2 {
+    top: -150px;
+    right: 10px;
+    width: 500px;
+    height: 500px;
+  }
+  .circle3 {
+    top: 350px;
+    left: 360px;
+    width: 200px;
+    height: 200px;
+  }
+  .circle4 {
+    top: 200px;
+    left: 550px;
+    width: 100px;
+    height: 100px;
+    filter: blur(40px);
+  }
+  .circle5 {
+    top: 10px;
+    left: 500px;
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    border-radius: 30px;
+  }
+
+  @media (max-width: 740px) {
+    .circle {
+      max-width: 100%;
+    }
+    .circle2,
+    .circle3,
+    .circle4 {
+      display: none;
+    }
+    .circle5 {
+        left: 0px;
+        top: 400px;
+    }
+  }
+</style>

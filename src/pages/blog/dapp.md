@@ -64,6 +64,7 @@ INFURA_TOKEN= # Poner el token extraido de infura
 Abrimos nuestro proyecto y eliminamos los archivos contenidos en contracts/, creamos uno nuevo llamado dAppContract.sol
 
 ```solidity
+// dAppContract.sol
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
@@ -104,7 +105,7 @@ contract dAppContract is ERC721URIStorage {
     // ** ** //
 
     // ** mint function ** //
-    function dafeMint(address account, string memory tokenURI) public {
+    function safeMint(address account, string memory tokenURI) public {
         require(verifyOwner(msg.sender), "El remitente no esta autorizado");
         _tokenId = _tokenId + 1;
         _safeMint(account, _tokenId);
@@ -114,9 +115,12 @@ contract dAppContract is ERC721URIStorage {
 }
 ```
 
+El contrato generado posibilita la creación de tokens mediante la función safeMint. Para ello, se debe proporcionar un tokenURI, que debería ser un archivo en IPFS en la red descentralizada, junto con una dirección de billetera a la cual asignar dicho token. Es importante destacar que ningún tokenId de este contrato tendrá el mismo valor, dado que este valor se incrementa automáticamente. Como medida de seguridad, solo los propietarios del contrato tienen la capacidad de generar estos tokens, y sus direcciones están almacenadas en un arreglo de memoria llamado "_owners".
+
 Luego nos vamos al archivo migrations/1_deploy_contracts.js y lo reemplazamos con el siguiente contenido:
 
 ```javascript
+// 1_deploy_contracts.js
 const path = require("path");
 const fs = require("fs");
 
@@ -133,9 +137,10 @@ module.exports = function (deployer) {
 };
 ```
 
-Finalmente modificamos el archivo truffle-config.js quedando así:
+Finalmente modificamos el archivo truffle-config.js, en donde enlazaremos la red sepolia de este ejemplo (en entornos productivos, esta red debería ser la mainnet), quedando así:
 
 ```javascript
+// truffle-config.js
 require("dotenv").config();
 const { MNEMONIC, INFURA_TOKEN } = process.env;
 
@@ -194,7 +199,7 @@ Si todo salió bien debes tener un resultado como el siguiente:
    > Total cost:     0.005721915016021362 ETH
 ```
 
-donde la dirección del smart contract es: `0xc59b7A1FD55DD22211595f39d5781f9E907F9B66`
+donde la dirección del smart contract es: `0xc59b7A1FD55DD22211595f39d5781f9E907F9B66`, además, se ha generado un archivo abi.json que contiene la estructura del smart contract que usaremos con web3.js más adelante.
 
 ## Creación de aplicación React para usar el smart contract
 
@@ -333,6 +338,8 @@ export const safeMint = async ({
   return response as ReturnSchema;
 };
 ```
+
+Los fragmentos de código anteriores permiten, mediante un clic en un botón, verificar la activación de la billetera en el navegador, inicializar el contrato inteligente con web3.js y llamar al método creado en nuestro contrato inteligente para generar los tokens.
 
 ¡Listo! ya podemos generar nuestros NFT a través de la aplicación con React, recuerda recargar tu wallet con ethereums, aquí tienes una opción: [Sepolia faucet](https://sepoliafaucet.com/)
 
