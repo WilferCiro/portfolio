@@ -7,11 +7,14 @@ const currentPath = Astro.url.pathname;
 {
   posts.map(({ frontmatter, url: urlString }) => {
     const url = urlString + "/";
+    const image = frontmatter.image;
+    const imageError = image.replace("webp", "jpg");
     return (
       <a href={url}>
         <div class={currentPath === url ? "blog-item active" : "blog-item"}>
           <img
-            src={frontmatter.image}
+            src={image}
+            onerror={`this.src='${imageError}'`}
             alt={`Imagen de ${frontmatter.title}`}
             class="image"
             transition:name={

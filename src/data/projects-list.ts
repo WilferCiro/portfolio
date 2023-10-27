@@ -68,7 +68,7 @@ const allProjects: ProjectsSchema = {
     dates: ["Julio 2021", "Agosto 2022"],
     description:
       "Backoffice principal de Negozia CF, permite la configuración de todo el core de crédito, además de generar informes útiles para el equipo de soporte y ventas.",
-    images: ["image1.png", "image2.png", "image3.png"],
+    images: ["image1.webp", "image2.webp", "image3.webp"],
     stack: [
       StackList.Express,
       StackList.ReactJS,
