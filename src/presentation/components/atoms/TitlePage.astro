@@ -7,7 +7,7 @@ interface Props {
 const data = Astro.props;
 ---
 
-<p class="bg-text">.::..::.▾...:::..</p>
+<div class="bg-text"></div>
 <div class="container" transition:name={data.transition_name || ""}>
   <div class="title-container">
     <div class="line"></div>
@@ -37,12 +37,15 @@ const data = Astro.props;
     margin: 0px;
   }
   .bg-text {
-    opacity: 0.2;
-    font-size: 70px;
-    letter-spacing: 6px;
+    opacity: 0.8;
     position: absolute;
-    margin-top: -20px;
-    color: var(--primary-color);
+    margin-top: -30px;
+    margin-left: 20px;
+    filter: blur(20px);
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    background-color: var(--secondary-color);
   }
   @media (max-width: 740px) {
     h2 {

@@ -10,12 +10,7 @@ interface Props extends WorkSchema {}
 const data = Astro.props;
 ---
 
-<a
-  href={`/work/${data.id}`}
-  rel="referrer"
-  class="link"
-  aria-label={`Ir a la descripción de ${data.name}`}
->
+<a href={`/work/${data.id}`} rel="referrer" class="link">
   <div class="card">
     <img
       src={"/images/works/" + data.images[0]}
