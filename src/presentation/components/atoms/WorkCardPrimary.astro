@@ -17,6 +17,8 @@ const data = Astro.props;
       alt="Foto de empresa"
       transition:name={`work-${data.name}`}
       class="image"
+      width="350px"
+      height="350px"
     />
     <div class="description">
       <div>
@@ -50,6 +52,9 @@ const data = Astro.props;
   .image {
     max-width: 350px;
     width: 90%;
+    max-height: 350px;
+    height: auto;
+    aspect-ratio: 1;
     display: block;
     border-radius: 16px;
   }
@@ -77,6 +82,9 @@ const data = Astro.props;
     }
     p {
       font-size: 15px;
+    }
+    .image {
+      width: 100%;
     }
   }
 </style>
