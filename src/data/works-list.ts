@@ -10,7 +10,7 @@ const worksLists: WorkSchema[] = [
     position: "Desarrollador Fullstack",
     link: "https://www.option.tech/",
     description: "",
-    images: ["option.webp"],
+    images: ["option.jpg"],
     projects: [/*allProjects.AIEPWeb3,*/ allProjects.codelco],
     stack: [
       StackList.NestJS,
@@ -42,7 +42,7 @@ const worksLists: WorkSchema[] = [
     position: "Tutor de programación Fullstack",
     dates: ["Mayo 2022", "Diciembre 2022"],
     description: "",
-    images: ["udea.webp"],
+    images: ["udea.jpg"],
     projects: [],
     stack: [
       StackList.Python,
@@ -78,7 +78,7 @@ const worksLists: WorkSchema[] = [
     position: "Desarrollador Fullstack",
     dates: ["Julio 2021", "Agosto 2022"],
     description: "",
-    images: ["negozia.webp"],
+    images: ["negozia.jpg"],
     projects: [
       allProjects.boNegozia,
       allProjects.dashboardNegozia,
@@ -118,7 +118,7 @@ const worksLists: WorkSchema[] = [
     position: "Desarrollador Fullstack",
     dates: ["Mayo 2020", "Julio 2021"],
     description: "",
-    images: ["jaivana.webp"],
+    images: ["jaivana.jpg"],
     projects: [allProjects.laferre],
     stack: [
       StackList.ReactJS,
@@ -151,7 +151,7 @@ const worksLists: WorkSchema[] = [
     position: "Desarrollador Fullstack",
     dates: ["2015", "Presente"],
     description: "",
-    images: ["freelance.webp"],
+    images: ["freelance.jpg"],
     projects: [
       allProjects.bdTgrado,
       allProjects.kiwipeluditos,

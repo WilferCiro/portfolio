@@ -8,12 +8,13 @@ import RightArrow from "./icons/RightArrow.astro";
 interface Props extends WorkSchema {}
 
 const data = Astro.props;
+const image = data.images[0].replace(".jpg", "-250.jpg");
 ---
 
 <a href={`/work/${data.id}`} rel="referrer" class="link">
   <div class="card">
     <img
-      src={"/images/works/" + data.images[0]}
+      src={"/images/works/" + image}
       alt="Foto de empresa"
       transition:name={`work-${data.name}`}
       class="image"

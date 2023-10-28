@@ -27,7 +27,7 @@ if (!id || typeof id === "undefined" || !work) {
 const posts = await Astro.glob("../../data/description_works/*.md");
 const currentPost = posts.find(({ file }) => file?.includes(`${work.id}.md`));
 
-const imgError = work?.images[0].replace("webp", "jpg");
+const image = work?.images[0].replace(".jpg", "-250.jpg");
 ---
 
 <Layout title={`Experiencia en ${work?.name}`}>
@@ -41,11 +41,10 @@ const imgError = work?.images[0].replace("webp", "jpg");
       </h3>
       <Divider />
       <img
-        src={"/images/works/" + work?.images[0]}
+        src={"/images/works/" + image}
         alt="Foto de empresa"
         transition:name={`work-${work?.name}`}
         class="image"
-        onerror={`this.src='/images/works/${imgError}'`}
       />
       {currentPost && <currentPost.Content />}
       <StackList stack={work.stack} />
