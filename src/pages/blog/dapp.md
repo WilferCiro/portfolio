@@ -6,7 +6,7 @@ year: "Octubre 2023"
 keywords: Ethereum, blockchain, NFT, nextjs, dapp, bitcoin, web3.
 description: Aprende los principios y pasos para crear una dApp (aplicación descentralizada).
 image: /images/blogs/dapp/image1.jpg
-title_image: /images/blogs/dapp/title-image.png
+title_image: /images/blogs/dapp/title-image.jpg
 id: dapp
 ---
 
