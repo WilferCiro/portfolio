@@ -1,6 +1,6 @@
 ---
 layout: ../../presentation/layouts/BlogPostLayout.astro
-title: Creación de microprocesador Mips en verilog
+title: Microprocesador Mips en verilog
 author: Wilfer Daniel Ciro Maya
 year: "Octubre 2023"
 keywords: Microprocesador, mips, verilog, fpga, sistemas digitales, diseño, arquitectura, hdl
@@ -10,7 +10,7 @@ title_image: /images/blogs/mips/title-image.jpg
 id: mips
 ---
 
-En este blog crearemos una microprocesador mips de 32 bits con pipeline utilizando HDL verilog, como referencia bibliográfica se utilizará el libro "Digital design and computer architecture" de *David Money Harris* y *Sarah L. Harris*.
+En este blog crearemos una microprocesador mips de 32 bits con pipeline utilizando HDL verilog, como referencia bibliográfica se utilizará el libro "Digital design and computer architecture" de *David Money Harris* y *Sarah L. Harris*. Este microprocesador puede ser implementado en una [FPGA](https://es.wikipedia.org/wiki/Matriz_de_puerta_programable_en_campo), utilizando programas especializado para ello como lo son [vivado](https://www.xilinx.com/support/download.html) o [quartus](https://www.intel.la/content/www/xl/es/products/details/fpga/development-tools/quartus-prime/resource.html)
 
 ![Arquitectura del microprocesador](/images/blogs/mips/image2.jpg)
 
@@ -64,7 +64,7 @@ Este componente es una memoria ROM que tiene almacenadas las instrucciones que e
 
 #### Program counter (PC)
 
-Este componente se encarga de seguir el índice de la instrucción actual, se actualiza dependiendo de la instrucción presente en la memoria ROM, por ejemplo: el valor del PC actual es 10, si existe una instrucción de JUMP -7, este PC a través de la ALU actualiza su valor a 3, si es una instrucció normal, se actualiza en 1. ([Ver código](https://github.com/WilferCiro/blog-mips32bits/blob/main/modules/program_counter.v))
+Este componente se encarga de seguir el índice de la instrucción actual, se actualiza dependiendo de la instrucción presente en la memoria ROM, por ejemplo: el valor del PC actual es 10, si existe una instrucción de JUMP -7, este PC a través de la ALU actualiza su valor a 3, mientras que si es una instrucción normal, se actualiza en +1. ([Ver código](https://github.com/WilferCiro/blog-mips32bits/blob/main/modules/program_counter.v))
 
 #### Ports
 
@@ -104,4 +104,6 @@ En el ejemplo del repositorio, el código de la memoria ROM ejecuta una serie de
 
 ### ¿Qué sigue?
 
-Descarga el repositorio, instala vivado o quartus, genera un proyecto con el código descargado, asigna los puertos físicos de la FPGA a los puertos del componente ports, realiza el RTL, la síntesis, la implementación, el bitstream y cárgalo en tu FPGA. También puedes utilizar los archivos tb_*.v para realizar simulaciones de los componentes individualmente.
+Descarga el repositorio, instala vivado o quartus, genera un proyecto con el código descargado, asigna los puertos físicos de la FPGA a los puertos del componente `ports`, realiza el RTL, la síntesis, la implementación, el bitstream y cárgalo en tu FPGA. También puedes utilizar los archivos tb_*.v para realizar simulaciones de los componentes individualmente.
+
+Como alternativas de software libre para la simulación, puedes utilizar [GTKwave](https://gtkwave.sourceforge.net/) e [icarus verilog](https://bleyer.org/icarus/).
