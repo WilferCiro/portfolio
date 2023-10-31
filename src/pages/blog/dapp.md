@@ -349,7 +349,7 @@ Al presionar el botón del código, debería solicitarte a través de la extensi
 
 Finalmente en etherscan debería verse así:
 
-![Solicitud de Metamask](/images/blogs/dapp/image3.png)
+![Solicitud de Metamask](/images/blogs/dapp/image1.jpg)
 
 ## ¿Qué sigue?
 
