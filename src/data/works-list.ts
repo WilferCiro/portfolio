@@ -138,14 +138,16 @@ const worksLists: WorkSchema[] = [
       StackList.Java,
     ],
     reviews: [
-      /*{
-        who: "Wilfer Daniel Ciro Maya",
-        date: "2022",
-        relationship: "Reclutadora en Option",
-        description:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam numquamoptio doloremque iste, impedit assumenda fugiat eius nullaexercitationem delectus aut, quibusdam qui. Iste voluptatum neque nobis,        ducimus laboriosam quasi.",
-      },
       {
+        who: "Cristian Ferney Ciro Maya",
+        relationship: "Fullstack Developer",
+        photo: "/images/reviews/cristian.jpg",
+        linkedIn:
+          "https://www.linkedin.com/in/cristian-ferney-ciro-maya-9b8b2126a/",
+        description:
+          "Wilfer como fullstack developer en Jaivaná tuvo un desempeño ejemplar. Es responsable, amable y siempre está abierto a aprender. Su enfoque proactivo en los proyectos no solo mejoró la eficiencia, sino que también elevó el espíritu del equipo. Su actitud positiva y habilidades técnicas hicieron de él un colega invaluable en nuestro equipo de desarrollo.",
+      },
+      /*{
         who: "Wilfer Daniel Ciro Maya",
         date: "2022",
         relationship: "Reclutadora en Option",
