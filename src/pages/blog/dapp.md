@@ -31,7 +31,7 @@ En este blog mostraré el paso a paso para crear una aplicación descentralizada
 
 En este paso vamos a crear diversas cuentas gratuitas con diversos proveedores que nos harán el trabajo más fácil
 
-1. [Infura](infura.io/): creamos una cuenta y extraemos nuestro token para la red Sepolia
+1. [Infura](https://infura.io/): creamos una cuenta y extraemos nuestro token para la red Sepolia
 2. [Metamask](https://metamask.io/): creamos nuestra cuenta y guardamos el MNEMONIC (12 palabras claves cuando se crea la cuenta)
 
 ## Creación del smart contract
@@ -167,7 +167,7 @@ module.exports = {
 };
 ```
 
-Ahora solo queda compilar y subir el contrato a la red sepolia:
+Ahora solo queda compilar y subir el contrato a la red sepolia (Recuerda primero obtener algunos sepolia eth faucet, [aquí puedes conseguir algunos](https://sepoliafaucet.com/)):
 
 ```sh
 truffle compile
@@ -207,7 +207,12 @@ donde la dirección del smart contract es: `0xc59b7A1FD55DD22211595f39d5781f9E90
 npm create vite@latest dApp -- --template react-ts
 cd dApp
 npm install web3@1.8.2
+```
 
+Creamos nuestro archivo .env en la raíz del proyecto:
+
+```sh
+VITE_ADDRES_SMART_CONTRACT= # Dirección del smart contract
 ```
 
 Copia el contenido del archivo abi.json creado en el smart-contract al proyecto react en el archivo: `src/constants/ABI.ts`

@@ -27,7 +27,9 @@ const currentPath = Astro.url.pathname;
             >
               {frontmatter.title}
             </p>
-            <DatesArray dates={[frontmatter.year]} />
+            <footer class="dates">
+              <DatesArray dates={[frontmatter.year]} />
+            </footer>
           </div>
         </div>
       </a>
@@ -60,7 +62,8 @@ const currentPath = Astro.url.pathname;
     margin: 6px;
   }
   .dates {
-    float: right;
+    padding-left: 10px;
+    color: var(--text-color3);
   }
   .clear {
     clear: both;

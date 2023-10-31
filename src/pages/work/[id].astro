@@ -37,7 +37,7 @@ const image = work?.images[0].replace(".jpg", "-250.jpg");
         ><DatesArray dates={work.dates} />
       </TitlePage>
       <h3 transition:name={`work-profession-${work?.name}`}>
-        Fullstack developer
+        {work.position}
       </h3>
       <Divider />
       <img

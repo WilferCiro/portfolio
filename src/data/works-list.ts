@@ -11,7 +11,7 @@ const worksLists: WorkSchema[] = [
     link: "https://www.option.tech/",
     description: "",
     images: ["option.jpg"],
-    projects: [/*allProjects.AIEPWeb3,*/ allProjects.codelco],
+    projects: [allProjects.AIEPWeb3, allProjects.codelco],
     stack: [
       StackList.NestJS,
       StackList.Express,
@@ -55,6 +55,15 @@ const worksLists: WorkSchema[] = [
       StackList.Flutter,
     ],
     reviews: [
+      {
+        description:
+          "Wilfer es un tutor con grandes capacidades de enseñanza, abierto a compartir su conocimiento, su experiencia en el campo de la tecnología lo hace sentir como un experto cuando explica algún tema, me inspiró a seguir el camino del desarrollo.",
+        relationship: "Developer",
+        who: "Jenny Cabrejo",
+        photo: "/images/reviews/jenny.jpg",
+        linkedIn:
+          "https://www.linkedin.com/in/jenny-caterin-cabrejo-marin-203967b6/",
+      },
       /*{
         who: "Wilfer Daniel Ciro Maya",
         date: "2022",

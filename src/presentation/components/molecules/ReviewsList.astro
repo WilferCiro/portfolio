@@ -1,6 +1,8 @@
 ---
 import type { ReviewSchema } from "../../../domain/schemas/WorkSchema";
 import QuoteIcon from "../atoms/icons/QuoteIcon.astro";
+import ExternalLinkIcon from "../atoms/icons/ExternalLinkIcon.astro";
+import Tooltip from "../atoms/Tooltip.astro";
 interface Props {
   reviews: ReviewSchema[];
 }
@@ -18,9 +20,12 @@ const { reviews } = Astro.props;
             <QuoteIcon />
           </p>
           <p class="description">{review.description}</p>
-          <p class="who">
-            {review.who} - {review.relationship}
-          </p>
+          <a href={review.linkedIn} target="_blank" title="Ver en linkedIn">
+            <div class="who">
+              {review.who} - {review.relationship}
+              <ExternalLinkIcon />
+            </div>
+          </a>
         </div>
       );
     })
@@ -38,6 +43,9 @@ const { reviews } = Astro.props;
     background-color: var(--secondary-color);
     color: white;
     border-radius: 20px;
+  }
+  .container a {
+    color: white;
   }
 
   .quote-icon {
@@ -72,6 +80,10 @@ const { reviews } = Astro.props;
   }
   .who {
     text-align: right;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: flex-end;
   }
   @media (min-width: 740px) and (max-width: 1000px) {
     .description {
@@ -108,7 +120,7 @@ const { reviews } = Astro.props;
       width: 100%;
       padding: 0;
     }
-    .description{
+    .description {
       padding: 0;
     }
   }

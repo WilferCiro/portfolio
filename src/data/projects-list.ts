@@ -78,7 +78,7 @@ const allProjects: ProjectsSchema = {
       StackList.AWS,
     ],
   },
-  /*AIEPWeb3: {
+  AIEPWeb3: {
     id: "AIEPWeb3",
     name: "Certificados web3",
     owner: "AIEP chile",
@@ -96,7 +96,7 @@ const allProjects: ProjectsSchema = {
       StackList.Ethereum,
       StackList.Azure,
     ],
-  },*/
+  },
   ddd: {
     name: "Backends con arquitectura DDD",
     id: "ddd",
