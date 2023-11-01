@@ -1,14 +1,18 @@
 ---
+import { getLangFromUrl, useTranslations } from "../../../data/i18n/utils";
 import SocialLinks from "../atoms/SocialLinks.astro";
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <footer>
   <div class="credits">
     <div>2023</div>
-    <div>Creado por <b>Wilfer Daniel Ciro Maya</b></div>
+    <div>{t("footer.created_by")}{" "}<b>Wilfer Daniel Ciro Maya</b></div>
     <div>
       <a href="https://github.com/WilferCiro/portfolio" target="_blank"
-        >Ver código fuente de este portafolio</a>
+        >{t("footer.see_code")}
+      </a>
     </div>
   </div>
   <div>

@@ -5,12 +5,21 @@ export interface IndividualProjectSchema {
   id: string;
   owner: string;
   dates: string[];
-  description: string;
   images: string[];
   stack: StackSchema[];
-  complete?: string;
+  description: {
+    en: string;
+    es: string;
+  };
+  complete?: {
+    en: string;
+    es: string;
+  };
   links?: {
-    title: string;
+    title: {
+      en: string;
+      es: string;
+    };
     href: string;
   }[];
 }

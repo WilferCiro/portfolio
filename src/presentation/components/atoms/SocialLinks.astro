@@ -5,6 +5,10 @@ import EmailIcon from "./icons/EmailIcon.astro";
 import GitlabIcon from "./icons/GitlabIcon.astro";
 import MediumLogoIcon from "./icons/MediumLogoIcon.astro";
 import Tooltip from "./Tooltip.astro";
+import { getLangFromUrl, useTranslations } from "../../../data/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <ul>
@@ -17,22 +21,35 @@ import Tooltip from "./Tooltip.astro";
     </a>
   </li>
   <li>
-    <a href="https://github.com/WilferCiro" target="_blank" title="Ir a Github"
+    <a
+      href="https://github.com/WilferCiro"
+      target="_blank"
+      title={`${t("social.go_to")} Github`}
       ><Tooltip title="Github"><GithubIcon /></Tooltip>
     </a>
   </li>
   <li>
-    <a href="https://gitlab.com/WilferCiro/" target="_blank" title="Ir a gitlab"
+    <a
+      href="https://gitlab.com/WilferCiro/"
+      target="_blank"
+      title={`${t("social.go_to")} gitlab`}
       ><Tooltip title="Gitlab"><GitlabIcon /></Tooltip>
     </a>
   </li>
   <li>
-    <a href="mailto:wilcirom@gmail.com" target="_blank" title="Enviar un Email"
+    <a
+      href="mailto:wilcirom@gmail.com"
+      target="_blank"
+      title={t("social.send_mail")}
       ><Tooltip title="Email"><EmailIcon /></Tooltip>
     </a>
   </li>
   <li>
-    <a href="https://medium.com/@wilcirom" target="_blank" title="Ir a Medium">
+    <a
+      href="https://medium.com/@wilcirom"
+      target="_blank"
+      title={`${t("social.go_to")} Medium`}
+    >
       <Tooltip title="Medium"><MediumLogoIcon /></Tooltip>
     </a>
   </li>
@@ -54,7 +71,7 @@ import Tooltip from "./Tooltip.astro";
     color: var(--text-color2);
     display: block;
   }
-  ulli a: hover {
+  ullia: hover {
     color: var(--text-color3);
   }
 </style>

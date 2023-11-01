@@ -2,7 +2,10 @@
 import type { ReviewSchema } from "../../../domain/schemas/WorkSchema";
 import QuoteIcon from "../atoms/icons/QuoteIcon.astro";
 import ExternalLinkIcon from "../atoms/icons/ExternalLinkIcon.astro";
-import Tooltip from "../atoms/Tooltip.astro";
+
+import { getLangFromUrl, useTranslations } from "../../../data/i18n/utils";
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 interface Props {
   reviews: ReviewSchema[];
 }
@@ -20,7 +23,11 @@ const { reviews } = Astro.props;
             <QuoteIcon />
           </p>
           <p class="description">{review.description}</p>
-          <a href={review.linkedIn} target="_blank" title="Ver en linkedIn">
+          <a
+            href={review.linkedIn}
+            target="_blank"
+            title={`${t("social.go_to")} linkedIn`}
+          >
             <div class="who">
               {review.who} - {review.relationship}
               <ExternalLinkIcon />

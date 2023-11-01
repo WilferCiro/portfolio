@@ -1,0 +1,47 @@
+---
+import { getLangFromUrl, useTranslations } from "../../data/i18n/utils";
+import allProjects from "../../data/projects-list";
+import Divider from "../../presentation/components/atoms/Divider.astro";
+import TitlePage from "../../presentation/components/atoms/TitlePage.astro";
+import ProjectsList from "../../presentation/components/molecules/ProjectsList.astro";
+import Layout from "../../presentation/layouts/Layout.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const projects = Object.keys(allProjects).map((key: string) => ({
+  ...allProjects[key],
+  key,
+}));
+---
+
+<Layout title={t("projects.my_projects")}>
+  <section>
+    <TitlePage title={t("projects.my_projects")} />
+    <Divider />
+    <p>
+      {t("projects.discover")}
+    </p>
+    <ProjectsList projects={projects} />
+  </section>
+</Layout>
+
+<style>
+  .container {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  section {
+    width: 70%;
+    margin: auto;
+    padding-top: 70px;
+    min-height: 100vh;
+  }
+
+  @media (max-width: 740px) {
+    section {
+      width: 90%;
+    }
+  }
+</style>

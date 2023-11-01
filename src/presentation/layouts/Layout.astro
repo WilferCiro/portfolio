@@ -1,10 +1,11 @@
 ---
 import { ViewTransitions } from "astro:transitions";
 import Header from "../components/molecules/Header.astro";
-import "../media/styles/main.css";
 import Footer from "../components/molecules/Footer.astro";
 import JsonLD from "../components/atoms/JsonLD.astro";
 import { getLangFromUrl } from "../../data/i18n/utils";
+import { layoutData } from "../../data/layout-data";
+import "../media/styles/main.css";
 
 const lang = getLangFromUrl(Astro.url);
 
@@ -15,15 +16,13 @@ interface Props {
   description?: string;
 }
 
+const layoutD = layoutData[lang];
+
 const { title } = Astro.props;
 const image =
   "https://wilciro.vercel.app" + (Astro.props.image || "/image-meta.png");
-const description =
-  Astro.props.description ||
-  "Soy un apasionado desarrollador fullstack con experiencia en tecnologías web modernas. Me encanta crear aplicaciones web innovadoras y soluciones tecnológicas para problemas complejos";
-const keywords =
-  Astro.props.keywords ||
-  "Wilfer Daniel Ciro Maya, developer, desarrollador fullstack, portfolio, portafolio";
+const description = Astro.props.description || layoutD.description;
+const keywords = Astro.props.keywords || layoutD.keywords;
 ---
 
 <!DOCTYPE html>

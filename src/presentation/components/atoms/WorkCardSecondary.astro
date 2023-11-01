@@ -1,22 +1,31 @@
 ---
+import {
+  getLangFromUrl,
+  useTranslatedPath,
+  useTranslations,
+} from "../../../data/i18n/utils";
 import type { WorkSchema } from "../../../domain/schemas/WorkSchema";
-import ButtonArrow from "./ButtonArrow.astro";
 import DatesArray from "./DatesArray.astro";
 import Divider from "./Divider.astro";
 import Tooltip from "./Tooltip.astro";
 import RightArrow from "./icons/RightArrow.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
+
 interface Props extends WorkSchema {}
 const data = Astro.props;
 
 const image = data.images[0].replace(".jpg", "-100.jpg");
 ---
 
-<a href={`/work/${data.id}`} rel="referrer" class="link">
+<a href={translatePath(`/work/${data.id}`)} rel="referrer" class="link">
   <div class="card">
     <img
       class="image"
       src={"/images/works/" + image}
-      alt="Foto de empresa"
+      alt={t("work_card.photo_of")}
       transition:name={`work-${data.name}`}
     />
     <div class="body">
@@ -27,7 +36,7 @@ const image = data.images[0].replace(".jpg", "-100.jpg");
         <DatesArray dates={data.dates} />
       </div>
       <div class="arrow">
-        <Tooltip title="Ver más">
+        <Tooltip title={t("generic.see_more")}>
           <RightArrow />
         </Tooltip>
       </div>

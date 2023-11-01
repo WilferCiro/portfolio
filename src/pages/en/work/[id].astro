@@ -1,14 +1,14 @@
 ---
-import worksLists from "../../data/works-list";
-import Layout from "../../presentation/layouts/Layout.astro";
-import StackList from "../../presentation/components/molecules/StackList.astro";
-import ButtonArrow from "../../presentation/components/atoms/ButtonArrow.astro";
-import ReviewsList from "../../presentation/components/molecules/ReviewsList.astro";
-import ProjectsList from "../../presentation/components/molecules/ProjectsList.astro";
-import TitlePage from "../../presentation/components/atoms/TitlePage.astro";
-import Divider from "../../presentation/components/atoms/Divider.astro";
-import DatesArray from "../../presentation/components/atoms/DatesArray.astro";
-import { getLangFromUrl, useTranslations } from "../../data/i18n/utils";
+import worksLists from "../../../data/works-list";
+import Layout from "../../../presentation/layouts/Layout.astro";
+import StackList from "../../../presentation/components/molecules/StackList.astro";
+import ButtonArrow from "../../../presentation/components/atoms/ButtonArrow.astro";
+import ReviewsList from "../../../presentation/components/molecules/ReviewsList.astro";
+import ProjectsList from "../../../presentation/components/molecules/ProjectsList.astro";
+import TitlePage from "../../../presentation/components/atoms/TitlePage.astro";
+import Divider from "../../../presentation/components/atoms/Divider.astro";
+import DatesArray from "../../../presentation/components/atoms/DatesArray.astro";
+import { getLangFromUrl, useTranslations } from "../../../data/i18n/utils";
 
 export function getStaticPaths() {
   return worksLists.map((work) => {
@@ -28,7 +28,7 @@ if (!id || typeof id === "undefined" || !work) {
   return Astro.redirect("/");
 }
 
-const posts = await Astro.glob("../../data/description_works/*.md");
+const posts = await Astro.glob("../../../data/description_works/*.md");
 const currentPost = posts.find(({ file }) => file?.includes(`${work.id}.md`));
 
 const image = work?.images[0].replace(".jpg", "-250.jpg");

@@ -1,9 +1,12 @@
 ---
-import BGPattern from "../components/atoms/BGPattern.astro";
+import { getLangFromUrl, useTranslations } from "../../data/i18n/utils";
 import DatesArray from "../components/atoms/DatesArray.astro";
 import TitlePageBlog from "../components/atoms/TitlePageBlog.astro";
 import NavBlog from "../components/molecules/NavBlog.astro";
 import Layout from "./Layout.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 const { frontmatter } = Astro.props;
 ---
@@ -21,7 +24,7 @@ const { frontmatter } = Astro.props;
     <p class="author">Por: {frontmatter.author}</p>
     <img
       src={frontmatter.image}
-      alt=`Imagen de ${frontmatter.title}`
+      alt=`${t("generic.image_of")} ${frontmatter.title}`
       class="title_page"
       transition:name={`image-${frontmatter.id}`}
     />

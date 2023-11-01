@@ -1,11 +1,14 @@
 ---
+import { getLangFromUrl, useTranslations } from "../../../../data/i18n/utils";
 import Divider from "../../atoms/Divider.astro";
 import TitlePage from "../../atoms/TitlePage.astro";
 import ListBlog from "../../molecules/ListBlog.astro";
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <div class="container">
-  <TitlePage title="Entradas de blog" />
+  <TitlePage title={t("blogs.title")} />
   <Divider />
   <div class="list">
     <ListBlog />

@@ -1,0 +1,28 @@
+---
+import { getLangFromUrl, useTranslations } from "../../data/i18n/utils";
+import ContactmeSection from "../../presentation/components/organisms/sections/ContactmeSection.astro";
+import Layout from "../../presentation/layouts/Layout.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Layout title={t("generic.contactme")}>
+  <section>
+    <ContactmeSection />
+  </section>
+</Layout>
+
+<style>
+  section {
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    min-height: 100vh;
+  }
+  @media (max-width: 740px) {
+    section {
+      width: 95%;
+    }
+  }
+</style>

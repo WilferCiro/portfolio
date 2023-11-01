@@ -39,7 +39,7 @@ const currentPath = Astro.url.pathname.replace(`/${lang}`, "");
       </Tooltip>
     </li>
     <li>
-      <Tooltip title={t("header.tooltip_projects")}>
+      <Tooltip title={t("generic.projects")}>
         <a
           href={translatePath("/projects/")}
           class={currentPath === "/projects/" ? "active" : ""}
@@ -64,7 +64,7 @@ const currentPath = Astro.url.pathname.replace(`/${lang}`, "");
       </Tooltip>
     </li>
     <li>
-      <Tooltip title={t("header.tooltip_lang")} transition:persist>
+      <Tooltip title={t("header.tooltip_lang")}>
         <a
           href={lang === "es" ? "en" : "/"}
           class={currentPath === "/contact/" ? "lang-btn active" : "lang-btn"}

@@ -1,13 +1,13 @@
 ---
-import allProjects from "../../data/projects-list";
-import DatesArray from "../../presentation/components/atoms/DatesArray.astro";
-import CarouselImages from "../../presentation/components/molecules/CarouselImages.astro";
-import StackList from "../../presentation/components/molecules/StackList.astro";
-import Layout from "../../presentation/layouts/Layout.astro";
-import ButtonArrow from "../../presentation/components/atoms/ButtonArrow.astro";
-import TitlePage from "../../presentation/components/atoms/TitlePage.astro";
-import Divider from "../../presentation/components/atoms/Divider.astro";
-import { getLangFromUrl, useTranslations } from "../../data/i18n/utils";
+import allProjects from "../../../data/projects-list";
+import DatesArray from "../../../presentation/components/atoms/DatesArray.astro";
+import CarouselImages from "../../../presentation/components/molecules/CarouselImages.astro";
+import StackList from "../../../presentation/components/molecules/StackList.astro";
+import Layout from "../../../presentation/layouts/Layout.astro";
+import ButtonArrow from "../../../presentation/components/atoms/ButtonArrow.astro";
+import TitlePage from "../../../presentation/components/atoms/TitlePage.astro";
+import Divider from "../../../presentation/components/atoms/Divider.astro";
+import { getLangFromUrl, useTranslations } from "../../../data/i18n/utils";
 
 export function getStaticPaths() {
   return Object.keys(allProjects).map((key) => {
