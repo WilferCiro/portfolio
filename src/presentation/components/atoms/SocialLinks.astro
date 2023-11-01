@@ -3,6 +3,8 @@ import LinkedInIcon from "./icons/LinkedInIcon.astro";
 import GithubIcon from "./icons/GithubIcon.astro";
 import EmailIcon from "./icons/EmailIcon.astro";
 import GitlabIcon from "./icons/GitlabIcon.astro";
+import MediumLogoIcon from "./icons/MediumLogoIcon.astro";
+import Tooltip from "./Tooltip.astro";
 ---
 
 <ul>
@@ -11,22 +13,27 @@ import GitlabIcon from "./icons/GitlabIcon.astro";
       href="https://www.linkedin.com/in/wilfer-ciro/"
       target="_blank"
       title="Ir a LinkedIn"
-      ><LinkedInIcon />
+      ><Tooltip title="LinkedIn"><LinkedInIcon /></Tooltip>
     </a>
   </li>
   <li>
     <a href="https://github.com/WilferCiro" target="_blank" title="Ir a Github"
-      ><GithubIcon />
+      ><Tooltip title="Github"><GithubIcon /></Tooltip>
     </a>
   </li>
   <li>
     <a href="https://gitlab.com/WilferCiro/" target="_blank" title="Ir a gitlab"
-      ><GitlabIcon />
+      ><Tooltip title="Gitlab"><GitlabIcon /></Tooltip>
     </a>
   </li>
   <li>
     <a href="mailto:wilcirom@gmail.com" target="_blank" title="Enviar un Email"
-      ><EmailIcon />
+      ><Tooltip title="Email"><EmailIcon /></Tooltip>
+    </a>
+  </li>
+  <li>
+    <a href="https://medium.com/@wilcirom" target="_blank" title="Ir a Medium">
+      <Tooltip title="Medium"><MediumLogoIcon /></Tooltip>
     </a>
   </li>
 </ul>
@@ -38,11 +45,16 @@ import GitlabIcon from "./icons/GitlabIcon.astro";
     padding: 0px;
     margin: 0px;
     list-style: none;
+    align-items: center;
+  }
+  ul li {
+    height: 26px;
   }
   ul li a {
     color: var(--text-color2);
+    display: block;
   }
-  ul li a: hover {
+  ulli a: hover {
     color: var(--text-color3);
   }
 </style>

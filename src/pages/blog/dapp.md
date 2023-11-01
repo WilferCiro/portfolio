@@ -22,17 +22,17 @@ En este blog mostraré el paso a paso para crear una aplicación descentralizada
 - NPM (versión 9.5.1)
 - Metamask en el navegador [Link](https://metamask.io/)
 
-## Pasos a seguir
-
-1. Crear un smart contract
-2. Crear una aplicación en React para usar el smart contract
-
 ## Dependencias externas
 
 En este paso vamos a crear diversas cuentas gratuitas con diversos proveedores que nos harán el trabajo más fácil
 
 1. [Infura](https://infura.io/): creamos una cuenta y extraemos nuestro token para la red Sepolia
 2. [Metamask](https://metamask.io/): creamos nuestra cuenta y guardamos el MNEMONIC (12 palabras claves cuando se crea la cuenta)
+
+## Pasos a seguir
+
+1. Crear un smart contract
+2. Crear una aplicación en React para usar el smart contract
 
 ## Creación del smart contract
 
