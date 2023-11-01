@@ -4,6 +4,10 @@ import Header from "../components/molecules/Header.astro";
 import "../media/styles/main.css";
 import Footer from "../components/molecules/Footer.astro";
 import JsonLD from "../components/atoms/JsonLD.astro";
+import { getLangFromUrl } from "../../data/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+
 interface Props {
   title: string;
   keywords?: string;
@@ -23,7 +27,7 @@ const keywords =
 ---
 
 <!DOCTYPE html>
-<html lang="es">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />

@@ -1,4 +1,5 @@
 ---
+import { getLangFromUrl, useTranslations } from "../data/i18n/utils";
 import BGPattern from "../presentation/components/atoms/BGPattern.astro";
 import BlogSection from "../presentation/components/organisms/sections/BlogSection.astro";
 import ContactmeSection from "../presentation/components/organisms/sections/ContactmeSection.astro";
@@ -8,9 +9,12 @@ import ProjectsSection from "../presentation/components/organisms/sections/Proje
 import QuoteSection from "../presentation/components/organisms/sections/QuoteSection.astro";
 import WorkExperienceSection from "../presentation/components/organisms/sections/WorkExperienceSection.astro";
 import Layout from "../presentation/layouts/Layout.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
-<Layout title="Desarrollador Fullstack">
+<Layout title={t("generic.fullstack_developer")}>
   <BGPattern />
   <PresentationSection />
   <PhraseSection />

@@ -1,9 +1,13 @@
 ---
+import { getLangFromUrl, useTranslations } from "../data/i18n/utils";
 import ContactmeSection from "../presentation/components/organisms/sections/ContactmeSection.astro";
 import Layout from "../presentation/layouts/Layout.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
-<Layout title="Contáctame">
+<Layout title={t("generic.contactme")}>
   <section>
     <ContactmeSection />
   </section>

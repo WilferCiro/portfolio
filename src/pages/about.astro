@@ -4,31 +4,26 @@ import AboutHobbies from "../presentation/components/molecules/AboutHobbies.astr
 import ImageWEffect from "../presentation/components/atoms/ImageWEffect.astro";
 import TitlePage from "../presentation/components/atoms/TitlePage.astro";
 import Divider from "../presentation/components/atoms/Divider.astro";
+import { getLangFromUrl, useTranslations } from "../data/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <Layout title="Sobre mi">
   <div class="container">
     <TitlePage title="Wilfer Daniel Ciro Maya" transition_name="me-name" />
-    <h3 transition:name="me-profession">Fullstack developer</h3>
+    <h3 transition:name="me-profession">{t("generic.fullstack_developer")}</h3>
     <Divider />
     <div class="photo-container">
       <ImageWEffect />
     </div>
     <div transition:name="me-description">
       <p>
-        Como full stack developer comprometido, responsable y apasionado por la
-        programación, tengo una amplia experiencia en el desarrollo de software
-        y en la implementación de soluciones innovadoras. Me siento cómodo
-        trabajando en diferentes lenguajes de programación y frameworks, así
-        como en la creación de aplicaciones web, móviles y de escritorio.
+        {t("about.description_1")}
       </p>
       <p>
-        He trabajado en equipos multidisciplinarios, colaborando en la creación
-        de soluciones a medida para clientes de diferentes sectores. Soy capaz
-        de entender los requerimientos y necesidades del cliente, y proponer
-        soluciones que cumplan con sus expectativas. Además, cuento con
-        habilidades en la gestión de proyectos y en la comunicación asertiva con
-        los diferentes miembros del equipo.
+        {t("about.description_2")}
       </p>
     </div>
     <AboutHobbies />
