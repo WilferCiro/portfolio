@@ -10,7 +10,7 @@ title_image: /images/blogs/face-recognition/title-image.jpg
 id: face_login_python
 ---
 
-En este artículo, se explicará el procedimiento para desarrollar un sistema de inicio de sesión en entornos web mediante Python y reconocimiento facial. Se emplearán librerías básicas sin adentrarse profundamente en el campo de la inteligencia artificial, ya que este tema será abordado en un artículo futuro.
+En este artículo, detallaré el procedimiento para crear un sistema de inicio de sesión en entornos web utilizando Python y reconocimiento facial. Utilizaremos bibliotecas básicas, sin profundizar demasiado en el ámbito de la inteligencia artificial, ya que este tema se explorará en un próximo artículo.
 
 ## Enlaces
 
@@ -24,23 +24,6 @@ En este artículo, se explicará el procedimiento para desarrollar un sistema de
 - Node.js (versión v18.16.0 o superior)
 - NPM (versión 9.5.1)
 
-## Instalación de dependencias
-
-```sh
-mkdir faceLogin
-cd faceLogin
-mkdir frontend backend
-```
-
-**Backend**
-
-```sh
-cd backend
-python3 -m venv virtualEnv
-source virtualEnv/bin/activate
-pip install face-recognition flask flask-cors
-```
-
 ## Ejecución
 
 ### Front end
@@ -48,6 +31,7 @@ pip install face-recognition flask flask-cors
 Vamos a crear un proyecto en html y javascript vanilla para este ejemplo
 
 ```sh
+mkdir frontend
 cd frontend
 touch index.html style.css main.js
 ```
@@ -139,10 +123,12 @@ El código mencionado anteriormente se encarga de capturar el evento de clic del
 
 ### Backend
 
-Ahora creamos lo necesario para nuestro backend con flask
-
 ```sh
+mkdir backend
 cd backend
+python3 -m venv virtualEnv
+source virtualEnv/bin/activate
+pip install face-recognition flask flask-cors
 touch index.py service.py
 mkdir models
 ```
