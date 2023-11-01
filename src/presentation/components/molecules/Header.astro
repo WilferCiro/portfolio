@@ -8,17 +8,19 @@ import ContactIcon from "../atoms/icons/ContactIcon.astro";
 import MoonIcon from "../atoms/icons/MoonIcon.astro";
 
 const currentPath = Astro.url.pathname;
+import i18next, { t } from "i18next";
+
 ---
 
 <header transition:persist>
   <ul class="menu">
     <li>
-      <Tooltip title="Inicio"
+      <Tooltip title={t("header.tooltip_home")}
         ><a href="/" aria-label="Ir al inicio de la página"><HomeIcon /></a>
       </Tooltip>
     </li>
     <li>
-      <Tooltip title="Sobre mi">
+      <Tooltip title={t("header.tooltip_about")}>
         <a
           href="/about"
           class={currentPath === "/about/" ? "active" : ""}
@@ -28,7 +30,7 @@ const currentPath = Astro.url.pathname;
       </Tooltip>
     </li>
     <li>
-      <Tooltip title="Proyectos">
+      <Tooltip title={t("header.tooltip_projects")}>
         <a
           href="/projects"
           class={currentPath === "/projects/" ? "active" : ""}
@@ -38,7 +40,7 @@ const currentPath = Astro.url.pathname;
       </Tooltip>
     </li>
     <li>
-      <Tooltip title="Contáctame">
+      <Tooltip title={t("header.tooltip_contact")}>
         <a
           href="/contact"
           class={currentPath === "/contact/" ? "active" : ""}
@@ -48,7 +50,7 @@ const currentPath = Astro.url.pathname;
       </Tooltip>
     </li>
     <li class="theme-option">
-      <Tooltip title="Alternar tema" transition:persist>
+      <Tooltip title={t("header.tooltip_theme")} transition:persist>
         <div id="button-theme" data-theme-toggle><MoonIcon /></div>
       </Tooltip>
     </li>

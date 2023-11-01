@@ -1,0 +1,9 @@
+{
+  "header": {
+    "tooltip_home": "Inicio",
+    "tooltip_about": "Sobre mi",
+    "tooltip_projects": "Proyectos",
+    "tooltip_contact": "Contáctame",
+    "tooltip_theme": "Alternar tema"
+  }
+}

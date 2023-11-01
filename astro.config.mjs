@@ -1,9 +1,10 @@
 import { defineConfig } from "astro/config";
 import mdx from "@astrojs/mdx";
 import embeds from "astro-embed/integration";
+import astroI18next from "astro-i18next";
 
 export default defineConfig({
-  integrations: [embeds(), mdx()],
+  integrations: [embeds(), mdx(), astroI18next()],
   markdown: {
     shikiConfig: {
       // Choose from Shiki's built-in themes (or add your own)

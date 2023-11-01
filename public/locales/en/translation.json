@@ -1,0 +1,9 @@
+{
+  "header": {
+    "tooltip_home": "Home",
+    "tooltip_about": "About me",
+    "tooltip_projects": "Projects",
+    "tooltip_contact": "Contact me",
+    "tooltip_theme": "Toggle theme"
+  }
+}
