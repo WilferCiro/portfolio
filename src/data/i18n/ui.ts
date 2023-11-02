@@ -16,6 +16,7 @@ export const ui = {
     "header.title_about_me": "Ir a mi descripción",
     "header.title_projects": "Ver la página de proyectos",
     "header.title_contact": "Ir a la página de contacto",
+    "header.title_lang": "Cambiar idioma de la página",
 
     "me.photo_of": "Foto de Wilfer Daniel Ciro Maya",
 
@@ -87,6 +88,7 @@ export const ui = {
     "header.title_about_me": "Go to my description",
     "header.title_projects": "Go to projects page",
     "header.title_contact": "Go to contact page",
+    "header.title_lang": "Change language of this web",
 
     "me.photo_of": "Wilfer Daniel Ciro Maya photo",
 
