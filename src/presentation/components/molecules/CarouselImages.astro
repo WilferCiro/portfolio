@@ -15,16 +15,16 @@ const { images, id } = Astro.props;
   <img
     src={`/images/projects/${id}/${images[0]}`}
     id="main"
-    alt={t("project_card.image_of")}
+    alt={`${t("project_card.image_of")} ${id}`}
     transition:name={`project-image-${id}`}
   />
   <div id="thumbnails">
     {
-      images.map((image: string) => {
+      images.map((image: string, index: number) => {
         return (
           <img
             src={`/images/projects/${id}/${image}`}
-            alt={t("project_card.image_of")}
+            alt={`${t("project_card.image_of")} ${id} nro ${index}`}
           />
         );
       })

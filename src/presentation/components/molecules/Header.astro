@@ -78,7 +78,9 @@ const nextPage =
         <a
           href={nextPage}
           class={"lang-btn"}
-          aria-label={t("header.title_contact")}
+          aria-label={`${lang === "es" ? "EN" : "ES"} ${t(
+            "header.title_lang"
+          )}`}
           >{lang === "es" ? "EN" : "ES"}
         </a>
       </Tooltip>
