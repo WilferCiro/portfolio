@@ -146,7 +146,7 @@ export const ui = {
     "generic.testimonials": "Reviews",
     "generic.projects": "Projects",
     "generic.project": "Project",
-    "generic.see_more": "See more",
+    "generic.see_more": "Description",
     "generic.image_of": "Image of",
     "generic.of": "of",
     "generic.present": "Present"
