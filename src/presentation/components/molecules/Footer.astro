@@ -3,11 +3,13 @@ import { getLangFromUrl, useTranslations } from "../../../data/i18n/utils";
 import SocialLinks from "../atoms/SocialLinks.astro";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+
+const year = new Date().getFullYear()
 ---
 
 <footer>
   <div class="credits">
-    <div>2023</div>
+    <div>{year}</div>
     <div>{t("footer.created_by")}{" "}<b>Wilfer Daniel Ciro Maya</b></div>
     <div>
       <a href="https://github.com/WilferCiro/portfolio" target="_blank"

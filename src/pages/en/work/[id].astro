@@ -28,7 +28,7 @@ if (!id || typeof id === "undefined" || !work) {
   return Astro.redirect("/");
 }
 
-const posts = await Astro.glob("../../../data/description_works/*.md");
+const posts = await Astro.glob("../../../data/description_works/en/*.md");
 const currentPost = posts.find(({ file }) => file?.includes(`${work.id}.md`));
 
 const image = work?.images[0].replace(".jpg", "-250.jpg");
@@ -41,7 +41,7 @@ const image = work?.images[0].replace(".jpg", "-250.jpg");
         ><DatesArray dates={work.dates} />
       </TitlePage>
       <h3 transition:name={`work-profession-${work?.name}`}>
-        {work.position}
+        {work.position[lang]}
       </h3>
       <Divider />
       <img

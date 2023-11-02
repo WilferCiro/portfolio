@@ -32,7 +32,7 @@ const image = data.images[0].replace(".jpg", "-250.jpg");
     />
     <div class="description">
       <div>
-        <header>{data.position}</header>
+        <header>{data.position[lang]}</header>
         <p>{data.name}</p>
         <Divider size="15px" />
         <DatesArray dates={data.dates} />

@@ -11,11 +11,10 @@ export interface ReviewSchema {
 export interface WorkSchema {
   name: string;
   id: string;
-  position: string;
+  position: { es: string; en: string };
   link?: string;
-  dates: string[];
+  dates: (string | Date)[];
   images: string[];
-  description: string;
   projects: IndividualProjectSchema[];
   stack: StackSchema[];
   reviews?: ReviewSchema[];

@@ -75,6 +75,7 @@ export const ui = {
     "generic.project": "Proyecto",
     "generic.see_more": "Ver más",
     "generic.image_of": "Imagen de",
+    "generic.of": "de",
   },
   en: {
     "header.tooltip_home": "Home",
@@ -144,5 +145,6 @@ export const ui = {
     "generic.project": "Project",
     "generic.see_more": "See more",
     "generic.image_of": "Image of",
+    "generic.of": "of",
   },
 } as const;

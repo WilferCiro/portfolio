@@ -1,5 +1,9 @@
 ---
-import { getLangFromUrl, useTranslations } from "../../../../data/i18n/utils";
+import {
+  getLangFromUrl,
+  useTranslatedPath,
+  useTranslations,
+} from "../../../../data/i18n/utils";
 import allProjects from "../../../../data/projects-list";
 import Button from "../../atoms/Button.astro";
 import Divider from "../../atoms/Divider.astro";
@@ -8,6 +12,7 @@ import ProjectsList from "../../molecules/ProjectsList.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
 
 const projects = Object.keys(allProjects)
   .slice(0, 3)
@@ -18,7 +23,7 @@ const projects = Object.keys(allProjects)
 ---
 
 <TitlePage title={t("projects.recents")}
-  ><a href="/projects"
+  ><a href={translatePath("/projects")}
     ><Button
       label={`${t("projects.see_all")} (${Object.keys(allProjects).length})`}
     />

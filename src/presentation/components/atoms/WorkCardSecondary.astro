@@ -30,7 +30,7 @@ const image = data.images[0].replace(".jpg", "-100.jpg");
     />
     <div class="body">
       <div>
-        <header>{data.position}</header>
+        <header>{data.position[lang]}</header>
         <p class="company">{data.name}</p>
         <Divider size="15px" />
         <DatesArray dates={data.dates} />

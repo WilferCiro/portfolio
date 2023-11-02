@@ -4,7 +4,7 @@ export interface IndividualProjectSchema {
   name: string;
   id: string;
   owner: string;
-  dates: string[];
+  dates: (string | Date)[];
   images: string[];
   stack: StackSchema[];
   description: {
