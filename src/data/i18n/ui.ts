@@ -63,6 +63,7 @@ export const ui = {
     "work_card.photo_of": "Foto de la empresa",
 
     "blogs.title": "Entradas de blog",
+    "blog.author": "Autor",
 
     "footer.created_by": "Creado por",
     "footer.see_code": "Ver código fuente de este portafolio",
@@ -131,6 +132,7 @@ export const ui = {
     "work_card.photo_of": "Company image",
 
     "blogs.title": "Blog articles",
+    "blog.author": "Author",
 
     "footer.created_by": "Created by",
     "footer.see_code": "Go to source code of this site",

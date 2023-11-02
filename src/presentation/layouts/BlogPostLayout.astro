@@ -21,7 +21,7 @@ const { frontmatter } = Astro.props;
     <TitlePageBlog title={frontmatter.title}>
       <DatesArray dates={[frontmatter.year]} />
     </TitlePageBlog>
-    <p class="author">Por: {frontmatter.author}</p>
+    <p class="author">{t("blog.author")}: {frontmatter.author}</p>
     <img
       src={frontmatter.image}
       alt=`${t("generic.image_of")} ${frontmatter.title}`

@@ -1,6 +1,6 @@
 ---
-layout: ../../presentation/layouts/BlogPostLayout.astro
-title: Microprocesador Mips en verilog
+layout: ../../../presentation/layouts/BlogPostLayout.astro
+title: Verilog Mips Microprocessor
 author: Wilfer Daniel Ciro Maya
 year: "Octubre 2023"
 keywords: Microprocesador, mips, verilog, fpga, sistemas digitales, diseño, arquitectura, hdl

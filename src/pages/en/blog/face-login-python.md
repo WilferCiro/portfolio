@@ -1,6 +1,6 @@
 ---
-layout: ../../presentation/layouts/BlogPostLayout.astro
-title: Reconocimiento facial en la web
+layout: ../../../presentation/layouts/BlogPostLayout.astro
+title: Facial recognition in web
 author: Wilfer Daniel Ciro Maya
 year: "Octubre 2023"
 keywords: python, reconocimiento, facial, web, flask, django, react, javascript.
