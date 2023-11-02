@@ -5,36 +5,39 @@ import CatIcon from "../atoms/icons/CatIcon.astro";
 import BookIcon from "../atoms/icons/BookIcon.astro";
 import RobotIcon from "../atoms/icons/RobotIcon.astro";
 import GymIcon from "../atoms/icons/GymIcon.astro";
-import TitlePage from "../atoms/TitlePage.astro";
 import Divider from "../atoms/Divider.astro";
+import { getLangFromUrl, useTranslations } from "../../../data/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <Divider size="60px" />
-<h3>Mis hobbies</h3>
+<h3>{t("hobbies.my_hobbies")}</h3>
 <ul>
   <li>
     <CoffeeIcon />
-    Barismo
+    {t("hobbies.barista")}
   </li>
   <li>
     <VideoGameIcon />
-    Juegos
+    {t("hobbies.games")}
   </li>
   <li>
     <CatIcon />
-    Gatos
+    {t("hobbies.cats")}
   </li>
   <li>
     <BookIcon />
-    Leer
+    {t("hobbies.read")}
   </li>
   <li>
     <RobotIcon />
-    Robótica
+    {t("hobbies.robotic")}
   </li>
   <li>
     <GymIcon />
-    Gimnasio
+    {t("hobbies.gym")}
   </li>
 </ul>
 

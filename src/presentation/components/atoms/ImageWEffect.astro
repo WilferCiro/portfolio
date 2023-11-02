@@ -1,17 +1,23 @@
 ---
+import { getLangFromUrl, useTranslations } from "../../../data/i18n/utils";
 
 interface Props {
   transition?: string;
 }
 const { transition } = Astro.props;
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <img
   src={"/images/me/me.webp"}
-  alt="Foto de Wilfer Ciro"
+  alt={t("me.photo_of")}
   transition:name={transition || "me-photo"}
   class="img"
-  onerror="this.src='/images/me/me.jpg'"
+  onerror="
+  this.src = '/images/me/me.jpg'
+"
 />
 
 <style>

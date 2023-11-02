@@ -4,10 +4,14 @@ import Divider from "../../atoms/Divider.astro";
 import QuoteIcon from "../../atoms/icons/QuoteIcon.astro";
 import ImageWEffect from "../../atoms/ImageWEffect.astro";
 import SocialLinks from "../../atoms/SocialLinks.astro";
+import { getLangFromUrl, useTranslations } from "../../../../data/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <div class="container">
-  <TitlePage title="Contáctame" />
+  <TitlePage title={t("generic.contactme")} />
   <Divider />
   <div class="body">
     <div class="photo-container">
@@ -18,21 +22,21 @@ import SocialLinks from "../../atoms/SocialLinks.astro";
       <p class="quote-icon">
         <QuoteIcon />
       </p>
-      <p>Contáctame y construyamos juntos soluciones para el mundo.</p>
+      <p>{t("contact.lets_build")}</p>
     </div>
     <Divider />
     <footer>
-      <a
-        href="mailto:wilcirom@gmail.com?subject=Hola, construyamos juntos soluciones para el mundo"
-        >Envíame un correo</a
-      >
+      <a href={`mailto:wilcirom@gmail.com?subject=${t("contact.lets_build")}`}
+        >{t("contact.send_mail")}
+      </a>
       <a href="https://wa.me/+573173587462" target="_blank"
-        >Envíame un Whatsapp</a
-      >
+        >{t("contact.send_whatsapp")}
+      </a>
       <a
         href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1JMWxfrXAC_FN9iz5XRM4cjN0TUsBiaeANkGTAwjIb0y85VHEIkrV2RVM5H2fIcx55-sGq3Ftz"
-        target="_blank">Agenda una cita</a
-      >
+        target="_blank"
+        >{t("contact.schedule")}
+      </a>
     </footer>
     <div class="social">
       <SocialLinks />

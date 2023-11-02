@@ -1,0 +1,7 @@
+### Laferre: 
+
+I developed an e-commerce platform for hardware products using React with Next.js and Java Vert.x. This enhanced the online shopping experience, resulting in increased sales and higher customer satisfaction. To improve the efficiency and transparency of the purchasing process, I implemented custom features such as order tracking and inventory management. I integrated security and privacy systems to ensure customer data was protected and compliant with standards. By integrating PayPal, users could conduct transactions securely and conveniently. I collaborated with the design and marketing team to ensure the platform was user-friendly and visually appealing, boosting user retention and sales. Lastly, I utilized agile methodologies to meet project deadlines and requirements, successfully completing the project within the allocated budget and timeframe.
+
+### Jaivana dashboard: 
+
+I performed regular maintenance and updates on the React library used in the dashboard. This allowed our users to access crucial information and perform tasks efficiently. I also resolved technical issues and errors in the React library, as well as in the Java and Vert.x backend code, enhancing the stability and functionality of the dashboard.

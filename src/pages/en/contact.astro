@@ -1,7 +1,7 @@
 ---
-import { getLangFromUrl, useTranslations } from "../data/i18n/utils";
-import ContactmeSection from "../presentation/components/organisms/sections/ContactmeSection.astro";
-import Layout from "../presentation/layouts/Layout.astro";
+import { getLangFromUrl, useTranslations } from "../../data/i18n/utils";
+import ContactmeSection from "../../presentation/components/organisms/sections/ContactmeSection.astro";
+import Layout from "../../presentation/layouts/Layout.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);

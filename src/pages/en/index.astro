@@ -1,0 +1,47 @@
+---
+import { getLangFromUrl, useTranslations } from "../../data/i18n/utils";
+import BGPattern from "../../presentation/components/atoms/BGPattern.astro";
+import BlogSection from "../../presentation/components/organisms/sections/BlogSection.astro";
+import ContactmeSection from "../../presentation/components/organisms/sections/ContactmeSection.astro";
+import PhraseSection from "../../presentation/components/organisms/sections/PhraseSection.astro";
+import PresentationSection from "../../presentation/components/organisms/sections/PresentationSection.astro";
+import ProjectsSection from "../../presentation/components/organisms/sections/ProjectsSection.astro";
+import QuoteSection from "../../presentation/components/organisms/sections/QuoteSection.astro";
+import WorkExperienceSection from "../../presentation/components/organisms/sections/WorkExperienceSection.astro";
+import Layout from "../../presentation/layouts/Layout.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Layout title={t("generic.fullstack_developer")}>
+  <BGPattern />
+  <PresentationSection />
+  <PhraseSection />
+  <section id="projects">
+    <ProjectsSection />
+  </section>
+  <section id="experience">
+    <WorkExperienceSection />
+  </section>
+  <QuoteSection />
+  <section id="blog">
+    <BlogSection />
+  </section>
+  <section id="contact">
+    <ContactmeSection />
+  </section>
+</Layout>
+
+<style>
+  section {
+    width: 80%;
+    margin: 100px auto;
+  }
+
+  @media (max-width: 740px) {
+    section {
+      width: 95%;
+    }
+  }
+</style>

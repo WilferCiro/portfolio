@@ -1,14 +1,18 @@
 ---
+import { getLangFromUrl, useTranslations } from "../../../../data/i18n/utils";
 import worksLists from "../../../../data/works-list";
 import Divider from "../../atoms/Divider.astro";
 import TitlePage from "../../atoms/TitlePage.astro";
 import WorkCardPrimary from "../../atoms/WorkCardPrimary.astro";
 import WorkCardSecondary from "../../atoms/WorkCardSecondary.astro";
 
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 const allWorks = worksLists;
 ---
 
-<TitlePage title="Experiencia laboral" />
+<TitlePage title={t("works.experience")} />
 <Divider size="45px" />
 <div class="container">
   <div class="primary">

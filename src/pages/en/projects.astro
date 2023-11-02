@@ -1,10 +1,10 @@
 ---
-import { getLangFromUrl, useTranslations } from "../data/i18n/utils";
-import allProjects from "../data/projects-list";
-import Divider from "../presentation/components/atoms/Divider.astro";
-import TitlePage from "../presentation/components/atoms/TitlePage.astro";
-import ProjectsList from "../presentation/components/molecules/ProjectsList.astro";
-import Layout from "../presentation/layouts/Layout.astro";
+import { getLangFromUrl, useTranslations } from "../../data/i18n/utils";
+import allProjects from "../../data/projects-list";
+import Divider from "../../presentation/components/atoms/Divider.astro";
+import TitlePage from "../../presentation/components/atoms/TitlePage.astro";
+import ProjectsList from "../../presentation/components/molecules/ProjectsList.astro";
+import Layout from "../../presentation/layouts/Layout.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);

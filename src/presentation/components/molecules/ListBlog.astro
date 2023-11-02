@@ -1,6 +1,19 @@
 ---
 import DatesArray from "../atoms/DatesArray.astro";
-const posts = await Astro.glob("../../../pages/blog/*{.md,.mdx}");
+
+import { getLangFromUrl, useTranslations } from "../../../data/i18n/utils";
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const subfolder = lang === "es" ? "" : "en/";
+
+const postsInitials = await Astro.glob("../../../pages/**/blog/*{.md,.mdx}");
+const posts = postsInitials.filter(
+  ({ url }) =>
+    (url.includes("/en/") && lang === "en") ||
+    (!url.includes("/en/") && lang === "es")
+);
+
 const currentPath = Astro.url.pathname;
 ---
 
@@ -13,7 +26,7 @@ const currentPath = Astro.url.pathname;
         <div class={currentPath === url ? "blog-item active" : "blog-item"}>
           <img
             src={image}
-            alt={`Imagen de ${frontmatter.title}`}
+            alt={`${t("generic.image_of")} ${frontmatter.title}`}
             class="image"
             transition:name={
               currentPath === url ? "" : `image-${frontmatter.id}`
@@ -28,7 +41,7 @@ const currentPath = Astro.url.pathname;
               {frontmatter.title}
             </p>
             <footer class="dates">
-              <DatesArray dates={[frontmatter.year]} />
+              <DatesArray dates={[new Date(frontmatter.year)]} />
             </footer>
           </div>
         </div>

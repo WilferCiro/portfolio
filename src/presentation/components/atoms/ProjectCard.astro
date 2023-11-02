@@ -1,28 +1,39 @@
 ---
+import {
+  getLangFromUrl,
+  useTranslatedPath,
+  useTranslations,
+} from "../../../data/i18n/utils";
 import type { IndividualProjectSchema } from "../../../domain/schemas/ProjectsSchema";
 import ButtonArrow from "./ButtonArrow.astro";
-interface Props extends IndividualProjectSchema {}
 
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
+
+interface Props extends IndividualProjectSchema {}
 const { id, ...data } = Astro.props;
 ---
 
 <div class="card">
-  <a href={`/project/${id}`} rel="referrer">
+  <a href={translatePath(`/project/${id}`)} rel="referrer">
     <img
       class="image"
       src={`/images/projects/${id}/${data.images[0]}`}
-      alt={`Imagen del proyecto ${data.name}`}
+      alt={`${t("project_card.image_of")} ${data.name}`}
       transition:name=`project-image-${id}`
     />
   </a>
   <div>
     <div class="description">
       <header transition:name=`project-title-${id}`>{data.name}</header>
-      <p transition:name=`project-description-${id}`>{data.description}</p>
+      <p transition:name=`project-description-${id}`>
+        {data.description[lang]}
+      </p>
     </div>
     <footer class="buttons">
-      <a href={`/project/${id}`} rel="referrer">
-        <ButtonArrow label="Ver más" />
+      <a href={translatePath(`/project/${id}`)} rel="referrer">
+        <ButtonArrow label={t("generic.see_more")} />
       </a>
     </footer>
   </div>

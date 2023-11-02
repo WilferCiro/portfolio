@@ -6,10 +6,9 @@ const worksLists: WorkSchema[] = [
   {
     name: "Option",
     id: "option",
-    dates: ["Agosto 2022", "Presente"],
-    position: "Desarrollador Fullstack",
+    dates: [new Date("2022, August"), "present"],
+    position: { es: "Desarrollador Fullstack", en: "Fullstack developer" },
     link: "https://www.option.tech/",
-    description: "",
     images: ["option.jpg"],
     projects: [allProjects.AIEPWeb3, allProjects.codelco],
     stack: [
@@ -28,7 +27,7 @@ const worksLists: WorkSchema[] = [
       {
         description:
           "Wilfer es un profesional que destaca por sus habilidades analíticas, capacidad de resolución de problemas, logrando trabajar en equipo, siempre orientado al logro de objetivos, proponiendo las mejores soluciones en cada uno de los proyectos donde ha participado.",
-        relationship: "Reclutadora IT",
+        relationship: "IT Talent Attraction Specialist",
         who: "Carolina Bravo",
         photo: "/images/reviews/caro.jpeg",
         linkedIn:
@@ -39,9 +38,11 @@ const worksLists: WorkSchema[] = [
   {
     name: "Misión TIC 2022",
     id: "mintic2022",
-    position: "Tutor de programación Fullstack",
-    dates: ["Mayo 2022", "Diciembre 2022"],
-    description: "",
+    position: {
+      es: "Tutor de programación Fullstack",
+      en: "full stack programming tutor",
+    },
+    dates: [new Date("2022, May"), new Date("2022, December")],
     images: ["udea.jpg"],
     projects: [],
     stack: [
@@ -57,7 +58,7 @@ const worksLists: WorkSchema[] = [
     reviews: [
       {
         description:
-          "Wilfer es un tutor con grandes capacidades de enseñanza, abierto a compartir su conocimiento, su experiencia en el campo de la tecnología lo hace sentir como un experto cuando explica algún tema, me inspiró a seguir el camino del desarrollo.",
+          "Wilfer es un profesor con grandes capacidades de enseñanza, abierto a compartir su conocimiento, su experiencia en el campo de la tecnología lo hace sentir como un experto cuando explica algún tema, me inspiró a seguir el camino del desarrollo.",
         relationship: "Developer",
         who: "Jenny Cabrejo",
         photo: "/images/reviews/jenny.jpg",
@@ -84,9 +85,8 @@ const worksLists: WorkSchema[] = [
     name: "Negozia CF",
     id: "negoziacf",
     link: "https://negoziacf.com/",
-    position: "Desarrollador Fullstack",
-    dates: ["Julio 2021", "Agosto 2022"],
-    description: "",
+    position: { es: "Desarrollador Fullstack", en: "Fullstack developer" },
+    dates: [new Date("2021, July"), new Date("2022, August")],
     images: ["negozia.jpg"],
     projects: [
       allProjects.boNegozia,
@@ -124,9 +124,8 @@ const worksLists: WorkSchema[] = [
     name: "Jaivaná",
     id: "jaivana",
     link: "https://www.jaivanaweb.co/",
-    position: "Desarrollador Fullstack",
-    dates: ["Mayo 2020", "Julio 2021"],
-    description: "",
+    position: { es: "Desarrollador Fullstack", en: "Fullstack devloper" },
+    dates: [new Date("2020, May"), new Date("2021, July")],
     images: ["jaivana.jpg"],
     projects: [allProjects.laferre],
     stack: [
@@ -159,9 +158,8 @@ const worksLists: WorkSchema[] = [
   {
     name: "Freelance",
     id: "freelance",
-    position: "Desarrollador Fullstack",
-    dates: ["2015", "Presente"],
-    description: "",
+    position: { es: "Desarrollador Fullstack", en: "Fullstack developer" },
+    dates: [new Date("2015, January"), "present"],
     images: ["freelance.jpg"],
     projects: [
       allProjects.bdTgrado,

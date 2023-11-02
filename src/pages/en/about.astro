@@ -1,10 +1,10 @@
 ---
-import Layout from "../presentation/layouts/Layout.astro";
-import AboutHobbies from "../presentation/components/molecules/AboutHobbies.astro";
-import ImageWEffect from "../presentation/components/atoms/ImageWEffect.astro";
-import TitlePage from "../presentation/components/atoms/TitlePage.astro";
-import Divider from "../presentation/components/atoms/Divider.astro";
-import { getLangFromUrl, useTranslations } from "../data/i18n/utils";
+import Layout from "../../presentation/layouts/Layout.astro";
+import AboutHobbies from "../../presentation/components/molecules/AboutHobbies.astro";
+import ImageWEffect from "../../presentation/components/atoms/ImageWEffect.astro";
+import TitlePage from "../../presentation/components/atoms/TitlePage.astro";
+import Divider from "../../presentation/components/atoms/Divider.astro";
+import { getLangFromUrl, useTranslations } from "../../data/i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);

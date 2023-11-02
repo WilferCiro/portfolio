@@ -4,13 +4,22 @@ export interface IndividualProjectSchema {
   name: string;
   id: string;
   owner: string;
-  dates: string[];
-  description: string;
+  dates: (string | Date)[];
   images: string[];
   stack: StackSchema[];
-  complete?: string;
+  description: {
+    en: string;
+    es: string;
+  };
+  complete?: {
+    en: string;
+    es: string;
+  };
   links?: {
-    title: string;
+    title: {
+      en: string;
+      es: string;
+    };
     href: string;
   }[];
 }
