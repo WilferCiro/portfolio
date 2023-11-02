@@ -41,7 +41,7 @@ const currentPath = Astro.url.pathname;
               {frontmatter.title}
             </p>
             <footer class="dates">
-              <DatesArray dates={[frontmatter.year]} />
+              <DatesArray dates={[new Date(frontmatter.year)]} />
             </footer>
           </div>
         </div>

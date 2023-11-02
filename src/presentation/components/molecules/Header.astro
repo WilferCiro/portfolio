@@ -19,7 +19,7 @@ const translatePath = useTranslatedPath(lang);
 const currentPath = Astro.url.pathname.replace(`/${lang}`, "");
 ---
 
-<header transition:persist>
+<header>
   <ul class="menu">
     <li>
       <Tooltip title={t("header.tooltip_home")}
@@ -66,7 +66,7 @@ const currentPath = Astro.url.pathname.replace(`/${lang}`, "");
     <li>
       <Tooltip title={t("header.tooltip_lang")}>
         <a
-          href={lang === "es" ? "en" : "/"}
+          href={lang === "es" ? "/en" : "/"}
           class={currentPath === "/contact/" ? "lang-btn active" : "lang-btn"}
           aria-label={t("header.title_contact")}>{lang === "es" ? "EN" : "ES"}</a
         >

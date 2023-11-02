@@ -114,7 +114,7 @@ const allProjects: ProjectsSchema = {
     name: "Backends con arquitectura DDD",
     id: "ddd",
     owner: "Freelance",
-    dates: [new Date("2023, May"), "Presente"],
+    dates: [new Date("2023, May"), "present"],
     description: {
       es: "Repositorio con proyectos backend con distintos lenguajes y frameworks utilizando arquitectura hexagonal, además de diferentes gestores de bases de datos.",
       en: "Repository with backend projects using various languages and frameworks, employing hexagonal architecture and different database management systems.",

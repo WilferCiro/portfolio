@@ -2,7 +2,7 @@
 layout: ../../../presentation/layouts/BlogPostLayout.astro
 title: Principles for creating a dApp
 author: Wilfer Daniel Ciro Maya
-year: "Octubre 2023"
+year: "2023, October"
 keywords: Ethereum, blockchain, NFT, nextjs, dapp, bitcoin, web3.
 description: Aprende los principios y pasos para crear una dApp (aplicación descentralizada).
 image: /images/blogs/dapp/image1.jpg

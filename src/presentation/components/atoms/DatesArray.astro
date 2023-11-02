@@ -16,7 +16,9 @@ const { dates } = Astro.props;
     dates
       .map((date) =>
         typeof date === "string"
-          ? date
+          ? date === "present"
+            ? t("generic.present")
+            : date
           : `${date.toLocaleString(lang, {
               month: "long",
             })}, ${date.getFullYear()}`

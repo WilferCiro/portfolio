@@ -2,7 +2,7 @@
 layout: ../../presentation/layouts/BlogPostLayout.astro
 title: Reconocimiento facial en la web
 author: Wilfer Daniel Ciro Maya
-year: "Octubre 2023"
+year: "2023, October"
 keywords: python, reconocimiento, facial, web, flask, django, react, javascript.
 description: Optimiza el proceso de inicio de sesión mediante reconocimiento facial en entornos web utilizando Python.
 image: /images/blogs/face-recognition/image1.jpg

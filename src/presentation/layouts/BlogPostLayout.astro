@@ -19,9 +19,10 @@ const { frontmatter } = Astro.props;
 >
   <section>
     <TitlePageBlog title={frontmatter.title}>
-      <DatesArray dates={[frontmatter.year]} />
+      <DatesArray dates={[new Date(frontmatter.year)]} />
     </TitlePageBlog>
     <p class="author">{t("blog.author")}: {frontmatter.author}</p>
+    {lang === "en" && <p class="warning">This site is being translated</p>}
     <img
       src={frontmatter.image}
       alt=`${t("generic.image_of")} ${frontmatter.title}`
@@ -113,5 +114,12 @@ const { frontmatter } = Astro.props;
     max-width: 100%;
     margin: auto;
     display: block;
+  }
+
+  .warning {
+    color: white;
+    background-color: #ffa92b;
+    padding: 20px 25px;
+    border-radius: 15px;
   }
 </style>

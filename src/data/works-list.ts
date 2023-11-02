@@ -6,7 +6,7 @@ const worksLists: WorkSchema[] = [
   {
     name: "Option",
     id: "option",
-    dates: [new Date("2022, August"), "Presente"],
+    dates: [new Date("2022, August"), "present"],
     position: { es: "Desarrollador Fullstack", en: "Fullstack developer" },
     link: "https://www.option.tech/",
     images: ["option.jpg"],
@@ -159,7 +159,7 @@ const worksLists: WorkSchema[] = [
     name: "Freelance",
     id: "freelance",
     position: { es: "Desarrollador Fullstack", en: "Fullstack developer" },
-    dates: [new Date("2015, January"), "Presente"],
+    dates: [new Date("2015, January"), "present"],
     images: ["freelance.jpg"],
     projects: [
       allProjects.bdTgrado,

@@ -2,7 +2,7 @@
 layout: ../../presentation/layouts/BlogPostLayout.astro
 title: Microprocesador Mips en verilog
 author: Wilfer Daniel Ciro Maya
-year: "Octubre 2023"
+year: "2023, October"
 keywords: Microprocesador, mips, verilog, fpga, sistemas digitales, diseño, arquitectura, hdl
 description: En este blog crearemos una microprocesador mips de 32 bits con pipeline utilizando HDL verilog.
 image: /images/blogs/mips/image1.jpg
