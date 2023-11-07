@@ -1,4 +1,5 @@
 ---
+import { pwaInfo } from "virtual:pwa-info";
 import { ViewTransitions } from "astro:transitions";
 import Header from "../components/molecules/Header.astro";
 import Footer from "../components/molecules/Footer.astro";
@@ -52,12 +53,13 @@ const keywords = Astro.props.keywords || layoutD.keywords;
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={image} />
 
-    <script src="/src/pwa.ts"></script>
-
     <link rel="manifest" href="/manifest.json" />
 
     <JsonLD />
     <ViewTransitions />
+
+    <script src="/src/pwa.ts"></script>
+    { pwaInfo && <Fragment set:html={pwaInfo.webManifest.linkTag} /> }
   </head>
   <body>
     <Header />
