@@ -5,6 +5,7 @@
     "display": "standalone",
     "background_color": "#082a3a",
     "theme_color": "#082a3a",
+    "description": "Bienvenid@ al portafolio personal de Wilfer Daniel Ciro Maya -- fullstack developer",
     "icons": [
       {
         "src": "./favicon-16x16.png",
@@ -29,8 +30,46 @@
       {
         "src": "./android-chrome-512x512.png",
         "sizes": "512x512",
-        "type": "image/png",
-        "purpose": "any maskable"
+        "type": "image/png"
       }
-    ]
+    ],
+    "screenshots": [
+      {
+        "src": "./screenshots/screenshot-540x720-1.jpg",
+        "type": "image/jpg",
+        "sizes": "538x718",
+        "form_factor": "narrow"
+      },
+      {
+        "src": "./screenshots/screenshot-540x720-2.jpg",
+        "type": "image/jpeg",
+        "sizes": "538x718",
+        "form_factor": "narrow"
+      },
+      {
+        "src": "./screenshots/screenshot-540x720-3.jpg",
+        "type": "image/jpeg",
+        "sizes": "538x718",
+        "form_factor": "narrow"
+      },
+      {
+        "src": "./screenshots/screenshot-1024x665-1.jpg",
+        "type": "image/jpg",
+        "sizes": "1024x665",
+        "form_factor": "wide"
+      },
+      {
+        "src": "./screenshots/screenshot-1024x665-2.jpg",
+        "type": "image/jpg",
+        "sizes": "1024x665",
+        "form_factor": "wide"
+      },
+      {
+        "src": "./screenshots/screenshot-1024x665-3.jpg",
+        "type": "image/jpg",
+        "sizes": "1024x665",
+        "form_factor": "wide"
+      }
+    ],
+    "categories": ["blog", "portafolio", "education"]
   }
