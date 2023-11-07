@@ -1,6 +1,7 @@
 import { defineConfig } from "astro/config";
 import mdx from "@astrojs/mdx";
 import embeds from "astro-embed/integration";
+import { VitePWA } from "vite-plugin-pwa";
 
 export default defineConfig({
   integrations: [embeds(), mdx()],
@@ -14,5 +15,8 @@ export default defineConfig({
       // https://github.com/shikijs/shiki/blob/main/docs/languages.md
       langs: [],
     },
+  },
+  vite: {
+    plugins: [VitePWA({})],
   },
 });
