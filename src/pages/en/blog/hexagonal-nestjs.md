@@ -1,5 +1,5 @@
 ---
-layout: ../../presentation/layouts/BlogPostLayout.astro
+layout: ../../../presentation/layouts/BlogPostLayout.astro
 title: Hexagonal architecture with nestjs
 author: Wilfer Daniel Ciro Maya
 year: "2023, November"
