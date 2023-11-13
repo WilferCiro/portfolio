@@ -1,29 +1,12 @@
 import { defineConfig } from "astro/config";
 import mdx from "@astrojs/mdx";
 import embeds from "astro-embed/integration";
-import AstroPWA from "@vite-pwa/astro";
+// import AstroPWA from "@vite-pwa/astro";
 
 export default defineConfig({
   integrations: [
     embeds(),
-    mdx(),
-    AstroPWA({
-      registerType: 'autoUpdate',
-      base: '/',
-      scope: '/',
-      includeAssets: ['favicon.ico'],
-      workbox: {
-        navigateFallback: "/",
-        globPatterns: ["**/*.{css,js,html,svg,png,jpg,jpeg,webp,ico,txt}"],
-      },
-      devOptions: {
-        enabled: true,
-        navigateFallbackAllowlist: [/^\//],
-      },
-      experimental: {
-        directoryAndTrailingSlashHandler: true,
-      },
-    }),
+    mdx(),    
   ],
   markdown: {
     shikiConfig: {
@@ -37,3 +20,23 @@ export default defineConfig({
     },
   },
 });
+
+/*
+AstroPWA({
+      registerType: 'autoUpdate',
+      base: '/',
+      scope: '/',
+      includeAssets: ['favicon.ico'],
+      workbox: {
+        navigateFallback: "/",
+        globPatterns: ["**//*.{css,js,html,svg,png,jpg,jpeg,webp,ico,txt}"],
+      },
+      devOptions: {
+        enabled: true,
+        navigateFallbackAllowlist: [/^\//],
+      },
+      experimental: {
+        directoryAndTrailingSlashHandler: true,
+      },
+    }),
+     */
