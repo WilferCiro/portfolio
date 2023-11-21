@@ -42,11 +42,15 @@ import QuoteIcon from "../../atoms/icons/QuoteIcon.astro";
     margin-left: -60px;
   }
   @media (max-width: 740px) {
-
     .quote-icon {
-        margin-left: 0px;
-        margin-top: -30px;
+      margin-left: 0px;
+      margin-top: -30px;
     }
   }
 
+  @media (min-width: 740px) and (max-width: 1000px) {
+    .container {
+      padding: 30px 60px;
+    }
+  }
 </style>
