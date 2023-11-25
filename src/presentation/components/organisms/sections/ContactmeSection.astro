@@ -27,15 +27,15 @@ const t = useTranslations(lang);
     <Divider />
     <footer>
       <a href={`mailto:wilcirom@gmail.com?subject=${t("contact.lets_build")}`}
-        >{t("contact.send_mail")}
+        ><label>{t("contact.send_mail")}</label>
       </a>
       <a href="https://wa.me/+573173587462" target="_blank"
-        >{t("contact.send_whatsapp")}
+        ><label>{t("contact.send_whatsapp")}</label>
       </a>
       <a
         href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1JMWxfrXAC_FN9iz5XRM4cjN0TUsBiaeANkGTAwjIb0y85VHEIkrV2RVM5H2fIcx55-sGq3Ftz"
         target="_blank"
-        >{t("contact.schedule")}
+        ><label>{t("contact.schedule")}</label>
       </a>
     </footer>
     <div class="social">
@@ -104,6 +104,33 @@ const t = useTranslations(lang);
     width: 33%;
     font-size: 15px;
     cursor: pointer;
+    position: relative;
+  }
+  footer a:before {
+    content: "";
+    transition: all 0.3s ease;
+    width: 40px;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: var(--primary-color);
+    z-index: 1;
+    border-radius: 40px;
+    opacity: 0;
+  }
+  footer a label {
+    position: inherit;
+    z-index: 3;
+    cursor: pointer;
+  }
+  footer a:hover {
+    color: var(--text-color1);
+    opacity: 1;
+  }
+  footer a:hover:before {
+    width: 100%;
+    opacity: 1;
   }
   .social {
     margin: auto;

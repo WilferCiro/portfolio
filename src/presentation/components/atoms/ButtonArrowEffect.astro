@@ -1,0 +1,76 @@
+---
+interface Props {
+  href: string;
+  text: string;
+}
+
+const { href, text } = Astro.props;
+---
+
+<a href={href} class="cta">
+  <span>{text}</span>
+  <svg width="13px" height="10px" viewBox="0 0 13 10">
+    <path d="M1,5 L11,5"></path>
+    <polyline points="8 1 12 5 8 9"></polyline>
+  </svg>
+</a>
+
+<style>
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  a:hover {
+    opacity: 1;
+  }
+
+  .cta {
+    position: relative;
+    margin: auto;
+    padding: 19px 22px;
+    transition: all 0.2s ease;
+  }
+  .cta:before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 0;
+    display: block;
+    border-radius: 28px;
+    background: var(--primary-color);
+    width: 56px;
+    height: 56px;
+    transition: all 0.3s ease;
+    opacity: 0.4;
+  }
+  .cta span {
+    position: relative;
+    font-size: 16px;
+  }
+  .cta svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: var(--text-color1);
+    stroke-width: 2;
+    transform: translateX(0px);
+    transition: all 0.3s ease;
+  }
+  .cta:hover span {
+    color: white;
+  }
+  .cta:hover:before {
+    width: 100%;
+    background: var(--primary-color);
+    opacity: 1;
+  }
+  .cta:hover svg {
+    transform: translateX(5px);
+  }
+  .cta:active {
+    transform: scale(0.96);
+  }
+</style>

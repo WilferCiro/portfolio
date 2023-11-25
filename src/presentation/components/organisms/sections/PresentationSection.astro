@@ -6,6 +6,7 @@ import {
   useTranslatedPath,
   useTranslations,
 } from "../../../../data/i18n/utils";
+import ButtonArrowEffect from "../../atoms/ButtonArrowEffect.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -22,9 +23,10 @@ const translatePath = useTranslatedPath(lang);
     <h3 class="creator" transition:name="me-description">
       {t("presentation.description")}
     </h3>
-    <a href={translatePath("/about")}>
-      <ButtonArrow label={t("presentation.know_about_me")} />
-    </a>
+    <ButtonArrowEffect
+      href={translatePath("/about")}
+      text={t("presentation.know_about_me")}
+    />
   </div>
   <div class="photo-container">
     <ImageWEffect />
