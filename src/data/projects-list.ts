@@ -79,6 +79,10 @@ const allProjects: ProjectsSchema = {
       es: "Backoffice principal de Negozia CF, permite la configuración de todo el core de crédito, además de generar informes útiles para el equipo de soporte y ventas.",
       en: "Main backoffice of Negozia CF, allowing configuration of the entire credit core, in addition to generating useful reports for the support and sales team.",
     },
+    complete: {
+      es: "Este proyecto se gestó desde sus cimientos, tomando como punto de partida la orientación de un backoffice preexistente. El desarrollo del frontend se llevó a cabo mediante la metodología de diseño atómico utilizando Next.js, mientras que el backend se estructuró mediante microservicios y se implementó Kafka. La implementación de esta plataforma ha optimizado significativamente las operaciones del núcleo de crédito de la empresa. Ahora es posible ajustar con facilidad todas las variables, generar informes en formato PDF y Excel de todas las transacciones, y visualizar diversos tipos de gráficos de rendimiento.",
+      en: "This project was conceived from the ground up, starting with the guidance of an existing backoffice. The frontend development was conducted using the atomic design methodology with Next.js, while the backend was structured through microservices and implemented with Kafka. The implementation of this platform has significantly optimized the operations of the company's credit core. It is now possible to easily adjust all variables, generate reports in PDF and Excel formats for all transactions, and visualize various types of performance graphs.",
+    },
     images: ["image1.webp", "image2.webp", "image3.webp"],
     stack: [
       StackList.Express,

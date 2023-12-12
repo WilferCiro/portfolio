@@ -5,6 +5,7 @@ import ImageWEffect from "../../presentation/components/atoms/ImageWEffect.astro
 import TitlePage from "../../presentation/components/atoms/TitlePage.astro";
 import Divider from "../../presentation/components/atoms/Divider.astro";
 import { getLangFromUrl, useTranslations } from "../../data/i18n/utils";
+import AboutStudies from "../../presentation/components/molecules/AboutStudies.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -26,6 +27,7 @@ const t = useTranslations(lang);
         {t("about.description_2")}
       </p>
     </div>
+    <AboutStudies />
     <AboutHobbies />
   </div>
 </Layout>

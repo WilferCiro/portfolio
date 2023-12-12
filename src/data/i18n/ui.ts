@@ -46,6 +46,8 @@ export const ui = {
     "hobbies.gym": "Gimnasio",
     "hobbies.my_hobbies": "Mis pasatiempos",
 
+    "studies.title": "Mis estudios",
+
     "work.experience_in": "Experiencia en",
     "work.alt_image": "Foto de la empresa",
     "work.go_to_site": "Ir al sitio de la empresa",
@@ -117,6 +119,8 @@ export const ui = {
     "hobbies.robotic": "Robotics",
     "hobbies.gym": "Gym",
     "hobbies.my_hobbies": "My hobbies",
+
+    "studies.title": "My studies",
 
     "work.experience_in": "Experience in",
     "work.alt_image": "Image of company",

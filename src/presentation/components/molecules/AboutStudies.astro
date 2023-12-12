@@ -7,59 +7,64 @@ import RobotIcon from "../atoms/icons/RobotIcon.astro";
 import GymIcon from "../atoms/icons/GymIcon.astro";
 import Divider from "../atoms/Divider.astro";
 import { getLangFromUrl, useTranslations } from "../../../data/i18n/utils";
+import DatesArray from "../atoms/DatesArray.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
 <Divider size="60px" />
-<h3>Mis estudios</h3>
-<ul>
-  <li>
-    <CoffeeIcon />
-    {t("hobbies.barista")}
-  </li>
-  <li>
-    <VideoGameIcon />
-    {t("hobbies.games")}
-  </li>
-  <li>
-    <CatIcon />
-    {t("hobbies.cats")}
-  </li>
-  <li>
-    <BookIcon />
-    {t("hobbies.read")}
-  </li>
-  <li>
-    <RobotIcon />
-    {t("hobbies.robotic")}
-  </li>
-  <li>
-    <GymIcon />
-    {t("hobbies.gym")}
-  </li>
-</ul>
+<h3>{t("studies.title")}</h3>
+<div class="studies">
+	<div class="item">
+		<div>
+		<img
+			src={"/images/studies/uq.jpg"}
+			alt={"Logo Universidad del Quindío"}
+			class="item-img"
+			/>
+				</div>
+				<div>
+					<h4>Ingeniería Electrónica</h4>
+					<h5>Universidad del Quindío</h5>
+						<DatesArray dates={["2015", "2020"]} />
+				</div>
+	</div>
+	<div class="item">
+		<div>
+		<img
+			src={"/images/studies/sena.jpg"}
+			alt={"Logo Sena"}
+			class="item-img"
+			/>
+				</div>
+				<div>
+		<h4>Técnico en programación de software</h4>
+		<h5>Sena</h5>
+			<DatesArray dates={["2013", "2015"]} />
+		</div>
+	</div>
+</div>
 
 <style>
-  ul {
-    padding: 0px;
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  ul li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 5px;
-    width: 80px;
-  }
-
-  h3 {
-    color: var(--primary-color);
-  }
+	.item {
+		margin-bottom: 20px;
+			display: flex;
+			align-items: center;
+			gap: 20px;
+	}
+		.item-img {
+			width: 60px;
+			height: 60px;
+			border-radius: 5px;
+		}
+	.item h4, .item h5, .item p {
+		margin: 0px;
+	}
+		.item h5, .item p {
+			color: var(--text-color3)
+		}
+	h3 {
+		color: var(--primary-color);
+	}
 </style>

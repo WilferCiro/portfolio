@@ -18,17 +18,26 @@ const { frontmatter } = Astro.props;
   description={frontmatter.description}
 >
   <section>
-    <TitlePageBlog title={frontmatter.title}>
-      <DatesArray dates={[new Date(frontmatter.year)]} />
-    </TitlePageBlog>
-    <p class="author">{t("blog.author")}: {frontmatter.author}</p>
-    {lang === "en" && <p class="warning">This site is being translated</p>}
     <img
       src={frontmatter.image}
       alt=`${t("generic.image_of")} ${frontmatter.title}`
       class="title_page"
       transition:name={`image-${frontmatter.id}`}
     />
+    <TitlePageBlog title={frontmatter.title} />
+    <div class="author">
+      <img
+        src={"/images/me/me.webp"}
+        alt={t("me.photo_of")}
+        class="author-img"
+      />
+      <div class="author-data">
+        <p>{t("blog.author")}: {frontmatter.author}</p>
+        <DatesArray dates={[new Date(frontmatter.year)]} />
+      </div>
+    </div>
+    <hr />
+    {lang === "en" && <p class="warning">This site is being translated</p>}
     <div id="slot" transition:name={`title-${frontmatter.id}`}>
       <slot />
     </div>
@@ -38,6 +47,9 @@ const { frontmatter } = Astro.props;
   <NavBlog />
 </Layout>
 <style>
+  hr {
+    border: solid 1px var(--border-color);
+  }
   section {
     width: 95%;
     max-width: 740px;
@@ -47,14 +59,30 @@ const { frontmatter } = Astro.props;
   }
   .author {
     font-style: italic;
-    text-align: right;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 20px 0px;
+  }
+  .author-data {
+    display: flex;
+    flex-direction: column;
+  }
+  .author-data p {
+    margin: 0px;
+  }
+  .author-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    display: block;
   }
   .title_page {
     width: 100%;
     height: 300px;
     object-fit: cover;
     border-radius: 20px;
-    margin-top: 30px;
+    margin-bottom: 40px;
   }
 
   .happy-codding {
