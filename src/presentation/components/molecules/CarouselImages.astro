@@ -4,135 +4,159 @@ import { getLangFromUrl, useTranslations } from "../../../data/i18n/utils";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 interface Props {
-  images: string[];
-  id: string;
+	images: string[];
+	id: string;
 }
 
 const { images, id } = Astro.props;
 ---
 
 <div class="container">
-  <img
-    src={`/images/projects/${id}/${images[0]}`}
-    id="main"
-    alt={`${t("project_card.image_of")} ${id}`}
-    transition:name={`project-image-${id}`}
-  />
-  <div id="thumbnails">
-    {
-      images.map((image: string, index: number) => {
-        return (
-          <img
-            src={`/images/projects/${id}/${image}`}
-            alt={`${t("project_card.image_of")} ${id} nro ${index}`}
-          />
-        );
-      })
-    }
-  </div>
+	<img
+		src={`/images/projects/${id}/${images[0]}`}
+		id="main"
+		alt={`${t("project_card.image_of")} ${id}`}
+		transition:name={`project-image-${id}`}
+	/>
+	<img
+		src={`/images/projects/${id}/${images[0]}`}
+		alt={`${t("project_card.image_of")} ${id}`}
+		transition:name={`project-image-${id}`}
+		id="background"
+	/>
+	<div id="thumbnails">
+		{
+			images.map((image: string, index: number) => {
+				return (
+					<img
+						src={`/images/projects/${id}/${image}`}
+						alt={`${t("project_card.image_of")} ${id} nro ${index}`}
+					/>
+				);
+			})
+		}
+	</div>
 </div>
 <style>
-  .container {
-    position: relative;
-    border-radius: 20px;
-    overflow: hidden;
-    height: 400px;
-  }
-  #main,
-  #thumbnails img {
-    border-radius: 10px;
-  }
-
-  * {
-    transition: all 0.5s ease;
-  }
-
-  #thumbnails {
-    text-align: center;
-    position: absolute;
-    margin-top: -80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--bg-color2-opacity);
-    padding: 6px 10px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: var(--border-radius);
-  }
-  #thumbnails img {
-    display: block;
-    width: 20px;
-    height: 20px;
-    margin: 6px;
-    cursor: pointer;
-    object-fit: cover;
+	.container {
+		position: relative;
+		border-radius: 20px;
+		overflow: hidden;
+		height: 400px;
+	}
+	#background {
+		object-fit: cover;
+		z-index: 1;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+    filter: blur(100px);
     box-shadow: var(--shadow) 0px 2px 2px 0px, var(--shadow) 0px 4px 4px 0px,
       var(--shadow) 0px 8px 8px 0px, var(--shadow) 0px 16px 16px 0px,
       var(--shadow) 0px 32px 32px 0px;
-  }
-  @media only screen and (max-width: 480px) {
-    #thumbnails {
-      margin-top: 0px;
-    }
-    #thumbnails img {
-      width: 40px;
-      height: 40px;
-    }
-  }
-  #thumbnails img:hover {
-    transform: scale(1.05);
-  }
+	}
 
   #main {
     width: 100%;
+    z-index: 2;
+    position: absolute;
+    top: 0px;
+    left: 0px;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     display: block;
-    margin: 20px auto;
-    box-shadow: var(--shadow) 0px 2px 2px 0px, var(--shadow) 0px 4px 4px 0px,
-      var(--shadow) 0px 8px 8px 0px, var(--shadow) 0px 16px 16px 0px,
-      var(--shadow) 0px 32px 32px 0px;
+    margin: 0px auto;
   }
-  @media only screen and (max-width: 480px) {
-    #main {
-      width: 100%;
-    }
-  }
+	#main,
+	#thumbnails img {
+		border-radius: 10px;
+	}
 
-  .hidden {
-    opacity: 0;
-  }
+	* {
+		transition: all 0.5s ease;
+	}
 
-  @media (max-width: 740px) {
-    #main {
-      height: 300px;
-    }
-  }
+	#thumbnails {
+		text-align: center;
+		position: absolute;
+		bottom: 0px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: var(--bg-color2-opacity);
+		padding: 6px 10px;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		border-radius: var(--border-radius);
+    z-index: 3;
+	}
+	#thumbnails img {
+		display: block;
+		width: 20px;
+		height: 20px;
+		margin: 6px;
+		cursor: pointer;
+		object-fit: cover;
+		box-shadow: var(--shadow) 0px 2px 2px 0px, var(--shadow) 0px 4px 4px 0px,
+			var(--shadow) 0px 8px 8px 0px, var(--shadow) 0px 16px 16px 0px,
+			var(--shadow) 0px 32px 32px 0px;
+	}
+	@media only screen and (max-width: 480px) {
+		#thumbnails {
+			margin-top: 0px;
+		}
+		#thumbnails img {
+			width: 40px;
+			height: 40px;
+		}
+	}
+	#thumbnails img:hover {
+		transform: scale(1.05);
+	}
+	@media only screen and (max-width: 480px) {
+		#main {
+			width: 100%;
+		}
+	}
+
+	.hidden {
+		opacity: 0;
+	}
+
+	@media (max-width: 740px) {
+		#main {
+			height: 300px;
+		}
+	}
 </style>
 
 <script async is:inline>
 var thumbnails = document.getElementById("thumbnails");
 var imgs = thumbnails?.getElementsByTagName("img") || [];
 var main = document.getElementById("main");
+var background = document.getElementById("background");
 
 for (let i = 0; i < imgs.length; i++) {
-  let img = imgs[i];
+	let img = imgs[i];
 
-  img.addEventListener("click", function () {
-    if (main && "src" in main) {
-      // Aplica una transición tipo parallax al cambiar la imagen principal
-      main.style.transition = "transform 0.5s, opacity 0.5s";
-      main.style.transform = "translateY(50px) scale(0.9)";
-      main.style.opacity = "0";
+	img.addEventListener("click", function () {
+		if (main && "src" in main) {
+			// Aplica una transición tipo parallax al cambiar la imagen principal
+			main.style.transition = "transform 0.5s, opacity 0.5s";
+			main.style.transform = "translateY(50px) scale(0.9)";
+			main.style.opacity = "0";
 
-      setTimeout(() => {
-        main.src = this.src;
-        // Restaura la posición y opacidad después de cambiar la imagen
-        main.style.transform = "translateY(0) scale(1)";
-        main.style.opacity = "1";
-      }, 200);
-    }
-  });
+			setTimeout(() => {
+				main.src = this.src;
+				// Restaura la posición y opacidad después de cambiar la imagen
+				main.style.transform = "translateY(0) scale(1)";
+				main.style.opacity = "1";
+
+        background.src = this.src;
+			}, 200);
+		}
+	});
 }
 </script>
