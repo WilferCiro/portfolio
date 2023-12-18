@@ -27,7 +27,7 @@ html[data-theme="light"] {
   --text-color2: rgb(40, 40, 40);
   --text-color3: rgb(80, 80, 80);
 
-  --border-color: rgba(80, 80, 80, 0.8);
+  --border-color: rgba(179, 179, 179, 0.8);
 }
 
 html[data-theme="dark"] {

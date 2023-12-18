@@ -3,15 +3,16 @@ import { getLangFromUrl, useTranslations } from "../../../data/i18n/utils";
 
 interface Props {
   transition?: string;
+  photo?: string;
 }
-const { transition } = Astro.props;
+const { transition, photo } = Astro.props;
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
 <img
-  src={"/images/me/me.webp"}
+  src={photo || "/images/me/me.webp"}
   alt={t("me.photo_of")}
   transition:name={transition || "me-photo"}
   class="img"
