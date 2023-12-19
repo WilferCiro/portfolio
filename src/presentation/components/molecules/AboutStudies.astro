@@ -1,10 +1,4 @@
 ---
-import CoffeeIcon from "../atoms/icons/CoffeeIcon.astro";
-import VideoGameIcon from "../atoms/icons/VideoGameIcon.astro";
-import CatIcon from "../atoms/icons/CatIcon.astro";
-import BookIcon from "../atoms/icons/BookIcon.astro";
-import RobotIcon from "../atoms/icons/RobotIcon.astro";
-import GymIcon from "../atoms/icons/GymIcon.astro";
 import Divider from "../atoms/Divider.astro";
 import { getLangFromUrl, useTranslations } from "../../../data/i18n/utils";
 import DatesArray from "../atoms/DatesArray.astro";
@@ -16,55 +10,67 @@ const t = useTranslations(lang);
 <Divider size="60px" />
 <h3>{t("studies.title")}</h3>
 <div class="studies">
-	<div class="item">
-		<div>
-		<img
-			src={"/images/studies/uq.jpg"}
-			alt={"Logo Universidad del Quindío"}
-			class="item-img"
-			/>
-				</div>
-				<div>
-					<h4>Ingeniería Electrónica</h4>
-					<h5>Universidad del Quindío</h5>
-						<DatesArray dates={["2015", "2020"]} />
-				</div>
-	</div>
-	<div class="item">
-		<div>
-		<img
-			src={"/images/studies/sena.jpg"}
-			alt={"Logo Sena"}
-			class="item-img"
-			/>
-				</div>
-				<div>
-		<h4>Técnico en programación de software</h4>
-		<h5>Sena</h5>
-			<DatesArray dates={["2013", "2015"]} />
-		</div>
-	</div>
+  <div class="item">
+    <div>
+      <img
+        src={"/images/studies/uq.jpg"}
+        alt={"Logo Universidad del Quindío"}
+        class="item-img"
+      />
+    </div>
+    <div>
+      <h4>Ingeniería Electrónica</h4>
+      <h5>Universidad del Quindío</h5>
+      <DatesArray dates={["2015", "2020"]} />
+    </div>
+  </div>
+  <div class="item">
+    <div>
+      <img
+        src={"/images/studies/sena.jpg"}
+        alt={"Logo Sena"}
+        class="item-img"
+      />
+    </div>
+    <div>
+      <h4>Técnico en programación de software</h4>
+      <h5>Sena</h5>
+      <DatesArray dates={["2013", "2015"]} />
+    </div>
+  </div>
 </div>
 
 <style>
-	.item {
-		margin-bottom: 20px;
-			display: flex;
-			align-items: center;
-			gap: 20px;
-	}
-		.item-img {
-			width: 60px;
-			height: 60px;
-			border-radius: 5px;
-		}
-	.item h4, .item h5, .item p {
-		margin: 0px;
-	}
-		.item h5, .item p {
-			color: var(--text-color3)
-		}
-	h3 {
-		color: var(--primary-color);
-	}
+  .item {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .item-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+  }
+  .item h4,
+  .item h5,
+  .item p {
+    margin: 0px;
+  }
+  .item h5,
+  .item p {
+    color: var(--text-color3);
+  }
+  h3 {
+    color: var(--primary-color);
+  }
+
+  @media (max-width: 740px) {
+    .item h4 {
+        font-size: 18px;
+    }
+    .item h5 {
+      font-size: 15px;
+    }
+  }
 </style>

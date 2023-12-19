@@ -64,7 +64,7 @@ const keywords = Astro.props.keywords || layoutD.keywords;
     </main>
     <Footer />
     <script>
-      const getTheme = () => localStorage.getItem("theme") || "light";
+      const getTheme = () => localStorage.getItem("theme") || "dark";
 
       const setTheme = (theme: string) =>
         document.documentElement.setAttribute("data-theme", theme);
