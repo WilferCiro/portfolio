@@ -5,7 +5,7 @@ const allProjects: ProjectsSchema = {
   kiwipeluditos: {
     id: "kiwipeluditos",
     name: "Kiwipeluditos",
-    owner: "Wilfer Ciro",
+    owner: "Emprendimiento personal",
     dates: [new Date("2022, January"), new Date("2022, August")],
     description: {
       es: "Plataforma web que permite a los usuarios registrar a sus mascotas y generar un código QR. Al escanearlo, se proporciona la ubicación de la mascota. Además, la plataforma facilita la gestión de vacunas y enfermedades de las mascotas.",
@@ -259,6 +259,10 @@ const allProjects: ProjectsSchema = {
     description: {
       es: "Plataforma completa para la administración de toda la parte académica y disciplinaria de los estudiantes, además de la gestión del inventario de la institución.",
       en: "Complete platform for the management of all academic and disciplinary aspects of students, as well as the institution's inventory management.",
+    },
+    complete: {
+      es: "Da Vinci fue la plataforma principal durante 6 años en la Institución Educativa Policarpa Salavarrieta de Quimbaya, Quindío. Esta plataforma permite la administración completa de todos los aspectos de la institución, incluyendo informes, gestión de datos, registro de calificaciones, inventario, estadísticas y generación de boletines trimestrales..",
+      en: "Da Vinci was the main platform for 6 years at the Policarpa Salavarrieta Educational Institution in Quimbaya, Quindío. This platform allows for the complete administration of all aspects of the institution, including reports, data management, grade management, inventory, statistics, and the generation of quarterly reports."
     },
     images: [
       "image1.png",
