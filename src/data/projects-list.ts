@@ -2,6 +2,35 @@ import { StackList } from "../domain/enums/StackList";
 import type { ProjectsSchema } from "../domain/schemas/ProjectsSchema";
 
 const allProjects: ProjectsSchema = {
+  arins: {
+    id: "arins",
+    name: "Arins",
+    owner: "Emprendimiento personal",
+    dates: [new Date("2023, December"), "current"],
+    description: {
+      es: "Plataforma concebida para la gestión integral de inventarios, ventas y el manejo de ingresos de clientes, destinada a servir a diversas empresas. Actualmente, se encuentra en producción con la participación activa de 10 clientes.",
+      en: "Platform designed for comprehensive inventory management, sales, and customer revenue handling, intended to cater to various businesses. Currently in production with active participation from 10 clients.",
+    },
+    complete: {
+      es: "Arins se presenta como una avanzada plataforma diseñada para simplificar y potenciar las operaciones de empresas dedicadas a la venta, instituciones educativas, gimnasios y otros sectores que dependen de la gestión de inventarios, ventas y control de ingresos en ubicaciones físicas.",
+      en: "Arins is an advanced platform designed to streamline and enhance the operations of sales-oriented businesses, educational institutions, gyms, and other sectors relying on inventory management, sales, and revenue control at physical locations.",
+    },
+    images: ["image1.jpg", "image2.jpg", "image3.jpg", "image4.jpg"],
+    stack: [
+      StackList.NestJS,
+      StackList.NodeJS,
+      StackList.ReactJS,
+      StackList.NextJS,
+      StackList.MongoDB,
+      StackList.Typescript,
+    ],
+    links: [
+      {
+        title: { es: "Web demo", en: "Web demo" },
+        href: "https://arins-front.vercel.app/login",
+      },
+    ],
+  },
   kiwipeluditos: {
     id: "kiwipeluditos",
     name: "Kiwipeluditos",
@@ -262,7 +291,7 @@ const allProjects: ProjectsSchema = {
     },
     complete: {
       es: "Da Vinci fue la plataforma principal durante 6 años en la Institución Educativa Policarpa Salavarrieta de Quimbaya, Quindío. Esta plataforma permite la administración completa de todos los aspectos de la institución, incluyendo informes, gestión de datos, registro de calificaciones, inventario, estadísticas y generación de boletines trimestrales..",
-      en: "Da Vinci was the main platform for 6 years at the Policarpa Salavarrieta Educational Institution in Quimbaya, Quindío. This platform allows for the complete administration of all aspects of the institution, including reports, data management, grade management, inventory, statistics, and the generation of quarterly reports."
+      en: "Da Vinci was the main platform for 6 years at the Policarpa Salavarrieta Educational Institution in Quimbaya, Quindío. This platform allows for the complete administration of all aspects of the institution, including reports, data management, grade management, inventory, statistics, and the generation of quarterly reports.",
     },
     images: [
       "image1.png",

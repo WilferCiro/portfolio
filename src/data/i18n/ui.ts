@@ -79,7 +79,7 @@ export const ui = {
     "generic.see_more": "Ver más",
     "generic.image_of": "Imagen de",
     "generic.of": "de",
-    "generic.present": "Presente"
+    "generic.present": "Presente",
   },
   en: {
     "header.tooltip_home": "Home",
@@ -153,6 +153,6 @@ export const ui = {
     "generic.see_more": "Description",
     "generic.image_of": "Image of",
     "generic.of": "of",
-    "generic.present": "Present"
+    "generic.present": "Present",
   },
 } as const;
