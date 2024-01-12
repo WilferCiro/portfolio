@@ -6,8 +6,9 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 interface Props {
   dates: (string | Date)[];
+  color?: string;
 }
-const { dates } = Astro.props;
+const { dates, color } = Astro.props;
 ---
 
 <p>
@@ -27,10 +28,10 @@ const { dates } = Astro.props;
   }
 </p>
 
-<style>
+<style define:vars={{color: color || "var(--text-color2)"}}>
   p {
     margin: 0px;
-    color: var(--text-color2);
+    color: var(--color);
     font-size: 13px;
     display: flex;
     align-items: center;

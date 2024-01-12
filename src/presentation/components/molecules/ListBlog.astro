@@ -34,7 +34,7 @@ const currentPath = Astro.url.pathname;
               {frontmatter.title}
             </p>
             <footer class="dates">
-              <DatesArray dates={[new Date(frontmatter.year)]} />
+              <DatesArray color="rgb(200, 200, 200)" dates={[new Date(frontmatter.year)]} />
             </footer>
           </div>
           <img
@@ -77,6 +77,12 @@ const currentPath = Astro.url.pathname;
   }
   .body {
     width: 100%;
+  }
+  p {
+    color: white !important;
+  }
+  .dates {
+    color: white !important;
   }
   .image {
     width: 80px;
