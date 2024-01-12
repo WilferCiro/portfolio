@@ -2,6 +2,7 @@
 import DatesArray from "../atoms/DatesArray.astro";
 
 import { getLangFromUrl, useTranslations } from "../../../data/i18n/utils";
+import ButtonArrow from "../atoms/ButtonArrow.astro";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
@@ -20,19 +21,11 @@ const currentPath = Astro.url.pathname;
 {
   posts.map(({ frontmatter, url: urlString }) => {
     const url = urlString + "/";
-    const image = frontmatter.image.replace(".jpg", "-80.jpg");
+    const image = frontmatter.image.replace(".jpg", "-80.png");
     return (
       <a href={url}>
         <div class={currentPath === url ? "blog-item active" : "blog-item"}>
-          <img
-            src={image}
-            alt={`${t("generic.image_of")} ${frontmatter.title}`}
-            class="image"
-            transition:name={
-              currentPath === url ? "" : `image-${frontmatter.id}`
-            }
-          />
-          <div>
+          <div class="body">
             <p
               transition:name={
                 currentPath === url ? "" : `title-${frontmatter.id}`
@@ -44,6 +37,14 @@ const currentPath = Astro.url.pathname;
               <DatesArray dates={[new Date(frontmatter.year)]} />
             </footer>
           </div>
+          <img
+            src={image}
+            alt={`${t("generic.image_of")} ${frontmatter.title}`}
+            class="image"
+            transition:name={
+              currentPath === url ? "" : `image-${frontmatter.id}`
+            }
+          />
         </div>
       </a>
     );
@@ -54,20 +55,35 @@ const currentPath = Astro.url.pathname;
   .active {
     border: solid 2px var(--primary-color);
   }
+
+  .button {
+    display: flex;
+    justify-content: flex-end;
+  }
   .blog-item {
-    width: 90%;
+    width: 100%;
     padding: 10px 15px;
     border-radius: 10px;
     margin: auto;
     display: flex;
     align-items: center;
     gap: 10px;
+    background-color: var(--secondary-color);
+    margin-bottom: 5px;
+    overflow: hidden;
+  }
+  .blog-item:hover .image {
+    transform: scale(1.7);
+  }
+  .body {
+    width: 100%;
   }
   .image {
     width: 80px;
     height: 80px;
     object-fit: cover;
     border-radius: 10px;
+    transition: all 0.2s;
   }
   p {
     color: var(--text-color1);

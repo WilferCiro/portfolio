@@ -5,10 +5,10 @@ import {
   useTranslations,
 } from "../../../data/i18n/utils";
 import type { WorkSchema } from "../../../domain/schemas/WorkSchema";
-import DatesArray from "./DatesArray.astro";
-import Divider from "./Divider.astro";
-import Tooltip from "./Tooltip.astro";
-import RightArrow from "./icons/RightArrow.astro";
+import DatesArray from "../atoms/DatesArray.astro";
+import Divider from "../atoms/Divider.astro";
+import Tooltip from "../atoms/Tooltip.astro";
+import RightArrow from "../atoms/icons/RightArrow.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);

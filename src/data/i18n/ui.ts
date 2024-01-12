@@ -69,7 +69,7 @@ export const ui = {
     "blog.author": "Autor",
 
     "footer.created_by": "Creado por",
-    "footer.see_code": "Ver código fuente de este portafolio",
+    "footer.see_code": "Ver el código fuente de este portafolio",
 
     "generic.fullstack_developer": "Desarrollador Fullstack",
     "generic.contactme": "Contáctame",

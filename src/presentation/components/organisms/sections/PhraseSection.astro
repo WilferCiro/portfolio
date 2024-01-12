@@ -33,6 +33,7 @@ const reviewList: ReviewSchema[] = [
     height: 45vh;
     width: 100%;
     color: rgb(230, 230, 230);
+      height: fit-content;
   }
   .body {
     width: 80%;
@@ -42,18 +43,18 @@ const reviewList: ReviewSchema[] = [
     align-items: center;
     justify-content: center;
   }
-  @media (min-width: 740px) and (max-width: 1000px) {
+  @media (min-width: 740px) and (max-width: 1100px) {
     .body {
       width: 95%;
-    }
-    .container {
-      height: fit-content;
     }
   }
   @media (max-width: 740px) {
     .container {
       background-color: var(--secondary-color);
       height: auto;
+    }
+    .body {
+      width: 95%;
     }
   }
 </style>
