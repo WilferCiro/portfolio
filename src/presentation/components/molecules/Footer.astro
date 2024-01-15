@@ -1,6 +1,7 @@
 ---
 import { getLangFromUrl, useTranslations } from "../../../data/i18n/utils";
 import SocialLinks from "../atoms/SocialLinks.astro";
+import ExternalLinkIcon from "../atoms/icons/ExternalLinkIcon.astro";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
@@ -12,8 +13,8 @@ const year = new Date().getFullYear();
     <div>{year}</div>
     <div>{t("footer.created_by")}{" "}<b>Wilfer Daniel Ciro Maya</b></div>
     <div>
-      <a href="https://github.com/WilferCiro/portfolio" target="_blank"
-        >{t("footer.see_code")}
+      <a class="link" href="https://github.com/WilferCiro/portfolio" target="_blank"
+        >{t("footer.see_code")} <ExternalLinkIcon />
       </a>
     </div>
   </div>
@@ -39,6 +40,12 @@ const year = new Date().getFullYear();
     display: flex;
     align-items: center;
     gap: 20px;
+  }
+
+  .link {
+    display: flex;
+    gap: 10px;
+    align-items: center;
   }
 
   @media (max-width: 740px) {
