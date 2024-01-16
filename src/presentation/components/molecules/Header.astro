@@ -11,6 +11,7 @@ import {
   useTranslatedPath,
   useTranslations,
 } from "../../../data/i18n/utils";
+import SunIcon from "../atoms/icons/SunIcon.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -70,7 +71,14 @@ const nextPage =
     </li>
     <li class="theme-option">
       <Tooltip title={t("header.tooltip_theme")} transition:persist>
-        <div id="button-theme" data-theme-toggle><MoonIcon /></div>
+        <div id="button-theme" data-theme-toggle>
+          <div id="moon-icon">
+            <MoonIcon />
+          </div>
+          <div id="sun-icon">
+            <SunIcon />
+          </div>
+        </div>
       </Tooltip>
     </li>
     <li>
@@ -134,6 +142,9 @@ const nextPage =
     display: flex;
     align-items: center;
   }
+  #button-theme {
+    padding: 6px 8px;
+  }
   .lang-btn {
     font-size: 20px;
     font-weight: bold;
@@ -166,6 +177,9 @@ const nextPage =
     color: var(--primary-color) !important;
     border: solid 1px var(--primary-color) !important;
   }
+  .hide {
+    display: none;
+  }
   @media (max-width: 740px) {
     header {
       bottom: 15px;
@@ -191,11 +205,23 @@ const nextPage =
 <script>
   document.addEventListener("astro:page-load", () => {
     const themeToggles = document.querySelectorAll("[data-theme-toggle]");
+    const sunIcon = document.getElementById("sun-icon");
+    const moonIcon = document.getElementById("moon-icon");
 
-    const getTheme = () => localStorage.getItem("theme") || "light";
+    const getTheme = () => localStorage.getItem("theme") || "dark";
 
-    const setTheme = (theme: string) =>
+    const setTheme = (theme: string) => {
+      if (theme === "dark") {
+        sunIcon?.classList.remove("hide");
+        moonIcon?.classList.add("hide");
+      } else {
+        sunIcon?.classList.add("hide");
+        moonIcon?.classList.remove("hide");
+      }
       document.documentElement.setAttribute("data-theme", theme);
+    };
+
+    setTheme(getTheme());
 
     themeToggles.forEach((toggle) => {
       toggle.addEventListener("click", () => {
