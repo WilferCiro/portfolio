@@ -10,7 +10,7 @@ title_image: /images/blogs/mips/title-image.jpg
 id: mips
 ---
 
-En este blog crearemos una microprocesador mips de 32 bits con pipeline utilizando HDL verilog, como referencia bibliográfica se utilizará el libro "Digital design and computer architecture" de *David Money Harris* y *Sarah L. Harris*. Este microprocesador puede ser implementado en una [FPGA](https://es.wikipedia.org/wiki/Matriz_de_puerta_programable_en_campo), utilizando programas especializado para ello como lo son [vivado](https://www.xilinx.com/support/download.html) o [quartus](https://www.intel.la/content/www/xl/es/products/details/fpga/development-tools/quartus-prime/resource.html)
+En este blog se mostrará el paso a paso para crear un microprocesador mips de 32 bits con pipeline utilizando HDL verilog, como referencia bibliográfica se utilizará el libro "Digital design and computer architecture" de *David Money Harris* y *Sarah L. Harris*. Este microprocesador puede ser implementado en una [FPGA](https://es.wikipedia.org/wiki/Matriz_de_puerta_programable_en_campo), utilizando programas especializado para ello como lo son [vivado](https://www.xilinx.com/support/download.html) o [quartus](https://www.intel.la/content/www/xl/es/products/details/fpga/development-tools/quartus-prime/resource.html)
 
 ![Arquitectura del microprocesador](/images/blogs/mips/image2.jpg)
 

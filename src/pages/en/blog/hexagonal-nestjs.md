@@ -10,7 +10,7 @@ title_image: /images/blogs/hexagonal-nestjs/title-image.jpg
 id: hexagonal_nestjs
 ---
 
-En este pequeño blog pretendo mostrarte cómo podemos implementar una arquitectura hexagonal en nestjs.
+En este se mostrará la implementación de una arquitectura hexagonal en nestjs, que puede servir como base para cualquier proyecto backend.
 
 ## Enlaces
 

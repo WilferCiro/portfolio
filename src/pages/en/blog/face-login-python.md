@@ -10,7 +10,7 @@ title_image: /images/blogs/face-recognition/title-image.jpg
 id: face_login_python
 ---
 
-En este artículo, detallaré el procedimiento para crear un sistema de inicio de sesión en entornos web utilizando Python y reconocimiento facial. Utilizaremos bibliotecas básicas, sin profundizar demasiado en el ámbito de la inteligencia artificial, ya que este tema se explorará en un próximo artículo.
+En este artículo, se mostrará el procedimiento para crear un sistema de inicio de sesión en entornos web utilizando Python y reconocimiento facial. Utilizaremos bibliotecas básicas, sin profundizar demasiado en el ámbito de la inteligencia artificial, ya que este tema se explorará en un próximo artículo.
 
 ## Enlaces
 

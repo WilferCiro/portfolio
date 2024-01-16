@@ -10,7 +10,7 @@ title_image: /images/blogs/dapp/title-image.jpg
 id: dapp
 ---
 
-En este blog mostraré el paso a paso para crear una aplicación descentralizada usando ethereum y web3.js. En este caso se usará la red de prueba llamada sepolia y diversas herramientas para consultar los NFT creados
+Este blog tiene como objetivo mostrar la creación de una aplicación descentralizada usando ethereum y web3.js. En este caso se usará la red de prueba llamada sepolia y diversas herramientas para consultar los NFT creados.
 
 ## Enlaces
 
