@@ -71,13 +71,13 @@ const nextPage =
     </li>
     <li class="theme-option">
       <Tooltip title={t("header.tooltip_theme")} transition:persist>
-        <div id="button-theme" data-theme-toggle>
-          <div id="moon-icon">
-            <MoonIcon />
-          </div>
-          <div id="sun-icon">
-            <SunIcon />
-          </div>
+        <div
+          class="button-theme"
+          data-theme-toggle
+          id="moon-icon"
+          transition:persist
+        >
+          <MoonIcon />
         </div>
       </Tooltip>
     </li>
@@ -130,7 +130,7 @@ const nextPage =
       var(--shadow) 0px 32px 32px 0px;
   }
   .menu li a,
-  #button-theme {
+  .button-theme {
     border-radius: 10px;
     background-color: var(--bg-color1);
     display: block;
@@ -142,15 +142,12 @@ const nextPage =
     display: flex;
     align-items: center;
   }
-  #button-theme {
-    padding: 6px 8px;
-  }
   .lang-btn {
     font-size: 20px;
     font-weight: bold;
   }
   .menu li a:hover,
-  #button-theme:hover {
+  .button-theme:hover {
     color: var(--text-color1);
     opacity: 1;
   }
@@ -178,8 +175,10 @@ const nextPage =
     border: solid 1px var(--primary-color) !important;
   }
   .hide {
-    display: none;
+    display: none !important;
+    opacity: 0;
   }
+
   @media (max-width: 740px) {
     header {
       bottom: 15px;
@@ -205,23 +204,12 @@ const nextPage =
 <script>
   document.addEventListener("astro:page-load", () => {
     const themeToggles = document.querySelectorAll("[data-theme-toggle]");
-    const sunIcon = document.getElementById("sun-icon");
-    const moonIcon = document.getElementById("moon-icon");
-
     const getTheme = () => localStorage.getItem("theme") || "dark";
 
     const setTheme = (theme: string) => {
-      if (theme === "dark") {
-        sunIcon?.classList.remove("hide");
-        moonIcon?.classList.add("hide");
-      } else {
-        sunIcon?.classList.add("hide");
-        moonIcon?.classList.remove("hide");
-      }
       document.documentElement.setAttribute("data-theme", theme);
     };
 
-    setTheme(getTheme());
 
     themeToggles.forEach((toggle) => {
       toggle.addEventListener("click", () => {

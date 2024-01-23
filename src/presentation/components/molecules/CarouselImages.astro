@@ -21,7 +21,6 @@ const { images, id } = Astro.props;
 	<img
 		src={`/images/projects/${id}/${images[0]}`}
 		alt={`${t("project_card.image_of")} ${id}`}
-		transition:name={`project-image-${id}`}
 		id="background"
 	/>
 	<div id="thumbnails">
