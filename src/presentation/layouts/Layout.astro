@@ -63,13 +63,12 @@ const keywords = Astro.props.keywords || layoutD.keywords;
       <slot />
     </main>
     <Footer />
-    <script>
+    <script is:inline>
       const getTheme = () => localStorage.getItem("theme") || "dark";
 
-      const setTheme = (theme: string) =>
+      const setTheme = (theme) =>
         document.documentElement.setAttribute("data-theme", theme);
-
-      window.addEventListener("DOMContentLoaded", () => setTheme(getTheme()));
+      setTheme(getTheme());
       document.addEventListener("astro:after-swap", () => setTheme(getTheme()));
     </script>
   </body>
