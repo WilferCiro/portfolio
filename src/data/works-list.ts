@@ -4,9 +4,25 @@ import allProjects from "./projects-list";
 
 const worksLists: WorkSchema[] = [
   {
+    name: "Yape",
+    id: "yape",
+    dates: [new Date("2024, January"), "present"],
+    position: { es: "Desarrollador Backend", en: "Backend developer" },
+    link: "https://www.yape.com.pe/",
+    images: ["yape.jpg"],
+    projects: [],
+    stack: [
+      StackList.NestJS,
+      StackList.PostgreSQL,
+      StackList.Azure,
+    ],
+    reviews: [
+    ],
+  },
+  {
     name: "Option",
     id: "option",
-    dates: [new Date("2022, August"), "present"],
+    dates: [new Date("2022, August"), new Date("2023, December")],
     position: { es: "Desarrollador Fullstack", en: "Fullstack developer" },
     link: "https://www.option.tech/",
     images: ["option.jpg"],
