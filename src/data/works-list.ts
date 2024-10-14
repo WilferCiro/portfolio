@@ -3,7 +3,7 @@ import type { WorkSchema } from "../domain/schemas/WorkSchema";
 import allProjects from "./projects-list";
 
 const worksLists: WorkSchema[] = [
-  {
+  /*{
     name: "Yape",
     id: "yape",
     dates: [new Date("2024, January"), "present"],
@@ -18,7 +18,7 @@ const worksLists: WorkSchema[] = [
     ],
     reviews: [
     ],
-  },
+  },*/
   {
     name: "Option",
     id: "option",
