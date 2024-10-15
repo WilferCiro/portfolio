@@ -22,7 +22,7 @@ const worksLists: WorkSchema[] = [
   {
     name: "Option",
     id: "option",
-    dates: [new Date("2022, August"), new Date("2023, December")],
+    dates: [new Date("2022, August"), "current"],
     position: { es: "Desarrollador Fullstack", en: "Fullstack developer" },
     link: "https://www.option.tech/",
     images: ["option.jpg"],
